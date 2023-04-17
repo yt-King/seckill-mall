@@ -1,7 +1,7 @@
 # seckill-mall
 ## 商城秒杀系统-整体架构图
 
-![image-20230412111045850](https://typora-imagehost-1308499275.cos.ap-shanghai.myqcloud.com/2022-12/image-20230412111045850.png)
+![](https://typora-imagehost-1308499275.cos.ap-shanghai.myqcloud.com/mac/macimage-20230416203428539.png)
 
 ### 聚合的一些设计原则
 
