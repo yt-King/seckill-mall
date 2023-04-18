@@ -1,0 +1,41 @@
+syntax = "proto3";
+option java_package = "person";
+
+// 用户
+service SeckillPersonService {
+  // 注册
+  rpc create(PersonMessage.CreatePersonReq) returns (PersonMessage.CommonRely) {
+  }
+  // 更新
+  rpc update(PersonMessage.UpdatePersonReq) returns (PersonMessage.CommonRely) {
+  }
+  // 登陆
+  rpc login(PersonMessage.PersonLoginReq) returns (PersonMessage.CommonRely) {
+  }
+}
+
+message PersonMessage{
+  message CommonRely {
+    int32 code = 1; // 状态码
+  }
+  message CreatePersonReq {
+    //用户名
+    string user_name = 1;
+    //用户密码
+    string password = 2;
+  }
+  message UpdatePersonReq {
+    //用户名
+    string user_name = 1;
+    //用户密码
+    string password = 2;
+    //主键id
+    string id = 3;
+  }
+  message PersonLoginReq {
+    //用户名
+    string user_name = 1;
+    //用户密码
+    string password = 2;
+  }
+}

@@ -1,4 +1,19 @@
 # seckill-mall
+
+## tips
+
+```bash
+#安装编译环境（以mac-arm为例）
+arch -arm64 brew install protobuf
+#检查安装是否成功，出现版本号即为成功
+protoc --version
+#安装plugin，用于生成service
+#从 https://repo.maven.apache.org/maven2/io/grpc/protoc-gen-grpc-java/ 下载 protoc-gen-grpc-java-1.54.1-osx-x86_64.exe
+#下载完成放到对应目录后去掉.exe后缀，然后执行如下命令，否则会报错，原因见 https://stackoverflow.com/questions/55023435/grpc-out-protoc-gen-grpc-plugin-failed-with-status-code-1-on-osx-java
+chmod +x protoc-gen-grpc-java-1.54.1-osx-x86_64.exe
+#最后执行脚本文件即可，脚本文件见/common/src/main/java/com/zufe/yt/common/pb/gen_code.sh
+```
+
 ## 商城秒杀系统-整体架构图
 
 ![](https://typora-imagehost-1308499275.cos.ap-shanghai.myqcloud.com/mac/macimage-20230416203428539.png)
