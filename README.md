@@ -12,6 +12,13 @@ protoc --version
 #下载完成放到对应目录后去掉.exe后缀，然后执行如下命令，否则会报错，原因见 https://stackoverflow.com/questions/55023435/grpc-out-protoc-gen-grpc-plugin-failed-with-status-code-1-on-osx-java
 chmod +x protoc-gen-grpc-java-1.54.1-osx-x86_64.exe
 #最后执行脚本文件即可，脚本文件见/common/src/main/java/com/zufe/yt/common/pb/gen_code.sh
+
+#项目以来中添加如下依赖，版本与protoc版本一致
+<dependency>
+      <groupId>com.google.protobuf</groupId>
+      <artifactId>protobuf-java</artifactId>
+      <version>${protobuf.version}</version>
+  </dependency>
 ```
 
 ## 商城秒杀系统-整体架构图
