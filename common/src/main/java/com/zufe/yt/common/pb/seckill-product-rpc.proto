@@ -1,0 +1,104 @@
+syntax = "proto3";
+option java_package = "product";
+
+// 商品
+service SeckillProductService {
+  // 添加或更新商品
+  rpc saveOrUpdateProduct(ProductMessage.saveOrUpdateProductReq) returns (ProductMessage.CommonRely) {
+  }
+  // 删除商品
+  rpc deleteProduct(ProductMessage.DeleteProductReq) returns (ProductMessage.CommonRely) {
+  }
+  // 分类列表
+  rpc getCategory(ProductMessage.GetCategoryReq) returns (ProductMessage.GetCategoryRely) {
+  }
+  // 商品列表
+  rpc getProduct(ProductMessage.GetAllProductReq) returns (ProductMessage.GetAllProductRely) {
+  }
+}
+
+message ProductMessage{
+  message CommonRely {
+    //状态码
+    int32 code = 1;
+  }
+  message saveOrUpdateProductReq {
+    //类目id
+    int32 category_id=1;
+    //商品id
+    int32 product_id=2;
+    //商品名称
+    string product_name=3;
+    //商品标题
+    string product_title=4;
+    //商品介绍
+    string product_intro=5;
+    //商品图片
+    string product_picture=6;
+    //商品价格
+    int32 product_price=7;
+    //商品打折价格
+    int32 product_selling_price=8;
+    //商品数量
+    int32 product_num=9;
+    //商品售出
+    int32 product_sales=10;
+    //主键id
+    string id=11;
+  }
+  message DeleteProductReq {
+    //主键id
+    string id = 1;
+  }
+  message GetCategoryReq {
+  }
+  message GetCategoryRely {
+    repeated Category category=1;
+  }
+  message Category {
+    //类目id
+    int32 category_id=1;
+    //类目名称
+    string category_name=2;
+  }
+  message GetAllProductReq {
+    //类目id
+    repeated string category_id=1;
+    //搜索条件
+    string search=2;
+    //当前页
+    int32 current_page=3;
+    //条数
+    int32 page_size=4;
+  }
+  message GetAllProductRely {
+    //状态码
+    int32 code = 1;
+    //总数
+    int32 total=2;
+    //商品
+    repeated Product product=3;
+  }
+  message Product {
+    //类目id
+    int32 category_id=1;
+    //商品id
+    int32 product_id=2;
+    //商品名称
+    string product_name=3;
+    //商品标题
+    string product_title=4;
+    //商品介绍
+    string product_intro=5;
+    //商品图片
+    string product_picture=6;
+    //商品价格
+    int32 product_price=7;
+    //商品打折价格
+    int32 product_selling_price=8;
+    //商品数量
+    int32 product_num=9;
+    //商品售出
+    int32 product_sales=10;
+  }
+}

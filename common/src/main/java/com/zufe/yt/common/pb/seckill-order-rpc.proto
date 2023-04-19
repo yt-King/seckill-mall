@@ -1,0 +1,51 @@
+syntax = "proto3";
+option java_package = "order";
+
+// 订单
+service SeckillOrderService {
+  // 新增
+  rpc addOrder(OrderMessage.AddOrderReq) returns (OrderMessage.CommonRely) {
+  }
+  // 订单列表
+  rpc getOrder(OrderMessage.GetOrderReq) returns (OrderMessage.GetOrderRely) {
+  }
+}
+
+message OrderMessage{
+  message CommonRely {
+    //状态码
+    int32 code = 1;
+  }
+  message Order {
+    //子订单
+    repeated ChildOrder child_orders=1;
+  }
+  message ChildOrder {
+    //商品id
+    int32 product_id=1;
+    //商品名称
+    string product_name=2;
+    //商品图片
+    string product_picture=3;
+    //商品价格
+    int32 price=4;
+    //商品数量
+    int32 num=5;
+  }
+  message AddOrderReq {
+    //用户id
+    string user_id = 1;
+    //订单详情
+    repeated Order orders=2;
+  }
+  message GetOrderReq {
+    //用户id
+    string user_id = 1;
+  }
+  message GetOrderRely {
+    //状态码
+    int32 code = 1;
+    //订单详情
+    repeated Order orders=2;
+  }
+}

@@ -1,32 +1,66 @@
 syntax = "proto3";
 option java_package = "collection";
 
-// 用户
+// 用户收藏
 service SeckillCollectionService {
-  // 创建
-  rpc create(CollectionMessage.CreateCollectionReq) returns (CollectionMessage.CommonRely) {
+  // 添加收藏
+  rpc addCollect(CollectionMessage.AddCollectionReq) returns (CollectionMessage.CommonRely) {
   }
-  // 更新
-  rpc update(CollectionMessage.UpdateCollectionReq) returns (CollectionMessage.CommonRely) {
+  // 删除收藏
+  rpc deleteCollect(CollectionMessage.DeleteCollectReq) returns (CollectionMessage.CommonRely) {
+  }
+  // 收藏列表
+  rpc getCollect(CollectionMessage.GetCollectReq) returns (CollectionMessage.GetCollectRely) {
   }
 }
 
 message CollectionMessage{
   message CommonRely {
-    int32 code = 1; // 状态码
+    //状态码
+    int32 code = 1;
   }
-  message CreateCollectionReq {
+  message AddCollectionReq {
+    //商品id
+    string product_id = 1;
+    //用户id
+    string user_id = 2;
+  }
+  message DeleteCollectReq {
+    //商品id
+    string product_id = 1;
+    //用户id
+    string user_id = 2;
+  }
+  message GetCollectReq {
     //用户id
     string user_id = 1;
-    //
-    string password = 2;
   }
-  message UpdateCollectionReq {
-    //用户名
-    string user_name = 1;
-    //用户密码
-    string password = 2;
-    //主键id
-    string id = 3;
+  message GetCollectRely {
+    //状态码
+    int32 code = 1;
+    //列表
+    repeated Collect collect_list = 2;
+  }
+  message Collect {
+    //类目id
+    int32 category_id=1;
+    //商品id
+    int32 product_id=2;
+    //商品名称
+    string product_name=3;
+    //商品标题
+    string product_title=4;
+    //商品介绍
+    string product_intro=5;
+    //商品图片
+    string product_picture=6;
+    //商品价格
+    int32 product_price=7;
+    //商品打折价格
+    int32 product_selling_price=8;
+    //商品数量
+    int32 product_num=9;
+    //商品售出
+    int32 product_sales=10;
   }
 }
