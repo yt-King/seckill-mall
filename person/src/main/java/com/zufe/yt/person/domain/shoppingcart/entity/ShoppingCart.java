@@ -1,4 +1,4 @@
-package com.zufe.yt.person.domain.shoppingCart.entity;
+package com.zufe.yt.person.domain.shoppingcart.entity;
 
 import lombok.Data;
 
