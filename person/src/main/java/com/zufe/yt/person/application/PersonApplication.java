@@ -10,12 +10,10 @@ import com.zufe.yt.person.domain.person.entity.Person;
 public interface PersonApplication {
     /**
      * 新增
-     * @param person
      */
     void save(Person person);
     /**
      * 更新
-     * @param person
      */
     void update(Person person);
 }

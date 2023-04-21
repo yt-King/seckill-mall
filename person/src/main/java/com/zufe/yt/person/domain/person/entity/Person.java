@@ -33,7 +33,7 @@ public class Person {
     }
 
     public void validExistence(PersonRepository personRepository) {
-        Person find = personRepository.find(new CriteriaAndWrapper().eq(Person::getUserName, "userName"));
+        Person find = personRepository.find(new CriteriaAndWrapper().eq(Person::getUserName, this.userName));
         if (null != find) {
             throw new ServiceException("用户已存在", 100001);
         }

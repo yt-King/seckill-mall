@@ -18,7 +18,7 @@ import javax.annotation.Resource;
 public class PersonApplicationImpl implements PersonApplication {
 
     @Resource
-    PersonRepository personRepository;
+    private PersonRepository personRepository;
 
     @Override
     public void save(Person person) {

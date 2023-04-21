@@ -81,34 +81,65 @@ public final class SeckillPersonServiceGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<person.SeckillPersonRpc.PersonMessage.PersonLoginReq,
-      person.SeckillPersonRpc.PersonMessage.CommonRely> getLoginMethod;
+      person.SeckillPersonRpc.PersonMessage.PersonLoginRely> getLoginMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "login",
       requestType = person.SeckillPersonRpc.PersonMessage.PersonLoginReq.class,
-      responseType = person.SeckillPersonRpc.PersonMessage.CommonRely.class,
+      responseType = person.SeckillPersonRpc.PersonMessage.PersonLoginRely.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<person.SeckillPersonRpc.PersonMessage.PersonLoginReq,
-      person.SeckillPersonRpc.PersonMessage.CommonRely> getLoginMethod() {
-    io.grpc.MethodDescriptor<person.SeckillPersonRpc.PersonMessage.PersonLoginReq, person.SeckillPersonRpc.PersonMessage.CommonRely> getLoginMethod;
+      person.SeckillPersonRpc.PersonMessage.PersonLoginRely> getLoginMethod() {
+    io.grpc.MethodDescriptor<person.SeckillPersonRpc.PersonMessage.PersonLoginReq, person.SeckillPersonRpc.PersonMessage.PersonLoginRely> getLoginMethod;
     if ((getLoginMethod = SeckillPersonServiceGrpc.getLoginMethod) == null) {
       synchronized (SeckillPersonServiceGrpc.class) {
         if ((getLoginMethod = SeckillPersonServiceGrpc.getLoginMethod) == null) {
           SeckillPersonServiceGrpc.getLoginMethod = getLoginMethod =
-              io.grpc.MethodDescriptor.<person.SeckillPersonRpc.PersonMessage.PersonLoginReq, person.SeckillPersonRpc.PersonMessage.CommonRely>newBuilder()
+              io.grpc.MethodDescriptor.<person.SeckillPersonRpc.PersonMessage.PersonLoginReq, person.SeckillPersonRpc.PersonMessage.PersonLoginRely>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "login"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   person.SeckillPersonRpc.PersonMessage.PersonLoginReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  person.SeckillPersonRpc.PersonMessage.CommonRely.getDefaultInstance()))
+                  person.SeckillPersonRpc.PersonMessage.PersonLoginRely.getDefaultInstance()))
               .setSchemaDescriptor(new SeckillPersonServiceMethodDescriptorSupplier("login"))
               .build();
         }
       }
     }
     return getLoginMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<person.SeckillPersonRpc.PersonMessage.findUserNameReq,
+      person.SeckillPersonRpc.PersonMessage.CommonRely> getFindUserNameMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "findUserName",
+      requestType = person.SeckillPersonRpc.PersonMessage.findUserNameReq.class,
+      responseType = person.SeckillPersonRpc.PersonMessage.CommonRely.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<person.SeckillPersonRpc.PersonMessage.findUserNameReq,
+      person.SeckillPersonRpc.PersonMessage.CommonRely> getFindUserNameMethod() {
+    io.grpc.MethodDescriptor<person.SeckillPersonRpc.PersonMessage.findUserNameReq, person.SeckillPersonRpc.PersonMessage.CommonRely> getFindUserNameMethod;
+    if ((getFindUserNameMethod = SeckillPersonServiceGrpc.getFindUserNameMethod) == null) {
+      synchronized (SeckillPersonServiceGrpc.class) {
+        if ((getFindUserNameMethod = SeckillPersonServiceGrpc.getFindUserNameMethod) == null) {
+          SeckillPersonServiceGrpc.getFindUserNameMethod = getFindUserNameMethod =
+              io.grpc.MethodDescriptor.<person.SeckillPersonRpc.PersonMessage.findUserNameReq, person.SeckillPersonRpc.PersonMessage.CommonRely>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "findUserName"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  person.SeckillPersonRpc.PersonMessage.findUserNameReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  person.SeckillPersonRpc.PersonMessage.CommonRely.getDefaultInstance()))
+              .setSchemaDescriptor(new SeckillPersonServiceMethodDescriptorSupplier("findUserName"))
+              .build();
+        }
+      }
+    }
+    return getFindUserNameMethod;
   }
 
   /**
@@ -188,8 +219,18 @@ public final class SeckillPersonServiceGrpc {
      * </pre>
      */
     default void login(person.SeckillPersonRpc.PersonMessage.PersonLoginReq request,
-        io.grpc.stub.StreamObserver<person.SeckillPersonRpc.PersonMessage.CommonRely> responseObserver) {
+        io.grpc.stub.StreamObserver<person.SeckillPersonRpc.PersonMessage.PersonLoginRely> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getLoginMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * 判断用户名
+     * </pre>
+     */
+    default void findUserName(person.SeckillPersonRpc.PersonMessage.findUserNameReq request,
+        io.grpc.stub.StreamObserver<person.SeckillPersonRpc.PersonMessage.CommonRely> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getFindUserNameMethod(), responseObserver);
     }
   }
 
@@ -254,9 +295,20 @@ public final class SeckillPersonServiceGrpc {
      * </pre>
      */
     public void login(person.SeckillPersonRpc.PersonMessage.PersonLoginReq request,
-        io.grpc.stub.StreamObserver<person.SeckillPersonRpc.PersonMessage.CommonRely> responseObserver) {
+        io.grpc.stub.StreamObserver<person.SeckillPersonRpc.PersonMessage.PersonLoginRely> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getLoginMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * 判断用户名
+     * </pre>
+     */
+    public void findUserName(person.SeckillPersonRpc.PersonMessage.findUserNameReq request,
+        io.grpc.stub.StreamObserver<person.SeckillPersonRpc.PersonMessage.CommonRely> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getFindUserNameMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -304,9 +356,19 @@ public final class SeckillPersonServiceGrpc {
      * 登陆
      * </pre>
      */
-    public person.SeckillPersonRpc.PersonMessage.CommonRely login(person.SeckillPersonRpc.PersonMessage.PersonLoginReq request) {
+    public person.SeckillPersonRpc.PersonMessage.PersonLoginRely login(person.SeckillPersonRpc.PersonMessage.PersonLoginReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getLoginMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * 判断用户名
+     * </pre>
+     */
+    public person.SeckillPersonRpc.PersonMessage.CommonRely findUserName(person.SeckillPersonRpc.PersonMessage.findUserNameReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getFindUserNameMethod(), getCallOptions(), request);
     }
   }
 
@@ -356,16 +418,28 @@ public final class SeckillPersonServiceGrpc {
      * 登陆
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<person.SeckillPersonRpc.PersonMessage.CommonRely> login(
+    public com.google.common.util.concurrent.ListenableFuture<person.SeckillPersonRpc.PersonMessage.PersonLoginRely> login(
         person.SeckillPersonRpc.PersonMessage.PersonLoginReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getLoginMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * 判断用户名
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<person.SeckillPersonRpc.PersonMessage.CommonRely> findUserName(
+        person.SeckillPersonRpc.PersonMessage.findUserNameReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getFindUserNameMethod(), getCallOptions()), request);
     }
   }
 
   private static final int METHODID_CREATE = 0;
   private static final int METHODID_UPDATE = 1;
   private static final int METHODID_LOGIN = 2;
+  private static final int METHODID_FIND_USER_NAME = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -394,6 +468,10 @@ public final class SeckillPersonServiceGrpc {
           break;
         case METHODID_LOGIN:
           serviceImpl.login((person.SeckillPersonRpc.PersonMessage.PersonLoginReq) request,
+              (io.grpc.stub.StreamObserver<person.SeckillPersonRpc.PersonMessage.PersonLoginRely>) responseObserver);
+          break;
+        case METHODID_FIND_USER_NAME:
+          serviceImpl.findUserName((person.SeckillPersonRpc.PersonMessage.findUserNameReq) request,
               (io.grpc.stub.StreamObserver<person.SeckillPersonRpc.PersonMessage.CommonRely>) responseObserver);
           break;
         default:
@@ -433,8 +511,15 @@ public final class SeckillPersonServiceGrpc {
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
               person.SeckillPersonRpc.PersonMessage.PersonLoginReq,
-              person.SeckillPersonRpc.PersonMessage.CommonRely>(
+              person.SeckillPersonRpc.PersonMessage.PersonLoginRely>(
                 service, METHODID_LOGIN)))
+        .addMethod(
+          getFindUserNameMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              person.SeckillPersonRpc.PersonMessage.findUserNameReq,
+              person.SeckillPersonRpc.PersonMessage.CommonRely>(
+                service, METHODID_FIND_USER_NAME)))
         .build();
   }
 
@@ -486,6 +571,7 @@ public final class SeckillPersonServiceGrpc {
               .addMethod(getCreateMethod())
               .addMethod(getUpdateMethod())
               .addMethod(getLoginMethod())
+              .addMethod(getFindUserNameMethod())
               .build();
         }
       }

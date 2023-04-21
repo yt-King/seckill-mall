@@ -54,18 +54,18 @@ message ShoppingCartMessage{
   }
   message ShoppingCart {
     //是否选中
-    bool check=1;
+    bool check = 1;
     //商品id
-    int32 product_id=2;
+    int32 product_id = 2;
     //商品名称
-    string product_name=3;
+    string product_name = 3;
     //商品图片
-    string product_picture=4;
+    string product_picture = 4;
     //商品价格
-    int32 price=5;
+    int32 price = 5;
     //商品数量
-    int32 num=6;
+    int32 num = 6;
     //最大购买数
-    int32 max_num=7;
+    int32 max_num = 7;
   }
 }

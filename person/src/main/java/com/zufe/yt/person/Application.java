@@ -9,10 +9,10 @@ import org.springframework.context.annotation.ComponentScan;
  */
 @SpringBootApplication
 @ComponentScan({"com.zufe.yt.person", "com.zufe.yt.common"})
-public class PersonApplication {
+public class Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(PersonApplication.class, args);
+        SpringApplication.run(Application.class, args);
     }
 
 }

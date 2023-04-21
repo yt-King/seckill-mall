@@ -7,6 +7,7 @@ import com.zufe.yt.person.domain.person.entity.Person;
 import com.zufe.yt.person.infrastructure.transfer.PersonMapper;
 import io.grpc.stub.StreamObserver;
 import net.devh.boot.grpc.server.service.GrpcService;
+import org.springframework.beans.factory.annotation.Autowired;
 import person.SeckillPersonRpc;
 
 import javax.annotation.Resource;
@@ -21,7 +22,7 @@ import javax.annotation.Resource;
 @GrpcService
 public class SeckillPersonGrpc extends person.SeckillPersonServiceGrpc.SeckillPersonServiceImplBase {
     @Resource
-    PersonApplication personApplication;
+    private PersonApplication personApplication;
     private final String lockKey = "PERSON-";
 
     @Override
@@ -47,7 +48,7 @@ public class SeckillPersonGrpc extends person.SeckillPersonServiceGrpc.SeckillPe
     }
 
     @Override
-    public void login(SeckillPersonRpc.PersonMessage.PersonLoginReq request, StreamObserver<SeckillPersonRpc.PersonMessage.CommonRely> responseObserver) {
+    public void login(SeckillPersonRpc.PersonMessage.PersonLoginReq request, StreamObserver<SeckillPersonRpc.PersonMessage.PersonLoginRely> responseObserver) {
         super.login(request, responseObserver);
     }
 }

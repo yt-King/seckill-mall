@@ -10,7 +10,7 @@ import person.SeckillPersonRpc;
 
 import javax.annotation.Resource;
 
-@SpringBootTest(classes = com.zufe.yt.person.PersonApplication.class)
+@SpringBootTest(classes = Application.class)
 class PersonApplicationTests {
     @Resource
     CollectionRepository collectionRepository;

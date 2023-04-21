@@ -3066,6 +3066,2127 @@ public final class SeckillPersonRpc {
 
     }
 
+    public interface PersonLoginRelyOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:PersonMessage.PersonLoginRely)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       *状态码
+       * </pre>
+       *
+       * <code>int32 code = 1;</code>
+       * @return The code.
+       */
+      int getCode();
+
+      /**
+       * <pre>
+       *用户信息
+       * </pre>
+       *
+       * <code>.PersonMessage.PersonInfo person = 2;</code>
+       * @return Whether the person field is set.
+       */
+      boolean hasPerson();
+      /**
+       * <pre>
+       *用户信息
+       * </pre>
+       *
+       * <code>.PersonMessage.PersonInfo person = 2;</code>
+       * @return The person.
+       */
+      person.SeckillPersonRpc.PersonMessage.PersonInfo getPerson();
+      /**
+       * <pre>
+       *用户信息
+       * </pre>
+       *
+       * <code>.PersonMessage.PersonInfo person = 2;</code>
+       */
+      person.SeckillPersonRpc.PersonMessage.PersonInfoOrBuilder getPersonOrBuilder();
+    }
+    /**
+     * Protobuf type {@code PersonMessage.PersonLoginRely}
+     */
+    public static final class PersonLoginRely extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:PersonMessage.PersonLoginRely)
+        PersonLoginRelyOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use PersonLoginRely.newBuilder() to construct.
+      private PersonLoginRely(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private PersonLoginRely() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new PersonLoginRely();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return person.SeckillPersonRpc.internal_static_PersonMessage_PersonLoginRely_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return person.SeckillPersonRpc.internal_static_PersonMessage_PersonLoginRely_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                person.SeckillPersonRpc.PersonMessage.PersonLoginRely.class, person.SeckillPersonRpc.PersonMessage.PersonLoginRely.Builder.class);
+      }
+
+      public static final int CODE_FIELD_NUMBER = 1;
+      private int code_ = 0;
+      /**
+       * <pre>
+       *状态码
+       * </pre>
+       *
+       * <code>int32 code = 1;</code>
+       * @return The code.
+       */
+      @java.lang.Override
+      public int getCode() {
+        return code_;
+      }
+
+      public static final int PERSON_FIELD_NUMBER = 2;
+      private person.SeckillPersonRpc.PersonMessage.PersonInfo person_;
+      /**
+       * <pre>
+       *用户信息
+       * </pre>
+       *
+       * <code>.PersonMessage.PersonInfo person = 2;</code>
+       * @return Whether the person field is set.
+       */
+      @java.lang.Override
+      public boolean hasPerson() {
+        return person_ != null;
+      }
+      /**
+       * <pre>
+       *用户信息
+       * </pre>
+       *
+       * <code>.PersonMessage.PersonInfo person = 2;</code>
+       * @return The person.
+       */
+      @java.lang.Override
+      public person.SeckillPersonRpc.PersonMessage.PersonInfo getPerson() {
+        return person_ == null ? person.SeckillPersonRpc.PersonMessage.PersonInfo.getDefaultInstance() : person_;
+      }
+      /**
+       * <pre>
+       *用户信息
+       * </pre>
+       *
+       * <code>.PersonMessage.PersonInfo person = 2;</code>
+       */
+      @java.lang.Override
+      public person.SeckillPersonRpc.PersonMessage.PersonInfoOrBuilder getPersonOrBuilder() {
+        return person_ == null ? person.SeckillPersonRpc.PersonMessage.PersonInfo.getDefaultInstance() : person_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (code_ != 0) {
+          output.writeInt32(1, code_);
+        }
+        if (person_ != null) {
+          output.writeMessage(2, getPerson());
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (code_ != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(1, code_);
+        }
+        if (person_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, getPerson());
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof person.SeckillPersonRpc.PersonMessage.PersonLoginRely)) {
+          return super.equals(obj);
+        }
+        person.SeckillPersonRpc.PersonMessage.PersonLoginRely other = (person.SeckillPersonRpc.PersonMessage.PersonLoginRely) obj;
+
+        if (getCode()
+            != other.getCode()) return false;
+        if (hasPerson() != other.hasPerson()) return false;
+        if (hasPerson()) {
+          if (!getPerson()
+              .equals(other.getPerson())) return false;
+        }
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + CODE_FIELD_NUMBER;
+        hash = (53 * hash) + getCode();
+        if (hasPerson()) {
+          hash = (37 * hash) + PERSON_FIELD_NUMBER;
+          hash = (53 * hash) + getPerson().hashCode();
+        }
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static person.SeckillPersonRpc.PersonMessage.PersonLoginRely parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static person.SeckillPersonRpc.PersonMessage.PersonLoginRely parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static person.SeckillPersonRpc.PersonMessage.PersonLoginRely parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static person.SeckillPersonRpc.PersonMessage.PersonLoginRely parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static person.SeckillPersonRpc.PersonMessage.PersonLoginRely parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static person.SeckillPersonRpc.PersonMessage.PersonLoginRely parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static person.SeckillPersonRpc.PersonMessage.PersonLoginRely parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static person.SeckillPersonRpc.PersonMessage.PersonLoginRely parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static person.SeckillPersonRpc.PersonMessage.PersonLoginRely parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static person.SeckillPersonRpc.PersonMessage.PersonLoginRely parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static person.SeckillPersonRpc.PersonMessage.PersonLoginRely parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static person.SeckillPersonRpc.PersonMessage.PersonLoginRely parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(person.SeckillPersonRpc.PersonMessage.PersonLoginRely prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code PersonMessage.PersonLoginRely}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:PersonMessage.PersonLoginRely)
+          person.SeckillPersonRpc.PersonMessage.PersonLoginRelyOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return person.SeckillPersonRpc.internal_static_PersonMessage_PersonLoginRely_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return person.SeckillPersonRpc.internal_static_PersonMessage_PersonLoginRely_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  person.SeckillPersonRpc.PersonMessage.PersonLoginRely.class, person.SeckillPersonRpc.PersonMessage.PersonLoginRely.Builder.class);
+        }
+
+        // Construct using person.SeckillPersonRpc.PersonMessage.PersonLoginRely.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          code_ = 0;
+          person_ = null;
+          if (personBuilder_ != null) {
+            personBuilder_.dispose();
+            personBuilder_ = null;
+          }
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return person.SeckillPersonRpc.internal_static_PersonMessage_PersonLoginRely_descriptor;
+        }
+
+        @java.lang.Override
+        public person.SeckillPersonRpc.PersonMessage.PersonLoginRely getDefaultInstanceForType() {
+          return person.SeckillPersonRpc.PersonMessage.PersonLoginRely.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public person.SeckillPersonRpc.PersonMessage.PersonLoginRely build() {
+          person.SeckillPersonRpc.PersonMessage.PersonLoginRely result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public person.SeckillPersonRpc.PersonMessage.PersonLoginRely buildPartial() {
+          person.SeckillPersonRpc.PersonMessage.PersonLoginRely result = new person.SeckillPersonRpc.PersonMessage.PersonLoginRely(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(person.SeckillPersonRpc.PersonMessage.PersonLoginRely result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.code_ = code_;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.person_ = personBuilder_ == null
+                ? person_
+                : personBuilder_.build();
+          }
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof person.SeckillPersonRpc.PersonMessage.PersonLoginRely) {
+            return mergeFrom((person.SeckillPersonRpc.PersonMessage.PersonLoginRely)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(person.SeckillPersonRpc.PersonMessage.PersonLoginRely other) {
+          if (other == person.SeckillPersonRpc.PersonMessage.PersonLoginRely.getDefaultInstance()) return this;
+          if (other.getCode() != 0) {
+            setCode(other.getCode());
+          }
+          if (other.hasPerson()) {
+            mergePerson(other.getPerson());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 8: {
+                  code_ = input.readInt32();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 8
+                case 18: {
+                  input.readMessage(
+                      getPersonFieldBuilder().getBuilder(),
+                      extensionRegistry);
+                  bitField0_ |= 0x00000002;
+                  break;
+                } // case 18
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private int code_ ;
+        /**
+         * <pre>
+         *状态码
+         * </pre>
+         *
+         * <code>int32 code = 1;</code>
+         * @return The code.
+         */
+        @java.lang.Override
+        public int getCode() {
+          return code_;
+        }
+        /**
+         * <pre>
+         *状态码
+         * </pre>
+         *
+         * <code>int32 code = 1;</code>
+         * @param value The code to set.
+         * @return This builder for chaining.
+         */
+        public Builder setCode(int value) {
+          
+          code_ = value;
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         *状态码
+         * </pre>
+         *
+         * <code>int32 code = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearCode() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          code_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private person.SeckillPersonRpc.PersonMessage.PersonInfo person_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            person.SeckillPersonRpc.PersonMessage.PersonInfo, person.SeckillPersonRpc.PersonMessage.PersonInfo.Builder, person.SeckillPersonRpc.PersonMessage.PersonInfoOrBuilder> personBuilder_;
+        /**
+         * <pre>
+         *用户信息
+         * </pre>
+         *
+         * <code>.PersonMessage.PersonInfo person = 2;</code>
+         * @return Whether the person field is set.
+         */
+        public boolean hasPerson() {
+          return ((bitField0_ & 0x00000002) != 0);
+        }
+        /**
+         * <pre>
+         *用户信息
+         * </pre>
+         *
+         * <code>.PersonMessage.PersonInfo person = 2;</code>
+         * @return The person.
+         */
+        public person.SeckillPersonRpc.PersonMessage.PersonInfo getPerson() {
+          if (personBuilder_ == null) {
+            return person_ == null ? person.SeckillPersonRpc.PersonMessage.PersonInfo.getDefaultInstance() : person_;
+          } else {
+            return personBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         *用户信息
+         * </pre>
+         *
+         * <code>.PersonMessage.PersonInfo person = 2;</code>
+         */
+        public Builder setPerson(person.SeckillPersonRpc.PersonMessage.PersonInfo value) {
+          if (personBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            person_ = value;
+          } else {
+            personBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         *用户信息
+         * </pre>
+         *
+         * <code>.PersonMessage.PersonInfo person = 2;</code>
+         */
+        public Builder setPerson(
+            person.SeckillPersonRpc.PersonMessage.PersonInfo.Builder builderForValue) {
+          if (personBuilder_ == null) {
+            person_ = builderForValue.build();
+          } else {
+            personBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         *用户信息
+         * </pre>
+         *
+         * <code>.PersonMessage.PersonInfo person = 2;</code>
+         */
+        public Builder mergePerson(person.SeckillPersonRpc.PersonMessage.PersonInfo value) {
+          if (personBuilder_ == null) {
+            if (((bitField0_ & 0x00000002) != 0) &&
+              person_ != null &&
+              person_ != person.SeckillPersonRpc.PersonMessage.PersonInfo.getDefaultInstance()) {
+              getPersonBuilder().mergeFrom(value);
+            } else {
+              person_ = value;
+            }
+          } else {
+            personBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         *用户信息
+         * </pre>
+         *
+         * <code>.PersonMessage.PersonInfo person = 2;</code>
+         */
+        public Builder clearPerson() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          person_ = null;
+          if (personBuilder_ != null) {
+            personBuilder_.dispose();
+            personBuilder_ = null;
+          }
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         *用户信息
+         * </pre>
+         *
+         * <code>.PersonMessage.PersonInfo person = 2;</code>
+         */
+        public person.SeckillPersonRpc.PersonMessage.PersonInfo.Builder getPersonBuilder() {
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return getPersonFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         *用户信息
+         * </pre>
+         *
+         * <code>.PersonMessage.PersonInfo person = 2;</code>
+         */
+        public person.SeckillPersonRpc.PersonMessage.PersonInfoOrBuilder getPersonOrBuilder() {
+          if (personBuilder_ != null) {
+            return personBuilder_.getMessageOrBuilder();
+          } else {
+            return person_ == null ?
+                person.SeckillPersonRpc.PersonMessage.PersonInfo.getDefaultInstance() : person_;
+          }
+        }
+        /**
+         * <pre>
+         *用户信息
+         * </pre>
+         *
+         * <code>.PersonMessage.PersonInfo person = 2;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            person.SeckillPersonRpc.PersonMessage.PersonInfo, person.SeckillPersonRpc.PersonMessage.PersonInfo.Builder, person.SeckillPersonRpc.PersonMessage.PersonInfoOrBuilder> 
+            getPersonFieldBuilder() {
+          if (personBuilder_ == null) {
+            personBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                person.SeckillPersonRpc.PersonMessage.PersonInfo, person.SeckillPersonRpc.PersonMessage.PersonInfo.Builder, person.SeckillPersonRpc.PersonMessage.PersonInfoOrBuilder>(
+                    getPerson(),
+                    getParentForChildren(),
+                    isClean());
+            person_ = null;
+          }
+          return personBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:PersonMessage.PersonLoginRely)
+      }
+
+      // @@protoc_insertion_point(class_scope:PersonMessage.PersonLoginRely)
+      private static final person.SeckillPersonRpc.PersonMessage.PersonLoginRely DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new person.SeckillPersonRpc.PersonMessage.PersonLoginRely();
+      }
+
+      public static person.SeckillPersonRpc.PersonMessage.PersonLoginRely getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<PersonLoginRely>
+          PARSER = new com.google.protobuf.AbstractParser<PersonLoginRely>() {
+        @java.lang.Override
+        public PersonLoginRely parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<PersonLoginRely> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<PersonLoginRely> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public person.SeckillPersonRpc.PersonMessage.PersonLoginRely getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface PersonInfoOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:PersonMessage.PersonInfo)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       *用户名
+       * </pre>
+       *
+       * <code>string user_name = 1;</code>
+       * @return The userName.
+       */
+      java.lang.String getUserName();
+      /**
+       * <pre>
+       *用户名
+       * </pre>
+       *
+       * <code>string user_name = 1;</code>
+       * @return The bytes for userName.
+       */
+      com.google.protobuf.ByteString
+          getUserNameBytes();
+
+      /**
+       * <pre>
+       *状态码
+       * </pre>
+       *
+       * <code>string user_id = 2;</code>
+       * @return The userId.
+       */
+      java.lang.String getUserId();
+      /**
+       * <pre>
+       *状态码
+       * </pre>
+       *
+       * <code>string user_id = 2;</code>
+       * @return The bytes for userId.
+       */
+      com.google.protobuf.ByteString
+          getUserIdBytes();
+    }
+    /**
+     * Protobuf type {@code PersonMessage.PersonInfo}
+     */
+    public static final class PersonInfo extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:PersonMessage.PersonInfo)
+        PersonInfoOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use PersonInfo.newBuilder() to construct.
+      private PersonInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private PersonInfo() {
+        userName_ = "";
+        userId_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new PersonInfo();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return person.SeckillPersonRpc.internal_static_PersonMessage_PersonInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return person.SeckillPersonRpc.internal_static_PersonMessage_PersonInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                person.SeckillPersonRpc.PersonMessage.PersonInfo.class, person.SeckillPersonRpc.PersonMessage.PersonInfo.Builder.class);
+      }
+
+      public static final int USER_NAME_FIELD_NUMBER = 1;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object userName_ = "";
+      /**
+       * <pre>
+       *用户名
+       * </pre>
+       *
+       * <code>string user_name = 1;</code>
+       * @return The userName.
+       */
+      @java.lang.Override
+      public java.lang.String getUserName() {
+        java.lang.Object ref = userName_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          userName_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       *用户名
+       * </pre>
+       *
+       * <code>string user_name = 1;</code>
+       * @return The bytes for userName.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getUserNameBytes() {
+        java.lang.Object ref = userName_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          userName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int USER_ID_FIELD_NUMBER = 2;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object userId_ = "";
+      /**
+       * <pre>
+       *状态码
+       * </pre>
+       *
+       * <code>string user_id = 2;</code>
+       * @return The userId.
+       */
+      @java.lang.Override
+      public java.lang.String getUserId() {
+        java.lang.Object ref = userId_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          userId_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       *状态码
+       * </pre>
+       *
+       * <code>string user_id = 2;</code>
+       * @return The bytes for userId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getUserIdBytes() {
+        java.lang.Object ref = userId_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          userId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userName_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, userName_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, userId_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userName_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, userName_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, userId_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof person.SeckillPersonRpc.PersonMessage.PersonInfo)) {
+          return super.equals(obj);
+        }
+        person.SeckillPersonRpc.PersonMessage.PersonInfo other = (person.SeckillPersonRpc.PersonMessage.PersonInfo) obj;
+
+        if (!getUserName()
+            .equals(other.getUserName())) return false;
+        if (!getUserId()
+            .equals(other.getUserId())) return false;
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + USER_NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getUserName().hashCode();
+        hash = (37 * hash) + USER_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getUserId().hashCode();
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static person.SeckillPersonRpc.PersonMessage.PersonInfo parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static person.SeckillPersonRpc.PersonMessage.PersonInfo parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static person.SeckillPersonRpc.PersonMessage.PersonInfo parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static person.SeckillPersonRpc.PersonMessage.PersonInfo parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static person.SeckillPersonRpc.PersonMessage.PersonInfo parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static person.SeckillPersonRpc.PersonMessage.PersonInfo parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static person.SeckillPersonRpc.PersonMessage.PersonInfo parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static person.SeckillPersonRpc.PersonMessage.PersonInfo parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static person.SeckillPersonRpc.PersonMessage.PersonInfo parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static person.SeckillPersonRpc.PersonMessage.PersonInfo parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static person.SeckillPersonRpc.PersonMessage.PersonInfo parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static person.SeckillPersonRpc.PersonMessage.PersonInfo parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(person.SeckillPersonRpc.PersonMessage.PersonInfo prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code PersonMessage.PersonInfo}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:PersonMessage.PersonInfo)
+          person.SeckillPersonRpc.PersonMessage.PersonInfoOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return person.SeckillPersonRpc.internal_static_PersonMessage_PersonInfo_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return person.SeckillPersonRpc.internal_static_PersonMessage_PersonInfo_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  person.SeckillPersonRpc.PersonMessage.PersonInfo.class, person.SeckillPersonRpc.PersonMessage.PersonInfo.Builder.class);
+        }
+
+        // Construct using person.SeckillPersonRpc.PersonMessage.PersonInfo.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          userName_ = "";
+          userId_ = "";
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return person.SeckillPersonRpc.internal_static_PersonMessage_PersonInfo_descriptor;
+        }
+
+        @java.lang.Override
+        public person.SeckillPersonRpc.PersonMessage.PersonInfo getDefaultInstanceForType() {
+          return person.SeckillPersonRpc.PersonMessage.PersonInfo.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public person.SeckillPersonRpc.PersonMessage.PersonInfo build() {
+          person.SeckillPersonRpc.PersonMessage.PersonInfo result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public person.SeckillPersonRpc.PersonMessage.PersonInfo buildPartial() {
+          person.SeckillPersonRpc.PersonMessage.PersonInfo result = new person.SeckillPersonRpc.PersonMessage.PersonInfo(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(person.SeckillPersonRpc.PersonMessage.PersonInfo result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.userName_ = userName_;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.userId_ = userId_;
+          }
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof person.SeckillPersonRpc.PersonMessage.PersonInfo) {
+            return mergeFrom((person.SeckillPersonRpc.PersonMessage.PersonInfo)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(person.SeckillPersonRpc.PersonMessage.PersonInfo other) {
+          if (other == person.SeckillPersonRpc.PersonMessage.PersonInfo.getDefaultInstance()) return this;
+          if (!other.getUserName().isEmpty()) {
+            userName_ = other.userName_;
+            bitField0_ |= 0x00000001;
+            onChanged();
+          }
+          if (!other.getUserId().isEmpty()) {
+            userId_ = other.userId_;
+            bitField0_ |= 0x00000002;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  userName_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 10
+                case 18: {
+                  userId_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000002;
+                  break;
+                } // case 18
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private java.lang.Object userName_ = "";
+        /**
+         * <pre>
+         *用户名
+         * </pre>
+         *
+         * <code>string user_name = 1;</code>
+         * @return The userName.
+         */
+        public java.lang.String getUserName() {
+          java.lang.Object ref = userName_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            userName_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         *用户名
+         * </pre>
+         *
+         * <code>string user_name = 1;</code>
+         * @return The bytes for userName.
+         */
+        public com.google.protobuf.ByteString
+            getUserNameBytes() {
+          java.lang.Object ref = userName_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            userName_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         *用户名
+         * </pre>
+         *
+         * <code>string user_name = 1;</code>
+         * @param value The userName to set.
+         * @return This builder for chaining.
+         */
+        public Builder setUserName(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          userName_ = value;
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         *用户名
+         * </pre>
+         *
+         * <code>string user_name = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearUserName() {
+          userName_ = getDefaultInstance().getUserName();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         *用户名
+         * </pre>
+         *
+         * <code>string user_name = 1;</code>
+         * @param value The bytes for userName to set.
+         * @return This builder for chaining.
+         */
+        public Builder setUserNameBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
+          userName_ = value;
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object userId_ = "";
+        /**
+         * <pre>
+         *状态码
+         * </pre>
+         *
+         * <code>string user_id = 2;</code>
+         * @return The userId.
+         */
+        public java.lang.String getUserId() {
+          java.lang.Object ref = userId_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            userId_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         *状态码
+         * </pre>
+         *
+         * <code>string user_id = 2;</code>
+         * @return The bytes for userId.
+         */
+        public com.google.protobuf.ByteString
+            getUserIdBytes() {
+          java.lang.Object ref = userId_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            userId_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         *状态码
+         * </pre>
+         *
+         * <code>string user_id = 2;</code>
+         * @param value The userId to set.
+         * @return This builder for chaining.
+         */
+        public Builder setUserId(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          userId_ = value;
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         *状态码
+         * </pre>
+         *
+         * <code>string user_id = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearUserId() {
+          userId_ = getDefaultInstance().getUserId();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         *状态码
+         * </pre>
+         *
+         * <code>string user_id = 2;</code>
+         * @param value The bytes for userId to set.
+         * @return This builder for chaining.
+         */
+        public Builder setUserIdBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
+          userId_ = value;
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:PersonMessage.PersonInfo)
+      }
+
+      // @@protoc_insertion_point(class_scope:PersonMessage.PersonInfo)
+      private static final person.SeckillPersonRpc.PersonMessage.PersonInfo DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new person.SeckillPersonRpc.PersonMessage.PersonInfo();
+      }
+
+      public static person.SeckillPersonRpc.PersonMessage.PersonInfo getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<PersonInfo>
+          PARSER = new com.google.protobuf.AbstractParser<PersonInfo>() {
+        @java.lang.Override
+        public PersonInfo parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<PersonInfo> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<PersonInfo> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public person.SeckillPersonRpc.PersonMessage.PersonInfo getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface findUserNameReqOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:PersonMessage.findUserNameReq)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       *用户名
+       * </pre>
+       *
+       * <code>string user_name = 1;</code>
+       * @return The userName.
+       */
+      java.lang.String getUserName();
+      /**
+       * <pre>
+       *用户名
+       * </pre>
+       *
+       * <code>string user_name = 1;</code>
+       * @return The bytes for userName.
+       */
+      com.google.protobuf.ByteString
+          getUserNameBytes();
+    }
+    /**
+     * Protobuf type {@code PersonMessage.findUserNameReq}
+     */
+    public static final class findUserNameReq extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:PersonMessage.findUserNameReq)
+        findUserNameReqOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use findUserNameReq.newBuilder() to construct.
+      private findUserNameReq(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private findUserNameReq() {
+        userName_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new findUserNameReq();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return person.SeckillPersonRpc.internal_static_PersonMessage_findUserNameReq_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return person.SeckillPersonRpc.internal_static_PersonMessage_findUserNameReq_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                person.SeckillPersonRpc.PersonMessage.findUserNameReq.class, person.SeckillPersonRpc.PersonMessage.findUserNameReq.Builder.class);
+      }
+
+      public static final int USER_NAME_FIELD_NUMBER = 1;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object userName_ = "";
+      /**
+       * <pre>
+       *用户名
+       * </pre>
+       *
+       * <code>string user_name = 1;</code>
+       * @return The userName.
+       */
+      @java.lang.Override
+      public java.lang.String getUserName() {
+        java.lang.Object ref = userName_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          userName_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       *用户名
+       * </pre>
+       *
+       * <code>string user_name = 1;</code>
+       * @return The bytes for userName.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getUserNameBytes() {
+        java.lang.Object ref = userName_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          userName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userName_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, userName_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userName_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, userName_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof person.SeckillPersonRpc.PersonMessage.findUserNameReq)) {
+          return super.equals(obj);
+        }
+        person.SeckillPersonRpc.PersonMessage.findUserNameReq other = (person.SeckillPersonRpc.PersonMessage.findUserNameReq) obj;
+
+        if (!getUserName()
+            .equals(other.getUserName())) return false;
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + USER_NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getUserName().hashCode();
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static person.SeckillPersonRpc.PersonMessage.findUserNameReq parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static person.SeckillPersonRpc.PersonMessage.findUserNameReq parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static person.SeckillPersonRpc.PersonMessage.findUserNameReq parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static person.SeckillPersonRpc.PersonMessage.findUserNameReq parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static person.SeckillPersonRpc.PersonMessage.findUserNameReq parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static person.SeckillPersonRpc.PersonMessage.findUserNameReq parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static person.SeckillPersonRpc.PersonMessage.findUserNameReq parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static person.SeckillPersonRpc.PersonMessage.findUserNameReq parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static person.SeckillPersonRpc.PersonMessage.findUserNameReq parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static person.SeckillPersonRpc.PersonMessage.findUserNameReq parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static person.SeckillPersonRpc.PersonMessage.findUserNameReq parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static person.SeckillPersonRpc.PersonMessage.findUserNameReq parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(person.SeckillPersonRpc.PersonMessage.findUserNameReq prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code PersonMessage.findUserNameReq}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:PersonMessage.findUserNameReq)
+          person.SeckillPersonRpc.PersonMessage.findUserNameReqOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return person.SeckillPersonRpc.internal_static_PersonMessage_findUserNameReq_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return person.SeckillPersonRpc.internal_static_PersonMessage_findUserNameReq_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  person.SeckillPersonRpc.PersonMessage.findUserNameReq.class, person.SeckillPersonRpc.PersonMessage.findUserNameReq.Builder.class);
+        }
+
+        // Construct using person.SeckillPersonRpc.PersonMessage.findUserNameReq.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          userName_ = "";
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return person.SeckillPersonRpc.internal_static_PersonMessage_findUserNameReq_descriptor;
+        }
+
+        @java.lang.Override
+        public person.SeckillPersonRpc.PersonMessage.findUserNameReq getDefaultInstanceForType() {
+          return person.SeckillPersonRpc.PersonMessage.findUserNameReq.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public person.SeckillPersonRpc.PersonMessage.findUserNameReq build() {
+          person.SeckillPersonRpc.PersonMessage.findUserNameReq result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public person.SeckillPersonRpc.PersonMessage.findUserNameReq buildPartial() {
+          person.SeckillPersonRpc.PersonMessage.findUserNameReq result = new person.SeckillPersonRpc.PersonMessage.findUserNameReq(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(person.SeckillPersonRpc.PersonMessage.findUserNameReq result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.userName_ = userName_;
+          }
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof person.SeckillPersonRpc.PersonMessage.findUserNameReq) {
+            return mergeFrom((person.SeckillPersonRpc.PersonMessage.findUserNameReq)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(person.SeckillPersonRpc.PersonMessage.findUserNameReq other) {
+          if (other == person.SeckillPersonRpc.PersonMessage.findUserNameReq.getDefaultInstance()) return this;
+          if (!other.getUserName().isEmpty()) {
+            userName_ = other.userName_;
+            bitField0_ |= 0x00000001;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  userName_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 10
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private java.lang.Object userName_ = "";
+        /**
+         * <pre>
+         *用户名
+         * </pre>
+         *
+         * <code>string user_name = 1;</code>
+         * @return The userName.
+         */
+        public java.lang.String getUserName() {
+          java.lang.Object ref = userName_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            userName_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         *用户名
+         * </pre>
+         *
+         * <code>string user_name = 1;</code>
+         * @return The bytes for userName.
+         */
+        public com.google.protobuf.ByteString
+            getUserNameBytes() {
+          java.lang.Object ref = userName_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            userName_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         *用户名
+         * </pre>
+         *
+         * <code>string user_name = 1;</code>
+         * @param value The userName to set.
+         * @return This builder for chaining.
+         */
+        public Builder setUserName(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          userName_ = value;
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         *用户名
+         * </pre>
+         *
+         * <code>string user_name = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearUserName() {
+          userName_ = getDefaultInstance().getUserName();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         *用户名
+         * </pre>
+         *
+         * <code>string user_name = 1;</code>
+         * @param value The bytes for userName to set.
+         * @return This builder for chaining.
+         */
+        public Builder setUserNameBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
+          userName_ = value;
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:PersonMessage.findUserNameReq)
+      }
+
+      // @@protoc_insertion_point(class_scope:PersonMessage.findUserNameReq)
+      private static final person.SeckillPersonRpc.PersonMessage.findUserNameReq DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new person.SeckillPersonRpc.PersonMessage.findUserNameReq();
+      }
+
+      public static person.SeckillPersonRpc.PersonMessage.findUserNameReq getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<findUserNameReq>
+          PARSER = new com.google.protobuf.AbstractParser<findUserNameReq>() {
+        @java.lang.Override
+        public findUserNameReq parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<findUserNameReq> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<findUserNameReq> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public person.SeckillPersonRpc.PersonMessage.findUserNameReq getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3447,6 +5568,21 @@ public final class SeckillPersonRpc {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_PersonMessage_PersonLoginReq_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_PersonMessage_PersonLoginRely_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_PersonMessage_PersonLoginRely_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_PersonMessage_PersonInfo_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_PersonMessage_PersonInfo_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_PersonMessage_findUserNameReq_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_PersonMessage_findUserNameReq_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -3456,19 +5592,25 @@ public final class SeckillPersonRpc {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\030seckill-person-rpc.proto\"\336\001\n\rPersonMes" +
+      "\n\030seckill-person-rpc.proto\"\202\003\n\rPersonMes" +
       "sage\032\032\n\nCommonRely\022\014\n\004code\030\001 \001(\005\0326\n\017Crea" +
       "tePersonReq\022\021\n\tuser_name\030\001 \001(\t\022\020\n\010passwo" +
       "rd\030\002 \001(\t\032B\n\017UpdatePersonReq\022\021\n\tuser_name" +
       "\030\001 \001(\t\022\020\n\010password\030\002 \001(\t\022\n\n\002id\030\003 \001(\t\0325\n\016" +
       "PersonLoginReq\022\021\n\tuser_name\030\001 \001(\t\022\020\n\010pas" +
-      "sword\030\002 \001(\t2\351\001\n\024SeckillPersonService\022E\n\006" +
-      "create\022\036.PersonMessage.CreatePersonReq\032\031" +
-      ".PersonMessage.CommonRely\"\000\022E\n\006update\022\036." +
-      "PersonMessage.UpdatePersonReq\032\031.PersonMe" +
-      "ssage.CommonRely\"\000\022C\n\005login\022\035.PersonMess" +
-      "age.PersonLoginReq\032\031.PersonMessage.Commo" +
-      "nRely\"\000B\010\n\006personb\006proto3"
+      "sword\030\002 \001(\t\032J\n\017PersonLoginRely\022\014\n\004code\030\001" +
+      " \001(\005\022)\n\006person\030\002 \001(\0132\031.PersonMessage.Per" +
+      "sonInfo\0320\n\nPersonInfo\022\021\n\tuser_name\030\001 \001(\t" +
+      "\022\017\n\007user_id\030\002 \001(\t\032$\n\017findUserNameReq\022\021\n\t" +
+      "user_name\030\001 \001(\t2\273\002\n\024SeckillPersonService" +
+      "\022E\n\006create\022\036.PersonMessage.CreatePersonR" +
+      "eq\032\031.PersonMessage.CommonRely\"\000\022E\n\006updat" +
+      "e\022\036.PersonMessage.UpdatePersonReq\032\031.Pers" +
+      "onMessage.CommonRely\"\000\022H\n\005login\022\035.Person" +
+      "Message.PersonLoginReq\032\036.PersonMessage.P" +
+      "ersonLoginRely\"\000\022K\n\014findUserName\022\036.Perso" +
+      "nMessage.findUserNameReq\032\031.PersonMessage" +
+      ".CommonRely\"\000B\010\n\006personb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3504,6 +5646,24 @@ public final class SeckillPersonRpc {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_PersonMessage_PersonLoginReq_descriptor,
         new java.lang.String[] { "UserName", "Password", });
+    internal_static_PersonMessage_PersonLoginRely_descriptor =
+      internal_static_PersonMessage_descriptor.getNestedTypes().get(4);
+    internal_static_PersonMessage_PersonLoginRely_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_PersonMessage_PersonLoginRely_descriptor,
+        new java.lang.String[] { "Code", "Person", });
+    internal_static_PersonMessage_PersonInfo_descriptor =
+      internal_static_PersonMessage_descriptor.getNestedTypes().get(5);
+    internal_static_PersonMessage_PersonInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_PersonMessage_PersonInfo_descriptor,
+        new java.lang.String[] { "UserName", "UserId", });
+    internal_static_PersonMessage_findUserNameReq_descriptor =
+      internal_static_PersonMessage_descriptor.getNestedTypes().get(6);
+    internal_static_PersonMessage_findUserNameReq_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_PersonMessage_findUserNameReq_descriptor,
+        new java.lang.String[] { "UserName", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
