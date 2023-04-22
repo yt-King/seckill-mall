@@ -3085,27 +3085,27 @@ public final class SeckillPersonRpc {
        *用户信息
        * </pre>
        *
-       * <code>.PersonMessage.PersonInfo person = 2;</code>
-       * @return Whether the person field is set.
+       * <code>.PersonMessage.PersonInfo user = 2;</code>
+       * @return Whether the user field is set.
        */
-      boolean hasPerson();
+      boolean hasUser();
       /**
        * <pre>
        *用户信息
        * </pre>
        *
-       * <code>.PersonMessage.PersonInfo person = 2;</code>
-       * @return The person.
+       * <code>.PersonMessage.PersonInfo user = 2;</code>
+       * @return The user.
        */
-      person.SeckillPersonRpc.PersonMessage.PersonInfo getPerson();
+      person.SeckillPersonRpc.PersonMessage.PersonInfo getUser();
       /**
        * <pre>
        *用户信息
        * </pre>
        *
-       * <code>.PersonMessage.PersonInfo person = 2;</code>
+       * <code>.PersonMessage.PersonInfo user = 2;</code>
        */
-      person.SeckillPersonRpc.PersonMessage.PersonInfoOrBuilder getPersonOrBuilder();
+      person.SeckillPersonRpc.PersonMessage.PersonInfoOrBuilder getUserOrBuilder();
     }
     /**
      * Protobuf type {@code PersonMessage.PersonLoginRely}
@@ -3162,42 +3162,42 @@ public final class SeckillPersonRpc {
         return code_;
       }
 
-      public static final int PERSON_FIELD_NUMBER = 2;
-      private person.SeckillPersonRpc.PersonMessage.PersonInfo person_;
+      public static final int USER_FIELD_NUMBER = 2;
+      private person.SeckillPersonRpc.PersonMessage.PersonInfo user_;
       /**
        * <pre>
        *用户信息
        * </pre>
        *
-       * <code>.PersonMessage.PersonInfo person = 2;</code>
-       * @return Whether the person field is set.
+       * <code>.PersonMessage.PersonInfo user = 2;</code>
+       * @return Whether the user field is set.
        */
       @java.lang.Override
-      public boolean hasPerson() {
-        return person_ != null;
+      public boolean hasUser() {
+        return user_ != null;
       }
       /**
        * <pre>
        *用户信息
        * </pre>
        *
-       * <code>.PersonMessage.PersonInfo person = 2;</code>
-       * @return The person.
+       * <code>.PersonMessage.PersonInfo user = 2;</code>
+       * @return The user.
        */
       @java.lang.Override
-      public person.SeckillPersonRpc.PersonMessage.PersonInfo getPerson() {
-        return person_ == null ? person.SeckillPersonRpc.PersonMessage.PersonInfo.getDefaultInstance() : person_;
+      public person.SeckillPersonRpc.PersonMessage.PersonInfo getUser() {
+        return user_ == null ? person.SeckillPersonRpc.PersonMessage.PersonInfo.getDefaultInstance() : user_;
       }
       /**
        * <pre>
        *用户信息
        * </pre>
        *
-       * <code>.PersonMessage.PersonInfo person = 2;</code>
+       * <code>.PersonMessage.PersonInfo user = 2;</code>
        */
       @java.lang.Override
-      public person.SeckillPersonRpc.PersonMessage.PersonInfoOrBuilder getPersonOrBuilder() {
-        return person_ == null ? person.SeckillPersonRpc.PersonMessage.PersonInfo.getDefaultInstance() : person_;
+      public person.SeckillPersonRpc.PersonMessage.PersonInfoOrBuilder getUserOrBuilder() {
+        return user_ == null ? person.SeckillPersonRpc.PersonMessage.PersonInfo.getDefaultInstance() : user_;
       }
 
       private byte memoizedIsInitialized = -1;
@@ -3217,8 +3217,8 @@ public final class SeckillPersonRpc {
         if (code_ != 0) {
           output.writeInt32(1, code_);
         }
-        if (person_ != null) {
-          output.writeMessage(2, getPerson());
+        if (user_ != null) {
+          output.writeMessage(2, getUser());
         }
         getUnknownFields().writeTo(output);
       }
@@ -3233,9 +3233,9 @@ public final class SeckillPersonRpc {
           size += com.google.protobuf.CodedOutputStream
             .computeInt32Size(1, code_);
         }
-        if (person_ != null) {
+        if (user_ != null) {
           size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(2, getPerson());
+            .computeMessageSize(2, getUser());
         }
         size += getUnknownFields().getSerializedSize();
         memoizedSize = size;
@@ -3254,10 +3254,10 @@ public final class SeckillPersonRpc {
 
         if (getCode()
             != other.getCode()) return false;
-        if (hasPerson() != other.hasPerson()) return false;
-        if (hasPerson()) {
-          if (!getPerson()
-              .equals(other.getPerson())) return false;
+        if (hasUser() != other.hasUser()) return false;
+        if (hasUser()) {
+          if (!getUser()
+              .equals(other.getUser())) return false;
         }
         if (!getUnknownFields().equals(other.getUnknownFields())) return false;
         return true;
@@ -3272,9 +3272,9 @@ public final class SeckillPersonRpc {
         hash = (19 * hash) + getDescriptor().hashCode();
         hash = (37 * hash) + CODE_FIELD_NUMBER;
         hash = (53 * hash) + getCode();
-        if (hasPerson()) {
-          hash = (37 * hash) + PERSON_FIELD_NUMBER;
-          hash = (53 * hash) + getPerson().hashCode();
+        if (hasUser()) {
+          hash = (37 * hash) + USER_FIELD_NUMBER;
+          hash = (53 * hash) + getUser().hashCode();
         }
         hash = (29 * hash) + getUnknownFields().hashCode();
         memoizedHashCode = hash;
@@ -3406,10 +3406,10 @@ public final class SeckillPersonRpc {
           super.clear();
           bitField0_ = 0;
           code_ = 0;
-          person_ = null;
-          if (personBuilder_ != null) {
-            personBuilder_.dispose();
-            personBuilder_ = null;
+          user_ = null;
+          if (userBuilder_ != null) {
+            userBuilder_.dispose();
+            userBuilder_ = null;
           }
           return this;
         }
@@ -3448,9 +3448,9 @@ public final class SeckillPersonRpc {
             result.code_ = code_;
           }
           if (((from_bitField0_ & 0x00000002) != 0)) {
-            result.person_ = personBuilder_ == null
-                ? person_
-                : personBuilder_.build();
+            result.user_ = userBuilder_ == null
+                ? user_
+                : userBuilder_.build();
           }
         }
 
@@ -3501,8 +3501,8 @@ public final class SeckillPersonRpc {
           if (other.getCode() != 0) {
             setCode(other.getCode());
           }
-          if (other.hasPerson()) {
-            mergePerson(other.getPerson());
+          if (other.hasUser()) {
+            mergeUser(other.getUser());
           }
           this.mergeUnknownFields(other.getUnknownFields());
           onChanged();
@@ -3537,7 +3537,7 @@ public final class SeckillPersonRpc {
                 } // case 8
                 case 18: {
                   input.readMessage(
-                      getPersonFieldBuilder().getBuilder(),
+                      getUserFieldBuilder().getBuilder(),
                       extensionRegistry);
                   bitField0_ |= 0x00000002;
                   break;
@@ -3603,18 +3603,18 @@ public final class SeckillPersonRpc {
           return this;
         }
 
-        private person.SeckillPersonRpc.PersonMessage.PersonInfo person_;
+        private person.SeckillPersonRpc.PersonMessage.PersonInfo user_;
         private com.google.protobuf.SingleFieldBuilderV3<
-            person.SeckillPersonRpc.PersonMessage.PersonInfo, person.SeckillPersonRpc.PersonMessage.PersonInfo.Builder, person.SeckillPersonRpc.PersonMessage.PersonInfoOrBuilder> personBuilder_;
+            person.SeckillPersonRpc.PersonMessage.PersonInfo, person.SeckillPersonRpc.PersonMessage.PersonInfo.Builder, person.SeckillPersonRpc.PersonMessage.PersonInfoOrBuilder> userBuilder_;
         /**
          * <pre>
          *用户信息
          * </pre>
          *
-         * <code>.PersonMessage.PersonInfo person = 2;</code>
-         * @return Whether the person field is set.
+         * <code>.PersonMessage.PersonInfo user = 2;</code>
+         * @return Whether the user field is set.
          */
-        public boolean hasPerson() {
+        public boolean hasUser() {
           return ((bitField0_ & 0x00000002) != 0);
         }
         /**
@@ -3622,14 +3622,14 @@ public final class SeckillPersonRpc {
          *用户信息
          * </pre>
          *
-         * <code>.PersonMessage.PersonInfo person = 2;</code>
-         * @return The person.
+         * <code>.PersonMessage.PersonInfo user = 2;</code>
+         * @return The user.
          */
-        public person.SeckillPersonRpc.PersonMessage.PersonInfo getPerson() {
-          if (personBuilder_ == null) {
-            return person_ == null ? person.SeckillPersonRpc.PersonMessage.PersonInfo.getDefaultInstance() : person_;
+        public person.SeckillPersonRpc.PersonMessage.PersonInfo getUser() {
+          if (userBuilder_ == null) {
+            return user_ == null ? person.SeckillPersonRpc.PersonMessage.PersonInfo.getDefaultInstance() : user_;
           } else {
-            return personBuilder_.getMessage();
+            return userBuilder_.getMessage();
           }
         }
         /**
@@ -3637,16 +3637,16 @@ public final class SeckillPersonRpc {
          *用户信息
          * </pre>
          *
-         * <code>.PersonMessage.PersonInfo person = 2;</code>
+         * <code>.PersonMessage.PersonInfo user = 2;</code>
          */
-        public Builder setPerson(person.SeckillPersonRpc.PersonMessage.PersonInfo value) {
-          if (personBuilder_ == null) {
+        public Builder setUser(person.SeckillPersonRpc.PersonMessage.PersonInfo value) {
+          if (userBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
             }
-            person_ = value;
+            user_ = value;
           } else {
-            personBuilder_.setMessage(value);
+            userBuilder_.setMessage(value);
           }
           bitField0_ |= 0x00000002;
           onChanged();
@@ -3657,14 +3657,14 @@ public final class SeckillPersonRpc {
          *用户信息
          * </pre>
          *
-         * <code>.PersonMessage.PersonInfo person = 2;</code>
+         * <code>.PersonMessage.PersonInfo user = 2;</code>
          */
-        public Builder setPerson(
+        public Builder setUser(
             person.SeckillPersonRpc.PersonMessage.PersonInfo.Builder builderForValue) {
-          if (personBuilder_ == null) {
-            person_ = builderForValue.build();
+          if (userBuilder_ == null) {
+            user_ = builderForValue.build();
           } else {
-            personBuilder_.setMessage(builderForValue.build());
+            userBuilder_.setMessage(builderForValue.build());
           }
           bitField0_ |= 0x00000002;
           onChanged();
@@ -3675,19 +3675,19 @@ public final class SeckillPersonRpc {
          *用户信息
          * </pre>
          *
-         * <code>.PersonMessage.PersonInfo person = 2;</code>
+         * <code>.PersonMessage.PersonInfo user = 2;</code>
          */
-        public Builder mergePerson(person.SeckillPersonRpc.PersonMessage.PersonInfo value) {
-          if (personBuilder_ == null) {
+        public Builder mergeUser(person.SeckillPersonRpc.PersonMessage.PersonInfo value) {
+          if (userBuilder_ == null) {
             if (((bitField0_ & 0x00000002) != 0) &&
-              person_ != null &&
-              person_ != person.SeckillPersonRpc.PersonMessage.PersonInfo.getDefaultInstance()) {
-              getPersonBuilder().mergeFrom(value);
+              user_ != null &&
+              user_ != person.SeckillPersonRpc.PersonMessage.PersonInfo.getDefaultInstance()) {
+              getUserBuilder().mergeFrom(value);
             } else {
-              person_ = value;
+              user_ = value;
             }
           } else {
-            personBuilder_.mergeFrom(value);
+            userBuilder_.mergeFrom(value);
           }
           bitField0_ |= 0x00000002;
           onChanged();
@@ -3698,14 +3698,14 @@ public final class SeckillPersonRpc {
          *用户信息
          * </pre>
          *
-         * <code>.PersonMessage.PersonInfo person = 2;</code>
+         * <code>.PersonMessage.PersonInfo user = 2;</code>
          */
-        public Builder clearPerson() {
+        public Builder clearUser() {
           bitField0_ = (bitField0_ & ~0x00000002);
-          person_ = null;
-          if (personBuilder_ != null) {
-            personBuilder_.dispose();
-            personBuilder_ = null;
+          user_ = null;
+          if (userBuilder_ != null) {
+            userBuilder_.dispose();
+            userBuilder_ = null;
           }
           onChanged();
           return this;
@@ -3715,26 +3715,26 @@ public final class SeckillPersonRpc {
          *用户信息
          * </pre>
          *
-         * <code>.PersonMessage.PersonInfo person = 2;</code>
+         * <code>.PersonMessage.PersonInfo user = 2;</code>
          */
-        public person.SeckillPersonRpc.PersonMessage.PersonInfo.Builder getPersonBuilder() {
+        public person.SeckillPersonRpc.PersonMessage.PersonInfo.Builder getUserBuilder() {
           bitField0_ |= 0x00000002;
           onChanged();
-          return getPersonFieldBuilder().getBuilder();
+          return getUserFieldBuilder().getBuilder();
         }
         /**
          * <pre>
          *用户信息
          * </pre>
          *
-         * <code>.PersonMessage.PersonInfo person = 2;</code>
+         * <code>.PersonMessage.PersonInfo user = 2;</code>
          */
-        public person.SeckillPersonRpc.PersonMessage.PersonInfoOrBuilder getPersonOrBuilder() {
-          if (personBuilder_ != null) {
-            return personBuilder_.getMessageOrBuilder();
+        public person.SeckillPersonRpc.PersonMessage.PersonInfoOrBuilder getUserOrBuilder() {
+          if (userBuilder_ != null) {
+            return userBuilder_.getMessageOrBuilder();
           } else {
-            return person_ == null ?
-                person.SeckillPersonRpc.PersonMessage.PersonInfo.getDefaultInstance() : person_;
+            return user_ == null ?
+                person.SeckillPersonRpc.PersonMessage.PersonInfo.getDefaultInstance() : user_;
           }
         }
         /**
@@ -3742,20 +3742,20 @@ public final class SeckillPersonRpc {
          *用户信息
          * </pre>
          *
-         * <code>.PersonMessage.PersonInfo person = 2;</code>
+         * <code>.PersonMessage.PersonInfo user = 2;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
             person.SeckillPersonRpc.PersonMessage.PersonInfo, person.SeckillPersonRpc.PersonMessage.PersonInfo.Builder, person.SeckillPersonRpc.PersonMessage.PersonInfoOrBuilder> 
-            getPersonFieldBuilder() {
-          if (personBuilder_ == null) {
-            personBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            getUserFieldBuilder() {
+          if (userBuilder_ == null) {
+            userBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
                 person.SeckillPersonRpc.PersonMessage.PersonInfo, person.SeckillPersonRpc.PersonMessage.PersonInfo.Builder, person.SeckillPersonRpc.PersonMessage.PersonInfoOrBuilder>(
-                    getPerson(),
+                    getUser(),
                     getParentForChildren(),
                     isClean());
-            person_ = null;
+            user_ = null;
           }
-          return personBuilder_;
+          return userBuilder_;
         }
         @java.lang.Override
         public final Builder setUnknownFields(
@@ -4596,8 +4596,8 @@ public final class SeckillPersonRpc {
 
     }
 
-    public interface findUserNameReqOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:PersonMessage.findUserNameReq)
+    public interface JudgeExistenceReqOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:PersonMessage.JudgeExistenceReq)
         com.google.protobuf.MessageOrBuilder {
 
       /**
@@ -4621,18 +4621,18 @@ public final class SeckillPersonRpc {
           getUserNameBytes();
     }
     /**
-     * Protobuf type {@code PersonMessage.findUserNameReq}
+     * Protobuf type {@code PersonMessage.JudgeExistenceReq}
      */
-    public static final class findUserNameReq extends
+    public static final class JudgeExistenceReq extends
         com.google.protobuf.GeneratedMessageV3 implements
-        // @@protoc_insertion_point(message_implements:PersonMessage.findUserNameReq)
-        findUserNameReqOrBuilder {
+        // @@protoc_insertion_point(message_implements:PersonMessage.JudgeExistenceReq)
+        JudgeExistenceReqOrBuilder {
     private static final long serialVersionUID = 0L;
-      // Use findUserNameReq.newBuilder() to construct.
-      private findUserNameReq(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      // Use JudgeExistenceReq.newBuilder() to construct.
+      private JudgeExistenceReq(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
         super(builder);
       }
-      private findUserNameReq() {
+      private JudgeExistenceReq() {
         userName_ = "";
       }
 
@@ -4640,7 +4640,7 @@ public final class SeckillPersonRpc {
       @SuppressWarnings({"unused"})
       protected java.lang.Object newInstance(
           UnusedPrivateParameter unused) {
-        return new findUserNameReq();
+        return new JudgeExistenceReq();
       }
 
       @java.lang.Override
@@ -4650,15 +4650,15 @@ public final class SeckillPersonRpc {
       }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return person.SeckillPersonRpc.internal_static_PersonMessage_findUserNameReq_descriptor;
+        return person.SeckillPersonRpc.internal_static_PersonMessage_JudgeExistenceReq_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return person.SeckillPersonRpc.internal_static_PersonMessage_findUserNameReq_fieldAccessorTable
+        return person.SeckillPersonRpc.internal_static_PersonMessage_JudgeExistenceReq_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                person.SeckillPersonRpc.PersonMessage.findUserNameReq.class, person.SeckillPersonRpc.PersonMessage.findUserNameReq.Builder.class);
+                person.SeckillPersonRpc.PersonMessage.JudgeExistenceReq.class, person.SeckillPersonRpc.PersonMessage.JudgeExistenceReq.Builder.class);
       }
 
       public static final int USER_NAME_FIELD_NUMBER = 1;
@@ -4747,10 +4747,10 @@ public final class SeckillPersonRpc {
         if (obj == this) {
          return true;
         }
-        if (!(obj instanceof person.SeckillPersonRpc.PersonMessage.findUserNameReq)) {
+        if (!(obj instanceof person.SeckillPersonRpc.PersonMessage.JudgeExistenceReq)) {
           return super.equals(obj);
         }
-        person.SeckillPersonRpc.PersonMessage.findUserNameReq other = (person.SeckillPersonRpc.PersonMessage.findUserNameReq) obj;
+        person.SeckillPersonRpc.PersonMessage.JudgeExistenceReq other = (person.SeckillPersonRpc.PersonMessage.JudgeExistenceReq) obj;
 
         if (!getUserName()
             .equals(other.getUserName())) return false;
@@ -4772,69 +4772,69 @@ public final class SeckillPersonRpc {
         return hash;
       }
 
-      public static person.SeckillPersonRpc.PersonMessage.findUserNameReq parseFrom(
+      public static person.SeckillPersonRpc.PersonMessage.JudgeExistenceReq parseFrom(
           java.nio.ByteBuffer data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static person.SeckillPersonRpc.PersonMessage.findUserNameReq parseFrom(
+      public static person.SeckillPersonRpc.PersonMessage.JudgeExistenceReq parseFrom(
           java.nio.ByteBuffer data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static person.SeckillPersonRpc.PersonMessage.findUserNameReq parseFrom(
+      public static person.SeckillPersonRpc.PersonMessage.JudgeExistenceReq parseFrom(
           com.google.protobuf.ByteString data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static person.SeckillPersonRpc.PersonMessage.findUserNameReq parseFrom(
+      public static person.SeckillPersonRpc.PersonMessage.JudgeExistenceReq parseFrom(
           com.google.protobuf.ByteString data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static person.SeckillPersonRpc.PersonMessage.findUserNameReq parseFrom(byte[] data)
+      public static person.SeckillPersonRpc.PersonMessage.JudgeExistenceReq parseFrom(byte[] data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static person.SeckillPersonRpc.PersonMessage.findUserNameReq parseFrom(
+      public static person.SeckillPersonRpc.PersonMessage.JudgeExistenceReq parseFrom(
           byte[] data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static person.SeckillPersonRpc.PersonMessage.findUserNameReq parseFrom(java.io.InputStream input)
+      public static person.SeckillPersonRpc.PersonMessage.JudgeExistenceReq parseFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static person.SeckillPersonRpc.PersonMessage.findUserNameReq parseFrom(
+      public static person.SeckillPersonRpc.PersonMessage.JudgeExistenceReq parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input, extensionRegistry);
       }
-      public static person.SeckillPersonRpc.PersonMessage.findUserNameReq parseDelimitedFrom(java.io.InputStream input)
+      public static person.SeckillPersonRpc.PersonMessage.JudgeExistenceReq parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input);
       }
-      public static person.SeckillPersonRpc.PersonMessage.findUserNameReq parseDelimitedFrom(
+      public static person.SeckillPersonRpc.PersonMessage.JudgeExistenceReq parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
-      public static person.SeckillPersonRpc.PersonMessage.findUserNameReq parseFrom(
+      public static person.SeckillPersonRpc.PersonMessage.JudgeExistenceReq parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static person.SeckillPersonRpc.PersonMessage.findUserNameReq parseFrom(
+      public static person.SeckillPersonRpc.PersonMessage.JudgeExistenceReq parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
@@ -4847,7 +4847,7 @@ public final class SeckillPersonRpc {
       public static Builder newBuilder() {
         return DEFAULT_INSTANCE.toBuilder();
       }
-      public static Builder newBuilder(person.SeckillPersonRpc.PersonMessage.findUserNameReq prototype) {
+      public static Builder newBuilder(person.SeckillPersonRpc.PersonMessage.JudgeExistenceReq prototype) {
         return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
       }
       @java.lang.Override
@@ -4863,26 +4863,26 @@ public final class SeckillPersonRpc {
         return builder;
       }
       /**
-       * Protobuf type {@code PersonMessage.findUserNameReq}
+       * Protobuf type {@code PersonMessage.JudgeExistenceReq}
        */
       public static final class Builder extends
           com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:PersonMessage.findUserNameReq)
-          person.SeckillPersonRpc.PersonMessage.findUserNameReqOrBuilder {
+          // @@protoc_insertion_point(builder_implements:PersonMessage.JudgeExistenceReq)
+          person.SeckillPersonRpc.PersonMessage.JudgeExistenceReqOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return person.SeckillPersonRpc.internal_static_PersonMessage_findUserNameReq_descriptor;
+          return person.SeckillPersonRpc.internal_static_PersonMessage_JudgeExistenceReq_descriptor;
         }
 
         @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return person.SeckillPersonRpc.internal_static_PersonMessage_findUserNameReq_fieldAccessorTable
+          return person.SeckillPersonRpc.internal_static_PersonMessage_JudgeExistenceReq_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  person.SeckillPersonRpc.PersonMessage.findUserNameReq.class, person.SeckillPersonRpc.PersonMessage.findUserNameReq.Builder.class);
+                  person.SeckillPersonRpc.PersonMessage.JudgeExistenceReq.class, person.SeckillPersonRpc.PersonMessage.JudgeExistenceReq.Builder.class);
         }
 
-        // Construct using person.SeckillPersonRpc.PersonMessage.findUserNameReq.newBuilder()
+        // Construct using person.SeckillPersonRpc.PersonMessage.JudgeExistenceReq.newBuilder()
         private Builder() {
 
         }
@@ -4903,17 +4903,17 @@ public final class SeckillPersonRpc {
         @java.lang.Override
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
-          return person.SeckillPersonRpc.internal_static_PersonMessage_findUserNameReq_descriptor;
+          return person.SeckillPersonRpc.internal_static_PersonMessage_JudgeExistenceReq_descriptor;
         }
 
         @java.lang.Override
-        public person.SeckillPersonRpc.PersonMessage.findUserNameReq getDefaultInstanceForType() {
-          return person.SeckillPersonRpc.PersonMessage.findUserNameReq.getDefaultInstance();
+        public person.SeckillPersonRpc.PersonMessage.JudgeExistenceReq getDefaultInstanceForType() {
+          return person.SeckillPersonRpc.PersonMessage.JudgeExistenceReq.getDefaultInstance();
         }
 
         @java.lang.Override
-        public person.SeckillPersonRpc.PersonMessage.findUserNameReq build() {
-          person.SeckillPersonRpc.PersonMessage.findUserNameReq result = buildPartial();
+        public person.SeckillPersonRpc.PersonMessage.JudgeExistenceReq build() {
+          person.SeckillPersonRpc.PersonMessage.JudgeExistenceReq result = buildPartial();
           if (!result.isInitialized()) {
             throw newUninitializedMessageException(result);
           }
@@ -4921,14 +4921,14 @@ public final class SeckillPersonRpc {
         }
 
         @java.lang.Override
-        public person.SeckillPersonRpc.PersonMessage.findUserNameReq buildPartial() {
-          person.SeckillPersonRpc.PersonMessage.findUserNameReq result = new person.SeckillPersonRpc.PersonMessage.findUserNameReq(this);
+        public person.SeckillPersonRpc.PersonMessage.JudgeExistenceReq buildPartial() {
+          person.SeckillPersonRpc.PersonMessage.JudgeExistenceReq result = new person.SeckillPersonRpc.PersonMessage.JudgeExistenceReq(this);
           if (bitField0_ != 0) { buildPartial0(result); }
           onBuilt();
           return result;
         }
 
-        private void buildPartial0(person.SeckillPersonRpc.PersonMessage.findUserNameReq result) {
+        private void buildPartial0(person.SeckillPersonRpc.PersonMessage.JudgeExistenceReq result) {
           int from_bitField0_ = bitField0_;
           if (((from_bitField0_ & 0x00000001) != 0)) {
             result.userName_ = userName_;
@@ -4969,16 +4969,16 @@ public final class SeckillPersonRpc {
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof person.SeckillPersonRpc.PersonMessage.findUserNameReq) {
-            return mergeFrom((person.SeckillPersonRpc.PersonMessage.findUserNameReq)other);
+          if (other instanceof person.SeckillPersonRpc.PersonMessage.JudgeExistenceReq) {
+            return mergeFrom((person.SeckillPersonRpc.PersonMessage.JudgeExistenceReq)other);
           } else {
             super.mergeFrom(other);
             return this;
           }
         }
 
-        public Builder mergeFrom(person.SeckillPersonRpc.PersonMessage.findUserNameReq other) {
-          if (other == person.SeckillPersonRpc.PersonMessage.findUserNameReq.getDefaultInstance()) return this;
+        public Builder mergeFrom(person.SeckillPersonRpc.PersonMessage.JudgeExistenceReq other) {
+          if (other == person.SeckillPersonRpc.PersonMessage.JudgeExistenceReq.getDefaultInstance()) return this;
           if (!other.getUserName().isEmpty()) {
             userName_ = other.userName_;
             bitField0_ |= 0x00000001;
@@ -5136,23 +5136,23 @@ public final class SeckillPersonRpc {
         }
 
 
-        // @@protoc_insertion_point(builder_scope:PersonMessage.findUserNameReq)
+        // @@protoc_insertion_point(builder_scope:PersonMessage.JudgeExistenceReq)
       }
 
-      // @@protoc_insertion_point(class_scope:PersonMessage.findUserNameReq)
-      private static final person.SeckillPersonRpc.PersonMessage.findUserNameReq DEFAULT_INSTANCE;
+      // @@protoc_insertion_point(class_scope:PersonMessage.JudgeExistenceReq)
+      private static final person.SeckillPersonRpc.PersonMessage.JudgeExistenceReq DEFAULT_INSTANCE;
       static {
-        DEFAULT_INSTANCE = new person.SeckillPersonRpc.PersonMessage.findUserNameReq();
+        DEFAULT_INSTANCE = new person.SeckillPersonRpc.PersonMessage.JudgeExistenceReq();
       }
 
-      public static person.SeckillPersonRpc.PersonMessage.findUserNameReq getDefaultInstance() {
+      public static person.SeckillPersonRpc.PersonMessage.JudgeExistenceReq getDefaultInstance() {
         return DEFAULT_INSTANCE;
       }
 
-      private static final com.google.protobuf.Parser<findUserNameReq>
-          PARSER = new com.google.protobuf.AbstractParser<findUserNameReq>() {
+      private static final com.google.protobuf.Parser<JudgeExistenceReq>
+          PARSER = new com.google.protobuf.AbstractParser<JudgeExistenceReq>() {
         @java.lang.Override
-        public findUserNameReq parsePartialFrom(
+        public JudgeExistenceReq parsePartialFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
@@ -5171,17 +5171,17 @@ public final class SeckillPersonRpc {
         }
       };
 
-      public static com.google.protobuf.Parser<findUserNameReq> parser() {
+      public static com.google.protobuf.Parser<JudgeExistenceReq> parser() {
         return PARSER;
       }
 
       @java.lang.Override
-      public com.google.protobuf.Parser<findUserNameReq> getParserForType() {
+      public com.google.protobuf.Parser<JudgeExistenceReq> getParserForType() {
         return PARSER;
       }
 
       @java.lang.Override
-      public person.SeckillPersonRpc.PersonMessage.findUserNameReq getDefaultInstanceForType() {
+      public person.SeckillPersonRpc.PersonMessage.JudgeExistenceReq getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
 
@@ -5579,10 +5579,10 @@ public final class SeckillPersonRpc {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_PersonMessage_PersonInfo_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_PersonMessage_findUserNameReq_descriptor;
+    internal_static_PersonMessage_JudgeExistenceReq_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_PersonMessage_findUserNameReq_fieldAccessorTable;
+      internal_static_PersonMessage_JudgeExistenceReq_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -5598,19 +5598,19 @@ public final class SeckillPersonRpc {
       "rd\030\002 \001(\t\032B\n\017UpdatePersonReq\022\021\n\tuser_name" +
       "\030\001 \001(\t\022\020\n\010password\030\002 \001(\t\022\n\n\002id\030\003 \001(\t\0325\n\016" +
       "PersonLoginReq\022\021\n\tuser_name\030\001 \001(\t\022\020\n\010pas" +
-      "sword\030\002 \001(\t\032J\n\017PersonLoginRely\022\014\n\004code\030\001" +
-      " \001(\005\022)\n\006person\030\002 \001(\0132\031.PersonMessage.Per" +
-      "sonInfo\0320\n\nPersonInfo\022\021\n\tuser_name\030\001 \001(\t" +
-      "\022\017\n\007user_id\030\002 \001(\t\032$\n\017findUserNameReq\022\021\n\t" +
-      "user_name\030\001 \001(\t2\273\002\n\024SeckillPersonService" +
+      "sword\030\002 \001(\t\032H\n\017PersonLoginRely\022\014\n\004code\030\001" +
+      " \001(\005\022\'\n\004user\030\002 \001(\0132\031.PersonMessage.Perso" +
+      "nInfo\0320\n\nPersonInfo\022\021\n\tuser_name\030\001 \001(\t\022\017" +
+      "\n\007user_id\030\002 \001(\t\032&\n\021JudgeExistenceReq\022\021\n\t" +
+      "user_name\030\001 \001(\t2\277\002\n\024SeckillPersonService" +
       "\022E\n\006create\022\036.PersonMessage.CreatePersonR" +
       "eq\032\031.PersonMessage.CommonRely\"\000\022E\n\006updat" +
       "e\022\036.PersonMessage.UpdatePersonReq\032\031.Pers" +
       "onMessage.CommonRely\"\000\022H\n\005login\022\035.Person" +
       "Message.PersonLoginReq\032\036.PersonMessage.P" +
-      "ersonLoginRely\"\000\022K\n\014findUserName\022\036.Perso" +
-      "nMessage.findUserNameReq\032\031.PersonMessage" +
-      ".CommonRely\"\000B\010\n\006personb\006proto3"
+      "ersonLoginRely\"\000\022O\n\016judgeExistence\022 .Per" +
+      "sonMessage.JudgeExistenceReq\032\031.PersonMes" +
+      "sage.CommonRely\"\000B\010\n\006personb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5651,18 +5651,18 @@ public final class SeckillPersonRpc {
     internal_static_PersonMessage_PersonLoginRely_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_PersonMessage_PersonLoginRely_descriptor,
-        new java.lang.String[] { "Code", "Person", });
+        new java.lang.String[] { "Code", "User", });
     internal_static_PersonMessage_PersonInfo_descriptor =
       internal_static_PersonMessage_descriptor.getNestedTypes().get(5);
     internal_static_PersonMessage_PersonInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_PersonMessage_PersonInfo_descriptor,
         new java.lang.String[] { "UserName", "UserId", });
-    internal_static_PersonMessage_findUserNameReq_descriptor =
+    internal_static_PersonMessage_JudgeExistenceReq_descriptor =
       internal_static_PersonMessage_descriptor.getNestedTypes().get(6);
-    internal_static_PersonMessage_findUserNameReq_fieldAccessorTable = new
+    internal_static_PersonMessage_JudgeExistenceReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_PersonMessage_findUserNameReq_descriptor,
+        internal_static_PersonMessage_JudgeExistenceReq_descriptor,
         new java.lang.String[] { "UserName", });
   }
 

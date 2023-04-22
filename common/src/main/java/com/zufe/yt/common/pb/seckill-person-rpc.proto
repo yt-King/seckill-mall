@@ -13,7 +13,7 @@ service SeckillPersonService {
   rpc login(PersonMessage.PersonLoginReq) returns (PersonMessage.PersonLoginRely) {
   }
   // 判断用户名
-  rpc findUserName(PersonMessage.findUserNameReq) returns (PersonMessage.CommonRely) {
+  rpc judgeExistence(PersonMessage.JudgeExistenceReq) returns (PersonMessage.CommonRely) {
   }
 }
 
@@ -45,7 +45,7 @@ message PersonMessage{
     //状态码
     int32 code = 1;
     //用户信息
-    PersonInfo person = 2;
+    PersonInfo user = 2;
   }
   message PersonInfo {
     //用户名
@@ -53,7 +53,7 @@ message PersonMessage{
     //状态码
     string user_id = 2;
   }
-  message findUserNameReq {
+  message JudgeExistenceReq {
     //用户名
     string user_name = 1;
   }

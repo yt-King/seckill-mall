@@ -17,15 +17,29 @@ public interface PersonMapper {
 
     /**
      * rpc新增入参转实体
-     * @param createPersonReq
-     * @return
+     *
+     * @param createPersonReq 入参
      */
     Person toEntity(SeckillPersonRpc.PersonMessage.CreatePersonReq createPersonReq);
 
     /**
      * rpc更新入参转实体
-     * @param updatePersonReq
-     * @return
+     *
+     * @param updatePersonReq 入参
      */
     Person toEntity(SeckillPersonRpc.PersonMessage.UpdatePersonReq updatePersonReq);
+
+    /**
+     * rpc判断用户是否存在入参转实体
+     *
+     * @param findUserNameReq 入参
+     */
+    Person toEntity(SeckillPersonRpc.PersonMessage.JudgeExistenceReq findUserNameReq);
+
+    /**
+     * rpc登陆入参转实体
+     *
+     * @param personLoginReq 入参
+     */
+    Person toEntity(SeckillPersonRpc.PersonMessage.PersonLoginReq personLoginReq);
 }

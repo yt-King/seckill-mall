@@ -111,35 +111,35 @@ public final class SeckillPersonServiceGrpc {
     return getLoginMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<person.SeckillPersonRpc.PersonMessage.findUserNameReq,
-      person.SeckillPersonRpc.PersonMessage.CommonRely> getFindUserNameMethod;
+  private static volatile io.grpc.MethodDescriptor<person.SeckillPersonRpc.PersonMessage.JudgeExistenceReq,
+      person.SeckillPersonRpc.PersonMessage.CommonRely> getJudgeExistenceMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "findUserName",
-      requestType = person.SeckillPersonRpc.PersonMessage.findUserNameReq.class,
+      fullMethodName = SERVICE_NAME + '/' + "judgeExistence",
+      requestType = person.SeckillPersonRpc.PersonMessage.JudgeExistenceReq.class,
       responseType = person.SeckillPersonRpc.PersonMessage.CommonRely.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<person.SeckillPersonRpc.PersonMessage.findUserNameReq,
-      person.SeckillPersonRpc.PersonMessage.CommonRely> getFindUserNameMethod() {
-    io.grpc.MethodDescriptor<person.SeckillPersonRpc.PersonMessage.findUserNameReq, person.SeckillPersonRpc.PersonMessage.CommonRely> getFindUserNameMethod;
-    if ((getFindUserNameMethod = SeckillPersonServiceGrpc.getFindUserNameMethod) == null) {
+  public static io.grpc.MethodDescriptor<person.SeckillPersonRpc.PersonMessage.JudgeExistenceReq,
+      person.SeckillPersonRpc.PersonMessage.CommonRely> getJudgeExistenceMethod() {
+    io.grpc.MethodDescriptor<person.SeckillPersonRpc.PersonMessage.JudgeExistenceReq, person.SeckillPersonRpc.PersonMessage.CommonRely> getJudgeExistenceMethod;
+    if ((getJudgeExistenceMethod = SeckillPersonServiceGrpc.getJudgeExistenceMethod) == null) {
       synchronized (SeckillPersonServiceGrpc.class) {
-        if ((getFindUserNameMethod = SeckillPersonServiceGrpc.getFindUserNameMethod) == null) {
-          SeckillPersonServiceGrpc.getFindUserNameMethod = getFindUserNameMethod =
-              io.grpc.MethodDescriptor.<person.SeckillPersonRpc.PersonMessage.findUserNameReq, person.SeckillPersonRpc.PersonMessage.CommonRely>newBuilder()
+        if ((getJudgeExistenceMethod = SeckillPersonServiceGrpc.getJudgeExistenceMethod) == null) {
+          SeckillPersonServiceGrpc.getJudgeExistenceMethod = getJudgeExistenceMethod =
+              io.grpc.MethodDescriptor.<person.SeckillPersonRpc.PersonMessage.JudgeExistenceReq, person.SeckillPersonRpc.PersonMessage.CommonRely>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "findUserName"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "judgeExistence"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  person.SeckillPersonRpc.PersonMessage.findUserNameReq.getDefaultInstance()))
+                  person.SeckillPersonRpc.PersonMessage.JudgeExistenceReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   person.SeckillPersonRpc.PersonMessage.CommonRely.getDefaultInstance()))
-              .setSchemaDescriptor(new SeckillPersonServiceMethodDescriptorSupplier("findUserName"))
+              .setSchemaDescriptor(new SeckillPersonServiceMethodDescriptorSupplier("judgeExistence"))
               .build();
         }
       }
     }
-    return getFindUserNameMethod;
+    return getJudgeExistenceMethod;
   }
 
   /**
@@ -228,9 +228,9 @@ public final class SeckillPersonServiceGrpc {
      * 判断用户名
      * </pre>
      */
-    default void findUserName(person.SeckillPersonRpc.PersonMessage.findUserNameReq request,
+    default void judgeExistence(person.SeckillPersonRpc.PersonMessage.JudgeExistenceReq request,
         io.grpc.stub.StreamObserver<person.SeckillPersonRpc.PersonMessage.CommonRely> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getFindUserNameMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getJudgeExistenceMethod(), responseObserver);
     }
   }
 
@@ -305,10 +305,10 @@ public final class SeckillPersonServiceGrpc {
      * 判断用户名
      * </pre>
      */
-    public void findUserName(person.SeckillPersonRpc.PersonMessage.findUserNameReq request,
+    public void judgeExistence(person.SeckillPersonRpc.PersonMessage.JudgeExistenceReq request,
         io.grpc.stub.StreamObserver<person.SeckillPersonRpc.PersonMessage.CommonRely> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getFindUserNameMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getJudgeExistenceMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -366,9 +366,9 @@ public final class SeckillPersonServiceGrpc {
      * 判断用户名
      * </pre>
      */
-    public person.SeckillPersonRpc.PersonMessage.CommonRely findUserName(person.SeckillPersonRpc.PersonMessage.findUserNameReq request) {
+    public person.SeckillPersonRpc.PersonMessage.CommonRely judgeExistence(person.SeckillPersonRpc.PersonMessage.JudgeExistenceReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getFindUserNameMethod(), getCallOptions(), request);
+          getChannel(), getJudgeExistenceMethod(), getCallOptions(), request);
     }
   }
 
@@ -429,17 +429,17 @@ public final class SeckillPersonServiceGrpc {
      * 判断用户名
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<person.SeckillPersonRpc.PersonMessage.CommonRely> findUserName(
-        person.SeckillPersonRpc.PersonMessage.findUserNameReq request) {
+    public com.google.common.util.concurrent.ListenableFuture<person.SeckillPersonRpc.PersonMessage.CommonRely> judgeExistence(
+        person.SeckillPersonRpc.PersonMessage.JudgeExistenceReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getFindUserNameMethod(), getCallOptions()), request);
+          getChannel().newCall(getJudgeExistenceMethod(), getCallOptions()), request);
     }
   }
 
   private static final int METHODID_CREATE = 0;
   private static final int METHODID_UPDATE = 1;
   private static final int METHODID_LOGIN = 2;
-  private static final int METHODID_FIND_USER_NAME = 3;
+  private static final int METHODID_JUDGE_EXISTENCE = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -470,8 +470,8 @@ public final class SeckillPersonServiceGrpc {
           serviceImpl.login((person.SeckillPersonRpc.PersonMessage.PersonLoginReq) request,
               (io.grpc.stub.StreamObserver<person.SeckillPersonRpc.PersonMessage.PersonLoginRely>) responseObserver);
           break;
-        case METHODID_FIND_USER_NAME:
-          serviceImpl.findUserName((person.SeckillPersonRpc.PersonMessage.findUserNameReq) request,
+        case METHODID_JUDGE_EXISTENCE:
+          serviceImpl.judgeExistence((person.SeckillPersonRpc.PersonMessage.JudgeExistenceReq) request,
               (io.grpc.stub.StreamObserver<person.SeckillPersonRpc.PersonMessage.CommonRely>) responseObserver);
           break;
         default:
@@ -514,12 +514,12 @@ public final class SeckillPersonServiceGrpc {
               person.SeckillPersonRpc.PersonMessage.PersonLoginRely>(
                 service, METHODID_LOGIN)))
         .addMethod(
-          getFindUserNameMethod(),
+          getJudgeExistenceMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              person.SeckillPersonRpc.PersonMessage.findUserNameReq,
+              person.SeckillPersonRpc.PersonMessage.JudgeExistenceReq,
               person.SeckillPersonRpc.PersonMessage.CommonRely>(
-                service, METHODID_FIND_USER_NAME)))
+                service, METHODID_JUDGE_EXISTENCE)))
         .build();
   }
 
@@ -571,7 +571,7 @@ public final class SeckillPersonServiceGrpc {
               .addMethod(getCreateMethod())
               .addMethod(getUpdateMethod())
               .addMethod(getLoginMethod())
-              .addMethod(getFindUserNameMethod())
+              .addMethod(getJudgeExistenceMethod())
               .build();
         }
       }

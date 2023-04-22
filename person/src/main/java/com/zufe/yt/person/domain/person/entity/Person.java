@@ -32,6 +32,23 @@ public class Person {
         }
     }
 
+    public void validName() {
+        if (this.userName.isBlank()) {
+            throw new ServiceException("用户名不能为空", 100001);
+        }
+    }
+
+    public void check(PersonRepository personRepository) {
+        Person find = personRepository.find(new CriteriaAndWrapper().eq(Person::getUserName, this.userName));
+        if (null == find) {
+            throw new ServiceException("用户不存在", 100001);
+        }
+        if (!find.getPassword().equals(this.password)) {
+            throw new ServiceException("用户名或密码错误", 100001);
+        }
+        this.setId(find.id);
+    }
+
     public void validExistence(PersonRepository personRepository) {
         Person find = personRepository.find(new CriteriaAndWrapper().eq(Person::getUserName, this.userName));
         if (null != find) {

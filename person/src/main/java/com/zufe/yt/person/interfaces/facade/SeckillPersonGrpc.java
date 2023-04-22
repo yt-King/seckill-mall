@@ -7,7 +7,6 @@ import com.zufe.yt.person.domain.person.entity.Person;
 import com.zufe.yt.person.infrastructure.transfer.PersonMapper;
 import io.grpc.stub.StreamObserver;
 import net.devh.boot.grpc.server.service.GrpcService;
-import org.springframework.beans.factory.annotation.Autowired;
 import person.SeckillPersonRpc;
 
 import javax.annotation.Resource;
@@ -48,7 +47,23 @@ public class SeckillPersonGrpc extends person.SeckillPersonServiceGrpc.SeckillPe
     }
 
     @Override
+    public void judgeExistence(SeckillPersonRpc.PersonMessage.JudgeExistenceReq request, StreamObserver<SeckillPersonRpc.PersonMessage.CommonRely> responseObserver) {
+        SeckillPersonRpc.PersonMessage.CommonRely.Builder builder = SeckillPersonRpc.PersonMessage.CommonRely.newBuilder().setCode(ResultCode.SUCCESS.getCode());
+        Person person = PersonMapper.INSTANCE.toEntity(request);
+        personApplication.judgeExistence(person);
+        responseObserver.onNext(builder.build());
+        responseObserver.onCompleted();
+    }
+
+    @Override
     public void login(SeckillPersonRpc.PersonMessage.PersonLoginReq request, StreamObserver<SeckillPersonRpc.PersonMessage.PersonLoginRely> responseObserver) {
-        super.login(request, responseObserver);
+        SeckillPersonRpc.PersonMessage.PersonLoginRely.Builder builder = SeckillPersonRpc.PersonMessage.PersonLoginRely.newBuilder().setCode(ResultCode.SUCCESS.getCode());
+        LockUtil.lock(lockKey + "LOGIN-" + request.getUserName(), 500, () -> {
+            Person person = PersonMapper.INSTANCE.toEntity(request);
+            String id = personApplication.login(person);
+            builder.setUser(SeckillPersonRpc.PersonMessage.PersonInfo.newBuilder().setUserId(id).setUserName(person.getUserName()).build());
+        });
+        responseObserver.onNext(builder.build());
+        responseObserver.onCompleted();
     }
 }

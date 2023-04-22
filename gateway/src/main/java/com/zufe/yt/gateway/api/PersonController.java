@@ -31,4 +31,16 @@ public class PersonController {
         SeckillPersonRpc.PersonMessage.CommonRely rely = personStub.create(ProtoBeanUtil.toMessage(data, SeckillPersonRpc.PersonMessage.CreatePersonReq.newBuilder()).build());
         return ProtoBeanUtil.toBean(rely, JSONObject.class);
     }
+
+    @PostMapping(value = "/v1/judge")
+    public JSONObject judge(@RequestBody Map<String, Object> data) {
+        SeckillPersonRpc.PersonMessage.CommonRely rely = personStub.judgeExistence(ProtoBeanUtil.toMessage(data, SeckillPersonRpc.PersonMessage.JudgeExistenceReq.newBuilder()).build());
+        return ProtoBeanUtil.toBean(rely, JSONObject.class);
+    }
+
+    @PostMapping(value = "/v1/login")
+    public JSONObject login(@RequestBody Map<String, Object> data) {
+        SeckillPersonRpc.PersonMessage.PersonLoginRely rely = personStub.login(ProtoBeanUtil.toMessage(data, SeckillPersonRpc.PersonMessage.PersonLoginReq.newBuilder()).build());
+        return ProtoBeanUtil.toBean(rely, JSONObject.class);
+    }
 }

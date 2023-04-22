@@ -32,4 +32,17 @@ public class PersonApplicationImpl implements PersonApplication {
         person.valid();
         personRepository.saveOrUpdate(person);
     }
+
+    @Override
+    public void judgeExistence(Person person) {
+        person.validName();
+        person.validExistence(personRepository);
+    }
+
+    @Override
+    public String login(Person person) {
+        person.valid();
+        person.check(personRepository);
+        return person.getId();
+    }
 }
