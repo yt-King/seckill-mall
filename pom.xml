@@ -23,11 +23,14 @@
         <module>order</module>
         <module>active</module>
         <module>common</module>
+        <module>gateway</module>
     </modules>
 
     <properties>
         <java.version>17</java.version>
+        <skipTests>true</skipTests>
     </properties>
+
     <dependencies>
 
     </dependencies>

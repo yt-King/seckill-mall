@@ -1,0 +1,71 @@
+syntax = "proto3";
+option java_package = "shoppingCart";
+
+// 用户购物车
+service SeckillShoppingCartService {
+  // 添加购物车
+  rpc addShoppingCart(ShoppingCartMessage.AddShoppingCartReq) returns (ShoppingCartMessage.CommonRely) {
+  }
+  // 删除购物车
+  rpc deleteShoppingCart(ShoppingCartMessage.DeleteShoppingCartReq) returns (ShoppingCartMessage.CommonRely) {
+  }
+  // 更新购物车数量
+  rpc updateShoppingCart(ShoppingCartMessage.UpdateShoppingCartReq) returns (ShoppingCartMessage.CommonRely) {
+  }
+  // 购物车列表
+  rpc getShoppingCart(ShoppingCartMessage.GetShoppingCartReq) returns (ShoppingCartMessage.GetShoppingCartRely) {
+  }
+}
+
+message ShoppingCartMessage{
+  message CommonRely {
+    //状态码
+    int32 code = 1;
+  }
+  message AddShoppingCartReq {
+    //商品id
+    string product_id = 1;
+    //用户id
+    string user_id = 2;
+  }
+  message UpdateShoppingCartReq {
+    //商品id
+    string product_id = 1;
+    //用户id
+    string user_id = 2;
+    //数量
+    int32 num = 3;
+  }
+  message DeleteShoppingCartReq {
+    //商品id
+    string product_id = 1;
+    //用户id
+    string user_id = 2;
+  }
+  message GetShoppingCartReq {
+    //用户id
+    string user_id = 1;
+  }
+  message GetShoppingCartRely {
+    //状态码
+    int32 code = 1;
+    //列表
+    repeated ShoppingCart shopping_cart_data = 2;
+  }
+  message ShoppingCart {
+    //是否选中
+    bool check = 1;
+    //商品id
+    int32 product_id = 2;
+    //商品名称
+    string product_name = 3;
+    //商品图片
+    string product_picture = 4;
+    //商品价格
+    int32 price = 5;
+    //商品数量
+    int32 num = 6;
+    //最大购买数
+    int32 max_num = 7;
+  }
+}
