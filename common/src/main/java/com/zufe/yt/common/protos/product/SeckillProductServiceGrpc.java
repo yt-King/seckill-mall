@@ -18,27 +18,27 @@ public final class SeckillProductServiceGrpc {
   public static final String SERVICE_NAME = "SeckillProductService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<product.SeckillProductRpc.ProductMessage.saveOrUpdateProductReq,
+  private static volatile io.grpc.MethodDescriptor<product.SeckillProductRpc.ProductMessage.SaveOrUpdateProductReq,
       product.SeckillProductRpc.ProductMessage.CommonRely> getSaveOrUpdateProductMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "saveOrUpdateProduct",
-      requestType = product.SeckillProductRpc.ProductMessage.saveOrUpdateProductReq.class,
+      requestType = product.SeckillProductRpc.ProductMessage.SaveOrUpdateProductReq.class,
       responseType = product.SeckillProductRpc.ProductMessage.CommonRely.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<product.SeckillProductRpc.ProductMessage.saveOrUpdateProductReq,
+  public static io.grpc.MethodDescriptor<product.SeckillProductRpc.ProductMessage.SaveOrUpdateProductReq,
       product.SeckillProductRpc.ProductMessage.CommonRely> getSaveOrUpdateProductMethod() {
-    io.grpc.MethodDescriptor<product.SeckillProductRpc.ProductMessage.saveOrUpdateProductReq, product.SeckillProductRpc.ProductMessage.CommonRely> getSaveOrUpdateProductMethod;
+    io.grpc.MethodDescriptor<product.SeckillProductRpc.ProductMessage.SaveOrUpdateProductReq, product.SeckillProductRpc.ProductMessage.CommonRely> getSaveOrUpdateProductMethod;
     if ((getSaveOrUpdateProductMethod = SeckillProductServiceGrpc.getSaveOrUpdateProductMethod) == null) {
       synchronized (SeckillProductServiceGrpc.class) {
         if ((getSaveOrUpdateProductMethod = SeckillProductServiceGrpc.getSaveOrUpdateProductMethod) == null) {
           SeckillProductServiceGrpc.getSaveOrUpdateProductMethod = getSaveOrUpdateProductMethod =
-              io.grpc.MethodDescriptor.<product.SeckillProductRpc.ProductMessage.saveOrUpdateProductReq, product.SeckillProductRpc.ProductMessage.CommonRely>newBuilder()
+              io.grpc.MethodDescriptor.<product.SeckillProductRpc.ProductMessage.SaveOrUpdateProductReq, product.SeckillProductRpc.ProductMessage.CommonRely>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "saveOrUpdateProduct"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  product.SeckillProductRpc.ProductMessage.saveOrUpdateProductReq.getDefaultInstance()))
+                  product.SeckillProductRpc.ProductMessage.SaveOrUpdateProductReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   product.SeckillProductRpc.ProductMessage.CommonRely.getDefaultInstance()))
               .setSchemaDescriptor(new SeckillProductServiceMethodDescriptorSupplier("saveOrUpdateProduct"))
@@ -198,7 +198,7 @@ public final class SeckillProductServiceGrpc {
      * 添加或更新商品
      * </pre>
      */
-    default void saveOrUpdateProduct(product.SeckillProductRpc.ProductMessage.saveOrUpdateProductReq request,
+    default void saveOrUpdateProduct(product.SeckillProductRpc.ProductMessage.SaveOrUpdateProductReq request,
         io.grpc.stub.StreamObserver<product.SeckillProductRpc.ProductMessage.CommonRely> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSaveOrUpdateProductMethod(), responseObserver);
     }
@@ -272,7 +272,7 @@ public final class SeckillProductServiceGrpc {
      * 添加或更新商品
      * </pre>
      */
-    public void saveOrUpdateProduct(product.SeckillProductRpc.ProductMessage.saveOrUpdateProductReq request,
+    public void saveOrUpdateProduct(product.SeckillProductRpc.ProductMessage.SaveOrUpdateProductReq request,
         io.grpc.stub.StreamObserver<product.SeckillProductRpc.ProductMessage.CommonRely> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSaveOrUpdateProductMethod(), getCallOptions()), request, responseObserver);
@@ -336,7 +336,7 @@ public final class SeckillProductServiceGrpc {
      * 添加或更新商品
      * </pre>
      */
-    public product.SeckillProductRpc.ProductMessage.CommonRely saveOrUpdateProduct(product.SeckillProductRpc.ProductMessage.saveOrUpdateProductReq request) {
+    public product.SeckillProductRpc.ProductMessage.CommonRely saveOrUpdateProduct(product.SeckillProductRpc.ProductMessage.SaveOrUpdateProductReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSaveOrUpdateProductMethod(), getCallOptions(), request);
     }
@@ -397,7 +397,7 @@ public final class SeckillProductServiceGrpc {
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<product.SeckillProductRpc.ProductMessage.CommonRely> saveOrUpdateProduct(
-        product.SeckillProductRpc.ProductMessage.saveOrUpdateProductReq request) {
+        product.SeckillProductRpc.ProductMessage.SaveOrUpdateProductReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSaveOrUpdateProductMethod(), getCallOptions()), request);
     }
@@ -459,7 +459,7 @@ public final class SeckillProductServiceGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_SAVE_OR_UPDATE_PRODUCT:
-          serviceImpl.saveOrUpdateProduct((product.SeckillProductRpc.ProductMessage.saveOrUpdateProductReq) request,
+          serviceImpl.saveOrUpdateProduct((product.SeckillProductRpc.ProductMessage.SaveOrUpdateProductReq) request,
               (io.grpc.stub.StreamObserver<product.SeckillProductRpc.ProductMessage.CommonRely>) responseObserver);
           break;
         case METHODID_DELETE_PRODUCT:
@@ -496,7 +496,7 @@ public final class SeckillProductServiceGrpc {
           getSaveOrUpdateProductMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              product.SeckillProductRpc.ProductMessage.saveOrUpdateProductReq,
+              product.SeckillProductRpc.ProductMessage.SaveOrUpdateProductReq,
               product.SeckillProductRpc.ProductMessage.CommonRely>(
                 service, METHODID_SAVE_OR_UPDATE_PRODUCT)))
         .addMethod(

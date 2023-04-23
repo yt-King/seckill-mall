@@ -557,8 +557,8 @@ public final class SeckillProductRpc {
 
     }
 
-    public interface saveOrUpdateProductReqOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:ProductMessage.saveOrUpdateProductReq)
+    public interface SaveOrUpdateProductReqOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:ProductMessage.SaveOrUpdateProductReq)
         com.google.protobuf.MessageOrBuilder {
 
       /**
@@ -722,18 +722,18 @@ public final class SeckillProductRpc {
           getIdBytes();
     }
     /**
-     * Protobuf type {@code ProductMessage.saveOrUpdateProductReq}
+     * Protobuf type {@code ProductMessage.SaveOrUpdateProductReq}
      */
-    public static final class saveOrUpdateProductReq extends
+    public static final class SaveOrUpdateProductReq extends
         com.google.protobuf.GeneratedMessageV3 implements
-        // @@protoc_insertion_point(message_implements:ProductMessage.saveOrUpdateProductReq)
-        saveOrUpdateProductReqOrBuilder {
+        // @@protoc_insertion_point(message_implements:ProductMessage.SaveOrUpdateProductReq)
+        SaveOrUpdateProductReqOrBuilder {
     private static final long serialVersionUID = 0L;
-      // Use saveOrUpdateProductReq.newBuilder() to construct.
-      private saveOrUpdateProductReq(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      // Use SaveOrUpdateProductReq.newBuilder() to construct.
+      private SaveOrUpdateProductReq(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
         super(builder);
       }
-      private saveOrUpdateProductReq() {
+      private SaveOrUpdateProductReq() {
         productName_ = "";
         productTitle_ = "";
         productIntro_ = "";
@@ -745,7 +745,7 @@ public final class SeckillProductRpc {
       @SuppressWarnings({"unused"})
       protected java.lang.Object newInstance(
           UnusedPrivateParameter unused) {
-        return new saveOrUpdateProductReq();
+        return new SaveOrUpdateProductReq();
       }
 
       @java.lang.Override
@@ -755,15 +755,15 @@ public final class SeckillProductRpc {
       }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return product.SeckillProductRpc.internal_static_ProductMessage_saveOrUpdateProductReq_descriptor;
+        return product.SeckillProductRpc.internal_static_ProductMessage_SaveOrUpdateProductReq_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return product.SeckillProductRpc.internal_static_ProductMessage_saveOrUpdateProductReq_fieldAccessorTable
+        return product.SeckillProductRpc.internal_static_ProductMessage_SaveOrUpdateProductReq_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                product.SeckillProductRpc.ProductMessage.saveOrUpdateProductReq.class, product.SeckillProductRpc.ProductMessage.saveOrUpdateProductReq.Builder.class);
+                product.SeckillProductRpc.ProductMessage.SaveOrUpdateProductReq.class, product.SeckillProductRpc.ProductMessage.SaveOrUpdateProductReq.Builder.class);
       }
 
       public static final int CATEGORY_ID_FIELD_NUMBER = 1;
@@ -1196,10 +1196,10 @@ public final class SeckillProductRpc {
         if (obj == this) {
          return true;
         }
-        if (!(obj instanceof product.SeckillProductRpc.ProductMessage.saveOrUpdateProductReq)) {
+        if (!(obj instanceof product.SeckillProductRpc.ProductMessage.SaveOrUpdateProductReq)) {
           return super.equals(obj);
         }
-        product.SeckillProductRpc.ProductMessage.saveOrUpdateProductReq other = (product.SeckillProductRpc.ProductMessage.saveOrUpdateProductReq) obj;
+        product.SeckillProductRpc.ProductMessage.SaveOrUpdateProductReq other = (product.SeckillProductRpc.ProductMessage.SaveOrUpdateProductReq) obj;
 
         if (getCategoryId()
             != other.getCategoryId()) return false;
@@ -1261,69 +1261,69 @@ public final class SeckillProductRpc {
         return hash;
       }
 
-      public static product.SeckillProductRpc.ProductMessage.saveOrUpdateProductReq parseFrom(
+      public static product.SeckillProductRpc.ProductMessage.SaveOrUpdateProductReq parseFrom(
           java.nio.ByteBuffer data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static product.SeckillProductRpc.ProductMessage.saveOrUpdateProductReq parseFrom(
+      public static product.SeckillProductRpc.ProductMessage.SaveOrUpdateProductReq parseFrom(
           java.nio.ByteBuffer data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static product.SeckillProductRpc.ProductMessage.saveOrUpdateProductReq parseFrom(
+      public static product.SeckillProductRpc.ProductMessage.SaveOrUpdateProductReq parseFrom(
           com.google.protobuf.ByteString data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static product.SeckillProductRpc.ProductMessage.saveOrUpdateProductReq parseFrom(
+      public static product.SeckillProductRpc.ProductMessage.SaveOrUpdateProductReq parseFrom(
           com.google.protobuf.ByteString data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static product.SeckillProductRpc.ProductMessage.saveOrUpdateProductReq parseFrom(byte[] data)
+      public static product.SeckillProductRpc.ProductMessage.SaveOrUpdateProductReq parseFrom(byte[] data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static product.SeckillProductRpc.ProductMessage.saveOrUpdateProductReq parseFrom(
+      public static product.SeckillProductRpc.ProductMessage.SaveOrUpdateProductReq parseFrom(
           byte[] data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static product.SeckillProductRpc.ProductMessage.saveOrUpdateProductReq parseFrom(java.io.InputStream input)
+      public static product.SeckillProductRpc.ProductMessage.SaveOrUpdateProductReq parseFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static product.SeckillProductRpc.ProductMessage.saveOrUpdateProductReq parseFrom(
+      public static product.SeckillProductRpc.ProductMessage.SaveOrUpdateProductReq parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input, extensionRegistry);
       }
-      public static product.SeckillProductRpc.ProductMessage.saveOrUpdateProductReq parseDelimitedFrom(java.io.InputStream input)
+      public static product.SeckillProductRpc.ProductMessage.SaveOrUpdateProductReq parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input);
       }
-      public static product.SeckillProductRpc.ProductMessage.saveOrUpdateProductReq parseDelimitedFrom(
+      public static product.SeckillProductRpc.ProductMessage.SaveOrUpdateProductReq parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
-      public static product.SeckillProductRpc.ProductMessage.saveOrUpdateProductReq parseFrom(
+      public static product.SeckillProductRpc.ProductMessage.SaveOrUpdateProductReq parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static product.SeckillProductRpc.ProductMessage.saveOrUpdateProductReq parseFrom(
+      public static product.SeckillProductRpc.ProductMessage.SaveOrUpdateProductReq parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
@@ -1336,7 +1336,7 @@ public final class SeckillProductRpc {
       public static Builder newBuilder() {
         return DEFAULT_INSTANCE.toBuilder();
       }
-      public static Builder newBuilder(product.SeckillProductRpc.ProductMessage.saveOrUpdateProductReq prototype) {
+      public static Builder newBuilder(product.SeckillProductRpc.ProductMessage.SaveOrUpdateProductReq prototype) {
         return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
       }
       @java.lang.Override
@@ -1352,26 +1352,26 @@ public final class SeckillProductRpc {
         return builder;
       }
       /**
-       * Protobuf type {@code ProductMessage.saveOrUpdateProductReq}
+       * Protobuf type {@code ProductMessage.SaveOrUpdateProductReq}
        */
       public static final class Builder extends
           com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:ProductMessage.saveOrUpdateProductReq)
-          product.SeckillProductRpc.ProductMessage.saveOrUpdateProductReqOrBuilder {
+          // @@protoc_insertion_point(builder_implements:ProductMessage.SaveOrUpdateProductReq)
+          product.SeckillProductRpc.ProductMessage.SaveOrUpdateProductReqOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return product.SeckillProductRpc.internal_static_ProductMessage_saveOrUpdateProductReq_descriptor;
+          return product.SeckillProductRpc.internal_static_ProductMessage_SaveOrUpdateProductReq_descriptor;
         }
 
         @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return product.SeckillProductRpc.internal_static_ProductMessage_saveOrUpdateProductReq_fieldAccessorTable
+          return product.SeckillProductRpc.internal_static_ProductMessage_SaveOrUpdateProductReq_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  product.SeckillProductRpc.ProductMessage.saveOrUpdateProductReq.class, product.SeckillProductRpc.ProductMessage.saveOrUpdateProductReq.Builder.class);
+                  product.SeckillProductRpc.ProductMessage.SaveOrUpdateProductReq.class, product.SeckillProductRpc.ProductMessage.SaveOrUpdateProductReq.Builder.class);
         }
 
-        // Construct using product.SeckillProductRpc.ProductMessage.saveOrUpdateProductReq.newBuilder()
+        // Construct using product.SeckillProductRpc.ProductMessage.SaveOrUpdateProductReq.newBuilder()
         private Builder() {
 
         }
@@ -1402,17 +1402,17 @@ public final class SeckillProductRpc {
         @java.lang.Override
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
-          return product.SeckillProductRpc.internal_static_ProductMessage_saveOrUpdateProductReq_descriptor;
+          return product.SeckillProductRpc.internal_static_ProductMessage_SaveOrUpdateProductReq_descriptor;
         }
 
         @java.lang.Override
-        public product.SeckillProductRpc.ProductMessage.saveOrUpdateProductReq getDefaultInstanceForType() {
-          return product.SeckillProductRpc.ProductMessage.saveOrUpdateProductReq.getDefaultInstance();
+        public product.SeckillProductRpc.ProductMessage.SaveOrUpdateProductReq getDefaultInstanceForType() {
+          return product.SeckillProductRpc.ProductMessage.SaveOrUpdateProductReq.getDefaultInstance();
         }
 
         @java.lang.Override
-        public product.SeckillProductRpc.ProductMessage.saveOrUpdateProductReq build() {
-          product.SeckillProductRpc.ProductMessage.saveOrUpdateProductReq result = buildPartial();
+        public product.SeckillProductRpc.ProductMessage.SaveOrUpdateProductReq build() {
+          product.SeckillProductRpc.ProductMessage.SaveOrUpdateProductReq result = buildPartial();
           if (!result.isInitialized()) {
             throw newUninitializedMessageException(result);
           }
@@ -1420,14 +1420,14 @@ public final class SeckillProductRpc {
         }
 
         @java.lang.Override
-        public product.SeckillProductRpc.ProductMessage.saveOrUpdateProductReq buildPartial() {
-          product.SeckillProductRpc.ProductMessage.saveOrUpdateProductReq result = new product.SeckillProductRpc.ProductMessage.saveOrUpdateProductReq(this);
+        public product.SeckillProductRpc.ProductMessage.SaveOrUpdateProductReq buildPartial() {
+          product.SeckillProductRpc.ProductMessage.SaveOrUpdateProductReq result = new product.SeckillProductRpc.ProductMessage.SaveOrUpdateProductReq(this);
           if (bitField0_ != 0) { buildPartial0(result); }
           onBuilt();
           return result;
         }
 
-        private void buildPartial0(product.SeckillProductRpc.ProductMessage.saveOrUpdateProductReq result) {
+        private void buildPartial0(product.SeckillProductRpc.ProductMessage.SaveOrUpdateProductReq result) {
           int from_bitField0_ = bitField0_;
           if (((from_bitField0_ & 0x00000001) != 0)) {
             result.categoryId_ = categoryId_;
@@ -1498,16 +1498,16 @@ public final class SeckillProductRpc {
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof product.SeckillProductRpc.ProductMessage.saveOrUpdateProductReq) {
-            return mergeFrom((product.SeckillProductRpc.ProductMessage.saveOrUpdateProductReq)other);
+          if (other instanceof product.SeckillProductRpc.ProductMessage.SaveOrUpdateProductReq) {
+            return mergeFrom((product.SeckillProductRpc.ProductMessage.SaveOrUpdateProductReq)other);
           } else {
             super.mergeFrom(other);
             return this;
           }
         }
 
-        public Builder mergeFrom(product.SeckillProductRpc.ProductMessage.saveOrUpdateProductReq other) {
-          if (other == product.SeckillProductRpc.ProductMessage.saveOrUpdateProductReq.getDefaultInstance()) return this;
+        public Builder mergeFrom(product.SeckillProductRpc.ProductMessage.SaveOrUpdateProductReq other) {
+          if (other == product.SeckillProductRpc.ProductMessage.SaveOrUpdateProductReq.getDefaultInstance()) return this;
           if (other.getCategoryId() != 0) {
             setCategoryId(other.getCategoryId());
           }
@@ -2385,23 +2385,23 @@ public final class SeckillProductRpc {
         }
 
 
-        // @@protoc_insertion_point(builder_scope:ProductMessage.saveOrUpdateProductReq)
+        // @@protoc_insertion_point(builder_scope:ProductMessage.SaveOrUpdateProductReq)
       }
 
-      // @@protoc_insertion_point(class_scope:ProductMessage.saveOrUpdateProductReq)
-      private static final product.SeckillProductRpc.ProductMessage.saveOrUpdateProductReq DEFAULT_INSTANCE;
+      // @@protoc_insertion_point(class_scope:ProductMessage.SaveOrUpdateProductReq)
+      private static final product.SeckillProductRpc.ProductMessage.SaveOrUpdateProductReq DEFAULT_INSTANCE;
       static {
-        DEFAULT_INSTANCE = new product.SeckillProductRpc.ProductMessage.saveOrUpdateProductReq();
+        DEFAULT_INSTANCE = new product.SeckillProductRpc.ProductMessage.SaveOrUpdateProductReq();
       }
 
-      public static product.SeckillProductRpc.ProductMessage.saveOrUpdateProductReq getDefaultInstance() {
+      public static product.SeckillProductRpc.ProductMessage.SaveOrUpdateProductReq getDefaultInstance() {
         return DEFAULT_INSTANCE;
       }
 
-      private static final com.google.protobuf.Parser<saveOrUpdateProductReq>
-          PARSER = new com.google.protobuf.AbstractParser<saveOrUpdateProductReq>() {
+      private static final com.google.protobuf.Parser<SaveOrUpdateProductReq>
+          PARSER = new com.google.protobuf.AbstractParser<SaveOrUpdateProductReq>() {
         @java.lang.Override
-        public saveOrUpdateProductReq parsePartialFrom(
+        public SaveOrUpdateProductReq parsePartialFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
@@ -2420,17 +2420,17 @@ public final class SeckillProductRpc {
         }
       };
 
-      public static com.google.protobuf.Parser<saveOrUpdateProductReq> parser() {
+      public static com.google.protobuf.Parser<SaveOrUpdateProductReq> parser() {
         return PARSER;
       }
 
       @java.lang.Override
-      public com.google.protobuf.Parser<saveOrUpdateProductReq> getParserForType() {
+      public com.google.protobuf.Parser<SaveOrUpdateProductReq> getParserForType() {
         return PARSER;
       }
 
       @java.lang.Override
-      public product.SeckillProductRpc.ProductMessage.saveOrUpdateProductReq getDefaultInstanceForType() {
+      public product.SeckillProductRpc.ProductMessage.SaveOrUpdateProductReq getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
 
@@ -9091,10 +9091,10 @@ public final class SeckillProductRpc {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ProductMessage_CommonRely_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_ProductMessage_saveOrUpdateProductReq_descriptor;
+    internal_static_ProductMessage_SaveOrUpdateProductReq_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_ProductMessage_saveOrUpdateProductReq_fieldAccessorTable;
+      internal_static_ProductMessage_SaveOrUpdateProductReq_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ProductMessage_DeleteProductReq_descriptor;
   private static final 
@@ -9140,7 +9140,7 @@ public final class SeckillProductRpc {
   static {
     java.lang.String[] descriptorData = {
       "\n\031seckill-product-rpc.proto\"\226\007\n\016ProductM" +
-      "essage\032\032\n\nCommonRely\022\014\n\004code\030\001 \001(\005\032\214\002\n\026s" +
+      "essage\032\032\n\nCommonRely\022\014\n\004code\030\001 \001(\005\032\214\002\n\026S" +
       "aveOrUpdateProductReq\022\023\n\013category_id\030\001 \001" +
       "(\005\022\022\n\nproduct_id\030\002 \001(\005\022\024\n\014product_name\030\003" +
       " \001(\t\022\025\n\rproduct_title\030\004 \001(\t\022\025\n\rproduct_i" +
@@ -9164,7 +9164,7 @@ public final class SeckillProductRpc {
       "duct_selling_price\030\010 \001(\005\022\023\n\013product_num\030" +
       "\t \001(\005\022\025\n\rproduct_sales\030\n \001(\0052\354\002\n\025Seckill" +
       "ProductService\022[\n\023saveOrUpdateProduct\022&." +
-      "ProductMessage.saveOrUpdateProductReq\032\032." +
+      "ProductMessage.SaveOrUpdateProductReq\032\032." +
       "ProductMessage.CommonRely\"\000\022O\n\rdeletePro" +
       "duct\022 .ProductMessage.DeleteProductReq\032\032" +
       ".ProductMessage.CommonRely\"\000\022P\n\013getCateg" +
@@ -9190,11 +9190,11 @@ public final class SeckillProductRpc {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ProductMessage_CommonRely_descriptor,
         new java.lang.String[] { "Code", });
-    internal_static_ProductMessage_saveOrUpdateProductReq_descriptor =
+    internal_static_ProductMessage_SaveOrUpdateProductReq_descriptor =
       internal_static_ProductMessage_descriptor.getNestedTypes().get(1);
-    internal_static_ProductMessage_saveOrUpdateProductReq_fieldAccessorTable = new
+    internal_static_ProductMessage_SaveOrUpdateProductReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_ProductMessage_saveOrUpdateProductReq_descriptor,
+        internal_static_ProductMessage_SaveOrUpdateProductReq_descriptor,
         new java.lang.String[] { "CategoryId", "ProductId", "ProductName", "ProductTitle", "ProductIntro", "ProductPicture", "ProductPrice", "ProductSellingPrice", "ProductNum", "ProductSales", "Id", });
     internal_static_ProductMessage_DeleteProductReq_descriptor =
       internal_static_ProductMessage_descriptor.getNestedTypes().get(2);

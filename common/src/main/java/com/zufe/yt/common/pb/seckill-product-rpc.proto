@@ -4,7 +4,7 @@ option java_package = "product";
 // 商品
 service SeckillProductService {
   // 添加或更新商品
-  rpc saveOrUpdateProduct(ProductMessage.saveOrUpdateProductReq) returns (ProductMessage.CommonRely) {
+  rpc saveOrUpdateProduct(ProductMessage.SaveOrUpdateProductReq) returns (ProductMessage.CommonRely) {
   }
   // 删除商品
   rpc deleteProduct(ProductMessage.DeleteProductReq) returns (ProductMessage.CommonRely) {
@@ -22,7 +22,7 @@ message ProductMessage{
     //状态码
     int32 code = 1;
   }
-  message saveOrUpdateProductReq {
+  message SaveOrUpdateProductReq {
     //类目id
     int32 category_id = 1;
     //商品id
