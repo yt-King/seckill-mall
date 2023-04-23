@@ -4,6 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
+/**
+ * @author yt
+ */
 @SpringBootApplication
 @ComponentScan({"com.zufe.yt.goods", "com.zufe.yt.common"})
 public class Application {

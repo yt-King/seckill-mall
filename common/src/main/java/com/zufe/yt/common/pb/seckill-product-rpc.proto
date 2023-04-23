@@ -26,7 +26,7 @@ message ProductMessage{
     //类目id
     int32 category_id = 1;
     //商品id
-    int32 product_id = 2;
+    string product_id = 2;
     //商品名称
     string product_name = 3;
     //商品标题
@@ -53,7 +53,9 @@ message ProductMessage{
   message GetCategoryReq {
   }
   message GetCategoryRely {
-    repeated Category category = 1;
+    //状态码
+    int32 code = 1;
+    repeated Category category = 2;
   }
   message Category {
     //类目id
@@ -83,7 +85,7 @@ message ProductMessage{
     //类目id
     int32 category_id = 1;
     //商品id
-    int32 product_id = 2;
+    string product_id = 2;
     //商品名称
     string product_name = 3;
     //商品标题

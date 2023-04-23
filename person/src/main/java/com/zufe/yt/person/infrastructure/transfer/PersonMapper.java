@@ -19,6 +19,7 @@ public interface PersonMapper {
      * rpc新增入参转实体
      *
      * @param createPersonReq 入参
+     * @return Person 实体
      */
     Person toEntity(SeckillPersonRpc.PersonMessage.CreatePersonReq createPersonReq);
 
@@ -26,6 +27,7 @@ public interface PersonMapper {
      * rpc更新入参转实体
      *
      * @param updatePersonReq 入参
+     * @return Person 实体
      */
     Person toEntity(SeckillPersonRpc.PersonMessage.UpdatePersonReq updatePersonReq);
 
@@ -33,6 +35,7 @@ public interface PersonMapper {
      * rpc判断用户是否存在入参转实体
      *
      * @param findUserNameReq 入参
+     * @return Person 实体
      */
     Person toEntity(SeckillPersonRpc.PersonMessage.JudgeExistenceReq findUserNameReq);
 
@@ -40,6 +43,7 @@ public interface PersonMapper {
      * rpc登陆入参转实体
      *
      * @param personLoginReq 入参
+     * @return Person 实体
      */
     Person toEntity(SeckillPersonRpc.PersonMessage.PersonLoginReq personLoginReq);
 }

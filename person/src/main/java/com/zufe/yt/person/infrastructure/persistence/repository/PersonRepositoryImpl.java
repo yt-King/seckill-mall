@@ -9,10 +9,10 @@ import org.springframework.stereotype.Repository;
 /**
  * @author yt
  * @package: com.zufe.yt.person.infrastructure.persistence.repository
- * @className: PersonRepositoryImlp
+ * @className: PersonRepositoryImpl
  * @date 2023/4/20
  * @description: 用户持久化实例
  */
 @Repository
-public class PersonRepositoryImlp extends RepositoryImpl<Person, PersonDO> implements PersonRepository {
+public class PersonRepositoryImpl extends RepositoryImpl<Person, PersonDO> implements PersonRepository {
 }
