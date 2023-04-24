@@ -15,6 +15,9 @@ service SeckillProductService {
   // 商品列表
   rpc getProducts(ProductMessage.GetAllProductsReq) returns (ProductMessage.GetAllProductsRely) {
   }
+  // 商品详情
+  rpc getProductDetail(ProductMessage.GetProductDetailReq) returns (ProductMessage.GetProductDetailRely) {
+  }
 }
 
 message ProductMessage{
@@ -79,7 +82,33 @@ message ProductMessage{
     //总数
     int32 total = 2;
     //商品
-    repeated Product product = 3;
+    repeated SimpleProduct product = 3;
+  }
+  message SimpleProduct {
+    //商品id
+    string product_id = 2;
+    //商品名称
+    string product_name = 3;
+    //商品标题
+    string product_title = 4;
+    //商品图片
+    string product_picture = 6;
+    //商品价格
+    int32 product_price = 7;
+    //商品打折价格
+    int32 product_selling_price = 8;
+    //主键id
+    string id = 11;
+  }
+  message GetProductDetailReq {
+    //id
+    string id = 1;
+  }
+  message GetProductDetailRely{
+    //状态码
+    int32 code = 1;
+    //商品
+    Product product = 2;
   }
   message Product {
     //类目id
