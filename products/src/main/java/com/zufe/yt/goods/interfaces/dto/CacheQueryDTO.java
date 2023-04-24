@@ -16,5 +16,5 @@ public class CacheQueryDTO {
     /**
      * 类目id
      */
-    String categoryId;
+    Integer categoryId;
 }

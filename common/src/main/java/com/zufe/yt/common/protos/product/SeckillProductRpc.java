@@ -2534,7 +2534,7 @@ public final class SeckillProductRpc {
 
       /**
        * <pre>
-       *主键id
+       *id
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -2543,7 +2543,7 @@ public final class SeckillProductRpc {
       java.lang.String getId();
       /**
        * <pre>
-       *主键id
+       *id
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -2551,6 +2551,16 @@ public final class SeckillProductRpc {
        */
       com.google.protobuf.ByteString
           getIdBytes();
+
+      /**
+       * <pre>
+       *类目id
+       * </pre>
+       *
+       * <code>int32 category_id = 2;</code>
+       * @return The categoryId.
+       */
+      int getCategoryId();
     }
     /**
      * Protobuf type {@code ProductMessage.DeleteProductReq}
@@ -2598,7 +2608,7 @@ public final class SeckillProductRpc {
       private volatile java.lang.Object id_ = "";
       /**
        * <pre>
-       *主键id
+       *id
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -2619,7 +2629,7 @@ public final class SeckillProductRpc {
       }
       /**
        * <pre>
-       *主键id
+       *id
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -2640,6 +2650,21 @@ public final class SeckillProductRpc {
         }
       }
 
+      public static final int CATEGORY_ID_FIELD_NUMBER = 2;
+      private int categoryId_ = 0;
+      /**
+       * <pre>
+       *类目id
+       * </pre>
+       *
+       * <code>int32 category_id = 2;</code>
+       * @return The categoryId.
+       */
+      @java.lang.Override
+      public int getCategoryId() {
+        return categoryId_;
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -2657,6 +2682,9 @@ public final class SeckillProductRpc {
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
         }
+        if (categoryId_ != 0) {
+          output.writeInt32(2, categoryId_);
+        }
         getUnknownFields().writeTo(output);
       }
 
@@ -2668,6 +2696,10 @@ public final class SeckillProductRpc {
         size = 0;
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+        }
+        if (categoryId_ != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(2, categoryId_);
         }
         size += getUnknownFields().getSerializedSize();
         memoizedSize = size;
@@ -2686,6 +2718,8 @@ public final class SeckillProductRpc {
 
         if (!getId()
             .equals(other.getId())) return false;
+        if (getCategoryId()
+            != other.getCategoryId()) return false;
         if (!getUnknownFields().equals(other.getUnknownFields())) return false;
         return true;
       }
@@ -2699,6 +2733,8 @@ public final class SeckillProductRpc {
         hash = (19 * hash) + getDescriptor().hashCode();
         hash = (37 * hash) + ID_FIELD_NUMBER;
         hash = (53 * hash) + getId().hashCode();
+        hash = (37 * hash) + CATEGORY_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getCategoryId();
         hash = (29 * hash) + getUnknownFields().hashCode();
         memoizedHashCode = hash;
         return hash;
@@ -2829,6 +2865,7 @@ public final class SeckillProductRpc {
           super.clear();
           bitField0_ = 0;
           id_ = "";
+          categoryId_ = 0;
           return this;
         }
 
@@ -2864,6 +2901,9 @@ public final class SeckillProductRpc {
           int from_bitField0_ = bitField0_;
           if (((from_bitField0_ & 0x00000001) != 0)) {
             result.id_ = id_;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.categoryId_ = categoryId_;
           }
         }
 
@@ -2916,6 +2956,9 @@ public final class SeckillProductRpc {
             bitField0_ |= 0x00000001;
             onChanged();
           }
+          if (other.getCategoryId() != 0) {
+            setCategoryId(other.getCategoryId());
+          }
           this.mergeUnknownFields(other.getUnknownFields());
           onChanged();
           return this;
@@ -2947,6 +2990,11 @@ public final class SeckillProductRpc {
                   bitField0_ |= 0x00000001;
                   break;
                 } // case 10
+                case 16: {
+                  categoryId_ = input.readInt32();
+                  bitField0_ |= 0x00000002;
+                  break;
+                } // case 16
                 default: {
                   if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                     done = true; // was an endgroup tag
@@ -2967,7 +3015,7 @@ public final class SeckillProductRpc {
         private java.lang.Object id_ = "";
         /**
          * <pre>
-         *主键id
+         *id
          * </pre>
          *
          * <code>string id = 1;</code>
@@ -2987,7 +3035,7 @@ public final class SeckillProductRpc {
         }
         /**
          * <pre>
-         *主键id
+         *id
          * </pre>
          *
          * <code>string id = 1;</code>
@@ -3008,7 +3056,7 @@ public final class SeckillProductRpc {
         }
         /**
          * <pre>
-         *主键id
+         *id
          * </pre>
          *
          * <code>string id = 1;</code>
@@ -3025,7 +3073,7 @@ public final class SeckillProductRpc {
         }
         /**
          * <pre>
-         *主键id
+         *id
          * </pre>
          *
          * <code>string id = 1;</code>
@@ -3039,7 +3087,7 @@ public final class SeckillProductRpc {
         }
         /**
          * <pre>
-         *主键id
+         *id
          * </pre>
          *
          * <code>string id = 1;</code>
@@ -3052,6 +3100,50 @@ public final class SeckillProductRpc {
           checkByteStringIsUtf8(value);
           id_ = value;
           bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+
+        private int categoryId_ ;
+        /**
+         * <pre>
+         *类目id
+         * </pre>
+         *
+         * <code>int32 category_id = 2;</code>
+         * @return The categoryId.
+         */
+        @java.lang.Override
+        public int getCategoryId() {
+          return categoryId_;
+        }
+        /**
+         * <pre>
+         *类目id
+         * </pre>
+         *
+         * <code>int32 category_id = 2;</code>
+         * @param value The categoryId to set.
+         * @return This builder for chaining.
+         */
+        public Builder setCategoryId(int value) {
+          
+          categoryId_ = value;
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         *类目id
+         * </pre>
+         *
+         * <code>int32 category_id = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearCategoryId() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          categoryId_ = 0;
           onChanged();
           return this;
         }
@@ -7219,6 +7311,16 @@ public final class SeckillProductRpc {
 
       /**
        * <pre>
+       *类目id
+       * </pre>
+       *
+       * <code>int32 category_id = 1;</code>
+       * @return The categoryId.
+       */
+      int getCategoryId();
+
+      /**
+       * <pre>
        *商品id
        * </pre>
        *
@@ -7282,7 +7384,7 @@ public final class SeckillProductRpc {
        *商品图片
        * </pre>
        *
-       * <code>string product_picture = 6;</code>
+       * <code>string product_picture = 5;</code>
        * @return The productPicture.
        */
       java.lang.String getProductPicture();
@@ -7291,7 +7393,7 @@ public final class SeckillProductRpc {
        *商品图片
        * </pre>
        *
-       * <code>string product_picture = 6;</code>
+       * <code>string product_picture = 5;</code>
        * @return The bytes for productPicture.
        */
       com.google.protobuf.ByteString
@@ -7302,7 +7404,7 @@ public final class SeckillProductRpc {
        *商品价格
        * </pre>
        *
-       * <code>int32 product_price = 7;</code>
+       * <code>int32 product_price = 6;</code>
        * @return The productPrice.
        */
       int getProductPrice();
@@ -7312,7 +7414,7 @@ public final class SeckillProductRpc {
        *商品打折价格
        * </pre>
        *
-       * <code>int32 product_selling_price = 8;</code>
+       * <code>int32 product_selling_price = 7;</code>
        * @return The productSellingPrice.
        */
       int getProductSellingPrice();
@@ -7322,7 +7424,7 @@ public final class SeckillProductRpc {
        *主键id
        * </pre>
        *
-       * <code>string id = 11;</code>
+       * <code>string id = 8;</code>
        * @return The id.
        */
       java.lang.String getId();
@@ -7331,7 +7433,7 @@ public final class SeckillProductRpc {
        *主键id
        * </pre>
        *
-       * <code>string id = 11;</code>
+       * <code>string id = 8;</code>
        * @return The bytes for id.
        */
       com.google.protobuf.ByteString
@@ -7380,6 +7482,21 @@ public final class SeckillProductRpc {
         return product.SeckillProductRpc.internal_static_ProductMessage_SimpleProduct_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 product.SeckillProductRpc.ProductMessage.SimpleProduct.class, product.SeckillProductRpc.ProductMessage.SimpleProduct.Builder.class);
+      }
+
+      public static final int CATEGORY_ID_FIELD_NUMBER = 1;
+      private int categoryId_ = 0;
+      /**
+       * <pre>
+       *类目id
+       * </pre>
+       *
+       * <code>int32 category_id = 1;</code>
+       * @return The categoryId.
+       */
+      @java.lang.Override
+      public int getCategoryId() {
+        return categoryId_;
       }
 
       public static final int PRODUCT_ID_FIELD_NUMBER = 2;
@@ -7523,7 +7640,7 @@ public final class SeckillProductRpc {
         }
       }
 
-      public static final int PRODUCT_PICTURE_FIELD_NUMBER = 6;
+      public static final int PRODUCT_PICTURE_FIELD_NUMBER = 5;
       @SuppressWarnings("serial")
       private volatile java.lang.Object productPicture_ = "";
       /**
@@ -7531,7 +7648,7 @@ public final class SeckillProductRpc {
        *商品图片
        * </pre>
        *
-       * <code>string product_picture = 6;</code>
+       * <code>string product_picture = 5;</code>
        * @return The productPicture.
        */
       @java.lang.Override
@@ -7552,7 +7669,7 @@ public final class SeckillProductRpc {
        *商品图片
        * </pre>
        *
-       * <code>string product_picture = 6;</code>
+       * <code>string product_picture = 5;</code>
        * @return The bytes for productPicture.
        */
       @java.lang.Override
@@ -7570,14 +7687,14 @@ public final class SeckillProductRpc {
         }
       }
 
-      public static final int PRODUCT_PRICE_FIELD_NUMBER = 7;
+      public static final int PRODUCT_PRICE_FIELD_NUMBER = 6;
       private int productPrice_ = 0;
       /**
        * <pre>
        *商品价格
        * </pre>
        *
-       * <code>int32 product_price = 7;</code>
+       * <code>int32 product_price = 6;</code>
        * @return The productPrice.
        */
       @java.lang.Override
@@ -7585,14 +7702,14 @@ public final class SeckillProductRpc {
         return productPrice_;
       }
 
-      public static final int PRODUCT_SELLING_PRICE_FIELD_NUMBER = 8;
+      public static final int PRODUCT_SELLING_PRICE_FIELD_NUMBER = 7;
       private int productSellingPrice_ = 0;
       /**
        * <pre>
        *商品打折价格
        * </pre>
        *
-       * <code>int32 product_selling_price = 8;</code>
+       * <code>int32 product_selling_price = 7;</code>
        * @return The productSellingPrice.
        */
       @java.lang.Override
@@ -7600,7 +7717,7 @@ public final class SeckillProductRpc {
         return productSellingPrice_;
       }
 
-      public static final int ID_FIELD_NUMBER = 11;
+      public static final int ID_FIELD_NUMBER = 8;
       @SuppressWarnings("serial")
       private volatile java.lang.Object id_ = "";
       /**
@@ -7608,7 +7725,7 @@ public final class SeckillProductRpc {
        *主键id
        * </pre>
        *
-       * <code>string id = 11;</code>
+       * <code>string id = 8;</code>
        * @return The id.
        */
       @java.lang.Override
@@ -7629,7 +7746,7 @@ public final class SeckillProductRpc {
        *主键id
        * </pre>
        *
-       * <code>string id = 11;</code>
+       * <code>string id = 8;</code>
        * @return The bytes for id.
        */
       @java.lang.Override
@@ -7661,6 +7778,9 @@ public final class SeckillProductRpc {
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
+        if (categoryId_ != 0) {
+          output.writeInt32(1, categoryId_);
+        }
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productId_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 2, productId_);
         }
@@ -7671,16 +7791,16 @@ public final class SeckillProductRpc {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 4, productTitle_);
         }
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productPicture_)) {
-          com.google.protobuf.GeneratedMessageV3.writeString(output, 6, productPicture_);
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 5, productPicture_);
         }
         if (productPrice_ != 0) {
-          output.writeInt32(7, productPrice_);
+          output.writeInt32(6, productPrice_);
         }
         if (productSellingPrice_ != 0) {
-          output.writeInt32(8, productSellingPrice_);
+          output.writeInt32(7, productSellingPrice_);
         }
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-          com.google.protobuf.GeneratedMessageV3.writeString(output, 11, id_);
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 8, id_);
         }
         getUnknownFields().writeTo(output);
       }
@@ -7691,6 +7811,10 @@ public final class SeckillProductRpc {
         if (size != -1) return size;
 
         size = 0;
+        if (categoryId_ != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(1, categoryId_);
+        }
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productId_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, productId_);
         }
@@ -7701,18 +7825,18 @@ public final class SeckillProductRpc {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, productTitle_);
         }
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productPicture_)) {
-          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, productPicture_);
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, productPicture_);
         }
         if (productPrice_ != 0) {
           size += com.google.protobuf.CodedOutputStream
-            .computeInt32Size(7, productPrice_);
+            .computeInt32Size(6, productPrice_);
         }
         if (productSellingPrice_ != 0) {
           size += com.google.protobuf.CodedOutputStream
-            .computeInt32Size(8, productSellingPrice_);
+            .computeInt32Size(7, productSellingPrice_);
         }
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, id_);
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, id_);
         }
         size += getUnknownFields().getSerializedSize();
         memoizedSize = size;
@@ -7729,6 +7853,8 @@ public final class SeckillProductRpc {
         }
         product.SeckillProductRpc.ProductMessage.SimpleProduct other = (product.SeckillProductRpc.ProductMessage.SimpleProduct) obj;
 
+        if (getCategoryId()
+            != other.getCategoryId()) return false;
         if (!getProductId()
             .equals(other.getProductId())) return false;
         if (!getProductName()
@@ -7754,6 +7880,8 @@ public final class SeckillProductRpc {
         }
         int hash = 41;
         hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + CATEGORY_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getCategoryId();
         hash = (37 * hash) + PRODUCT_ID_FIELD_NUMBER;
         hash = (53 * hash) + getProductId().hashCode();
         hash = (37 * hash) + PRODUCT_NAME_FIELD_NUMBER;
@@ -7897,6 +8025,7 @@ public final class SeckillProductRpc {
         public Builder clear() {
           super.clear();
           bitField0_ = 0;
+          categoryId_ = 0;
           productId_ = "";
           productName_ = "";
           productTitle_ = "";
@@ -7938,24 +8067,27 @@ public final class SeckillProductRpc {
         private void buildPartial0(product.SeckillProductRpc.ProductMessage.SimpleProduct result) {
           int from_bitField0_ = bitField0_;
           if (((from_bitField0_ & 0x00000001) != 0)) {
-            result.productId_ = productId_;
+            result.categoryId_ = categoryId_;
           }
           if (((from_bitField0_ & 0x00000002) != 0)) {
-            result.productName_ = productName_;
+            result.productId_ = productId_;
           }
           if (((from_bitField0_ & 0x00000004) != 0)) {
-            result.productTitle_ = productTitle_;
+            result.productName_ = productName_;
           }
           if (((from_bitField0_ & 0x00000008) != 0)) {
-            result.productPicture_ = productPicture_;
+            result.productTitle_ = productTitle_;
           }
           if (((from_bitField0_ & 0x00000010) != 0)) {
-            result.productPrice_ = productPrice_;
+            result.productPicture_ = productPicture_;
           }
           if (((from_bitField0_ & 0x00000020) != 0)) {
-            result.productSellingPrice_ = productSellingPrice_;
+            result.productPrice_ = productPrice_;
           }
           if (((from_bitField0_ & 0x00000040) != 0)) {
+            result.productSellingPrice_ = productSellingPrice_;
+          }
+          if (((from_bitField0_ & 0x00000080) != 0)) {
             result.id_ = id_;
           }
         }
@@ -8004,24 +8136,27 @@ public final class SeckillProductRpc {
 
         public Builder mergeFrom(product.SeckillProductRpc.ProductMessage.SimpleProduct other) {
           if (other == product.SeckillProductRpc.ProductMessage.SimpleProduct.getDefaultInstance()) return this;
+          if (other.getCategoryId() != 0) {
+            setCategoryId(other.getCategoryId());
+          }
           if (!other.getProductId().isEmpty()) {
             productId_ = other.productId_;
-            bitField0_ |= 0x00000001;
+            bitField0_ |= 0x00000002;
             onChanged();
           }
           if (!other.getProductName().isEmpty()) {
             productName_ = other.productName_;
-            bitField0_ |= 0x00000002;
+            bitField0_ |= 0x00000004;
             onChanged();
           }
           if (!other.getProductTitle().isEmpty()) {
             productTitle_ = other.productTitle_;
-            bitField0_ |= 0x00000004;
+            bitField0_ |= 0x00000008;
             onChanged();
           }
           if (!other.getProductPicture().isEmpty()) {
             productPicture_ = other.productPicture_;
-            bitField0_ |= 0x00000008;
+            bitField0_ |= 0x00000010;
             onChanged();
           }
           if (other.getProductPrice() != 0) {
@@ -8032,7 +8167,7 @@ public final class SeckillProductRpc {
           }
           if (!other.getId().isEmpty()) {
             id_ = other.id_;
-            bitField0_ |= 0x00000040;
+            bitField0_ |= 0x00000080;
             onChanged();
           }
           this.mergeUnknownFields(other.getUnknownFields());
@@ -8061,41 +8196,46 @@ public final class SeckillProductRpc {
                 case 0:
                   done = true;
                   break;
+                case 8: {
+                  categoryId_ = input.readInt32();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 8
                 case 18: {
                   productId_ = input.readStringRequireUtf8();
-                  bitField0_ |= 0x00000001;
+                  bitField0_ |= 0x00000002;
                   break;
                 } // case 18
                 case 26: {
                   productName_ = input.readStringRequireUtf8();
-                  bitField0_ |= 0x00000002;
+                  bitField0_ |= 0x00000004;
                   break;
                 } // case 26
                 case 34: {
                   productTitle_ = input.readStringRequireUtf8();
-                  bitField0_ |= 0x00000004;
-                  break;
-                } // case 34
-                case 50: {
-                  productPicture_ = input.readStringRequireUtf8();
                   bitField0_ |= 0x00000008;
                   break;
-                } // case 50
-                case 56: {
-                  productPrice_ = input.readInt32();
+                } // case 34
+                case 42: {
+                  productPicture_ = input.readStringRequireUtf8();
                   bitField0_ |= 0x00000010;
                   break;
-                } // case 56
-                case 64: {
-                  productSellingPrice_ = input.readInt32();
+                } // case 42
+                case 48: {
+                  productPrice_ = input.readInt32();
                   bitField0_ |= 0x00000020;
                   break;
-                } // case 64
-                case 90: {
-                  id_ = input.readStringRequireUtf8();
+                } // case 48
+                case 56: {
+                  productSellingPrice_ = input.readInt32();
                   bitField0_ |= 0x00000040;
                   break;
-                } // case 90
+                } // case 56
+                case 66: {
+                  id_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000080;
+                  break;
+                } // case 66
                 default: {
                   if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                     done = true; // was an endgroup tag
@@ -8112,6 +8252,50 @@ public final class SeckillProductRpc {
           return this;
         }
         private int bitField0_;
+
+        private int categoryId_ ;
+        /**
+         * <pre>
+         *类目id
+         * </pre>
+         *
+         * <code>int32 category_id = 1;</code>
+         * @return The categoryId.
+         */
+        @java.lang.Override
+        public int getCategoryId() {
+          return categoryId_;
+        }
+        /**
+         * <pre>
+         *类目id
+         * </pre>
+         *
+         * <code>int32 category_id = 1;</code>
+         * @param value The categoryId to set.
+         * @return This builder for chaining.
+         */
+        public Builder setCategoryId(int value) {
+          
+          categoryId_ = value;
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         *类目id
+         * </pre>
+         *
+         * <code>int32 category_id = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearCategoryId() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          categoryId_ = 0;
+          onChanged();
+          return this;
+        }
 
         private java.lang.Object productId_ = "";
         /**
@@ -8168,7 +8352,7 @@ public final class SeckillProductRpc {
             java.lang.String value) {
           if (value == null) { throw new NullPointerException(); }
           productId_ = value;
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000002;
           onChanged();
           return this;
         }
@@ -8182,7 +8366,7 @@ public final class SeckillProductRpc {
          */
         public Builder clearProductId() {
           productId_ = getDefaultInstance().getProductId();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
           return this;
         }
@@ -8200,7 +8384,7 @@ public final class SeckillProductRpc {
           if (value == null) { throw new NullPointerException(); }
           checkByteStringIsUtf8(value);
           productId_ = value;
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000002;
           onChanged();
           return this;
         }
@@ -8260,7 +8444,7 @@ public final class SeckillProductRpc {
             java.lang.String value) {
           if (value == null) { throw new NullPointerException(); }
           productName_ = value;
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000004;
           onChanged();
           return this;
         }
@@ -8274,7 +8458,7 @@ public final class SeckillProductRpc {
          */
         public Builder clearProductName() {
           productName_ = getDefaultInstance().getProductName();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000004);
           onChanged();
           return this;
         }
@@ -8292,7 +8476,7 @@ public final class SeckillProductRpc {
           if (value == null) { throw new NullPointerException(); }
           checkByteStringIsUtf8(value);
           productName_ = value;
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000004;
           onChanged();
           return this;
         }
@@ -8352,7 +8536,7 @@ public final class SeckillProductRpc {
             java.lang.String value) {
           if (value == null) { throw new NullPointerException(); }
           productTitle_ = value;
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000008;
           onChanged();
           return this;
         }
@@ -8366,7 +8550,7 @@ public final class SeckillProductRpc {
          */
         public Builder clearProductTitle() {
           productTitle_ = getDefaultInstance().getProductTitle();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000008);
           onChanged();
           return this;
         }
@@ -8384,7 +8568,7 @@ public final class SeckillProductRpc {
           if (value == null) { throw new NullPointerException(); }
           checkByteStringIsUtf8(value);
           productTitle_ = value;
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000008;
           onChanged();
           return this;
         }
@@ -8395,7 +8579,7 @@ public final class SeckillProductRpc {
          *商品图片
          * </pre>
          *
-         * <code>string product_picture = 6;</code>
+         * <code>string product_picture = 5;</code>
          * @return The productPicture.
          */
         public java.lang.String getProductPicture() {
@@ -8415,7 +8599,7 @@ public final class SeckillProductRpc {
          *商品图片
          * </pre>
          *
-         * <code>string product_picture = 6;</code>
+         * <code>string product_picture = 5;</code>
          * @return The bytes for productPicture.
          */
         public com.google.protobuf.ByteString
@@ -8436,7 +8620,7 @@ public final class SeckillProductRpc {
          *商品图片
          * </pre>
          *
-         * <code>string product_picture = 6;</code>
+         * <code>string product_picture = 5;</code>
          * @param value The productPicture to set.
          * @return This builder for chaining.
          */
@@ -8444,7 +8628,7 @@ public final class SeckillProductRpc {
             java.lang.String value) {
           if (value == null) { throw new NullPointerException(); }
           productPicture_ = value;
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000010;
           onChanged();
           return this;
         }
@@ -8453,12 +8637,12 @@ public final class SeckillProductRpc {
          *商品图片
          * </pre>
          *
-         * <code>string product_picture = 6;</code>
+         * <code>string product_picture = 5;</code>
          * @return This builder for chaining.
          */
         public Builder clearProductPicture() {
           productPicture_ = getDefaultInstance().getProductPicture();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000010);
           onChanged();
           return this;
         }
@@ -8467,7 +8651,7 @@ public final class SeckillProductRpc {
          *商品图片
          * </pre>
          *
-         * <code>string product_picture = 6;</code>
+         * <code>string product_picture = 5;</code>
          * @param value The bytes for productPicture to set.
          * @return This builder for chaining.
          */
@@ -8476,7 +8660,7 @@ public final class SeckillProductRpc {
           if (value == null) { throw new NullPointerException(); }
           checkByteStringIsUtf8(value);
           productPicture_ = value;
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000010;
           onChanged();
           return this;
         }
@@ -8487,7 +8671,7 @@ public final class SeckillProductRpc {
          *商品价格
          * </pre>
          *
-         * <code>int32 product_price = 7;</code>
+         * <code>int32 product_price = 6;</code>
          * @return The productPrice.
          */
         @java.lang.Override
@@ -8499,14 +8683,14 @@ public final class SeckillProductRpc {
          *商品价格
          * </pre>
          *
-         * <code>int32 product_price = 7;</code>
+         * <code>int32 product_price = 6;</code>
          * @param value The productPrice to set.
          * @return This builder for chaining.
          */
         public Builder setProductPrice(int value) {
           
           productPrice_ = value;
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000020;
           onChanged();
           return this;
         }
@@ -8515,11 +8699,11 @@ public final class SeckillProductRpc {
          *商品价格
          * </pre>
          *
-         * <code>int32 product_price = 7;</code>
+         * <code>int32 product_price = 6;</code>
          * @return This builder for chaining.
          */
         public Builder clearProductPrice() {
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000020);
           productPrice_ = 0;
           onChanged();
           return this;
@@ -8531,7 +8715,7 @@ public final class SeckillProductRpc {
          *商品打折价格
          * </pre>
          *
-         * <code>int32 product_selling_price = 8;</code>
+         * <code>int32 product_selling_price = 7;</code>
          * @return The productSellingPrice.
          */
         @java.lang.Override
@@ -8543,14 +8727,14 @@ public final class SeckillProductRpc {
          *商品打折价格
          * </pre>
          *
-         * <code>int32 product_selling_price = 8;</code>
+         * <code>int32 product_selling_price = 7;</code>
          * @param value The productSellingPrice to set.
          * @return This builder for chaining.
          */
         public Builder setProductSellingPrice(int value) {
           
           productSellingPrice_ = value;
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000040;
           onChanged();
           return this;
         }
@@ -8559,11 +8743,11 @@ public final class SeckillProductRpc {
          *商品打折价格
          * </pre>
          *
-         * <code>int32 product_selling_price = 8;</code>
+         * <code>int32 product_selling_price = 7;</code>
          * @return This builder for chaining.
          */
         public Builder clearProductSellingPrice() {
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000040);
           productSellingPrice_ = 0;
           onChanged();
           return this;
@@ -8575,7 +8759,7 @@ public final class SeckillProductRpc {
          *主键id
          * </pre>
          *
-         * <code>string id = 11;</code>
+         * <code>string id = 8;</code>
          * @return The id.
          */
         public java.lang.String getId() {
@@ -8595,7 +8779,7 @@ public final class SeckillProductRpc {
          *主键id
          * </pre>
          *
-         * <code>string id = 11;</code>
+         * <code>string id = 8;</code>
          * @return The bytes for id.
          */
         public com.google.protobuf.ByteString
@@ -8616,7 +8800,7 @@ public final class SeckillProductRpc {
          *主键id
          * </pre>
          *
-         * <code>string id = 11;</code>
+         * <code>string id = 8;</code>
          * @param value The id to set.
          * @return This builder for chaining.
          */
@@ -8624,7 +8808,7 @@ public final class SeckillProductRpc {
             java.lang.String value) {
           if (value == null) { throw new NullPointerException(); }
           id_ = value;
-          bitField0_ |= 0x00000040;
+          bitField0_ |= 0x00000080;
           onChanged();
           return this;
         }
@@ -8633,12 +8817,12 @@ public final class SeckillProductRpc {
          *主键id
          * </pre>
          *
-         * <code>string id = 11;</code>
+         * <code>string id = 8;</code>
          * @return This builder for chaining.
          */
         public Builder clearId() {
           id_ = getDefaultInstance().getId();
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000080);
           onChanged();
           return this;
         }
@@ -8647,7 +8831,7 @@ public final class SeckillProductRpc {
          *主键id
          * </pre>
          *
-         * <code>string id = 11;</code>
+         * <code>string id = 8;</code>
          * @param value The bytes for id to set.
          * @return This builder for chaining.
          */
@@ -8656,7 +8840,7 @@ public final class SeckillProductRpc {
           if (value == null) { throw new NullPointerException(); }
           checkByteStringIsUtf8(value);
           id_ = value;
-          bitField0_ |= 0x00000040;
+          bitField0_ |= 0x00000080;
           onChanged();
           return this;
         }
@@ -8747,6 +8931,16 @@ public final class SeckillProductRpc {
        */
       com.google.protobuf.ByteString
           getIdBytes();
+
+      /**
+       * <pre>
+       *类目id
+       * </pre>
+       *
+       * <code>int32 category_id = 2;</code>
+       * @return The categoryId.
+       */
+      int getCategoryId();
     }
     /**
      * Protobuf type {@code ProductMessage.GetProductDetailReq}
@@ -8836,6 +9030,21 @@ public final class SeckillProductRpc {
         }
       }
 
+      public static final int CATEGORY_ID_FIELD_NUMBER = 2;
+      private int categoryId_ = 0;
+      /**
+       * <pre>
+       *类目id
+       * </pre>
+       *
+       * <code>int32 category_id = 2;</code>
+       * @return The categoryId.
+       */
+      @java.lang.Override
+      public int getCategoryId() {
+        return categoryId_;
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -8853,6 +9062,9 @@ public final class SeckillProductRpc {
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
         }
+        if (categoryId_ != 0) {
+          output.writeInt32(2, categoryId_);
+        }
         getUnknownFields().writeTo(output);
       }
 
@@ -8864,6 +9076,10 @@ public final class SeckillProductRpc {
         size = 0;
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+        }
+        if (categoryId_ != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(2, categoryId_);
         }
         size += getUnknownFields().getSerializedSize();
         memoizedSize = size;
@@ -8882,6 +9098,8 @@ public final class SeckillProductRpc {
 
         if (!getId()
             .equals(other.getId())) return false;
+        if (getCategoryId()
+            != other.getCategoryId()) return false;
         if (!getUnknownFields().equals(other.getUnknownFields())) return false;
         return true;
       }
@@ -8895,6 +9113,8 @@ public final class SeckillProductRpc {
         hash = (19 * hash) + getDescriptor().hashCode();
         hash = (37 * hash) + ID_FIELD_NUMBER;
         hash = (53 * hash) + getId().hashCode();
+        hash = (37 * hash) + CATEGORY_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getCategoryId();
         hash = (29 * hash) + getUnknownFields().hashCode();
         memoizedHashCode = hash;
         return hash;
@@ -9025,6 +9245,7 @@ public final class SeckillProductRpc {
           super.clear();
           bitField0_ = 0;
           id_ = "";
+          categoryId_ = 0;
           return this;
         }
 
@@ -9060,6 +9281,9 @@ public final class SeckillProductRpc {
           int from_bitField0_ = bitField0_;
           if (((from_bitField0_ & 0x00000001) != 0)) {
             result.id_ = id_;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.categoryId_ = categoryId_;
           }
         }
 
@@ -9112,6 +9336,9 @@ public final class SeckillProductRpc {
             bitField0_ |= 0x00000001;
             onChanged();
           }
+          if (other.getCategoryId() != 0) {
+            setCategoryId(other.getCategoryId());
+          }
           this.mergeUnknownFields(other.getUnknownFields());
           onChanged();
           return this;
@@ -9143,6 +9370,11 @@ public final class SeckillProductRpc {
                   bitField0_ |= 0x00000001;
                   break;
                 } // case 10
+                case 16: {
+                  categoryId_ = input.readInt32();
+                  bitField0_ |= 0x00000002;
+                  break;
+                } // case 16
                 default: {
                   if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                     done = true; // was an endgroup tag
@@ -9248,6 +9480,50 @@ public final class SeckillProductRpc {
           checkByteStringIsUtf8(value);
           id_ = value;
           bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+
+        private int categoryId_ ;
+        /**
+         * <pre>
+         *类目id
+         * </pre>
+         *
+         * <code>int32 category_id = 2;</code>
+         * @return The categoryId.
+         */
+        @java.lang.Override
+        public int getCategoryId() {
+          return categoryId_;
+        }
+        /**
+         * <pre>
+         *类目id
+         * </pre>
+         *
+         * <code>int32 category_id = 2;</code>
+         * @param value The categoryId to set.
+         * @return This builder for chaining.
+         */
+        public Builder setCategoryId(int value) {
+          
+          categoryId_ = value;
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         *类目id
+         * </pre>
+         *
+         * <code>int32 category_id = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearCategoryId() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          categoryId_ = 0;
           onChanged();
           return this;
         }
@@ -12471,7 +12747,7 @@ public final class SeckillProductRpc {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\031seckill-product-rpc.proto\"\331\t\n\016ProductM" +
+      "\n\031seckill-product-rpc.proto\"\230\n\n\016ProductM" +
       "essage\032\032\n\nCommonRely\022\014\n\004code\030\001 \001(\005\032\214\002\n\026S" +
       "aveOrUpdateProductReq\022\023\n\013category_id\030\001 \001" +
       "(\005\022\022\n\nproduct_id\030\002 \001(\t\022\024\n\014product_name\030\003" +
@@ -12479,42 +12755,44 @@ public final class SeckillProductRpc {
       "ntro\030\005 \001(\t\022\027\n\017product_picture\030\006 \001(\t\022\025\n\rp" +
       "roduct_price\030\007 \001(\005\022\035\n\025product_selling_pr" +
       "ice\030\010 \001(\005\022\023\n\013product_num\030\t \001(\005\022\025\n\rproduc" +
-      "t_sales\030\n \001(\005\022\n\n\002id\030\013 \001(\t\032\036\n\020DeleteProdu" +
-      "ctReq\022\n\n\002id\030\001 \001(\t\032\020\n\016GetCategoryReq\032K\n\017G" +
-      "etCategoryRely\022\014\n\004code\030\001 \001(\005\022*\n\010category" +
-      "\030\002 \003(\0132\030.ProductMessage.Category\0326\n\010Cate" +
-      "gory\022\023\n\013category_id\030\001 \001(\005\022\025\n\rcategory_na" +
-      "me\030\002 \001(\t\032a\n\021GetAllProductsReq\022\023\n\013categor" +
-      "y_id\030\001 \003(\t\022\016\n\006search\030\002 \001(\t\022\024\n\014current_pa" +
-      "ge\030\003 \001(\005\022\021\n\tpage_size\030\004 \001(\005\032a\n\022GetAllPro" +
-      "ductsRely\022\014\n\004code\030\001 \001(\005\022\r\n\005total\030\002 \001(\005\022." +
-      "\n\007product\030\003 \003(\0132\035.ProductMessage.SimpleP" +
-      "roduct\032\253\001\n\rSimpleProduct\022\022\n\nproduct_id\030\002" +
-      " \001(\t\022\024\n\014product_name\030\003 \001(\t\022\025\n\rproduct_ti" +
-      "tle\030\004 \001(\t\022\027\n\017product_picture\030\006 \001(\t\022\025\n\rpr" +
-      "oduct_price\030\007 \001(\005\022\035\n\025product_selling_pri" +
-      "ce\030\010 \001(\005\022\n\n\002id\030\013 \001(\t\032!\n\023GetProductDetail" +
-      "Req\022\n\n\002id\030\001 \001(\t\032N\n\024GetProductDetailRely\022" +
-      "\014\n\004code\030\001 \001(\005\022(\n\007product\030\002 \001(\0132\027.Product" +
-      "Message.Product\032\375\001\n\007Product\022\023\n\013category_" +
-      "id\030\001 \001(\005\022\022\n\nproduct_id\030\002 \001(\t\022\024\n\014product_" +
-      "name\030\003 \001(\t\022\025\n\rproduct_title\030\004 \001(\t\022\025\n\rpro" +
-      "duct_intro\030\005 \001(\t\022\027\n\017product_picture\030\006 \001(" +
-      "\t\022\025\n\rproduct_price\030\007 \001(\005\022\035\n\025product_sell" +
-      "ing_price\030\010 \001(\005\022\023\n\013product_num\030\t \001(\005\022\025\n\r" +
-      "product_sales\030\n \001(\005\022\n\n\002id\030\013 \001(\t2\320\003\n\025Seck" +
-      "illProductService\022[\n\023saveOrUpdateProduct" +
-      "\022&.ProductMessage.SaveOrUpdateProductReq" +
-      "\032\032.ProductMessage.CommonRely\"\000\022O\n\rdelete" +
-      "Product\022 .ProductMessage.DeleteProductRe" +
-      "q\032\032.ProductMessage.CommonRely\"\000\022P\n\013getCa" +
-      "tegory\022\036.ProductMessage.GetCategoryReq\032\037" +
-      ".ProductMessage.GetCategoryRely\"\000\022V\n\013get" +
-      "Products\022!.ProductMessage.GetAllProducts" +
-      "Req\032\".ProductMessage.GetAllProductsRely\"" +
-      "\000\022_\n\020getProductDetail\022#.ProductMessage.G" +
-      "etProductDetailReq\032$.ProductMessage.GetP" +
-      "roductDetailRely\"\000B\t\n\007productb\006proto3"
+      "t_sales\030\n \001(\005\022\n\n\002id\030\013 \001(\t\0323\n\020DeleteProdu" +
+      "ctReq\022\n\n\002id\030\001 \001(\t\022\023\n\013category_id\030\002 \001(\005\032\020" +
+      "\n\016GetCategoryReq\032K\n\017GetCategoryRely\022\014\n\004c" +
+      "ode\030\001 \001(\005\022*\n\010category\030\002 \003(\0132\030.ProductMes" +
+      "sage.Category\0326\n\010Category\022\023\n\013category_id" +
+      "\030\001 \001(\005\022\025\n\rcategory_name\030\002 \001(\t\032a\n\021GetAllP" +
+      "roductsReq\022\023\n\013category_id\030\001 \003(\t\022\016\n\006searc" +
+      "h\030\002 \001(\t\022\024\n\014current_page\030\003 \001(\005\022\021\n\tpage_si" +
+      "ze\030\004 \001(\005\032a\n\022GetAllProductsRely\022\014\n\004code\030\001" +
+      " \001(\005\022\r\n\005total\030\002 \001(\005\022.\n\007product\030\003 \003(\0132\035.P" +
+      "roductMessage.SimpleProduct\032\300\001\n\rSimplePr" +
+      "oduct\022\023\n\013category_id\030\001 \001(\005\022\022\n\nproduct_id" +
+      "\030\002 \001(\t\022\024\n\014product_name\030\003 \001(\t\022\025\n\rproduct_" +
+      "title\030\004 \001(\t\022\027\n\017product_picture\030\005 \001(\t\022\025\n\r" +
+      "product_price\030\006 \001(\005\022\035\n\025product_selling_p" +
+      "rice\030\007 \001(\005\022\n\n\002id\030\010 \001(\t\0326\n\023GetProductDeta" +
+      "ilReq\022\n\n\002id\030\001 \001(\t\022\023\n\013category_id\030\002 \001(\005\032N" +
+      "\n\024GetProductDetailRely\022\014\n\004code\030\001 \001(\005\022(\n\007" +
+      "product\030\002 \001(\0132\027.ProductMessage.Product\032\375" +
+      "\001\n\007Product\022\023\n\013category_id\030\001 \001(\005\022\022\n\nprodu" +
+      "ct_id\030\002 \001(\t\022\024\n\014product_name\030\003 \001(\t\022\025\n\rpro" +
+      "duct_title\030\004 \001(\t\022\025\n\rproduct_intro\030\005 \001(\t\022" +
+      "\027\n\017product_picture\030\006 \001(\t\022\025\n\rproduct_pric" +
+      "e\030\007 \001(\005\022\035\n\025product_selling_price\030\010 \001(\005\022\023" +
+      "\n\013product_num\030\t \001(\005\022\025\n\rproduct_sales\030\n \001" +
+      "(\005\022\n\n\002id\030\013 \001(\t2\320\003\n\025SeckillProductService" +
+      "\022[\n\023saveOrUpdateProduct\022&.ProductMessage" +
+      ".SaveOrUpdateProductReq\032\032.ProductMessage" +
+      ".CommonRely\"\000\022O\n\rdeleteProduct\022 .Product" +
+      "Message.DeleteProductReq\032\032.ProductMessag" +
+      "e.CommonRely\"\000\022P\n\013getCategory\022\036.ProductM" +
+      "essage.GetCategoryReq\032\037.ProductMessage.G" +
+      "etCategoryRely\"\000\022V\n\013getProducts\022!.Produc" +
+      "tMessage.GetAllProductsReq\032\".ProductMess" +
+      "age.GetAllProductsRely\"\000\022_\n\020getProductDe" +
+      "tail\022#.ProductMessage.GetProductDetailRe" +
+      "q\032$.ProductMessage.GetProductDetailRely\"" +
+      "\000B\t\n\007productb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -12543,7 +12821,7 @@ public final class SeckillProductRpc {
     internal_static_ProductMessage_DeleteProductReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ProductMessage_DeleteProductReq_descriptor,
-        new java.lang.String[] { "Id", });
+        new java.lang.String[] { "Id", "CategoryId", });
     internal_static_ProductMessage_GetCategoryReq_descriptor =
       internal_static_ProductMessage_descriptor.getNestedTypes().get(3);
     internal_static_ProductMessage_GetCategoryReq_fieldAccessorTable = new
@@ -12579,13 +12857,13 @@ public final class SeckillProductRpc {
     internal_static_ProductMessage_SimpleProduct_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ProductMessage_SimpleProduct_descriptor,
-        new java.lang.String[] { "ProductId", "ProductName", "ProductTitle", "ProductPicture", "ProductPrice", "ProductSellingPrice", "Id", });
+        new java.lang.String[] { "CategoryId", "ProductId", "ProductName", "ProductTitle", "ProductPicture", "ProductPrice", "ProductSellingPrice", "Id", });
     internal_static_ProductMessage_GetProductDetailReq_descriptor =
       internal_static_ProductMessage_descriptor.getNestedTypes().get(9);
     internal_static_ProductMessage_GetProductDetailReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ProductMessage_GetProductDetailReq_descriptor,
-        new java.lang.String[] { "Id", });
+        new java.lang.String[] { "Id", "CategoryId", });
     internal_static_ProductMessage_GetProductDetailRely_descriptor =
       internal_static_ProductMessage_descriptor.getNestedTypes().get(10);
     internal_static_ProductMessage_GetProductDetailRely_fieldAccessorTable = new

@@ -18,6 +18,7 @@ import org.springframework.stereotype.Repository;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -42,15 +43,22 @@ public class ProductsRepositoryImpl extends RepositoryImpl<Product, ProductDO> i
 
     @Override
     public String saveOrUpdate(Product product) {
+        //找出原来的数据，如果categoryId变动的话要在原来的redis组里去掉这个
+        Product old = super.findById(product.getId());
         ProductDO productDO = ProductMapper.INSTANCE.toDO(product);
         String id = mongoUtil.insertOrUpdate(productDO);
         product.setId(id);
 
-        String key = String.format(REDIS_KEY, product.getCategoryId());
-        List<ProductDO> list = this.getRedisList(key, String.valueOf(product.getCategoryId()));
-        list.removeIf(x -> id.equals(x.getId()));
-        list.add(productDO);
+        if (!Objects.equals(old.getCategoryId(), product.getCategoryId())) {
+            List<ProductDO> list = this.getRedisList(String.format(REDIS_KEY, old.getCategoryId()), old.getCategoryId());
+            list.removeIf(x -> product.getId().equals(x.getId()));
+            redisService.set(String.format(REDIS_KEY, old.getCategoryId()), JSON.toJSONString(list), 1200L);
+        }
 
+        String key = String.format(REDIS_KEY, product.getCategoryId());
+        List<ProductDO> list = this.getRedisList(key, product.getCategoryId());
+        list.removeIf(x -> product.getId().equals(x.getId()));
+        list.add(productDO);
         redisService.set(key, JSON.toJSONString(list), 1200L);
 
         cache.put(String.format(CACHE_KEY, productDO.getCategoryId()), ProductMapper.INSTANCE.toEntityList(list));
@@ -77,7 +85,7 @@ public class ProductsRepositoryImpl extends RepositoryImpl<Product, ProductDO> i
         return products.stream().filter(x -> x.getId().equals(queryDTO.getId())).findAny().orElse(null);
     }
 
-    private List<ProductDO> getRedisList(String key, String categoryId) {
+    private List<ProductDO> getRedisList(String key, Integer categoryId) {
         this.checkRedis(key, categoryId);
 
         Object value = redisService.get(key);
@@ -85,12 +93,12 @@ public class ProductsRepositoryImpl extends RepositoryImpl<Product, ProductDO> i
         return JSON.parseArray(value.toString(), entityClass);
     }
 
-    private void checkRedis(String key, String categoryId) {
+    private void checkRedis(String key, Integer categoryId) {
         CacheUtil.renewOrSet(key, 1200, () -> mongoUtil.findListByQuery(
                 new CriteriaAndWrapper().eq(ProductDO::getCategoryId, categoryId), entityClass), false);
     }
 
-    private List<Product> getCacheList(String categoryId) {
+    private List<Product> getCacheList(Integer categoryId) {
         return cache.get(String.format(CACHE_KEY, categoryId), f -> {
             String key = String.format(REDIS_KEY, categoryId);
             List<ProductDO> productDOList = this.getRedisList(key, categoryId);
