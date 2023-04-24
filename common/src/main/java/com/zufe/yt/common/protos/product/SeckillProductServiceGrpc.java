@@ -142,6 +142,37 @@ public final class SeckillProductServiceGrpc {
     return getGetProductsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<product.SeckillProductRpc.ProductMessage.GetProductDetailReq,
+      product.SeckillProductRpc.ProductMessage.GetProductDetailRely> getGetProductDetailMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "getProductDetail",
+      requestType = product.SeckillProductRpc.ProductMessage.GetProductDetailReq.class,
+      responseType = product.SeckillProductRpc.ProductMessage.GetProductDetailRely.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<product.SeckillProductRpc.ProductMessage.GetProductDetailReq,
+      product.SeckillProductRpc.ProductMessage.GetProductDetailRely> getGetProductDetailMethod() {
+    io.grpc.MethodDescriptor<product.SeckillProductRpc.ProductMessage.GetProductDetailReq, product.SeckillProductRpc.ProductMessage.GetProductDetailRely> getGetProductDetailMethod;
+    if ((getGetProductDetailMethod = SeckillProductServiceGrpc.getGetProductDetailMethod) == null) {
+      synchronized (SeckillProductServiceGrpc.class) {
+        if ((getGetProductDetailMethod = SeckillProductServiceGrpc.getGetProductDetailMethod) == null) {
+          SeckillProductServiceGrpc.getGetProductDetailMethod = getGetProductDetailMethod =
+              io.grpc.MethodDescriptor.<product.SeckillProductRpc.ProductMessage.GetProductDetailReq, product.SeckillProductRpc.ProductMessage.GetProductDetailRely>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getProductDetail"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  product.SeckillProductRpc.ProductMessage.GetProductDetailReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  product.SeckillProductRpc.ProductMessage.GetProductDetailRely.getDefaultInstance()))
+              .setSchemaDescriptor(new SeckillProductServiceMethodDescriptorSupplier("getProductDetail"))
+              .build();
+        }
+      }
+    }
+    return getGetProductDetailMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -232,6 +263,16 @@ public final class SeckillProductServiceGrpc {
         io.grpc.stub.StreamObserver<product.SeckillProductRpc.ProductMessage.GetAllProductsRely> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetProductsMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * 商品详情
+     * </pre>
+     */
+    default void getProductDetail(product.SeckillProductRpc.ProductMessage.GetProductDetailReq request,
+        io.grpc.stub.StreamObserver<product.SeckillProductRpc.ProductMessage.GetProductDetailRely> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetProductDetailMethod(), responseObserver);
+    }
   }
 
   /**
@@ -310,6 +351,17 @@ public final class SeckillProductServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetProductsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * 商品详情
+     * </pre>
+     */
+    public void getProductDetail(product.SeckillProductRpc.ProductMessage.GetProductDetailReq request,
+        io.grpc.stub.StreamObserver<product.SeckillProductRpc.ProductMessage.GetProductDetailRely> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetProductDetailMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -369,6 +421,16 @@ public final class SeckillProductServiceGrpc {
     public product.SeckillProductRpc.ProductMessage.GetAllProductsRely getProducts(product.SeckillProductRpc.ProductMessage.GetAllProductsReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetProductsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * 商品详情
+     * </pre>
+     */
+    public product.SeckillProductRpc.ProductMessage.GetProductDetailRely getProductDetail(product.SeckillProductRpc.ProductMessage.GetProductDetailReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetProductDetailMethod(), getCallOptions(), request);
     }
   }
 
@@ -434,12 +496,24 @@ public final class SeckillProductServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetProductsMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * 商品详情
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<product.SeckillProductRpc.ProductMessage.GetProductDetailRely> getProductDetail(
+        product.SeckillProductRpc.ProductMessage.GetProductDetailReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetProductDetailMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_SAVE_OR_UPDATE_PRODUCT = 0;
   private static final int METHODID_DELETE_PRODUCT = 1;
   private static final int METHODID_GET_CATEGORY = 2;
   private static final int METHODID_GET_PRODUCTS = 3;
+  private static final int METHODID_GET_PRODUCT_DETAIL = 4;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -473,6 +547,10 @@ public final class SeckillProductServiceGrpc {
         case METHODID_GET_PRODUCTS:
           serviceImpl.getProducts((product.SeckillProductRpc.ProductMessage.GetAllProductsReq) request,
               (io.grpc.stub.StreamObserver<product.SeckillProductRpc.ProductMessage.GetAllProductsRely>) responseObserver);
+          break;
+        case METHODID_GET_PRODUCT_DETAIL:
+          serviceImpl.getProductDetail((product.SeckillProductRpc.ProductMessage.GetProductDetailReq) request,
+              (io.grpc.stub.StreamObserver<product.SeckillProductRpc.ProductMessage.GetProductDetailRely>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -520,6 +598,13 @@ public final class SeckillProductServiceGrpc {
               product.SeckillProductRpc.ProductMessage.GetAllProductsReq,
               product.SeckillProductRpc.ProductMessage.GetAllProductsRely>(
                 service, METHODID_GET_PRODUCTS)))
+        .addMethod(
+          getGetProductDetailMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              product.SeckillProductRpc.ProductMessage.GetProductDetailReq,
+              product.SeckillProductRpc.ProductMessage.GetProductDetailRely>(
+                service, METHODID_GET_PRODUCT_DETAIL)))
         .build();
   }
 
@@ -572,6 +657,7 @@ public final class SeckillProductServiceGrpc {
               .addMethod(getDeleteProductMethod())
               .addMethod(getGetCategoryMethod())
               .addMethod(getGetProductsMethod())
+              .addMethod(getGetProductDetailMethod())
               .build();
         }
       }
