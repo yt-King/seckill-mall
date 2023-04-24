@@ -29,9 +29,9 @@ public interface ProductMapper {
      * @param product 入参
      * @return ProductDO 持久化对象
      */
-    @Mapping(target = "productName.value", source = "productName")
-    @Mapping(target = "productPrice.value", source = "productPrice")
-    @Mapping(target = "productSellingPrice.value", source = "productSellingPrice")
+    @Mapping(source = "productName.value", target = "productName")
+    @Mapping(source = "productPrice.value", target = "productPrice")
+    @Mapping(source = "productSellingPrice.value", target = "productSellingPrice")
     ProductDO toDO(Product product);
 
     /**
@@ -40,6 +40,9 @@ public interface ProductMapper {
      * @param saveOrUpdateProductReq 入参
      * @return Product 实体
      */
+    @Mapping(target = "productName.value", source = "productName")
+    @Mapping(target = "productPrice.value", source = "productPrice")
+    @Mapping(target = "productSellingPrice.value", source = "productSellingPrice")
     Product toEntity(SeckillProductRpc.ProductMessage.SaveOrUpdateProductReq saveOrUpdateProductReq);
 
     /**
@@ -65,6 +68,7 @@ public interface ProductMapper {
      * @param getAllProductReq 入参
      * @return QueryDTO dto
      */
+    @Mapping(source = "categoryIdList", target = "categoryId")
     QueryDTO toQuery(SeckillProductRpc.ProductMessage.GetAllProductsReq getAllProductReq);
 
     /**
@@ -89,6 +93,9 @@ public interface ProductMapper {
      * @param product 入参
      * @return Product dto
      */
+    @Mapping(source = "productName.value", target = "productName")
+    @Mapping(source = "productPrice.value", target = "productPrice")
+    @Mapping(source = "productSellingPrice.value", target = "productSellingPrice")
     SeckillProductRpc.ProductMessage.SimpleProduct toSimpleMessage(Product product);
 
     /**
@@ -97,5 +104,8 @@ public interface ProductMapper {
      * @param product 入参
      * @return Product dto
      */
+    @Mapping(source = "productName.value", target = "productName")
+    @Mapping(source = "productPrice.value", target = "productPrice")
+    @Mapping(source = "productSellingPrice.value", target = "productSellingPrice")
     SeckillProductRpc.ProductMessage.Product toMessage(Product product);
 }

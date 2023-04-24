@@ -49,7 +49,7 @@ public class ProductsRepositoryImpl extends RepositoryImpl<Product, ProductDO> i
         String id = mongoUtil.insertOrUpdate(productDO);
         product.setId(id);
 
-        if (!Objects.equals(old.getCategoryId(), product.getCategoryId())) {
+        if (null != old && !Objects.equals(old.getCategoryId(), product.getCategoryId())) {
             List<ProductDO> list = this.getRedisList(String.format(REDIS_KEY, old.getCategoryId()), old.getCategoryId());
             list.removeIf(x -> product.getId().equals(x.getId()));
             redisService.set(String.format(REDIS_KEY, old.getCategoryId()), JSON.toJSONString(list), 1200L);

@@ -10,6 +10,7 @@ import com.zufe.yt.goods.domain.category.entity.Category;
 import com.zufe.yt.goods.domain.product.entity.Product;
 import com.zufe.yt.goods.domain.product.repository.ProductsRepository;
 import com.zufe.yt.goods.infrastructure.enums.CategoryEnum;
+import com.zufe.yt.goods.infrastructure.enums.PageEnum;
 import com.zufe.yt.goods.infrastructure.persistence.data.ProductDO;
 import com.zufe.yt.goods.infrastructure.transfer.CategoryMapper;
 import com.zufe.yt.goods.infrastructure.util.EnumListUtil;
@@ -61,14 +62,16 @@ public class ProductsApplicationImpl implements ProductsApplication {
     @Override
     public MongoPage<Product> getProductList(QueryDTO queryDTO) {
         CriteriaAndWrapper wrapper = new CriteriaAndWrapper();
-        if (!queryDTO.getCategoryId().isEmpty()) {
-            wrapper.containOr(ProductDO::getCategoryId, queryDTO.getCategoryId());
-        } else if (StrUtil.isNotBlank(queryDTO.getSearch())) {
+        if (StrUtil.isNotBlank(queryDTO.getSearch())) {
             wrapper.like(ProductDO::getGlobalSearchValue, queryDTO.getSearch());
+        } else if (!queryDTO.getCategoryId().isEmpty()) {
+            wrapper.containOr(ProductDO::getCategoryId, queryDTO.getCategoryId());
+
         }
         return productsRepository.page(
                 new SortBuilder().desc(ProductDO::getCreateTime),
-                new MongoPage<>(queryDTO.getCurrentPage(), queryDTO.getPageSize()),
+                new MongoPage<>(queryDTO.getCurrentPage() == 0 ? PageEnum.CURRENT_PAGE.getNum() : queryDTO.getCurrentPage(),
+                        queryDTO.getPageSize() == 0 ? PageEnum.PAGE_SIZE.getNum() : queryDTO.getPageSize()),
                 wrapper
         );
     }

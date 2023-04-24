@@ -17,7 +17,7 @@ public class QueryDTO {
     /**
      * 类目id
      */
-    List<String> categoryId;
+    List<Integer> categoryId;
     /**
      * 搜索条件
      */

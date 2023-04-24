@@ -19,7 +19,7 @@
     <modules>
         <module>person</module>
         <module>logger</module>
-        <module>products</module>
+        <module>goods</module>
         <module>order</module>
         <module>active</module>
         <module>common</module>
