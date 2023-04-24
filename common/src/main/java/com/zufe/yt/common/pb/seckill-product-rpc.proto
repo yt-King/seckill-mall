@@ -50,8 +50,10 @@ message ProductMessage{
     string id = 11;
   }
   message DeleteProductReq {
-    //主键id
+    //id
     string id = 1;
+    //类目id
+    int32 category_id = 2;
   }
   message GetCategoryReq {
   }
@@ -85,6 +87,8 @@ message ProductMessage{
     repeated SimpleProduct product = 3;
   }
   message SimpleProduct {
+    //类目id
+    int32 category_id = 1;
     //商品id
     string product_id = 2;
     //商品名称
@@ -92,17 +96,19 @@ message ProductMessage{
     //商品标题
     string product_title = 4;
     //商品图片
-    string product_picture = 6;
+    string product_picture = 5;
     //商品价格
-    int32 product_price = 7;
+    int32 product_price = 6;
     //商品打折价格
-    int32 product_selling_price = 8;
+    int32 product_selling_price = 7;
     //主键id
-    string id = 11;
+    string id = 8;
   }
   message GetProductDetailReq {
     //id
     string id = 1;
+    //类目id
+    int32 category_id = 2;
   }
   message GetProductDetailRely{
     //状态码

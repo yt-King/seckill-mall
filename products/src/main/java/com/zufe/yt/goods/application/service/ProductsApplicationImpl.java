@@ -8,6 +8,7 @@ import com.zufe.yt.goods.domain.product.repository.ProductsRepository;
 import com.zufe.yt.goods.infrastructure.enums.CategoryEnum;
 import com.zufe.yt.goods.infrastructure.transfer.CategoryMapper;
 import com.zufe.yt.goods.infrastructure.util.EnumListUtil;
+import com.zufe.yt.goods.interfaces.dto.CacheQueryDTO;
 import com.zufe.yt.goods.interfaces.dto.QueryDTO;
 import org.springframework.stereotype.Service;
 
@@ -39,8 +40,8 @@ public class ProductsApplicationImpl implements ProductsApplication {
     }
 
     @Override
-    public void delete(String id) {
-        productsRepository.removeById(id);
+    public void delete(CacheQueryDTO queryDTO) {
+        productsRepository.delete(queryDTO);
     }
 
     @Override
@@ -52,4 +53,42 @@ public class ProductsApplicationImpl implements ProductsApplication {
     public List<Product> getProductList(QueryDTO queryDTO) {
         return productsRepository.list();
     }
+
+    @Override
+    public Product getProductDetail(CacheQueryDTO queryDTO) {
+        return productsRepository.findById(queryDTO);
+    }
+
+//    @Override
+//    public MongoPage<SettingListDTO> page(PrizeWrap.PrizeListReq request) {
+//        ActiveId activeId = new ActiveId(request.getSActiveId());
+//        CriteriaAndWrapper wrapper = new CriteriaAndWrapper();
+//        wrapper.eq(PrizeSettingDO::getSActiveId, activeId.getId());
+//        wrapper.eq(PrizeSettingDO::getDeleteFlag, DeleteStatusEnum.SHOW.name());
+//        if (StringUtils.isNotBlank(request.getName())) {
+//            wrapper.like(PrizeSettingDO::getName, request.getName());
+//        }
+//        if (StringUtils.isNotBlank(request.getStatus())) {
+//            wrapper.eq(PrizeSettingDO::getStatus, request.getStatus());
+//        }
+//        MongoPage<PrizeSetting> mongoPage = prizeSettingRepository.page(
+//                new SortBuilder().desc(PrizeSettingDO::getCreateTime),
+//                new MongoPage<>(request.getPage(), request.getPageSize()),
+//                wrapper
+//        );
+//
+//        MongoPage<SettingListDTO> page = new MongoPage<>();
+//        page.setTotalPage(mongoPage.getTotalPage());
+//        page.setTotalSize(mongoPage.getTotalSize());
+//
+//        List<SettingListDTO> list = new ArrayList<>();
+//        if (CollUtil.isNotEmpty(mongoPage.getRecords())) {
+//            List<PrizeSetting> prizeSettings = mongoPage.getRecords();
+//            this.updateStatus(prizeSettings);
+//            list.addAll(ConverterUtil.toDOList(prizeSettings, SettingListDTO.class));
+//        }
+//        page.setRecords(list);
+//
+//        return page;
+//    }
 }

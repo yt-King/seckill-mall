@@ -2,6 +2,7 @@ package com.zufe.yt.goods.application;
 
 import com.zufe.yt.goods.domain.category.entity.Category;
 import com.zufe.yt.goods.domain.product.entity.Product;
+import com.zufe.yt.goods.interfaces.dto.CacheQueryDTO;
 import com.zufe.yt.goods.interfaces.dto.QueryDTO;
 
 import java.util.List;
@@ -20,7 +21,7 @@ public interface ProductsApplication {
     /**
      * 删除
      */
-    void delete(String id);
+    void delete(CacheQueryDTO queryDTO);
 
     /**
      * 获取类目列表
@@ -31,4 +32,9 @@ public interface ProductsApplication {
      * 获取商品列表
      */
     List<Product> getProductList(QueryDTO queryDTO);
+
+    /**
+     * 获取商品详情
+     */
+    Product getProductDetail(CacheQueryDTO queryDTO);
 }

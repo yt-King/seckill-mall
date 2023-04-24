@@ -42,7 +42,7 @@ public class SeckillProductsGrpc extends SeckillProductServiceGrpc.SeckillProduc
     @Override
     public void deleteProduct(SeckillProductRpc.ProductMessage.DeleteProductReq request, StreamObserver<SeckillProductRpc.ProductMessage.CommonRely> responseObserver) {
         SeckillProductRpc.ProductMessage.CommonRely.Builder builder = SeckillProductRpc.ProductMessage.CommonRely.newBuilder().setCode(ResultCode.SUCCESS.getCode());
-        LockUtil.lock(lockKey + "DELETE-" + request.getId(), 500, () -> productsApplication.delete(request.getId()));
+        LockUtil.lock(lockKey + "DELETE-" + request.getId(), 500, () -> productsApplication.delete(ProductMapper.INSTANCE.toCacheQuery(request)));
         responseObserver.onNext(builder.build());
         responseObserver.onCompleted();
     }
@@ -58,7 +58,16 @@ public class SeckillProductsGrpc extends SeckillProductServiceGrpc.SeckillProduc
     @Override
     public void getProducts(SeckillProductRpc.ProductMessage.GetAllProductsReq request, StreamObserver<SeckillProductRpc.ProductMessage.GetAllProductsRely> responseObserver) {
         SeckillProductRpc.ProductMessage.GetAllProductsRely.Builder builder = SeckillProductRpc.ProductMessage.GetAllProductsRely.newBuilder().setCode(ResultCode.SUCCESS.getCode());
-        productsApplication.getProductList(ProductMapper.INSTANCE.toQuery(request)).forEach(x -> builder.addProduct(ProductMapper.INSTANCE.toMessage(x)));
+        productsApplication.getProductList(ProductMapper.INSTANCE.toQuery(request)).forEach(x -> builder.addProduct(ProductMapper.INSTANCE.toSimpleMessage(x)));
+        responseObserver.onNext(builder.build());
+        responseObserver.onCompleted();
+    }
+
+    @Override
+    public void getProductDetail(SeckillProductRpc.ProductMessage.GetProductDetailReq request, StreamObserver<SeckillProductRpc.ProductMessage.GetProductDetailRely> responseObserver) {
+        SeckillProductRpc.ProductMessage.GetProductDetailRely.Builder builder = SeckillProductRpc.ProductMessage.GetProductDetailRely.newBuilder().setCode(ResultCode.SUCCESS.getCode());
+        Product productDetail = productsApplication.getProductDetail(ProductMapper.INSTANCE.toCacheQuery(request));
+        builder.setProduct(ProductMapper.INSTANCE.toMessage(productDetail));
         responseObserver.onNext(builder.build());
         responseObserver.onCompleted();
     }
