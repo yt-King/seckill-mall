@@ -5,6 +5,10 @@ import com.zufe.yt.goods.application.ProductsApplication;
 import com.zufe.yt.goods.domain.category.entity.Category;
 import com.zufe.yt.goods.domain.product.entity.Product;
 import com.zufe.yt.goods.domain.product.repository.ProductsRepository;
+import com.zufe.yt.goods.infrastructure.enums.CategoryEnum;
+import com.zufe.yt.goods.infrastructure.transfer.CategoryMapper;
+import com.zufe.yt.goods.infrastructure.util.EnumListUtil;
+import com.zufe.yt.goods.interfaces.dto.QueryDTO;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -41,7 +45,11 @@ public class ProductsApplicationImpl implements ProductsApplication {
 
     @Override
     public List<Category> getCategory() {
-//        return EnumListUtil.enumToListMap(Category.class);
-        return null;
+        return CategoryMapper.INSTANCE.toEntityList(EnumListUtil.enumToListMap(CategoryEnum.class));
+    }
+
+    @Override
+    public List<Product> getProductList(QueryDTO queryDTO) {
+        return productsRepository.list();
     }
 }

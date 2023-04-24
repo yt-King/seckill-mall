@@ -13,7 +13,7 @@ service SeckillProductService {
   rpc getCategory(ProductMessage.GetCategoryReq) returns (ProductMessage.GetCategoryRely) {
   }
   // 商品列表
-  rpc getProduct(ProductMessage.GetAllProductReq) returns (ProductMessage.GetAllProductRely) {
+  rpc getProducts(ProductMessage.GetAllProductsReq) returns (ProductMessage.GetAllProductsRely) {
   }
 }
 
@@ -63,7 +63,7 @@ message ProductMessage{
     //类目名称
     string category_name = 2;
   }
-  message GetAllProductReq {
+  message GetAllProductsReq {
     //类目id
     repeated string category_id = 1;
     //搜索条件
@@ -73,7 +73,7 @@ message ProductMessage{
     //条数
     int32 page_size = 4;
   }
-  message GetAllProductRely {
+  message GetAllProductsRely {
     //状态码
     int32 code = 1;
     //总数
@@ -102,5 +102,7 @@ message ProductMessage{
     int32 product_num = 9;
     //商品售出
     int32 product_sales = 10;
+    //主键id
+    string id = 11;
   }
 }

@@ -4,6 +4,7 @@ import com.zufe.yt.common.core.constant.ResultCode;
 import com.zufe.yt.common.redis.util.LockUtil;
 import com.zufe.yt.goods.application.ProductsApplication;
 import com.zufe.yt.goods.domain.product.entity.Product;
+import com.zufe.yt.goods.infrastructure.transfer.CategoryMapper;
 import com.zufe.yt.goods.infrastructure.transfer.ProductMapper;
 import io.grpc.stub.StreamObserver;
 import net.devh.boot.grpc.server.service.GrpcService;
@@ -48,14 +49,17 @@ public class SeckillProductsGrpc extends SeckillProductServiceGrpc.SeckillProduc
 
     @Override
     public void getCategory(SeckillProductRpc.ProductMessage.GetCategoryReq request, StreamObserver<SeckillProductRpc.ProductMessage.GetCategoryRely> responseObserver) {
-//        SeckillProductRpc.ProductMessage.GetCategoryRely.Builder builder = SeckillProductRpc.ProductMessage.GetCategoryRely.newBuilder().setCode(ResultCode.SUCCESS.getCode());
-//        productsApplication.getCategory();
-//        responseObserver.onNext(builder.build());
-//        responseObserver.onCompleted();
+        SeckillProductRpc.ProductMessage.GetCategoryRely.Builder builder = SeckillProductRpc.ProductMessage.GetCategoryRely.newBuilder().setCode(ResultCode.SUCCESS.getCode());
+        productsApplication.getCategory().forEach(x -> builder.addCategory(CategoryMapper.INSTANCE.toMessage(x)));
+        responseObserver.onNext(builder.build());
+        responseObserver.onCompleted();
     }
 
     @Override
-    public void getProduct(SeckillProductRpc.ProductMessage.GetAllProductReq request, StreamObserver<SeckillProductRpc.ProductMessage.GetAllProductRely> responseObserver) {
-        super.getProduct(request, responseObserver);
+    public void getProducts(SeckillProductRpc.ProductMessage.GetAllProductsReq request, StreamObserver<SeckillProductRpc.ProductMessage.GetAllProductsRely> responseObserver) {
+        SeckillProductRpc.ProductMessage.GetAllProductsRely.Builder builder = SeckillProductRpc.ProductMessage.GetAllProductsRely.newBuilder().setCode(ResultCode.SUCCESS.getCode());
+        productsApplication.getProductList(ProductMapper.INSTANCE.toQuery(request)).forEach(x -> builder.addProduct(ProductMapper.INSTANCE.toMessage(x)));
+        responseObserver.onNext(builder.build());
+        responseObserver.onCompleted();
     }
 }

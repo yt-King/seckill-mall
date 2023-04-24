@@ -1,13 +1,10 @@
 package com.zufe.yt.goods.infrastructure.transfer;
 
-import com.zufe.yt.goods.domain.category.entity.Category;
 import com.zufe.yt.goods.domain.product.entity.Product;
+import com.zufe.yt.goods.interfaces.dto.QueryDTO;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 import product.SeckillProductRpc;
-
-import java.util.List;
-import java.util.Map;
 
 
 /**
@@ -29,10 +26,18 @@ public interface ProductMapper {
     Product toEntity(SeckillProductRpc.ProductMessage.SaveOrUpdateProductReq saveOrUpdateProductReq);
 
     /**
-     * rpc新增入参转实体
+     * rpc查询转dto
      *
-     * @param list 入参
-     * @return Product 实体
+     * @param getAllProductReq 入参
+     * @return QueryDTO dto
      */
-    List<Category> toEntity(List<Map<String, Object>> list);
+    QueryDTO toQuery(SeckillProductRpc.ProductMessage.GetAllProductsReq getAllProductReq);
+
+    /**
+     * 实体转message
+     *
+     * @param product 入参
+     * @return Product dto
+     */
+    SeckillProductRpc.ProductMessage.Product toMessage(Product product);
 }
