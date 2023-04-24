@@ -57,4 +57,8 @@ public class ProductDO extends MongoBaseDO {
      * 商品售出
      */
     Integer productSales;
+    /**
+     * 全局搜索值
+     */
+    String globalSearchValue;
 }

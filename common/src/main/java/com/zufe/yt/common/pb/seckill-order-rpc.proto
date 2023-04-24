@@ -22,7 +22,7 @@ message OrderMessage{
   }
   message ChildOrder {
     //商品id
-    int32 product_id = 1;
+    string product_id = 1;
     //商品名称
     string product_name = 2;
     //商品图片
@@ -31,6 +31,8 @@ message OrderMessage{
     int32 price = 4;
     //商品数量
     int32 num = 5;
+    //id
+    string id = 6;
   }
   message AddOrderReq {
     //用户id

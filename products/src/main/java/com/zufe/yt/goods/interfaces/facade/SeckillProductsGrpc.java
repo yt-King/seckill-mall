@@ -1,6 +1,7 @@
 package com.zufe.yt.goods.interfaces.facade;
 
 import com.zufe.yt.common.core.constant.ResultCode;
+import com.zufe.yt.common.mongo.util.MongoPage;
 import com.zufe.yt.common.redis.util.LockUtil;
 import com.zufe.yt.goods.application.ProductsApplication;
 import com.zufe.yt.goods.domain.product.entity.Product;
@@ -58,7 +59,9 @@ public class SeckillProductsGrpc extends SeckillProductServiceGrpc.SeckillProduc
     @Override
     public void getProducts(SeckillProductRpc.ProductMessage.GetAllProductsReq request, StreamObserver<SeckillProductRpc.ProductMessage.GetAllProductsRely> responseObserver) {
         SeckillProductRpc.ProductMessage.GetAllProductsRely.Builder builder = SeckillProductRpc.ProductMessage.GetAllProductsRely.newBuilder().setCode(ResultCode.SUCCESS.getCode());
-        productsApplication.getProductList(ProductMapper.INSTANCE.toQuery(request)).forEach(x -> builder.addProduct(ProductMapper.INSTANCE.toSimpleMessage(x)));
+        MongoPage<Product> mongoPage = productsApplication.getProductList(ProductMapper.INSTANCE.toQuery(request));
+        mongoPage.getRecords().forEach(x -> builder.addProduct(ProductMapper.INSTANCE.toSimpleMessage(x)));
+        builder.setTotal((int) mongoPage.getTotalSize());
         responseObserver.onNext(builder.build());
         responseObserver.onCompleted();
     }

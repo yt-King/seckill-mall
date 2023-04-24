@@ -4,7 +4,9 @@ import com.zufe.yt.goods.domain.product.entity.Product;
 import com.zufe.yt.goods.infrastructure.persistence.data.ProductDO;
 import com.zufe.yt.goods.interfaces.dto.CacheQueryDTO;
 import com.zufe.yt.goods.interfaces.dto.QueryDTO;
+import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
 import product.SeckillProductRpc;
 
@@ -22,6 +24,17 @@ public interface ProductMapper {
     ProductMapper INSTANCE = Mappers.getMapper(ProductMapper.class);
 
     /**
+     * 实体转持久化对象
+     *
+     * @param product 入参
+     * @return ProductDO 持久化对象
+     */
+    @Mapping(target = "productName.value", source = "productName")
+    @Mapping(target = "productPrice.value", source = "productPrice")
+    @Mapping(target = "productSellingPrice.value", source = "productSellingPrice")
+    ProductDO toDO(Product product);
+
+    /**
      * rpc新增入参转实体
      *
      * @param saveOrUpdateProductReq 入参
@@ -32,10 +45,11 @@ public interface ProductMapper {
     /**
      * 持久化对象转领域对象
      *
-     * @param product 入参
+     * @param productDO 入参
      * @return Product 实体
      */
-    Product toEntity(ProductDO product);
+    @InheritInverseConfiguration
+    Product toEntity(ProductDO productDO);
 
     /**
      * 持久化对象列表转领域对象列表
@@ -44,14 +58,6 @@ public interface ProductMapper {
      * @return Product 实体
      */
     List<Product> toEntityList(List<ProductDO> productDOList);
-
-    /**
-     * 实体转持久化对象
-     *
-     * @param product 入参
-     * @return ProductDO 持久化对象
-     */
-    ProductDO toDO(Product product);
 
     /**
      * rpc查询转dto

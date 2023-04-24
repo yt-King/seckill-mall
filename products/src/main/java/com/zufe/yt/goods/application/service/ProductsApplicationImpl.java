@@ -1,11 +1,16 @@
 package com.zufe.yt.goods.application.service;
 
 import cn.hutool.core.util.StrUtil;
+import com.zufe.yt.common.core.exception.ServiceException;
+import com.zufe.yt.common.mongo.domain.CriteriaAndWrapper;
+import com.zufe.yt.common.mongo.util.MongoPage;
+import com.zufe.yt.common.mongo.util.SortBuilder;
 import com.zufe.yt.goods.application.ProductsApplication;
 import com.zufe.yt.goods.domain.category.entity.Category;
 import com.zufe.yt.goods.domain.product.entity.Product;
 import com.zufe.yt.goods.domain.product.repository.ProductsRepository;
 import com.zufe.yt.goods.infrastructure.enums.CategoryEnum;
+import com.zufe.yt.goods.infrastructure.persistence.data.ProductDO;
 import com.zufe.yt.goods.infrastructure.transfer.CategoryMapper;
 import com.zufe.yt.goods.infrastructure.util.EnumListUtil;
 import com.zufe.yt.goods.interfaces.dto.CacheQueryDTO;
@@ -20,7 +25,7 @@ import java.util.List;
  * @package: com.zufe.yt.goods.application.service
  * @className: ProductsApplicationImpl
  * @date 2023/4/23
- * @description: TODO
+ * @description: 商品服务应用层实现类
  */
 
 @Service
@@ -36,11 +41,15 @@ public class ProductsApplicationImpl implements ProductsApplication {
         if (StrUtil.isBlank(product.getId())) {
             product.validExistence(productsRepository);
         }
+        product.handleGlobalSearchValue();
         productsRepository.saveOrUpdate(product);
     }
 
     @Override
     public void delete(CacheQueryDTO queryDTO) {
+        if (StrUtil.isBlank(queryDTO.getId()) || null == queryDTO.getCategoryId()) {
+            throw new ServiceException("参数有误", 100001);
+        }
         productsRepository.delete(queryDTO);
     }
 
@@ -50,45 +59,29 @@ public class ProductsApplicationImpl implements ProductsApplication {
     }
 
     @Override
-    public List<Product> getProductList(QueryDTO queryDTO) {
-        return productsRepository.list();
+    public MongoPage<Product> getProductList(QueryDTO queryDTO) {
+        CriteriaAndWrapper wrapper = new CriteriaAndWrapper();
+        if (!queryDTO.getCategoryId().isEmpty()) {
+            wrapper.containOr(ProductDO::getCategoryId, queryDTO.getCategoryId());
+        } else if (StrUtil.isNotBlank(queryDTO.getSearch())) {
+            wrapper.like(ProductDO::getGlobalSearchValue, queryDTO.getSearch());
+        }
+        return productsRepository.page(
+                new SortBuilder().desc(ProductDO::getCreateTime),
+                new MongoPage<>(queryDTO.getCurrentPage(), queryDTO.getPageSize()),
+                wrapper
+        );
     }
 
     @Override
     public Product getProductDetail(CacheQueryDTO queryDTO) {
-        return productsRepository.findById(queryDTO);
+        if (StrUtil.isBlank(queryDTO.getId()) || null == queryDTO.getCategoryId()) {
+            throw new ServiceException("参数有误", 100001);
+        }
+        Product product = productsRepository.findById(queryDTO);
+        if (null == product) {
+            throw new ServiceException("商品不存在", 100001);
+        }
+        return product;
     }
-
-//    @Override
-//    public MongoPage<SettingListDTO> page(PrizeWrap.PrizeListReq request) {
-//        ActiveId activeId = new ActiveId(request.getSActiveId());
-//        CriteriaAndWrapper wrapper = new CriteriaAndWrapper();
-//        wrapper.eq(PrizeSettingDO::getSActiveId, activeId.getId());
-//        wrapper.eq(PrizeSettingDO::getDeleteFlag, DeleteStatusEnum.SHOW.name());
-//        if (StringUtils.isNotBlank(request.getName())) {
-//            wrapper.like(PrizeSettingDO::getName, request.getName());
-//        }
-//        if (StringUtils.isNotBlank(request.getStatus())) {
-//            wrapper.eq(PrizeSettingDO::getStatus, request.getStatus());
-//        }
-//        MongoPage<PrizeSetting> mongoPage = prizeSettingRepository.page(
-//                new SortBuilder().desc(PrizeSettingDO::getCreateTime),
-//                new MongoPage<>(request.getPage(), request.getPageSize()),
-//                wrapper
-//        );
-//
-//        MongoPage<SettingListDTO> page = new MongoPage<>();
-//        page.setTotalPage(mongoPage.getTotalPage());
-//        page.setTotalSize(mongoPage.getTotalSize());
-//
-//        List<SettingListDTO> list = new ArrayList<>();
-//        if (CollUtil.isNotEmpty(mongoPage.getRecords())) {
-//            List<PrizeSetting> prizeSettings = mongoPage.getRecords();
-//            this.updateStatus(prizeSettings);
-//            list.addAll(ConverterUtil.toDOList(prizeSettings, SettingListDTO.class));
-//        }
-//        page.setRecords(list);
-//
-//        return page;
-//    }
 }

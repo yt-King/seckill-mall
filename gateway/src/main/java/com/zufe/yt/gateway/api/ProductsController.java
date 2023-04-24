@@ -49,4 +49,10 @@ public class ProductsController {
         SeckillProductRpc.ProductMessage.GetAllProductsRely rely = productsStub.getProducts(ProtoBeanUtil.toMessage(data, SeckillProductRpc.ProductMessage.GetAllProductsReq.newBuilder()).build());
         return ProtoBeanUtil.toBean(rely, JSONObject.class);
     }
+
+    @PostMapping(value = "/v1/detail")
+    public JSONObject detail(@RequestBody Map<String, Object> data) {
+        SeckillProductRpc.ProductMessage.GetProductDetailRely rely = productsStub.getProductDetail(ProtoBeanUtil.toMessage(data, SeckillProductRpc.ProductMessage.GetProductDetailReq.newBuilder()).build());
+        return ProtoBeanUtil.toBean(rely, JSONObject.class);
+    }
 }

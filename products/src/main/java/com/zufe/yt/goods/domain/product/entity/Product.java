@@ -4,9 +4,13 @@ import cn.hutool.core.util.StrUtil;
 import com.zufe.yt.common.core.exception.ServiceException;
 import com.zufe.yt.common.mongo.domain.CriteriaAndWrapper;
 import com.zufe.yt.goods.domain.product.repository.ProductsRepository;
+import com.zufe.yt.goods.domain.product.value.Name;
+import com.zufe.yt.goods.domain.product.value.Price;
 import com.zufe.yt.goods.infrastructure.enums.CategoryEnum;
 import com.zufe.yt.goods.infrastructure.util.EnumListUtil;
 import lombok.Data;
+
+import java.util.StringJoiner;
 
 /**
  * @author yt
@@ -33,7 +37,7 @@ public class Product {
     /**
      * 商品名称
      */
-    String productName;
+    Name productName;
     /**
      * 商品标题
      */
@@ -49,11 +53,11 @@ public class Product {
     /**
      * 商品价格
      */
-    Integer productPrice;
+    Price productPrice;
     /**
      * 商品打折价格
      */
-    Integer productSellingPrice;
+    Price productSellingPrice;
     /**
      * 商品数量
      */
@@ -62,13 +66,14 @@ public class Product {
      * 商品售出
      */
     Integer productSales;
+    /**
+     * 全局搜索值
+     */
+    String globalSearchValue;
 
     public void valid() {
         if (StrUtil.isBlank(this.productId)) {
             throw new ServiceException("商品id不能为空", 100001);
-        }
-        if (StrUtil.isBlank(this.productName)) {
-            throw new ServiceException("商品名称不能为空", 100001);
         }
         if (null == this.categoryId || 0 == this.categoryId) {
             throw new ServiceException("类目id不能为空", 100001);
@@ -76,13 +81,6 @@ public class Product {
             String key = "categoryId";
             if (EnumListUtil.enumToListMap(CategoryEnum.class).parallelStream().map(x -> (int) x.get(key)).noneMatch(x -> this.categoryId.intValue() == x)) {
                 throw new ServiceException("类目id错误", 100001);
-            }
-        }
-        if (this.productPrice == null || this.productSellingPrice == null) {
-            throw new ServiceException("商品价格不能为空", 100001);
-        } else {
-            if (this.productPrice <= 0 || this.productSellingPrice <= 0) {
-                throw new ServiceException("商品价格不能为负数", 100001);
             }
         }
         if (this.productNum == null || this.productNum <= 0) {
@@ -95,5 +93,15 @@ public class Product {
         if (null != find) {
             throw new ServiceException("商品已存在", 100001);
         }
+    }
+
+    public void handleGlobalSearchValue() {
+        StringJoiner stringJoiner = new StringJoiner(",");
+        stringJoiner
+                .add(this.getProductName().getValue())
+                .add(this.productTitle)
+                .add(String.valueOf(this.productPrice.getValue()))
+                .add(String.valueOf(this.productSellingPrice.getValue()));
+        this.setGlobalSearchValue(stringJoiner.toString());
     }
 }

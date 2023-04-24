@@ -1,5 +1,6 @@
 package com.zufe.yt.goods.application;
 
+import com.zufe.yt.common.mongo.util.MongoPage;
 import com.zufe.yt.goods.domain.category.entity.Category;
 import com.zufe.yt.goods.domain.product.entity.Product;
 import com.zufe.yt.goods.interfaces.dto.CacheQueryDTO;
@@ -10,7 +11,7 @@ import java.util.List;
 /**
  * @author yt
  * @date 2023/4/23
- * @description: TODO
+ * @description: 商品服务应用层接口
  */
 public interface ProductsApplication {
     /**
@@ -31,7 +32,7 @@ public interface ProductsApplication {
     /**
      * 获取商品列表
      */
-    List<Product> getProductList(QueryDTO queryDTO);
+    MongoPage<Product> getProductList(QueryDTO queryDTO);
 
     /**
      * 获取商品详情
