@@ -6,8 +6,10 @@ service SeckillOrderService {
   // 新增
   rpc addOrder(OrderMessage.AddOrderReq) returns (OrderMessage.CommonRely) {
   }
+  // 订单列表
+  rpc getOrder(OrderMessage.GetOrderReq) returns (OrderMessage.GetOrderRely) {
+  }
 }
-
 message OrderMessage{
   message CommonRely {
     //状态码

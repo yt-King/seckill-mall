@@ -1,6 +1,9 @@
 package com.zufe.yt.order.infrastructure.persistence.data;
 
+import com.zufe.yt.common.mongo.util.MongoBaseDO;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 /**
  * @author yt
@@ -10,20 +13,14 @@ import lombok.Data;
  * @description: 订单持久化对象
  */
 
+@EqualsAndHashCode(callSuper = true)
 @Data
-public class OrderDO {
+@Document(collection = "order")
+public class OrderDO extends MongoBaseDO {
     /**
      * 商品id
      */
     String productId;
-    /**
-     * 商品名称
-     */
-    String productName;
-    /**
-     * 商品图片
-     */
-    String productPicture;
     /**
      * 商品价格
      */

@@ -1,5 +1,6 @@
 package com.zufe.yt.order.domain.order.entity;
 
+import com.zufe.yt.order.domain.order.value.Price;
 import lombok.Data;
 
 /**
@@ -21,19 +22,15 @@ public class Order {
      */
     String productId;
     /**
-     * 商品名称
-     */
-    String productName;
-    /**
-     * 商品图片
-     */
-    String productPicture;
-    /**
      * 商品价格
      */
-    Integer price;
+    Price price;
     /**
      * 商品数量
      */
     Integer num;
+    /**
+     * 创建时间
+     */
+    Double createTime;
 }

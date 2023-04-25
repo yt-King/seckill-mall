@@ -21,14 +21,6 @@ public class OrderDTO {
      */
     String productId;
     /**
-     * 商品名称
-     */
-    String productName;
-    /**
-     * 商品图片
-     */
-    String productPicture;
-    /**
      * 商品价格
      */
     Integer price;
@@ -36,4 +28,8 @@ public class OrderDTO {
      * 商品数量
      */
     Integer num;
+    /**
+     * 创建时间
+     */
+    Double createTime;
 }

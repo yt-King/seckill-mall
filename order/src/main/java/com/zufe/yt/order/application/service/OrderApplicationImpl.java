@@ -1,6 +1,11 @@
 package com.zufe.yt.order.application.service;
 
+import com.zufe.yt.order.application.OrderApplication;
+import com.zufe.yt.order.domain.order.entity.Order;
+import com.zufe.yt.order.domain.order.repository.OrderRepository;
 import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
 
 /**
  * @author yt
@@ -11,5 +16,12 @@ import org.springframework.stereotype.Service;
  */
 
 @Service
-public class OrderApplicationImpl {
+public class OrderApplicationImpl implements OrderApplication {
+    @Resource
+    OrderRepository orderRepository;
+
+    @Override
+    public void addOrder(Order order) {
+        orderRepository.saveOrUpdate(order);
+    }
 }
