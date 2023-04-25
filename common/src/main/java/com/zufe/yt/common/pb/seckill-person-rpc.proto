@@ -15,8 +15,43 @@ service SeckillPersonService {
   // 判断用户名
   rpc judgeExistence(PersonMessage.JudgeExistenceReq) returns (PersonMessage.CommonRely) {
   }
+  // 订单列表
+  rpc getOrder(OrderMessage.GetOrderReq) returns (OrderMessage.GetOrderRely) {
+  }
 }
-
+// 用户订单
+service SeckillOrderService {
+  // 订单列表
+  rpc getOrder(OrderMessage.GetOrderReq) returns (OrderMessage.GetOrderRely) {
+  }
+}
+// 用户收藏
+service SeckillCollectionService {
+  // 添加收藏
+  rpc addCollect(CollectionMessage.AddCollectionReq) returns (CollectionMessage.CommonRely) {
+  }
+  // 删除收藏
+  rpc deleteCollect(CollectionMessage.DeleteCollectReq) returns (CollectionMessage.CommonRely) {
+  }
+  // 收藏列表
+  rpc getCollect(CollectionMessage.GetCollectReq) returns (CollectionMessage.GetCollectRely) {
+  }
+}
+// 用户购物车
+service SeckillShoppingCartService {
+  // 添加购物车
+  rpc addShoppingCart(ShoppingCartMessage.AddShoppingCartReq) returns (ShoppingCartMessage.CommonRely) {
+  }
+  // 删除购物车
+  rpc deleteShoppingCart(ShoppingCartMessage.DeleteShoppingCartReq) returns (ShoppingCartMessage.CommonRely) {
+  }
+  // 更新购物车数量
+  rpc updateShoppingCart(ShoppingCartMessage.UpdateShoppingCartReq) returns (ShoppingCartMessage.CommonRely) {
+  }
+  // 购物车列表
+  rpc getShoppingCart(ShoppingCartMessage.GetShoppingCartReq) returns (ShoppingCartMessage.GetShoppingCartRely) {
+  }
+}
 message PersonMessage{
   message CommonRely {
     int32 code = 1; // 状态码
@@ -56,5 +91,141 @@ message PersonMessage{
   message JudgeExistenceReq {
     //用户名
     string user_name = 1;
+  }
+}
+message OrderMessage{
+  message CommonRely {
+    //状态码
+    int32 code = 1;
+  }
+  message Order {
+    //子订单
+    repeated ChildOrder child_orders = 1;
+  }
+  message ChildOrder {
+    //商品id
+    string product_id = 1;
+    //商品名称
+    string product_name = 2;
+    //商品图片
+    string product_picture = 3;
+    //商品价格
+    int32 price = 4;
+    //商品数量
+    int32 num = 5;
+    //id
+    string id = 6;
+  }
+  message GetOrderReq {
+    //用户id
+    string user_id = 1;
+  }
+  message GetOrderRely {
+    //状态码
+    int32 code = 1;
+    //订单详情
+    repeated Order orders = 2;
+  }
+}
+message CollectionMessage{
+  message CommonRely {
+    //状态码
+    int32 code = 1;
+  }
+  message AddCollectionReq {
+    //商品id
+    string product_id = 1;
+    //用户id
+    string user_id = 2;
+  }
+  message DeleteCollectReq {
+    //商品id
+    string product_id = 1;
+    //用户id
+    string user_id = 2;
+  }
+  message GetCollectReq {
+    //用户id
+    string user_id = 1;
+  }
+  message GetCollectRely {
+    //状态码
+    int32 code = 1;
+    //列表
+    repeated Collect collect_list = 2;
+  }
+  message Collect {
+    //类目id
+    int32 category_id = 1;
+    //商品id
+    int32 product_id = 2;
+    //商品名称
+    string product_name = 3;
+    //商品标题
+    string product_title = 4;
+    //商品介绍
+    string product_intro = 5;
+    //商品图片
+    string product_picture = 6;
+    //商品价格
+    int32 product_price = 7;
+    //商品打折价格
+    int32 product_selling_price = 8;
+    //商品数量
+    int32 product_num = 9;
+    //商品售出
+    int32 product_sales = 10;
+  }
+}
+message ShoppingCartMessage{
+  message CommonRely {
+    //状态码
+    int32 code = 1;
+  }
+  message AddShoppingCartReq {
+    //商品id
+    string product_id = 1;
+    //用户id
+    string user_id = 2;
+  }
+  message UpdateShoppingCartReq {
+    //商品id
+    string product_id = 1;
+    //用户id
+    string user_id = 2;
+    //数量
+    int32 num = 3;
+  }
+  message DeleteShoppingCartReq {
+    //商品id
+    string product_id = 1;
+    //用户id
+    string user_id = 2;
+  }
+  message GetShoppingCartReq {
+    //用户id
+    string user_id = 1;
+  }
+  message GetShoppingCartRely {
+    //状态码
+    int32 code = 1;
+    //列表
+    repeated ShoppingCart shopping_cart_data = 2;
+  }
+  message ShoppingCart {
+    //是否选中
+    bool check = 1;
+    //商品id
+    int32 product_id = 2;
+    //商品名称
+    string product_name = 3;
+    //商品图片
+    string product_picture = 4;
+    //商品价格
+    int32 price = 5;
+    //商品数量
+    int32 num = 6;
+    //最大购买数
+    int32 max_num = 7;
   }
 }
