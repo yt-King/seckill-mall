@@ -1,4 +1,4 @@
-package collection;
+package person;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
@@ -9,7 +9,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.54.1)",
-    comments = "Source: seckill-collection-rpc.proto")
+    comments = "Source: seckill-person-rpc.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class SeckillCollectionServiceGrpc {
 
@@ -18,29 +18,29 @@ public final class SeckillCollectionServiceGrpc {
   public static final String SERVICE_NAME = "SeckillCollectionService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<collection.SeckillCollectionRpc.CollectionMessage.AddCollectionReq,
-      collection.SeckillCollectionRpc.CollectionMessage.CommonRely> getAddCollectMethod;
+  private static volatile io.grpc.MethodDescriptor<person.SeckillPersonRpc.CollectionMessage.AddCollectionReq,
+      person.SeckillPersonRpc.CollectionMessage.CommonRely> getAddCollectMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "addCollect",
-      requestType = collection.SeckillCollectionRpc.CollectionMessage.AddCollectionReq.class,
-      responseType = collection.SeckillCollectionRpc.CollectionMessage.CommonRely.class,
+      requestType = person.SeckillPersonRpc.CollectionMessage.AddCollectionReq.class,
+      responseType = person.SeckillPersonRpc.CollectionMessage.CommonRely.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<collection.SeckillCollectionRpc.CollectionMessage.AddCollectionReq,
-      collection.SeckillCollectionRpc.CollectionMessage.CommonRely> getAddCollectMethod() {
-    io.grpc.MethodDescriptor<collection.SeckillCollectionRpc.CollectionMessage.AddCollectionReq, collection.SeckillCollectionRpc.CollectionMessage.CommonRely> getAddCollectMethod;
+  public static io.grpc.MethodDescriptor<person.SeckillPersonRpc.CollectionMessage.AddCollectionReq,
+      person.SeckillPersonRpc.CollectionMessage.CommonRely> getAddCollectMethod() {
+    io.grpc.MethodDescriptor<person.SeckillPersonRpc.CollectionMessage.AddCollectionReq, person.SeckillPersonRpc.CollectionMessage.CommonRely> getAddCollectMethod;
     if ((getAddCollectMethod = SeckillCollectionServiceGrpc.getAddCollectMethod) == null) {
       synchronized (SeckillCollectionServiceGrpc.class) {
         if ((getAddCollectMethod = SeckillCollectionServiceGrpc.getAddCollectMethod) == null) {
           SeckillCollectionServiceGrpc.getAddCollectMethod = getAddCollectMethod =
-              io.grpc.MethodDescriptor.<collection.SeckillCollectionRpc.CollectionMessage.AddCollectionReq, collection.SeckillCollectionRpc.CollectionMessage.CommonRely>newBuilder()
+              io.grpc.MethodDescriptor.<person.SeckillPersonRpc.CollectionMessage.AddCollectionReq, person.SeckillPersonRpc.CollectionMessage.CommonRely>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "addCollect"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  collection.SeckillCollectionRpc.CollectionMessage.AddCollectionReq.getDefaultInstance()))
+                  person.SeckillPersonRpc.CollectionMessage.AddCollectionReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  collection.SeckillCollectionRpc.CollectionMessage.CommonRely.getDefaultInstance()))
+                  person.SeckillPersonRpc.CollectionMessage.CommonRely.getDefaultInstance()))
               .setSchemaDescriptor(new SeckillCollectionServiceMethodDescriptorSupplier("addCollect"))
               .build();
         }
@@ -49,29 +49,29 @@ public final class SeckillCollectionServiceGrpc {
     return getAddCollectMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<collection.SeckillCollectionRpc.CollectionMessage.DeleteCollectReq,
-      collection.SeckillCollectionRpc.CollectionMessage.CommonRely> getDeleteCollectMethod;
+  private static volatile io.grpc.MethodDescriptor<person.SeckillPersonRpc.CollectionMessage.DeleteCollectReq,
+      person.SeckillPersonRpc.CollectionMessage.CommonRely> getDeleteCollectMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "deleteCollect",
-      requestType = collection.SeckillCollectionRpc.CollectionMessage.DeleteCollectReq.class,
-      responseType = collection.SeckillCollectionRpc.CollectionMessage.CommonRely.class,
+      requestType = person.SeckillPersonRpc.CollectionMessage.DeleteCollectReq.class,
+      responseType = person.SeckillPersonRpc.CollectionMessage.CommonRely.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<collection.SeckillCollectionRpc.CollectionMessage.DeleteCollectReq,
-      collection.SeckillCollectionRpc.CollectionMessage.CommonRely> getDeleteCollectMethod() {
-    io.grpc.MethodDescriptor<collection.SeckillCollectionRpc.CollectionMessage.DeleteCollectReq, collection.SeckillCollectionRpc.CollectionMessage.CommonRely> getDeleteCollectMethod;
+  public static io.grpc.MethodDescriptor<person.SeckillPersonRpc.CollectionMessage.DeleteCollectReq,
+      person.SeckillPersonRpc.CollectionMessage.CommonRely> getDeleteCollectMethod() {
+    io.grpc.MethodDescriptor<person.SeckillPersonRpc.CollectionMessage.DeleteCollectReq, person.SeckillPersonRpc.CollectionMessage.CommonRely> getDeleteCollectMethod;
     if ((getDeleteCollectMethod = SeckillCollectionServiceGrpc.getDeleteCollectMethod) == null) {
       synchronized (SeckillCollectionServiceGrpc.class) {
         if ((getDeleteCollectMethod = SeckillCollectionServiceGrpc.getDeleteCollectMethod) == null) {
           SeckillCollectionServiceGrpc.getDeleteCollectMethod = getDeleteCollectMethod =
-              io.grpc.MethodDescriptor.<collection.SeckillCollectionRpc.CollectionMessage.DeleteCollectReq, collection.SeckillCollectionRpc.CollectionMessage.CommonRely>newBuilder()
+              io.grpc.MethodDescriptor.<person.SeckillPersonRpc.CollectionMessage.DeleteCollectReq, person.SeckillPersonRpc.CollectionMessage.CommonRely>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "deleteCollect"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  collection.SeckillCollectionRpc.CollectionMessage.DeleteCollectReq.getDefaultInstance()))
+                  person.SeckillPersonRpc.CollectionMessage.DeleteCollectReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  collection.SeckillCollectionRpc.CollectionMessage.CommonRely.getDefaultInstance()))
+                  person.SeckillPersonRpc.CollectionMessage.CommonRely.getDefaultInstance()))
               .setSchemaDescriptor(new SeckillCollectionServiceMethodDescriptorSupplier("deleteCollect"))
               .build();
         }
@@ -80,29 +80,29 @@ public final class SeckillCollectionServiceGrpc {
     return getDeleteCollectMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<collection.SeckillCollectionRpc.CollectionMessage.GetCollectReq,
-      collection.SeckillCollectionRpc.CollectionMessage.GetCollectRely> getGetCollectMethod;
+  private static volatile io.grpc.MethodDescriptor<person.SeckillPersonRpc.CollectionMessage.GetCollectReq,
+      person.SeckillPersonRpc.CollectionMessage.GetCollectRely> getGetCollectMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "getCollect",
-      requestType = collection.SeckillCollectionRpc.CollectionMessage.GetCollectReq.class,
-      responseType = collection.SeckillCollectionRpc.CollectionMessage.GetCollectRely.class,
+      requestType = person.SeckillPersonRpc.CollectionMessage.GetCollectReq.class,
+      responseType = person.SeckillPersonRpc.CollectionMessage.GetCollectRely.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<collection.SeckillCollectionRpc.CollectionMessage.GetCollectReq,
-      collection.SeckillCollectionRpc.CollectionMessage.GetCollectRely> getGetCollectMethod() {
-    io.grpc.MethodDescriptor<collection.SeckillCollectionRpc.CollectionMessage.GetCollectReq, collection.SeckillCollectionRpc.CollectionMessage.GetCollectRely> getGetCollectMethod;
+  public static io.grpc.MethodDescriptor<person.SeckillPersonRpc.CollectionMessage.GetCollectReq,
+      person.SeckillPersonRpc.CollectionMessage.GetCollectRely> getGetCollectMethod() {
+    io.grpc.MethodDescriptor<person.SeckillPersonRpc.CollectionMessage.GetCollectReq, person.SeckillPersonRpc.CollectionMessage.GetCollectRely> getGetCollectMethod;
     if ((getGetCollectMethod = SeckillCollectionServiceGrpc.getGetCollectMethod) == null) {
       synchronized (SeckillCollectionServiceGrpc.class) {
         if ((getGetCollectMethod = SeckillCollectionServiceGrpc.getGetCollectMethod) == null) {
           SeckillCollectionServiceGrpc.getGetCollectMethod = getGetCollectMethod =
-              io.grpc.MethodDescriptor.<collection.SeckillCollectionRpc.CollectionMessage.GetCollectReq, collection.SeckillCollectionRpc.CollectionMessage.GetCollectRely>newBuilder()
+              io.grpc.MethodDescriptor.<person.SeckillPersonRpc.CollectionMessage.GetCollectReq, person.SeckillPersonRpc.CollectionMessage.GetCollectRely>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getCollect"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  collection.SeckillCollectionRpc.CollectionMessage.GetCollectReq.getDefaultInstance()))
+                  person.SeckillPersonRpc.CollectionMessage.GetCollectReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  collection.SeckillCollectionRpc.CollectionMessage.GetCollectRely.getDefaultInstance()))
+                  person.SeckillPersonRpc.CollectionMessage.GetCollectRely.getDefaultInstance()))
               .setSchemaDescriptor(new SeckillCollectionServiceMethodDescriptorSupplier("getCollect"))
               .build();
         }
@@ -167,8 +167,8 @@ public final class SeckillCollectionServiceGrpc {
      * 添加收藏
      * </pre>
      */
-    default void addCollect(collection.SeckillCollectionRpc.CollectionMessage.AddCollectionReq request,
-        io.grpc.stub.StreamObserver<collection.SeckillCollectionRpc.CollectionMessage.CommonRely> responseObserver) {
+    default void addCollect(person.SeckillPersonRpc.CollectionMessage.AddCollectionReq request,
+        io.grpc.stub.StreamObserver<person.SeckillPersonRpc.CollectionMessage.CommonRely> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddCollectMethod(), responseObserver);
     }
 
@@ -177,8 +177,8 @@ public final class SeckillCollectionServiceGrpc {
      * 删除收藏
      * </pre>
      */
-    default void deleteCollect(collection.SeckillCollectionRpc.CollectionMessage.DeleteCollectReq request,
-        io.grpc.stub.StreamObserver<collection.SeckillCollectionRpc.CollectionMessage.CommonRely> responseObserver) {
+    default void deleteCollect(person.SeckillPersonRpc.CollectionMessage.DeleteCollectReq request,
+        io.grpc.stub.StreamObserver<person.SeckillPersonRpc.CollectionMessage.CommonRely> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteCollectMethod(), responseObserver);
     }
 
@@ -187,8 +187,8 @@ public final class SeckillCollectionServiceGrpc {
      * 收藏列表
      * </pre>
      */
-    default void getCollect(collection.SeckillCollectionRpc.CollectionMessage.GetCollectReq request,
-        io.grpc.stub.StreamObserver<collection.SeckillCollectionRpc.CollectionMessage.GetCollectRely> responseObserver) {
+    default void getCollect(person.SeckillPersonRpc.CollectionMessage.GetCollectReq request,
+        io.grpc.stub.StreamObserver<person.SeckillPersonRpc.CollectionMessage.GetCollectRely> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetCollectMethod(), responseObserver);
     }
   }
@@ -231,8 +231,8 @@ public final class SeckillCollectionServiceGrpc {
      * 添加收藏
      * </pre>
      */
-    public void addCollect(collection.SeckillCollectionRpc.CollectionMessage.AddCollectionReq request,
-        io.grpc.stub.StreamObserver<collection.SeckillCollectionRpc.CollectionMessage.CommonRely> responseObserver) {
+    public void addCollect(person.SeckillPersonRpc.CollectionMessage.AddCollectionReq request,
+        io.grpc.stub.StreamObserver<person.SeckillPersonRpc.CollectionMessage.CommonRely> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getAddCollectMethod(), getCallOptions()), request, responseObserver);
     }
@@ -242,8 +242,8 @@ public final class SeckillCollectionServiceGrpc {
      * 删除收藏
      * </pre>
      */
-    public void deleteCollect(collection.SeckillCollectionRpc.CollectionMessage.DeleteCollectReq request,
-        io.grpc.stub.StreamObserver<collection.SeckillCollectionRpc.CollectionMessage.CommonRely> responseObserver) {
+    public void deleteCollect(person.SeckillPersonRpc.CollectionMessage.DeleteCollectReq request,
+        io.grpc.stub.StreamObserver<person.SeckillPersonRpc.CollectionMessage.CommonRely> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteCollectMethod(), getCallOptions()), request, responseObserver);
     }
@@ -253,8 +253,8 @@ public final class SeckillCollectionServiceGrpc {
      * 收藏列表
      * </pre>
      */
-    public void getCollect(collection.SeckillCollectionRpc.CollectionMessage.GetCollectReq request,
-        io.grpc.stub.StreamObserver<collection.SeckillCollectionRpc.CollectionMessage.GetCollectRely> responseObserver) {
+    public void getCollect(person.SeckillPersonRpc.CollectionMessage.GetCollectReq request,
+        io.grpc.stub.StreamObserver<person.SeckillPersonRpc.CollectionMessage.GetCollectRely> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetCollectMethod(), getCallOptions()), request, responseObserver);
     }
@@ -284,7 +284,7 @@ public final class SeckillCollectionServiceGrpc {
      * 添加收藏
      * </pre>
      */
-    public collection.SeckillCollectionRpc.CollectionMessage.CommonRely addCollect(collection.SeckillCollectionRpc.CollectionMessage.AddCollectionReq request) {
+    public person.SeckillPersonRpc.CollectionMessage.CommonRely addCollect(person.SeckillPersonRpc.CollectionMessage.AddCollectionReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getAddCollectMethod(), getCallOptions(), request);
     }
@@ -294,7 +294,7 @@ public final class SeckillCollectionServiceGrpc {
      * 删除收藏
      * </pre>
      */
-    public collection.SeckillCollectionRpc.CollectionMessage.CommonRely deleteCollect(collection.SeckillCollectionRpc.CollectionMessage.DeleteCollectReq request) {
+    public person.SeckillPersonRpc.CollectionMessage.CommonRely deleteCollect(person.SeckillPersonRpc.CollectionMessage.DeleteCollectReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteCollectMethod(), getCallOptions(), request);
     }
@@ -304,7 +304,7 @@ public final class SeckillCollectionServiceGrpc {
      * 收藏列表
      * </pre>
      */
-    public collection.SeckillCollectionRpc.CollectionMessage.GetCollectRely getCollect(collection.SeckillCollectionRpc.CollectionMessage.GetCollectReq request) {
+    public person.SeckillPersonRpc.CollectionMessage.GetCollectRely getCollect(person.SeckillPersonRpc.CollectionMessage.GetCollectReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetCollectMethod(), getCallOptions(), request);
     }
@@ -334,8 +334,8 @@ public final class SeckillCollectionServiceGrpc {
      * 添加收藏
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<collection.SeckillCollectionRpc.CollectionMessage.CommonRely> addCollect(
-        collection.SeckillCollectionRpc.CollectionMessage.AddCollectionReq request) {
+    public com.google.common.util.concurrent.ListenableFuture<person.SeckillPersonRpc.CollectionMessage.CommonRely> addCollect(
+        person.SeckillPersonRpc.CollectionMessage.AddCollectionReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getAddCollectMethod(), getCallOptions()), request);
     }
@@ -345,8 +345,8 @@ public final class SeckillCollectionServiceGrpc {
      * 删除收藏
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<collection.SeckillCollectionRpc.CollectionMessage.CommonRely> deleteCollect(
-        collection.SeckillCollectionRpc.CollectionMessage.DeleteCollectReq request) {
+    public com.google.common.util.concurrent.ListenableFuture<person.SeckillPersonRpc.CollectionMessage.CommonRely> deleteCollect(
+        person.SeckillPersonRpc.CollectionMessage.DeleteCollectReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteCollectMethod(), getCallOptions()), request);
     }
@@ -356,8 +356,8 @@ public final class SeckillCollectionServiceGrpc {
      * 收藏列表
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<collection.SeckillCollectionRpc.CollectionMessage.GetCollectRely> getCollect(
-        collection.SeckillCollectionRpc.CollectionMessage.GetCollectReq request) {
+    public com.google.common.util.concurrent.ListenableFuture<person.SeckillPersonRpc.CollectionMessage.GetCollectRely> getCollect(
+        person.SeckillPersonRpc.CollectionMessage.GetCollectReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetCollectMethod(), getCallOptions()), request);
     }
@@ -385,16 +385,16 @@ public final class SeckillCollectionServiceGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_ADD_COLLECT:
-          serviceImpl.addCollect((collection.SeckillCollectionRpc.CollectionMessage.AddCollectionReq) request,
-              (io.grpc.stub.StreamObserver<collection.SeckillCollectionRpc.CollectionMessage.CommonRely>) responseObserver);
+          serviceImpl.addCollect((person.SeckillPersonRpc.CollectionMessage.AddCollectionReq) request,
+              (io.grpc.stub.StreamObserver<person.SeckillPersonRpc.CollectionMessage.CommonRely>) responseObserver);
           break;
         case METHODID_DELETE_COLLECT:
-          serviceImpl.deleteCollect((collection.SeckillCollectionRpc.CollectionMessage.DeleteCollectReq) request,
-              (io.grpc.stub.StreamObserver<collection.SeckillCollectionRpc.CollectionMessage.CommonRely>) responseObserver);
+          serviceImpl.deleteCollect((person.SeckillPersonRpc.CollectionMessage.DeleteCollectReq) request,
+              (io.grpc.stub.StreamObserver<person.SeckillPersonRpc.CollectionMessage.CommonRely>) responseObserver);
           break;
         case METHODID_GET_COLLECT:
-          serviceImpl.getCollect((collection.SeckillCollectionRpc.CollectionMessage.GetCollectReq) request,
-              (io.grpc.stub.StreamObserver<collection.SeckillCollectionRpc.CollectionMessage.GetCollectRely>) responseObserver);
+          serviceImpl.getCollect((person.SeckillPersonRpc.CollectionMessage.GetCollectReq) request,
+              (io.grpc.stub.StreamObserver<person.SeckillPersonRpc.CollectionMessage.GetCollectRely>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -418,22 +418,22 @@ public final class SeckillCollectionServiceGrpc {
           getAddCollectMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              collection.SeckillCollectionRpc.CollectionMessage.AddCollectionReq,
-              collection.SeckillCollectionRpc.CollectionMessage.CommonRely>(
+              person.SeckillPersonRpc.CollectionMessage.AddCollectionReq,
+              person.SeckillPersonRpc.CollectionMessage.CommonRely>(
                 service, METHODID_ADD_COLLECT)))
         .addMethod(
           getDeleteCollectMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              collection.SeckillCollectionRpc.CollectionMessage.DeleteCollectReq,
-              collection.SeckillCollectionRpc.CollectionMessage.CommonRely>(
+              person.SeckillPersonRpc.CollectionMessage.DeleteCollectReq,
+              person.SeckillPersonRpc.CollectionMessage.CommonRely>(
                 service, METHODID_DELETE_COLLECT)))
         .addMethod(
           getGetCollectMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              collection.SeckillCollectionRpc.CollectionMessage.GetCollectReq,
-              collection.SeckillCollectionRpc.CollectionMessage.GetCollectRely>(
+              person.SeckillPersonRpc.CollectionMessage.GetCollectReq,
+              person.SeckillPersonRpc.CollectionMessage.GetCollectRely>(
                 service, METHODID_GET_COLLECT)))
         .build();
   }
@@ -444,7 +444,7 @@ public final class SeckillCollectionServiceGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return collection.SeckillCollectionRpc.getDescriptor();
+      return person.SeckillPersonRpc.getDescriptor();
     }
 
     @java.lang.Override

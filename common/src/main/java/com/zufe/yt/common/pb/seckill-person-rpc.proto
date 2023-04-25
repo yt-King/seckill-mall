@@ -15,14 +15,11 @@ service SeckillPersonService {
   // 判断用户名
   rpc judgeExistence(PersonMessage.JudgeExistenceReq) returns (PersonMessage.CommonRely) {
   }
-  // 订单列表
-  rpc getOrder(OrderMessage.GetOrderReq) returns (OrderMessage.GetOrderRely) {
-  }
 }
 // 用户订单
-service SeckillOrderService {
+service SeckillPersonOrderService {
   // 订单列表
-  rpc getOrder(OrderMessage.GetOrderReq) returns (OrderMessage.GetOrderRely) {
+  rpc getOrder(PersonOrderMessage.GetOrderReq) returns (PersonOrderMessage.GetOrderRely) {
   }
 }
 // 用户收藏
@@ -93,7 +90,7 @@ message PersonMessage{
     string user_name = 1;
   }
 }
-message OrderMessage{
+message PersonOrderMessage{
   message CommonRely {
     //状态码
     int32 code = 1;

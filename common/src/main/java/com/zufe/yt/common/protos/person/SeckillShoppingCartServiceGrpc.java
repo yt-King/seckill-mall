@@ -1,4 +1,4 @@
-package shoppingCart;
+package person;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
@@ -9,7 +9,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.54.1)",
-    comments = "Source: seckill-shopping-cart-rpc.proto")
+    comments = "Source: seckill-person-rpc.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class SeckillShoppingCartServiceGrpc {
 
@@ -18,29 +18,29 @@ public final class SeckillShoppingCartServiceGrpc {
   public static final String SERVICE_NAME = "SeckillShoppingCartService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.AddShoppingCartReq,
-      shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.CommonRely> getAddShoppingCartMethod;
+  private static volatile io.grpc.MethodDescriptor<person.SeckillPersonRpc.ShoppingCartMessage.AddShoppingCartReq,
+      person.SeckillPersonRpc.ShoppingCartMessage.CommonRely> getAddShoppingCartMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "addShoppingCart",
-      requestType = shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.AddShoppingCartReq.class,
-      responseType = shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.CommonRely.class,
+      requestType = person.SeckillPersonRpc.ShoppingCartMessage.AddShoppingCartReq.class,
+      responseType = person.SeckillPersonRpc.ShoppingCartMessage.CommonRely.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.AddShoppingCartReq,
-      shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.CommonRely> getAddShoppingCartMethod() {
-    io.grpc.MethodDescriptor<shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.AddShoppingCartReq, shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.CommonRely> getAddShoppingCartMethod;
+  public static io.grpc.MethodDescriptor<person.SeckillPersonRpc.ShoppingCartMessage.AddShoppingCartReq,
+      person.SeckillPersonRpc.ShoppingCartMessage.CommonRely> getAddShoppingCartMethod() {
+    io.grpc.MethodDescriptor<person.SeckillPersonRpc.ShoppingCartMessage.AddShoppingCartReq, person.SeckillPersonRpc.ShoppingCartMessage.CommonRely> getAddShoppingCartMethod;
     if ((getAddShoppingCartMethod = SeckillShoppingCartServiceGrpc.getAddShoppingCartMethod) == null) {
       synchronized (SeckillShoppingCartServiceGrpc.class) {
         if ((getAddShoppingCartMethod = SeckillShoppingCartServiceGrpc.getAddShoppingCartMethod) == null) {
           SeckillShoppingCartServiceGrpc.getAddShoppingCartMethod = getAddShoppingCartMethod =
-              io.grpc.MethodDescriptor.<shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.AddShoppingCartReq, shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.CommonRely>newBuilder()
+              io.grpc.MethodDescriptor.<person.SeckillPersonRpc.ShoppingCartMessage.AddShoppingCartReq, person.SeckillPersonRpc.ShoppingCartMessage.CommonRely>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "addShoppingCart"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.AddShoppingCartReq.getDefaultInstance()))
+                  person.SeckillPersonRpc.ShoppingCartMessage.AddShoppingCartReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.CommonRely.getDefaultInstance()))
+                  person.SeckillPersonRpc.ShoppingCartMessage.CommonRely.getDefaultInstance()))
               .setSchemaDescriptor(new SeckillShoppingCartServiceMethodDescriptorSupplier("addShoppingCart"))
               .build();
         }
@@ -49,29 +49,29 @@ public final class SeckillShoppingCartServiceGrpc {
     return getAddShoppingCartMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.DeleteShoppingCartReq,
-      shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.CommonRely> getDeleteShoppingCartMethod;
+  private static volatile io.grpc.MethodDescriptor<person.SeckillPersonRpc.ShoppingCartMessage.DeleteShoppingCartReq,
+      person.SeckillPersonRpc.ShoppingCartMessage.CommonRely> getDeleteShoppingCartMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "deleteShoppingCart",
-      requestType = shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.DeleteShoppingCartReq.class,
-      responseType = shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.CommonRely.class,
+      requestType = person.SeckillPersonRpc.ShoppingCartMessage.DeleteShoppingCartReq.class,
+      responseType = person.SeckillPersonRpc.ShoppingCartMessage.CommonRely.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.DeleteShoppingCartReq,
-      shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.CommonRely> getDeleteShoppingCartMethod() {
-    io.grpc.MethodDescriptor<shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.DeleteShoppingCartReq, shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.CommonRely> getDeleteShoppingCartMethod;
+  public static io.grpc.MethodDescriptor<person.SeckillPersonRpc.ShoppingCartMessage.DeleteShoppingCartReq,
+      person.SeckillPersonRpc.ShoppingCartMessage.CommonRely> getDeleteShoppingCartMethod() {
+    io.grpc.MethodDescriptor<person.SeckillPersonRpc.ShoppingCartMessage.DeleteShoppingCartReq, person.SeckillPersonRpc.ShoppingCartMessage.CommonRely> getDeleteShoppingCartMethod;
     if ((getDeleteShoppingCartMethod = SeckillShoppingCartServiceGrpc.getDeleteShoppingCartMethod) == null) {
       synchronized (SeckillShoppingCartServiceGrpc.class) {
         if ((getDeleteShoppingCartMethod = SeckillShoppingCartServiceGrpc.getDeleteShoppingCartMethod) == null) {
           SeckillShoppingCartServiceGrpc.getDeleteShoppingCartMethod = getDeleteShoppingCartMethod =
-              io.grpc.MethodDescriptor.<shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.DeleteShoppingCartReq, shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.CommonRely>newBuilder()
+              io.grpc.MethodDescriptor.<person.SeckillPersonRpc.ShoppingCartMessage.DeleteShoppingCartReq, person.SeckillPersonRpc.ShoppingCartMessage.CommonRely>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "deleteShoppingCart"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.DeleteShoppingCartReq.getDefaultInstance()))
+                  person.SeckillPersonRpc.ShoppingCartMessage.DeleteShoppingCartReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.CommonRely.getDefaultInstance()))
+                  person.SeckillPersonRpc.ShoppingCartMessage.CommonRely.getDefaultInstance()))
               .setSchemaDescriptor(new SeckillShoppingCartServiceMethodDescriptorSupplier("deleteShoppingCart"))
               .build();
         }
@@ -80,29 +80,29 @@ public final class SeckillShoppingCartServiceGrpc {
     return getDeleteShoppingCartMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.UpdateShoppingCartReq,
-      shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.CommonRely> getUpdateShoppingCartMethod;
+  private static volatile io.grpc.MethodDescriptor<person.SeckillPersonRpc.ShoppingCartMessage.UpdateShoppingCartReq,
+      person.SeckillPersonRpc.ShoppingCartMessage.CommonRely> getUpdateShoppingCartMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "updateShoppingCart",
-      requestType = shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.UpdateShoppingCartReq.class,
-      responseType = shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.CommonRely.class,
+      requestType = person.SeckillPersonRpc.ShoppingCartMessage.UpdateShoppingCartReq.class,
+      responseType = person.SeckillPersonRpc.ShoppingCartMessage.CommonRely.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.UpdateShoppingCartReq,
-      shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.CommonRely> getUpdateShoppingCartMethod() {
-    io.grpc.MethodDescriptor<shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.UpdateShoppingCartReq, shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.CommonRely> getUpdateShoppingCartMethod;
+  public static io.grpc.MethodDescriptor<person.SeckillPersonRpc.ShoppingCartMessage.UpdateShoppingCartReq,
+      person.SeckillPersonRpc.ShoppingCartMessage.CommonRely> getUpdateShoppingCartMethod() {
+    io.grpc.MethodDescriptor<person.SeckillPersonRpc.ShoppingCartMessage.UpdateShoppingCartReq, person.SeckillPersonRpc.ShoppingCartMessage.CommonRely> getUpdateShoppingCartMethod;
     if ((getUpdateShoppingCartMethod = SeckillShoppingCartServiceGrpc.getUpdateShoppingCartMethod) == null) {
       synchronized (SeckillShoppingCartServiceGrpc.class) {
         if ((getUpdateShoppingCartMethod = SeckillShoppingCartServiceGrpc.getUpdateShoppingCartMethod) == null) {
           SeckillShoppingCartServiceGrpc.getUpdateShoppingCartMethod = getUpdateShoppingCartMethod =
-              io.grpc.MethodDescriptor.<shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.UpdateShoppingCartReq, shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.CommonRely>newBuilder()
+              io.grpc.MethodDescriptor.<person.SeckillPersonRpc.ShoppingCartMessage.UpdateShoppingCartReq, person.SeckillPersonRpc.ShoppingCartMessage.CommonRely>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "updateShoppingCart"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.UpdateShoppingCartReq.getDefaultInstance()))
+                  person.SeckillPersonRpc.ShoppingCartMessage.UpdateShoppingCartReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.CommonRely.getDefaultInstance()))
+                  person.SeckillPersonRpc.ShoppingCartMessage.CommonRely.getDefaultInstance()))
               .setSchemaDescriptor(new SeckillShoppingCartServiceMethodDescriptorSupplier("updateShoppingCart"))
               .build();
         }
@@ -111,29 +111,29 @@ public final class SeckillShoppingCartServiceGrpc {
     return getUpdateShoppingCartMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.GetShoppingCartReq,
-      shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.GetShoppingCartRely> getGetShoppingCartMethod;
+  private static volatile io.grpc.MethodDescriptor<person.SeckillPersonRpc.ShoppingCartMessage.GetShoppingCartReq,
+      person.SeckillPersonRpc.ShoppingCartMessage.GetShoppingCartRely> getGetShoppingCartMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "getShoppingCart",
-      requestType = shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.GetShoppingCartReq.class,
-      responseType = shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.GetShoppingCartRely.class,
+      requestType = person.SeckillPersonRpc.ShoppingCartMessage.GetShoppingCartReq.class,
+      responseType = person.SeckillPersonRpc.ShoppingCartMessage.GetShoppingCartRely.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.GetShoppingCartReq,
-      shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.GetShoppingCartRely> getGetShoppingCartMethod() {
-    io.grpc.MethodDescriptor<shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.GetShoppingCartReq, shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.GetShoppingCartRely> getGetShoppingCartMethod;
+  public static io.grpc.MethodDescriptor<person.SeckillPersonRpc.ShoppingCartMessage.GetShoppingCartReq,
+      person.SeckillPersonRpc.ShoppingCartMessage.GetShoppingCartRely> getGetShoppingCartMethod() {
+    io.grpc.MethodDescriptor<person.SeckillPersonRpc.ShoppingCartMessage.GetShoppingCartReq, person.SeckillPersonRpc.ShoppingCartMessage.GetShoppingCartRely> getGetShoppingCartMethod;
     if ((getGetShoppingCartMethod = SeckillShoppingCartServiceGrpc.getGetShoppingCartMethod) == null) {
       synchronized (SeckillShoppingCartServiceGrpc.class) {
         if ((getGetShoppingCartMethod = SeckillShoppingCartServiceGrpc.getGetShoppingCartMethod) == null) {
           SeckillShoppingCartServiceGrpc.getGetShoppingCartMethod = getGetShoppingCartMethod =
-              io.grpc.MethodDescriptor.<shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.GetShoppingCartReq, shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.GetShoppingCartRely>newBuilder()
+              io.grpc.MethodDescriptor.<person.SeckillPersonRpc.ShoppingCartMessage.GetShoppingCartReq, person.SeckillPersonRpc.ShoppingCartMessage.GetShoppingCartRely>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getShoppingCart"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.GetShoppingCartReq.getDefaultInstance()))
+                  person.SeckillPersonRpc.ShoppingCartMessage.GetShoppingCartReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.GetShoppingCartRely.getDefaultInstance()))
+                  person.SeckillPersonRpc.ShoppingCartMessage.GetShoppingCartRely.getDefaultInstance()))
               .setSchemaDescriptor(new SeckillShoppingCartServiceMethodDescriptorSupplier("getShoppingCart"))
               .build();
         }
@@ -198,8 +198,8 @@ public final class SeckillShoppingCartServiceGrpc {
      * 添加购物车
      * </pre>
      */
-    default void addShoppingCart(shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.AddShoppingCartReq request,
-        io.grpc.stub.StreamObserver<shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.CommonRely> responseObserver) {
+    default void addShoppingCart(person.SeckillPersonRpc.ShoppingCartMessage.AddShoppingCartReq request,
+        io.grpc.stub.StreamObserver<person.SeckillPersonRpc.ShoppingCartMessage.CommonRely> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddShoppingCartMethod(), responseObserver);
     }
 
@@ -208,8 +208,8 @@ public final class SeckillShoppingCartServiceGrpc {
      * 删除购物车
      * </pre>
      */
-    default void deleteShoppingCart(shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.DeleteShoppingCartReq request,
-        io.grpc.stub.StreamObserver<shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.CommonRely> responseObserver) {
+    default void deleteShoppingCart(person.SeckillPersonRpc.ShoppingCartMessage.DeleteShoppingCartReq request,
+        io.grpc.stub.StreamObserver<person.SeckillPersonRpc.ShoppingCartMessage.CommonRely> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteShoppingCartMethod(), responseObserver);
     }
 
@@ -218,8 +218,8 @@ public final class SeckillShoppingCartServiceGrpc {
      * 更新购物车数量
      * </pre>
      */
-    default void updateShoppingCart(shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.UpdateShoppingCartReq request,
-        io.grpc.stub.StreamObserver<shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.CommonRely> responseObserver) {
+    default void updateShoppingCart(person.SeckillPersonRpc.ShoppingCartMessage.UpdateShoppingCartReq request,
+        io.grpc.stub.StreamObserver<person.SeckillPersonRpc.ShoppingCartMessage.CommonRely> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateShoppingCartMethod(), responseObserver);
     }
 
@@ -228,8 +228,8 @@ public final class SeckillShoppingCartServiceGrpc {
      * 购物车列表
      * </pre>
      */
-    default void getShoppingCart(shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.GetShoppingCartReq request,
-        io.grpc.stub.StreamObserver<shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.GetShoppingCartRely> responseObserver) {
+    default void getShoppingCart(person.SeckillPersonRpc.ShoppingCartMessage.GetShoppingCartReq request,
+        io.grpc.stub.StreamObserver<person.SeckillPersonRpc.ShoppingCartMessage.GetShoppingCartRely> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetShoppingCartMethod(), responseObserver);
     }
   }
@@ -272,8 +272,8 @@ public final class SeckillShoppingCartServiceGrpc {
      * 添加购物车
      * </pre>
      */
-    public void addShoppingCart(shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.AddShoppingCartReq request,
-        io.grpc.stub.StreamObserver<shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.CommonRely> responseObserver) {
+    public void addShoppingCart(person.SeckillPersonRpc.ShoppingCartMessage.AddShoppingCartReq request,
+        io.grpc.stub.StreamObserver<person.SeckillPersonRpc.ShoppingCartMessage.CommonRely> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getAddShoppingCartMethod(), getCallOptions()), request, responseObserver);
     }
@@ -283,8 +283,8 @@ public final class SeckillShoppingCartServiceGrpc {
      * 删除购物车
      * </pre>
      */
-    public void deleteShoppingCart(shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.DeleteShoppingCartReq request,
-        io.grpc.stub.StreamObserver<shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.CommonRely> responseObserver) {
+    public void deleteShoppingCart(person.SeckillPersonRpc.ShoppingCartMessage.DeleteShoppingCartReq request,
+        io.grpc.stub.StreamObserver<person.SeckillPersonRpc.ShoppingCartMessage.CommonRely> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteShoppingCartMethod(), getCallOptions()), request, responseObserver);
     }
@@ -294,8 +294,8 @@ public final class SeckillShoppingCartServiceGrpc {
      * 更新购物车数量
      * </pre>
      */
-    public void updateShoppingCart(shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.UpdateShoppingCartReq request,
-        io.grpc.stub.StreamObserver<shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.CommonRely> responseObserver) {
+    public void updateShoppingCart(person.SeckillPersonRpc.ShoppingCartMessage.UpdateShoppingCartReq request,
+        io.grpc.stub.StreamObserver<person.SeckillPersonRpc.ShoppingCartMessage.CommonRely> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateShoppingCartMethod(), getCallOptions()), request, responseObserver);
     }
@@ -305,8 +305,8 @@ public final class SeckillShoppingCartServiceGrpc {
      * 购物车列表
      * </pre>
      */
-    public void getShoppingCart(shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.GetShoppingCartReq request,
-        io.grpc.stub.StreamObserver<shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.GetShoppingCartRely> responseObserver) {
+    public void getShoppingCart(person.SeckillPersonRpc.ShoppingCartMessage.GetShoppingCartReq request,
+        io.grpc.stub.StreamObserver<person.SeckillPersonRpc.ShoppingCartMessage.GetShoppingCartRely> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetShoppingCartMethod(), getCallOptions()), request, responseObserver);
     }
@@ -336,7 +336,7 @@ public final class SeckillShoppingCartServiceGrpc {
      * 添加购物车
      * </pre>
      */
-    public shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.CommonRely addShoppingCart(shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.AddShoppingCartReq request) {
+    public person.SeckillPersonRpc.ShoppingCartMessage.CommonRely addShoppingCart(person.SeckillPersonRpc.ShoppingCartMessage.AddShoppingCartReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getAddShoppingCartMethod(), getCallOptions(), request);
     }
@@ -346,7 +346,7 @@ public final class SeckillShoppingCartServiceGrpc {
      * 删除购物车
      * </pre>
      */
-    public shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.CommonRely deleteShoppingCart(shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.DeleteShoppingCartReq request) {
+    public person.SeckillPersonRpc.ShoppingCartMessage.CommonRely deleteShoppingCart(person.SeckillPersonRpc.ShoppingCartMessage.DeleteShoppingCartReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteShoppingCartMethod(), getCallOptions(), request);
     }
@@ -356,7 +356,7 @@ public final class SeckillShoppingCartServiceGrpc {
      * 更新购物车数量
      * </pre>
      */
-    public shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.CommonRely updateShoppingCart(shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.UpdateShoppingCartReq request) {
+    public person.SeckillPersonRpc.ShoppingCartMessage.CommonRely updateShoppingCart(person.SeckillPersonRpc.ShoppingCartMessage.UpdateShoppingCartReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateShoppingCartMethod(), getCallOptions(), request);
     }
@@ -366,7 +366,7 @@ public final class SeckillShoppingCartServiceGrpc {
      * 购物车列表
      * </pre>
      */
-    public shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.GetShoppingCartRely getShoppingCart(shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.GetShoppingCartReq request) {
+    public person.SeckillPersonRpc.ShoppingCartMessage.GetShoppingCartRely getShoppingCart(person.SeckillPersonRpc.ShoppingCartMessage.GetShoppingCartReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetShoppingCartMethod(), getCallOptions(), request);
     }
@@ -396,8 +396,8 @@ public final class SeckillShoppingCartServiceGrpc {
      * 添加购物车
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.CommonRely> addShoppingCart(
-        shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.AddShoppingCartReq request) {
+    public com.google.common.util.concurrent.ListenableFuture<person.SeckillPersonRpc.ShoppingCartMessage.CommonRely> addShoppingCart(
+        person.SeckillPersonRpc.ShoppingCartMessage.AddShoppingCartReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getAddShoppingCartMethod(), getCallOptions()), request);
     }
@@ -407,8 +407,8 @@ public final class SeckillShoppingCartServiceGrpc {
      * 删除购物车
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.CommonRely> deleteShoppingCart(
-        shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.DeleteShoppingCartReq request) {
+    public com.google.common.util.concurrent.ListenableFuture<person.SeckillPersonRpc.ShoppingCartMessage.CommonRely> deleteShoppingCart(
+        person.SeckillPersonRpc.ShoppingCartMessage.DeleteShoppingCartReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteShoppingCartMethod(), getCallOptions()), request);
     }
@@ -418,8 +418,8 @@ public final class SeckillShoppingCartServiceGrpc {
      * 更新购物车数量
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.CommonRely> updateShoppingCart(
-        shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.UpdateShoppingCartReq request) {
+    public com.google.common.util.concurrent.ListenableFuture<person.SeckillPersonRpc.ShoppingCartMessage.CommonRely> updateShoppingCart(
+        person.SeckillPersonRpc.ShoppingCartMessage.UpdateShoppingCartReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateShoppingCartMethod(), getCallOptions()), request);
     }
@@ -429,8 +429,8 @@ public final class SeckillShoppingCartServiceGrpc {
      * 购物车列表
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.GetShoppingCartRely> getShoppingCart(
-        shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.GetShoppingCartReq request) {
+    public com.google.common.util.concurrent.ListenableFuture<person.SeckillPersonRpc.ShoppingCartMessage.GetShoppingCartRely> getShoppingCart(
+        person.SeckillPersonRpc.ShoppingCartMessage.GetShoppingCartReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetShoppingCartMethod(), getCallOptions()), request);
     }
@@ -459,20 +459,20 @@ public final class SeckillShoppingCartServiceGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_ADD_SHOPPING_CART:
-          serviceImpl.addShoppingCart((shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.AddShoppingCartReq) request,
-              (io.grpc.stub.StreamObserver<shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.CommonRely>) responseObserver);
+          serviceImpl.addShoppingCart((person.SeckillPersonRpc.ShoppingCartMessage.AddShoppingCartReq) request,
+              (io.grpc.stub.StreamObserver<person.SeckillPersonRpc.ShoppingCartMessage.CommonRely>) responseObserver);
           break;
         case METHODID_DELETE_SHOPPING_CART:
-          serviceImpl.deleteShoppingCart((shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.DeleteShoppingCartReq) request,
-              (io.grpc.stub.StreamObserver<shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.CommonRely>) responseObserver);
+          serviceImpl.deleteShoppingCart((person.SeckillPersonRpc.ShoppingCartMessage.DeleteShoppingCartReq) request,
+              (io.grpc.stub.StreamObserver<person.SeckillPersonRpc.ShoppingCartMessage.CommonRely>) responseObserver);
           break;
         case METHODID_UPDATE_SHOPPING_CART:
-          serviceImpl.updateShoppingCart((shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.UpdateShoppingCartReq) request,
-              (io.grpc.stub.StreamObserver<shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.CommonRely>) responseObserver);
+          serviceImpl.updateShoppingCart((person.SeckillPersonRpc.ShoppingCartMessage.UpdateShoppingCartReq) request,
+              (io.grpc.stub.StreamObserver<person.SeckillPersonRpc.ShoppingCartMessage.CommonRely>) responseObserver);
           break;
         case METHODID_GET_SHOPPING_CART:
-          serviceImpl.getShoppingCart((shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.GetShoppingCartReq) request,
-              (io.grpc.stub.StreamObserver<shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.GetShoppingCartRely>) responseObserver);
+          serviceImpl.getShoppingCart((person.SeckillPersonRpc.ShoppingCartMessage.GetShoppingCartReq) request,
+              (io.grpc.stub.StreamObserver<person.SeckillPersonRpc.ShoppingCartMessage.GetShoppingCartRely>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -496,29 +496,29 @@ public final class SeckillShoppingCartServiceGrpc {
           getAddShoppingCartMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.AddShoppingCartReq,
-              shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.CommonRely>(
+              person.SeckillPersonRpc.ShoppingCartMessage.AddShoppingCartReq,
+              person.SeckillPersonRpc.ShoppingCartMessage.CommonRely>(
                 service, METHODID_ADD_SHOPPING_CART)))
         .addMethod(
           getDeleteShoppingCartMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.DeleteShoppingCartReq,
-              shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.CommonRely>(
+              person.SeckillPersonRpc.ShoppingCartMessage.DeleteShoppingCartReq,
+              person.SeckillPersonRpc.ShoppingCartMessage.CommonRely>(
                 service, METHODID_DELETE_SHOPPING_CART)))
         .addMethod(
           getUpdateShoppingCartMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.UpdateShoppingCartReq,
-              shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.CommonRely>(
+              person.SeckillPersonRpc.ShoppingCartMessage.UpdateShoppingCartReq,
+              person.SeckillPersonRpc.ShoppingCartMessage.CommonRely>(
                 service, METHODID_UPDATE_SHOPPING_CART)))
         .addMethod(
           getGetShoppingCartMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.GetShoppingCartReq,
-              shoppingCart.SeckillShoppingCartRpc.ShoppingCartMessage.GetShoppingCartRely>(
+              person.SeckillPersonRpc.ShoppingCartMessage.GetShoppingCartReq,
+              person.SeckillPersonRpc.ShoppingCartMessage.GetShoppingCartRely>(
                 service, METHODID_GET_SHOPPING_CART)))
         .build();
   }
@@ -529,7 +529,7 @@ public final class SeckillShoppingCartServiceGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return shoppingCart.SeckillShoppingCartRpc.getDescriptor();
+      return person.SeckillPersonRpc.getDescriptor();
     }
 
     @java.lang.Override
