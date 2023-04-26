@@ -1,10 +1,11 @@
 package com.zufe.yt.goods.application;
 
 import com.zufe.yt.common.mongo.util.MongoPage;
-import com.zufe.yt.goods.domain.category.entity.Category;
+import com.zufe.yt.goods.domain.category.Category;
 import com.zufe.yt.goods.domain.product.entity.Product;
 import com.zufe.yt.goods.interfaces.dto.CacheQueryDTO;
 import com.zufe.yt.goods.interfaces.dto.QueryDTO;
+import com.zufe.yt.goods.interfaces.dto.StockDTO;
 
 import java.util.List;
 
@@ -38,4 +39,9 @@ public interface ProductsApplication {
      * 获取商品详情
      */
     Product getProductDetail(CacheQueryDTO queryDTO);
+
+    /**
+     * 用户购买商品增加商品已获取量
+     */
+    String incCount(StockDTO stockDTO);
 }

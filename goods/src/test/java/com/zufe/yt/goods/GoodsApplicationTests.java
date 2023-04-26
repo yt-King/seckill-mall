@@ -1,7 +1,7 @@
 package com.zufe.yt.goods;
 
 import com.zufe.yt.common.core.exception.ServiceException;
-import com.zufe.yt.goods.domain.category.entity.Category;
+import com.zufe.yt.goods.domain.category.Category;
 import com.zufe.yt.goods.infrastructure.enums.CategoryEnum;
 import com.zufe.yt.goods.infrastructure.transfer.CategoryMapper;
 import com.zufe.yt.goods.infrastructure.util.EnumListUtil;

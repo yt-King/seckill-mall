@@ -1,4 +1,4 @@
-package com.zufe.yt.goods.domain.category.entity;
+package com.zufe.yt.goods.domain.category;
 
 import lombok.Data;
 

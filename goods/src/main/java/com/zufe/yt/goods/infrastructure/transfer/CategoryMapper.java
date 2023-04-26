@@ -1,6 +1,6 @@
 package com.zufe.yt.goods.infrastructure.transfer;
 
-import com.zufe.yt.goods.domain.category.entity.Category;
+import com.zufe.yt.goods.domain.category.Category;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;

@@ -18,6 +18,9 @@ service SeckillProductService {
   // 商品详情
   rpc getProductDetail(ProductMessage.GetProductDetailReq) returns (ProductMessage.GetProductDetailRely) {
   }
+  // 商品扣除
+  rpc incGotCount(ProductMessage.IncGotCountReq) returns (ProductMessage.IncGotCountRely) {
+  }
 }
 
 message ProductMessage{
@@ -139,5 +142,19 @@ message ProductMessage{
     int32 product_sales = 10;
     //主键id
     string id = 11;
+  }
+  message IncGotCountReq {
+    //商品id
+    string product_id = 1;
+    //商品总量
+    string total_count = 2;
+    //商品已使用量
+    string got_count = 3;
+    //操作数量
+    string inc_count = 4;
+  }
+  message IncGotCountRely {
+    //codeId
+    string code_id = 1;
   }
 }
