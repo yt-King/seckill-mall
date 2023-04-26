@@ -5852,10 +5852,11 @@ public final class SeckillOrderRpc {
       "\022#\n\006orders\030\002 \003(\0132\023.OrderMessage.Order\032\036\n" +
       "\013GetOrderReq\022\017\n\007user_id\030\001 \001(\t\032A\n\014GetOrde" +
       "rRely\022\014\n\004code\030\001 \001(\005\022#\n\006orders\030\002 \003(\0132\023.Or" +
-      "derMessage.Order2X\n\023SeckillOrderService\022" +
-      "A\n\010addOrder\022\031.OrderMessage.AddOrderReq\032\030" +
-      ".OrderMessage.CommonRely\"\000B\007\n\005orderb\006pro" +
-      "to3"
+      "derMessage.Order2\235\001\n\023SeckillOrderService" +
+      "\022A\n\010addOrder\022\031.OrderMessage.AddOrderReq\032" +
+      "\030.OrderMessage.CommonRely\"\000\022C\n\010getOrder\022" +
+      "\031.OrderMessage.GetOrderReq\032\032.OrderMessag" +
+      "e.GetOrderRely\"\000B\007\n\005orderb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -36,4 +36,9 @@ public class SeckillOrderGrpc extends SeckillOrderServiceGrpc.SeckillOrderServic
         responseObserver.onNext(builder.build());
         responseObserver.onCompleted();
     }
+
+    @Override
+    public void getOrder(SeckillOrderRpc.OrderMessage.GetOrderReq request, StreamObserver<SeckillOrderRpc.OrderMessage.GetOrderRely> responseObserver) {
+        super.getOrder(request, responseObserver);
+    }
 }

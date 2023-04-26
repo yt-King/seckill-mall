@@ -49,6 +49,37 @@ public final class SeckillOrderServiceGrpc {
     return getAddOrderMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<order.SeckillOrderRpc.OrderMessage.GetOrderReq,
+      order.SeckillOrderRpc.OrderMessage.GetOrderRely> getGetOrderMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "getOrder",
+      requestType = order.SeckillOrderRpc.OrderMessage.GetOrderReq.class,
+      responseType = order.SeckillOrderRpc.OrderMessage.GetOrderRely.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<order.SeckillOrderRpc.OrderMessage.GetOrderReq,
+      order.SeckillOrderRpc.OrderMessage.GetOrderRely> getGetOrderMethod() {
+    io.grpc.MethodDescriptor<order.SeckillOrderRpc.OrderMessage.GetOrderReq, order.SeckillOrderRpc.OrderMessage.GetOrderRely> getGetOrderMethod;
+    if ((getGetOrderMethod = SeckillOrderServiceGrpc.getGetOrderMethod) == null) {
+      synchronized (SeckillOrderServiceGrpc.class) {
+        if ((getGetOrderMethod = SeckillOrderServiceGrpc.getGetOrderMethod) == null) {
+          SeckillOrderServiceGrpc.getGetOrderMethod = getGetOrderMethod =
+              io.grpc.MethodDescriptor.<order.SeckillOrderRpc.OrderMessage.GetOrderReq, order.SeckillOrderRpc.OrderMessage.GetOrderRely>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getOrder"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  order.SeckillOrderRpc.OrderMessage.GetOrderReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  order.SeckillOrderRpc.OrderMessage.GetOrderRely.getDefaultInstance()))
+              .setSchemaDescriptor(new SeckillOrderServiceMethodDescriptorSupplier("getOrder"))
+              .build();
+        }
+      }
+    }
+    return getGetOrderMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -109,6 +140,16 @@ public final class SeckillOrderServiceGrpc {
         io.grpc.stub.StreamObserver<order.SeckillOrderRpc.OrderMessage.CommonRely> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddOrderMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * 订单列表
+     * </pre>
+     */
+    default void getOrder(order.SeckillOrderRpc.OrderMessage.GetOrderReq request,
+        io.grpc.stub.StreamObserver<order.SeckillOrderRpc.OrderMessage.GetOrderRely> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetOrderMethod(), responseObserver);
+    }
   }
 
   /**
@@ -154,6 +195,17 @@ public final class SeckillOrderServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getAddOrderMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * 订单列表
+     * </pre>
+     */
+    public void getOrder(order.SeckillOrderRpc.OrderMessage.GetOrderReq request,
+        io.grpc.stub.StreamObserver<order.SeckillOrderRpc.OrderMessage.GetOrderRely> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetOrderMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -183,6 +235,16 @@ public final class SeckillOrderServiceGrpc {
     public order.SeckillOrderRpc.OrderMessage.CommonRely addOrder(order.SeckillOrderRpc.OrderMessage.AddOrderReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getAddOrderMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * 订单列表
+     * </pre>
+     */
+    public order.SeckillOrderRpc.OrderMessage.GetOrderRely getOrder(order.SeckillOrderRpc.OrderMessage.GetOrderReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetOrderMethod(), getCallOptions(), request);
     }
   }
 
@@ -215,9 +277,21 @@ public final class SeckillOrderServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getAddOrderMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * 订单列表
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<order.SeckillOrderRpc.OrderMessage.GetOrderRely> getOrder(
+        order.SeckillOrderRpc.OrderMessage.GetOrderReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetOrderMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_ADD_ORDER = 0;
+  private static final int METHODID_GET_ORDER = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -239,6 +313,10 @@ public final class SeckillOrderServiceGrpc {
         case METHODID_ADD_ORDER:
           serviceImpl.addOrder((order.SeckillOrderRpc.OrderMessage.AddOrderReq) request,
               (io.grpc.stub.StreamObserver<order.SeckillOrderRpc.OrderMessage.CommonRely>) responseObserver);
+          break;
+        case METHODID_GET_ORDER:
+          serviceImpl.getOrder((order.SeckillOrderRpc.OrderMessage.GetOrderReq) request,
+              (io.grpc.stub.StreamObserver<order.SeckillOrderRpc.OrderMessage.GetOrderRely>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -265,6 +343,13 @@ public final class SeckillOrderServiceGrpc {
               order.SeckillOrderRpc.OrderMessage.AddOrderReq,
               order.SeckillOrderRpc.OrderMessage.CommonRely>(
                 service, METHODID_ADD_ORDER)))
+        .addMethod(
+          getGetOrderMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              order.SeckillOrderRpc.OrderMessage.GetOrderReq,
+              order.SeckillOrderRpc.OrderMessage.GetOrderRely>(
+                service, METHODID_GET_ORDER)))
         .build();
   }
 
@@ -314,6 +399,7 @@ public final class SeckillOrderServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new SeckillOrderServiceFileDescriptorSupplier())
               .addMethod(getAddOrderMethod())
+              .addMethod(getGetOrderMethod())
               .build();
         }
       }
