@@ -35,8 +35,10 @@ public class SeckillOrderGrpc extends SeckillOrderServiceGrpc.SeckillOrderServic
 
     @Override
     public void getOrder(SeckillOrderRpc.OrderMessage.GetOrderReq request, StreamObserver<SeckillOrderRpc.OrderMessage.GetOrderRely> responseObserver) {
-        super.getOrder(request, responseObserver);
+        SeckillOrderRpc.OrderMessage.GetOrderRely.Builder builder = SeckillOrderRpc.OrderMessage.GetOrderRely.newBuilder().setCode(ResultCode.SUCCESS.getCode());
+        orderApplication.getOrder(request.getUserId()).forEach(x -> builder.addOrders(OrderMapper.INSTANCE.toMessage(x)));
+        responseObserver.onNext(builder.build());
+        responseObserver.onCompleted();
     }
-
 
 }

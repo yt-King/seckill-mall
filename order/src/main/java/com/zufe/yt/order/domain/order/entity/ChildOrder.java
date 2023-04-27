@@ -2,6 +2,7 @@ package com.zufe.yt.order.domain.order.entity;
 
 import com.zufe.yt.order.domain.order.value.Num;
 import com.zufe.yt.order.domain.order.value.Price;
+import com.zufe.yt.order.domain.order.value.ProductId;
 import lombok.Data;
 
 /**
@@ -17,7 +18,7 @@ public class ChildOrder {
     /**
      * 商品id
      */
-    String productId;
+    ProductId productId;
     /**
      * 商品价格
      */
@@ -26,4 +27,8 @@ public class ChildOrder {
      * 商品数量
      */
     Num num;
+    /**
+     * 订单状态
+     */
+    String status;
 }

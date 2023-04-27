@@ -15,7 +15,10 @@ public enum ResultCode {
      * success
      */
     SUCCESS(0, "success"),
-
+    /**
+     * 库存不足
+     */
+    STOCK_INSUFFICIENT(233, "库存不足"),
     /**
      * 系统异常
      */

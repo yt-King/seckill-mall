@@ -1,5 +1,7 @@
 package com.zufe.yt.order.domain.order.entity;
 
+import cn.hutool.core.util.StrUtil;
+import com.zufe.yt.common.core.exception.ServiceException;
 import lombok.Data;
 
 import java.util.List;
@@ -27,4 +29,13 @@ public class Order {
      * 创建时间
      */
     Double createTime;
+
+    public void valid() {
+        if (StrUtil.isBlank(this.userId)) {
+            throw new ServiceException("用户id不能为空", 100001);
+        }
+        if (childOrders.isEmpty()) {
+            throw new ServiceException("子订单不能为空", 100001);
+        }
+    }
 }

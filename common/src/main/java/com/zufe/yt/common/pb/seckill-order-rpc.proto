@@ -30,8 +30,10 @@ message OrderMessage{
     int32 price = 4;
     //商品数量
     int32 num = 5;
+    //子订单状态
+    string order_status = 6;
     //子订单id
-    string id = 6;
+    string id = 7;
   }
   message AddOrderReq {
     //用户id

@@ -3,6 +3,7 @@ package com.zufe.yt.goods.application.service;
 import cn.hutool.core.lang.UUID;
 import cn.hutool.core.thread.ThreadUtil;
 import cn.hutool.core.util.StrUtil;
+import com.zufe.yt.common.core.constant.ResultCode;
 import com.zufe.yt.common.core.exception.ServiceException;
 import com.zufe.yt.common.mongo.domain.CriteriaAndWrapper;
 import com.zufe.yt.common.mongo.util.MongoPage;
@@ -181,17 +182,17 @@ public class ProductsApplicationImpl implements ProductsApplication {
         //todo:考虑一下怎么在缓存里查，现在的缓存需要categoryId，后续优化
         Product product = productsRepository.findById(stockDTO.getProductId());
         if (product == null) {
-            throw new ServiceException("商品不存在", 100001);
+            throw new ServiceException("商品不存在", 100007);
         }
         //走lua脚本获取
         Stock stock = stockRepository.findById(stockDTO.getProductId());
         if (stock == null) {
-            throw new ServiceException("库存不存在", 100001);
+            throw new ServiceException("库存不存在", 100008);
         }
         //走lua扣除
         Long res = stockRepository.incGotCount(stockDTO.getIncCount(), stock);
         if (res == null || res <= 0) {
-            throw new ServiceException("库存不足", 100003);
+            throw new ServiceException(ResultCode.STOCK_INSUFFICIENT.getMsg(), ResultCode.STOCK_INSUFFICIENT.getCode());
         }
         redisService.sSet(SYNC_STOCK_KEY, stockDTO.getProductId());
         //todo:生成codeId返回，这里先简单用uuid代替一下

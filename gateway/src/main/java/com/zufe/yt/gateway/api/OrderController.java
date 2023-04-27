@@ -31,4 +31,10 @@ public class OrderController {
         SeckillOrderRpc.OrderMessage.CommonRely rely = orderStub.addOrder(ProtoBeanUtil.toMessage(data, SeckillOrderRpc.OrderMessage.AddOrderReq.newBuilder()).build());
         return ProtoBeanUtil.toBean(rely, JSONObject.class);
     }
+
+    @PostMapping(value = "/v1/get")
+    public JSONObject get(@RequestBody Map<String, Object> data) {
+        SeckillOrderRpc.OrderMessage.GetOrderRely rely = orderStub.getOrder(ProtoBeanUtil.toMessage(data, SeckillOrderRpc.OrderMessage.GetOrderReq.newBuilder()).build());
+        return ProtoBeanUtil.toBean(rely, JSONObject.class);
+    }
 }

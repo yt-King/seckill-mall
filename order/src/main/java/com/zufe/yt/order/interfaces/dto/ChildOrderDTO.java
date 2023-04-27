@@ -25,4 +25,8 @@ public class ChildOrderDTO {
      * 商品数量
      */
     Integer num;
+    /**
+     * 订单状态
+     */
+    String status;
 }
