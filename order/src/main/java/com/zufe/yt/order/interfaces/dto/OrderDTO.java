@@ -1,6 +1,9 @@
 package com.zufe.yt.order.interfaces.dto;
 
+import com.zufe.yt.order.domain.order.entity.ChildOrder;
 import lombok.Data;
+
+import java.util.List;
 
 /**
  * @author yt
@@ -12,22 +15,15 @@ import lombok.Data;
 
 @Data
 public class OrderDTO {
-    /**
-     * id
-     */
     String id;
     /**
-     * 商品id
+     * 用户id
      */
-    String productId;
+    String userId;
     /**
-     * 商品价格
+     * 子订单
      */
-    Integer price;
-    /**
-     * 商品数量
-     */
-    Integer num;
+    List<ChildOrderDTO> childOrders;
     /**
      * 创建时间
      */

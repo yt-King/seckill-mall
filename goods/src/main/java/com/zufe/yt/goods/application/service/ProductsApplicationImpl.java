@@ -27,12 +27,15 @@ import com.zufe.yt.goods.interfaces.dto.CacheQueryDTO;
 import com.zufe.yt.goods.interfaces.dto.QueryDTO;
 import com.zufe.yt.goods.interfaces.dto.StockDTO;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.data.redis.core.RedisCallback;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.serializer.RedisSerializer;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * @author yt
@@ -56,7 +59,7 @@ public class ProductsApplicationImpl implements ProductsApplication {
 
     private static final String UNIQUE = "UUID:%S";
     private static final String SYNC_STOCK_KEY = "SYNC:STOCK";
-    private static final Long TIME = 3600L;
+    private static final Long TIME = 30L;
 
     /**
      * 初始化 开启一个定时器 定时刷新被修改的库存同步到数据库
@@ -166,10 +169,14 @@ public class ProductsApplicationImpl implements ProductsApplication {
         //先判断幂等
         if (StringUtils.isNotBlank(stockDTO.getUuid())) {
             String key = String.format(UNIQUE, stockDTO.getUuid());
-            if (redisService.hasKey(key)) {
+            RedisSerializer<String> serializer = redisTemplate.getStringSerializer();
+            byte[] res = redisTemplate.execute((RedisCallback<byte[]>) connection ->
+                    connection.getSet(Objects.requireNonNull(serializer.serialize(key)), Objects.requireNonNull(serializer.serialize(""))));
+            if (res != null) {
                 return "";
             }
-            redisService.set(key, "", TIME);
+            //设置过期时间
+            redisService.expire(key, TIME);
         }
         //todo:考虑一下怎么在缓存里查，现在的缓存需要categoryId，后续优化
         Product product = productsRepository.findById(stockDTO.getProductId());

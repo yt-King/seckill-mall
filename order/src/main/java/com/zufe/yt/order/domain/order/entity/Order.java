@@ -1,7 +1,8 @@
 package com.zufe.yt.order.domain.order.entity;
 
-import com.zufe.yt.order.domain.order.value.Price;
 import lombok.Data;
+
+import java.util.List;
 
 /**
  * @author yt
@@ -13,22 +14,15 @@ import lombok.Data;
 
 @Data
 public class Order {
-    /**
-     * id
-     */
     String id;
     /**
-     * 商品id
+     * 用户id
      */
-    String productId;
+    String userId;
     /**
-     * 商品价格
+     * 子订单
      */
-    Price price;
-    /**
-     * 商品数量
-     */
-    Integer num;
+    List<ChildOrder> childOrders;
     /**
      * 创建时间
      */

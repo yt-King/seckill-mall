@@ -5,6 +5,8 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.List;
+
 /**
  * @author yt
  * @package: com.zufe.yt.order.infrastructure.persistence.data
@@ -18,15 +20,11 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection = "order")
 public class OrderDO extends MongoBaseDO {
     /**
-     * 商品id
+     * 用户id
      */
-    String productId;
+    String userId;
     /**
-     * 商品价格
+     * 子订单
      */
-    Integer price;
-    /**
-     * 商品数量
-     */
-    Integer num;
+    List<ChildOrderDO> childOrders;
 }
