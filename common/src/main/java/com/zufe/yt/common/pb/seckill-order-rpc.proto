@@ -30,7 +30,7 @@ message OrderMessage{
     int32 price = 4;
     //商品数量
     int32 num = 5;
-    //id
+    //子订单id
     string id = 6;
   }
   message AddOrderReq {
@@ -38,6 +38,10 @@ message OrderMessage{
     string user_id = 1;
     //订单详情
     repeated Order orders = 2;
+    //订单id
+    string id = 3;
+    //创建时间
+    double create_time = 4;
   }
   message GetOrderReq {
     //用户id
