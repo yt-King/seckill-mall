@@ -6,6 +6,9 @@ import com.zufe.yt.goods.interfaces.dto.StockDTO;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
+import product.SeckillProductRpc;
+
+import java.util.Map;
 
 /**
  * @author yt
@@ -25,7 +28,7 @@ public interface StockMapper {
      * @param stock 入参
      * @return StockDO do对象
      */
-    @Mapping(source = "goodsId.value", target = "goodsId")
+    @Mapping(source = "productId.value", target = "productId")
     @Mapping(source = "totalCount.value", target = "totalCount")
     @Mapping(source = "gotCount.value", target = "gotCount")
     StockDO toDO(Stock stock);
@@ -36,19 +39,26 @@ public interface StockMapper {
      * @param stockDTO 入参
      * @return Stock 实体
      */
-    @Mapping(target = "goodsId.value", source = "goodsId")
-    @Mapping(target = "totalCount.value", source = "totalCount")
-    @Mapping(target = "gotCount.value", source = "gotCount")
+    @Mapping(target = "productId.value", source = "productId")
     Stock toEntity(StockDTO stockDTO);
 
     /**
      * dto转实体
      *
-     * @param object 入参
+     * @param map 入参
      * @return Stock 实体
      */
-    @Mapping(target = "goodsId.value", source = "goodsId")
-    @Mapping(target = "totalCount.value", source = "totalCount")
-    @Mapping(target = "gotCount.value", source = "gotCount")
-    Stock toEntity(Object object);
+    @Mapping(expression = "java((String)map.get(\"productId\"))", target = "productId.value")
+    @Mapping(expression = "java(Integer.valueOf(map.get(\"totalCount\").toString()))", target = "totalCount.value")
+    @Mapping(expression = "java(Integer.valueOf(map.get(\"gotCount\").toString()))", target = "gotCount.value")
+    @Mapping(expression = "java((String)map.get(\"id\"))", target = "id")
+    Stock toEntity(Map<Object, Object> map);
+
+    /**
+     * message转dto
+     *
+     * @param incGotCountReq 入参
+     * @return StockDTO dto
+     */
+    StockDTO toDTO(SeckillProductRpc.ProductMessage.IncGotCountReq incGotCountReq);
 }

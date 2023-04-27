@@ -47,8 +47,8 @@ public class StockRepositoryImpl extends RepositoryImpl<Stock, StockDO> implemen
     @Override
     public Stock findById(String productId) {
         String key = String.format(STOCK_KEY, productId);
-        Object find = redisService.get(key);
-        if (find == null) {
+        Map<Object, Object> find = redisService.hmGet(key);
+        if (find.isEmpty()) {
             Stock stock = super.find(new CriteriaAndWrapper().eq(Stock::getProductId, productId));
             if (stock != null) {
                 this.store(key, JSON.parseObject(JSON.toJSONString(StockMapper.INSTANCE.toDO(stock))), false);
@@ -62,7 +62,6 @@ public class StockRepositoryImpl extends RepositoryImpl<Stock, StockDO> implemen
     @Override
     public void setTotalCount(String productId, Integer total) {
         String key = String.format(STOCK_KEY, productId);
-
         JSONObject object = new JSONObject();
         object.put("totalCount", total);
         this.store(key, object, true);
@@ -73,7 +72,7 @@ public class StockRepositoryImpl extends RepositoryImpl<Stock, StockDO> implemen
         String key = String.format(STOCK_KEY, stock.getProductId());
         return redisTemplate.execute(limitScript, new StringRedisSerializer(),
                 new Jackson2JsonRedisSerializer<>(Long.class), Collections.singletonList(key),
-                Arrays.asList("totalCount", incCount + "", stock.getTotalCount() + "").toArray());
+                Arrays.asList("gotCount", String.valueOf(incCount), String.valueOf(stock.getTotalCount())).toArray());
     }
 
     private void store(String key, JSONObject jsonObject, boolean isUpdate) {
@@ -81,7 +80,7 @@ public class StockRepositoryImpl extends RepositoryImpl<Stock, StockDO> implemen
         args.add(isUpdate ? "1" : "0");
         for (Map.Entry<String, Object> entry : jsonObject.entrySet()) {
             args.add(entry.getKey());
-            args.add(entry.getValue() + "");
+            args.add(String.valueOf(entry.getValue()));
         }
         redisTemplate.execute(storeScript, new StringRedisSerializer(),
                 new Jackson2JsonRedisSerializer<>(Long.class), Collections.singletonList(key), args.toArray());

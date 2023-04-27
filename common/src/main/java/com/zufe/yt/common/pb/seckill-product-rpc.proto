@@ -146,12 +146,10 @@ message ProductMessage{
   message IncGotCountReq {
     //商品id
     string product_id = 1;
-    //商品总量
-    string total_count = 2;
-    //商品已使用量
-    string got_count = 3;
     //操作数量
-    string inc_count = 4;
+    int32 inc_count = 2;
+    //幂等id
+    string uuid = 3;
   }
   message IncGotCountRely {
     //codeId

@@ -31,12 +31,12 @@ public class GotCount implements ValueObject<GotCount> {
     }
 
     @Override
-    public Object getValue() {
+    public Integer getValue() {
         return this.value;
     }
 
     @Override
     public String toString() {
-        return this.value + "";
+        return String.valueOf(this.value);
     }
 }

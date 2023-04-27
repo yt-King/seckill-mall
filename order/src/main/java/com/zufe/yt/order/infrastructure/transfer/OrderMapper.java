@@ -19,9 +19,9 @@ public interface OrderMapper {
     /**
      * rpc新增入参转实体
      *
-     * @param addOrderReq 入参
+     * @param childOrder 入参
      * @return Order 实体
      */
-    @Mapping(target = "price.value", source = "productName")
-    Order toEntity(SeckillOrderRpc.OrderMessage.AddOrderReq addOrderReq);
+    @Mapping(target = "price.value", source = "price")
+    Order toEntity(SeckillOrderRpc.OrderMessage.ChildOrder childOrder);
 }

@@ -173,6 +173,37 @@ public final class SeckillProductServiceGrpc {
     return getGetProductDetailMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<product.SeckillProductRpc.ProductMessage.IncGotCountReq,
+      product.SeckillProductRpc.ProductMessage.IncGotCountRely> getIncGotCountMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "incGotCount",
+      requestType = product.SeckillProductRpc.ProductMessage.IncGotCountReq.class,
+      responseType = product.SeckillProductRpc.ProductMessage.IncGotCountRely.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<product.SeckillProductRpc.ProductMessage.IncGotCountReq,
+      product.SeckillProductRpc.ProductMessage.IncGotCountRely> getIncGotCountMethod() {
+    io.grpc.MethodDescriptor<product.SeckillProductRpc.ProductMessage.IncGotCountReq, product.SeckillProductRpc.ProductMessage.IncGotCountRely> getIncGotCountMethod;
+    if ((getIncGotCountMethod = SeckillProductServiceGrpc.getIncGotCountMethod) == null) {
+      synchronized (SeckillProductServiceGrpc.class) {
+        if ((getIncGotCountMethod = SeckillProductServiceGrpc.getIncGotCountMethod) == null) {
+          SeckillProductServiceGrpc.getIncGotCountMethod = getIncGotCountMethod =
+              io.grpc.MethodDescriptor.<product.SeckillProductRpc.ProductMessage.IncGotCountReq, product.SeckillProductRpc.ProductMessage.IncGotCountRely>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "incGotCount"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  product.SeckillProductRpc.ProductMessage.IncGotCountReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  product.SeckillProductRpc.ProductMessage.IncGotCountRely.getDefaultInstance()))
+              .setSchemaDescriptor(new SeckillProductServiceMethodDescriptorSupplier("incGotCount"))
+              .build();
+        }
+      }
+    }
+    return getIncGotCountMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -273,6 +304,16 @@ public final class SeckillProductServiceGrpc {
         io.grpc.stub.StreamObserver<product.SeckillProductRpc.ProductMessage.GetProductDetailRely> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetProductDetailMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * 商品扣除
+     * </pre>
+     */
+    default void incGotCount(product.SeckillProductRpc.ProductMessage.IncGotCountReq request,
+        io.grpc.stub.StreamObserver<product.SeckillProductRpc.ProductMessage.IncGotCountRely> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getIncGotCountMethod(), responseObserver);
+    }
   }
 
   /**
@@ -362,6 +403,17 @@ public final class SeckillProductServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetProductDetailMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * 商品扣除
+     * </pre>
+     */
+    public void incGotCount(product.SeckillProductRpc.ProductMessage.IncGotCountReq request,
+        io.grpc.stub.StreamObserver<product.SeckillProductRpc.ProductMessage.IncGotCountRely> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getIncGotCountMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -431,6 +483,16 @@ public final class SeckillProductServiceGrpc {
     public product.SeckillProductRpc.ProductMessage.GetProductDetailRely getProductDetail(product.SeckillProductRpc.ProductMessage.GetProductDetailReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetProductDetailMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * 商品扣除
+     * </pre>
+     */
+    public product.SeckillProductRpc.ProductMessage.IncGotCountRely incGotCount(product.SeckillProductRpc.ProductMessage.IncGotCountReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getIncGotCountMethod(), getCallOptions(), request);
     }
   }
 
@@ -507,6 +569,17 @@ public final class SeckillProductServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetProductDetailMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * 商品扣除
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<product.SeckillProductRpc.ProductMessage.IncGotCountRely> incGotCount(
+        product.SeckillProductRpc.ProductMessage.IncGotCountReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getIncGotCountMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_SAVE_OR_UPDATE_PRODUCT = 0;
@@ -514,6 +587,7 @@ public final class SeckillProductServiceGrpc {
   private static final int METHODID_GET_CATEGORY = 2;
   private static final int METHODID_GET_PRODUCTS = 3;
   private static final int METHODID_GET_PRODUCT_DETAIL = 4;
+  private static final int METHODID_INC_GOT_COUNT = 5;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -551,6 +625,10 @@ public final class SeckillProductServiceGrpc {
         case METHODID_GET_PRODUCT_DETAIL:
           serviceImpl.getProductDetail((product.SeckillProductRpc.ProductMessage.GetProductDetailReq) request,
               (io.grpc.stub.StreamObserver<product.SeckillProductRpc.ProductMessage.GetProductDetailRely>) responseObserver);
+          break;
+        case METHODID_INC_GOT_COUNT:
+          serviceImpl.incGotCount((product.SeckillProductRpc.ProductMessage.IncGotCountReq) request,
+              (io.grpc.stub.StreamObserver<product.SeckillProductRpc.ProductMessage.IncGotCountRely>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -605,6 +683,13 @@ public final class SeckillProductServiceGrpc {
               product.SeckillProductRpc.ProductMessage.GetProductDetailReq,
               product.SeckillProductRpc.ProductMessage.GetProductDetailRely>(
                 service, METHODID_GET_PRODUCT_DETAIL)))
+        .addMethod(
+          getIncGotCountMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              product.SeckillProductRpc.ProductMessage.IncGotCountReq,
+              product.SeckillProductRpc.ProductMessage.IncGotCountRely>(
+                service, METHODID_INC_GOT_COUNT)))
         .build();
   }
 
@@ -658,6 +743,7 @@ public final class SeckillProductServiceGrpc {
               .addMethod(getGetCategoryMethod())
               .addMethod(getGetProductsMethod())
               .addMethod(getGetProductDetailMethod())
+              .addMethod(getIncGotCountMethod())
               .build();
         }
       }

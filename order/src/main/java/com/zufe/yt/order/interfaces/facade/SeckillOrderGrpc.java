@@ -3,8 +3,6 @@ package com.zufe.yt.order.interfaces.facade;
 import com.zufe.yt.common.core.constant.ResultCode;
 import com.zufe.yt.common.redis.util.LockUtil;
 import com.zufe.yt.order.application.OrderApplication;
-import com.zufe.yt.order.domain.order.entity.Order;
-import com.zufe.yt.order.infrastructure.transfer.OrderMapper;
 import io.grpc.stub.StreamObserver;
 import net.devh.boot.grpc.server.service.GrpcService;
 import order.SeckillOrderRpc;
@@ -30,8 +28,8 @@ public class SeckillOrderGrpc extends SeckillOrderServiceGrpc.SeckillOrderServic
     public void addOrder(SeckillOrderRpc.OrderMessage.AddOrderReq request, StreamObserver<SeckillOrderRpc.OrderMessage.CommonRely> responseObserver) {
         SeckillOrderRpc.OrderMessage.CommonRely.Builder builder = SeckillOrderRpc.OrderMessage.CommonRely.newBuilder().setCode(ResultCode.SUCCESS.getCode());
         LockUtil.lock(lockKey + "ADD-" + request.getUserId(), 500, () -> {
-            Order order = OrderMapper.INSTANCE.toEntity(request);
-            orderApplication.addOrder(order);
+//            Order order = OrderMapper.INSTANCE.toEntity(request);
+//            orderApplication.addOrder(order);
         });
         responseObserver.onNext(builder.build());
         responseObserver.onCompleted();

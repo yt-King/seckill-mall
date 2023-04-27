@@ -29,7 +29,7 @@ public class ProductId implements ValueObject<ProductId> {
     }
 
     @Override
-    public Object getValue() {
+    public String getValue() {
         return this.value;
     }
 

@@ -86,21 +86,33 @@ public class ProductsApplicationImpl implements ProductsApplication {
     @Override
     public void saveOrUpdate(Product product) {
         product.valid();
-        //id为空表示更新，校验一遍是否存在
-        if (StrUtil.isBlank(product.getId())) {
-            product.validExistence(productsRepository);
+        boolean createFlag = false;
+        //id不为空表示更新
+        if (StrUtil.isNotBlank(product.getId())) {
+            Stock find = stockRepository.findById(product.getId());
+            if (find == null) {
+                throw new ServiceException("库存不存在", 200001);
+            }
             //只更新总的数量，其他的不更新
             stockRepository.setTotalCount(product.getId(), product.getProductNum());
+            //更新数据库
+            find.setTotalCount(new TotalCount(product.getProductNum()));
+            stockRepository.save(find);
         } else {
-            //新增一个库存
-            Stock stock = Stock.builder()
-                    .productId(new ProductId(product.getId()))
-                    .totalCount(new TotalCount(product.getProductNum()))
-                    .gotCount(new GotCount(0)).build();
-            stockRepository.save(stock);
+            product.validExistence(productsRepository);
+            createFlag = true;
         }
         product.handleGlobalSearchValue();
-        productsRepository.saveOrUpdate(product);
+        String id = productsRepository.saveOrUpdate(product);
+        if (createFlag) {
+            //新增一个库存
+            Stock stock = Stock.builder()
+                    .productId(new ProductId(id))
+                    .totalCount(new TotalCount(product.getProductNum()))
+                    .gotCount(new GotCount(0))
+                    .build();
+            stockRepository.save(stock);
+        }
     }
 
     @Override

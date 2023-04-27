@@ -12317,6 +12317,1464 @@ public final class SeckillProductRpc {
 
     }
 
+    public interface IncGotCountReqOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:ProductMessage.IncGotCountReq)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       *商品id
+       * </pre>
+       *
+       * <code>string product_id = 1;</code>
+       * @return The productId.
+       */
+      java.lang.String getProductId();
+      /**
+       * <pre>
+       *商品id
+       * </pre>
+       *
+       * <code>string product_id = 1;</code>
+       * @return The bytes for productId.
+       */
+      com.google.protobuf.ByteString
+          getProductIdBytes();
+
+      /**
+       * <pre>
+       *操作数量
+       * </pre>
+       *
+       * <code>int32 inc_count = 2;</code>
+       * @return The incCount.
+       */
+      int getIncCount();
+
+      /**
+       * <pre>
+       *幂等id
+       * </pre>
+       *
+       * <code>string uuid = 3;</code>
+       * @return The uuid.
+       */
+      java.lang.String getUuid();
+      /**
+       * <pre>
+       *幂等id
+       * </pre>
+       *
+       * <code>string uuid = 3;</code>
+       * @return The bytes for uuid.
+       */
+      com.google.protobuf.ByteString
+          getUuidBytes();
+    }
+    /**
+     * Protobuf type {@code ProductMessage.IncGotCountReq}
+     */
+    public static final class IncGotCountReq extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:ProductMessage.IncGotCountReq)
+        IncGotCountReqOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use IncGotCountReq.newBuilder() to construct.
+      private IncGotCountReq(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private IncGotCountReq() {
+        productId_ = "";
+        uuid_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new IncGotCountReq();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return product.SeckillProductRpc.internal_static_ProductMessage_IncGotCountReq_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return product.SeckillProductRpc.internal_static_ProductMessage_IncGotCountReq_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                product.SeckillProductRpc.ProductMessage.IncGotCountReq.class, product.SeckillProductRpc.ProductMessage.IncGotCountReq.Builder.class);
+      }
+
+      public static final int PRODUCT_ID_FIELD_NUMBER = 1;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object productId_ = "";
+      /**
+       * <pre>
+       *商品id
+       * </pre>
+       *
+       * <code>string product_id = 1;</code>
+       * @return The productId.
+       */
+      @java.lang.Override
+      public java.lang.String getProductId() {
+        java.lang.Object ref = productId_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          productId_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       *商品id
+       * </pre>
+       *
+       * <code>string product_id = 1;</code>
+       * @return The bytes for productId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getProductIdBytes() {
+        java.lang.Object ref = productId_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          productId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int INC_COUNT_FIELD_NUMBER = 2;
+      private int incCount_ = 0;
+      /**
+       * <pre>
+       *操作数量
+       * </pre>
+       *
+       * <code>int32 inc_count = 2;</code>
+       * @return The incCount.
+       */
+      @java.lang.Override
+      public int getIncCount() {
+        return incCount_;
+      }
+
+      public static final int UUID_FIELD_NUMBER = 3;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object uuid_ = "";
+      /**
+       * <pre>
+       *幂等id
+       * </pre>
+       *
+       * <code>string uuid = 3;</code>
+       * @return The uuid.
+       */
+      @java.lang.Override
+      public java.lang.String getUuid() {
+        java.lang.Object ref = uuid_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          uuid_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       *幂等id
+       * </pre>
+       *
+       * <code>string uuid = 3;</code>
+       * @return The bytes for uuid.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getUuidBytes() {
+        java.lang.Object ref = uuid_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          uuid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productId_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, productId_);
+        }
+        if (incCount_ != 0) {
+          output.writeInt32(2, incCount_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uuid_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 3, uuid_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productId_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, productId_);
+        }
+        if (incCount_ != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(2, incCount_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uuid_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, uuid_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof product.SeckillProductRpc.ProductMessage.IncGotCountReq)) {
+          return super.equals(obj);
+        }
+        product.SeckillProductRpc.ProductMessage.IncGotCountReq other = (product.SeckillProductRpc.ProductMessage.IncGotCountReq) obj;
+
+        if (!getProductId()
+            .equals(other.getProductId())) return false;
+        if (getIncCount()
+            != other.getIncCount()) return false;
+        if (!getUuid()
+            .equals(other.getUuid())) return false;
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + PRODUCT_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getProductId().hashCode();
+        hash = (37 * hash) + INC_COUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getIncCount();
+        hash = (37 * hash) + UUID_FIELD_NUMBER;
+        hash = (53 * hash) + getUuid().hashCode();
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static product.SeckillProductRpc.ProductMessage.IncGotCountReq parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static product.SeckillProductRpc.ProductMessage.IncGotCountReq parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static product.SeckillProductRpc.ProductMessage.IncGotCountReq parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static product.SeckillProductRpc.ProductMessage.IncGotCountReq parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static product.SeckillProductRpc.ProductMessage.IncGotCountReq parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static product.SeckillProductRpc.ProductMessage.IncGotCountReq parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static product.SeckillProductRpc.ProductMessage.IncGotCountReq parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static product.SeckillProductRpc.ProductMessage.IncGotCountReq parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static product.SeckillProductRpc.ProductMessage.IncGotCountReq parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static product.SeckillProductRpc.ProductMessage.IncGotCountReq parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static product.SeckillProductRpc.ProductMessage.IncGotCountReq parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static product.SeckillProductRpc.ProductMessage.IncGotCountReq parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(product.SeckillProductRpc.ProductMessage.IncGotCountReq prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code ProductMessage.IncGotCountReq}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:ProductMessage.IncGotCountReq)
+          product.SeckillProductRpc.ProductMessage.IncGotCountReqOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return product.SeckillProductRpc.internal_static_ProductMessage_IncGotCountReq_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return product.SeckillProductRpc.internal_static_ProductMessage_IncGotCountReq_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  product.SeckillProductRpc.ProductMessage.IncGotCountReq.class, product.SeckillProductRpc.ProductMessage.IncGotCountReq.Builder.class);
+        }
+
+        // Construct using product.SeckillProductRpc.ProductMessage.IncGotCountReq.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          productId_ = "";
+          incCount_ = 0;
+          uuid_ = "";
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return product.SeckillProductRpc.internal_static_ProductMessage_IncGotCountReq_descriptor;
+        }
+
+        @java.lang.Override
+        public product.SeckillProductRpc.ProductMessage.IncGotCountReq getDefaultInstanceForType() {
+          return product.SeckillProductRpc.ProductMessage.IncGotCountReq.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public product.SeckillProductRpc.ProductMessage.IncGotCountReq build() {
+          product.SeckillProductRpc.ProductMessage.IncGotCountReq result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public product.SeckillProductRpc.ProductMessage.IncGotCountReq buildPartial() {
+          product.SeckillProductRpc.ProductMessage.IncGotCountReq result = new product.SeckillProductRpc.ProductMessage.IncGotCountReq(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(product.SeckillProductRpc.ProductMessage.IncGotCountReq result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.productId_ = productId_;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.incCount_ = incCount_;
+          }
+          if (((from_bitField0_ & 0x00000004) != 0)) {
+            result.uuid_ = uuid_;
+          }
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof product.SeckillProductRpc.ProductMessage.IncGotCountReq) {
+            return mergeFrom((product.SeckillProductRpc.ProductMessage.IncGotCountReq)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(product.SeckillProductRpc.ProductMessage.IncGotCountReq other) {
+          if (other == product.SeckillProductRpc.ProductMessage.IncGotCountReq.getDefaultInstance()) return this;
+          if (!other.getProductId().isEmpty()) {
+            productId_ = other.productId_;
+            bitField0_ |= 0x00000001;
+            onChanged();
+          }
+          if (other.getIncCount() != 0) {
+            setIncCount(other.getIncCount());
+          }
+          if (!other.getUuid().isEmpty()) {
+            uuid_ = other.uuid_;
+            bitField0_ |= 0x00000004;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  productId_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 10
+                case 16: {
+                  incCount_ = input.readInt32();
+                  bitField0_ |= 0x00000002;
+                  break;
+                } // case 16
+                case 26: {
+                  uuid_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000004;
+                  break;
+                } // case 26
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private java.lang.Object productId_ = "";
+        /**
+         * <pre>
+         *商品id
+         * </pre>
+         *
+         * <code>string product_id = 1;</code>
+         * @return The productId.
+         */
+        public java.lang.String getProductId() {
+          java.lang.Object ref = productId_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            productId_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         *商品id
+         * </pre>
+         *
+         * <code>string product_id = 1;</code>
+         * @return The bytes for productId.
+         */
+        public com.google.protobuf.ByteString
+            getProductIdBytes() {
+          java.lang.Object ref = productId_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            productId_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         *商品id
+         * </pre>
+         *
+         * <code>string product_id = 1;</code>
+         * @param value The productId to set.
+         * @return This builder for chaining.
+         */
+        public Builder setProductId(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          productId_ = value;
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         *商品id
+         * </pre>
+         *
+         * <code>string product_id = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearProductId() {
+          productId_ = getDefaultInstance().getProductId();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         *商品id
+         * </pre>
+         *
+         * <code>string product_id = 1;</code>
+         * @param value The bytes for productId to set.
+         * @return This builder for chaining.
+         */
+        public Builder setProductIdBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
+          productId_ = value;
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+
+        private int incCount_ ;
+        /**
+         * <pre>
+         *操作数量
+         * </pre>
+         *
+         * <code>int32 inc_count = 2;</code>
+         * @return The incCount.
+         */
+        @java.lang.Override
+        public int getIncCount() {
+          return incCount_;
+        }
+        /**
+         * <pre>
+         *操作数量
+         * </pre>
+         *
+         * <code>int32 inc_count = 2;</code>
+         * @param value The incCount to set.
+         * @return This builder for chaining.
+         */
+        public Builder setIncCount(int value) {
+          
+          incCount_ = value;
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         *操作数量
+         * </pre>
+         *
+         * <code>int32 inc_count = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearIncCount() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          incCount_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object uuid_ = "";
+        /**
+         * <pre>
+         *幂等id
+         * </pre>
+         *
+         * <code>string uuid = 3;</code>
+         * @return The uuid.
+         */
+        public java.lang.String getUuid() {
+          java.lang.Object ref = uuid_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            uuid_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         *幂等id
+         * </pre>
+         *
+         * <code>string uuid = 3;</code>
+         * @return The bytes for uuid.
+         */
+        public com.google.protobuf.ByteString
+            getUuidBytes() {
+          java.lang.Object ref = uuid_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            uuid_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         *幂等id
+         * </pre>
+         *
+         * <code>string uuid = 3;</code>
+         * @param value The uuid to set.
+         * @return This builder for chaining.
+         */
+        public Builder setUuid(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          uuid_ = value;
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         *幂等id
+         * </pre>
+         *
+         * <code>string uuid = 3;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearUuid() {
+          uuid_ = getDefaultInstance().getUuid();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         *幂等id
+         * </pre>
+         *
+         * <code>string uuid = 3;</code>
+         * @param value The bytes for uuid to set.
+         * @return This builder for chaining.
+         */
+        public Builder setUuidBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
+          uuid_ = value;
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:ProductMessage.IncGotCountReq)
+      }
+
+      // @@protoc_insertion_point(class_scope:ProductMessage.IncGotCountReq)
+      private static final product.SeckillProductRpc.ProductMessage.IncGotCountReq DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new product.SeckillProductRpc.ProductMessage.IncGotCountReq();
+      }
+
+      public static product.SeckillProductRpc.ProductMessage.IncGotCountReq getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<IncGotCountReq>
+          PARSER = new com.google.protobuf.AbstractParser<IncGotCountReq>() {
+        @java.lang.Override
+        public IncGotCountReq parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<IncGotCountReq> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<IncGotCountReq> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public product.SeckillProductRpc.ProductMessage.IncGotCountReq getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface IncGotCountRelyOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:ProductMessage.IncGotCountRely)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       *codeId
+       * </pre>
+       *
+       * <code>string code_id = 1;</code>
+       * @return The codeId.
+       */
+      java.lang.String getCodeId();
+      /**
+       * <pre>
+       *codeId
+       * </pre>
+       *
+       * <code>string code_id = 1;</code>
+       * @return The bytes for codeId.
+       */
+      com.google.protobuf.ByteString
+          getCodeIdBytes();
+    }
+    /**
+     * Protobuf type {@code ProductMessage.IncGotCountRely}
+     */
+    public static final class IncGotCountRely extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:ProductMessage.IncGotCountRely)
+        IncGotCountRelyOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use IncGotCountRely.newBuilder() to construct.
+      private IncGotCountRely(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private IncGotCountRely() {
+        codeId_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new IncGotCountRely();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return product.SeckillProductRpc.internal_static_ProductMessage_IncGotCountRely_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return product.SeckillProductRpc.internal_static_ProductMessage_IncGotCountRely_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                product.SeckillProductRpc.ProductMessage.IncGotCountRely.class, product.SeckillProductRpc.ProductMessage.IncGotCountRely.Builder.class);
+      }
+
+      public static final int CODE_ID_FIELD_NUMBER = 1;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object codeId_ = "";
+      /**
+       * <pre>
+       *codeId
+       * </pre>
+       *
+       * <code>string code_id = 1;</code>
+       * @return The codeId.
+       */
+      @java.lang.Override
+      public java.lang.String getCodeId() {
+        java.lang.Object ref = codeId_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          codeId_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       *codeId
+       * </pre>
+       *
+       * <code>string code_id = 1;</code>
+       * @return The bytes for codeId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getCodeIdBytes() {
+        java.lang.Object ref = codeId_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          codeId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(codeId_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, codeId_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(codeId_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, codeId_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof product.SeckillProductRpc.ProductMessage.IncGotCountRely)) {
+          return super.equals(obj);
+        }
+        product.SeckillProductRpc.ProductMessage.IncGotCountRely other = (product.SeckillProductRpc.ProductMessage.IncGotCountRely) obj;
+
+        if (!getCodeId()
+            .equals(other.getCodeId())) return false;
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + CODE_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getCodeId().hashCode();
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static product.SeckillProductRpc.ProductMessage.IncGotCountRely parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static product.SeckillProductRpc.ProductMessage.IncGotCountRely parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static product.SeckillProductRpc.ProductMessage.IncGotCountRely parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static product.SeckillProductRpc.ProductMessage.IncGotCountRely parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static product.SeckillProductRpc.ProductMessage.IncGotCountRely parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static product.SeckillProductRpc.ProductMessage.IncGotCountRely parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static product.SeckillProductRpc.ProductMessage.IncGotCountRely parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static product.SeckillProductRpc.ProductMessage.IncGotCountRely parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static product.SeckillProductRpc.ProductMessage.IncGotCountRely parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static product.SeckillProductRpc.ProductMessage.IncGotCountRely parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static product.SeckillProductRpc.ProductMessage.IncGotCountRely parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static product.SeckillProductRpc.ProductMessage.IncGotCountRely parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(product.SeckillProductRpc.ProductMessage.IncGotCountRely prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code ProductMessage.IncGotCountRely}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:ProductMessage.IncGotCountRely)
+          product.SeckillProductRpc.ProductMessage.IncGotCountRelyOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return product.SeckillProductRpc.internal_static_ProductMessage_IncGotCountRely_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return product.SeckillProductRpc.internal_static_ProductMessage_IncGotCountRely_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  product.SeckillProductRpc.ProductMessage.IncGotCountRely.class, product.SeckillProductRpc.ProductMessage.IncGotCountRely.Builder.class);
+        }
+
+        // Construct using product.SeckillProductRpc.ProductMessage.IncGotCountRely.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          codeId_ = "";
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return product.SeckillProductRpc.internal_static_ProductMessage_IncGotCountRely_descriptor;
+        }
+
+        @java.lang.Override
+        public product.SeckillProductRpc.ProductMessage.IncGotCountRely getDefaultInstanceForType() {
+          return product.SeckillProductRpc.ProductMessage.IncGotCountRely.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public product.SeckillProductRpc.ProductMessage.IncGotCountRely build() {
+          product.SeckillProductRpc.ProductMessage.IncGotCountRely result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public product.SeckillProductRpc.ProductMessage.IncGotCountRely buildPartial() {
+          product.SeckillProductRpc.ProductMessage.IncGotCountRely result = new product.SeckillProductRpc.ProductMessage.IncGotCountRely(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(product.SeckillProductRpc.ProductMessage.IncGotCountRely result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.codeId_ = codeId_;
+          }
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof product.SeckillProductRpc.ProductMessage.IncGotCountRely) {
+            return mergeFrom((product.SeckillProductRpc.ProductMessage.IncGotCountRely)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(product.SeckillProductRpc.ProductMessage.IncGotCountRely other) {
+          if (other == product.SeckillProductRpc.ProductMessage.IncGotCountRely.getDefaultInstance()) return this;
+          if (!other.getCodeId().isEmpty()) {
+            codeId_ = other.codeId_;
+            bitField0_ |= 0x00000001;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  codeId_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 10
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private java.lang.Object codeId_ = "";
+        /**
+         * <pre>
+         *codeId
+         * </pre>
+         *
+         * <code>string code_id = 1;</code>
+         * @return The codeId.
+         */
+        public java.lang.String getCodeId() {
+          java.lang.Object ref = codeId_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            codeId_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         *codeId
+         * </pre>
+         *
+         * <code>string code_id = 1;</code>
+         * @return The bytes for codeId.
+         */
+        public com.google.protobuf.ByteString
+            getCodeIdBytes() {
+          java.lang.Object ref = codeId_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            codeId_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         *codeId
+         * </pre>
+         *
+         * <code>string code_id = 1;</code>
+         * @param value The codeId to set.
+         * @return This builder for chaining.
+         */
+        public Builder setCodeId(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          codeId_ = value;
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         *codeId
+         * </pre>
+         *
+         * <code>string code_id = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearCodeId() {
+          codeId_ = getDefaultInstance().getCodeId();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         *codeId
+         * </pre>
+         *
+         * <code>string code_id = 1;</code>
+         * @param value The bytes for codeId to set.
+         * @return This builder for chaining.
+         */
+        public Builder setCodeIdBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
+          codeId_ = value;
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:ProductMessage.IncGotCountRely)
+      }
+
+      // @@protoc_insertion_point(class_scope:ProductMessage.IncGotCountRely)
+      private static final product.SeckillProductRpc.ProductMessage.IncGotCountRely DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new product.SeckillProductRpc.ProductMessage.IncGotCountRely();
+      }
+
+      public static product.SeckillProductRpc.ProductMessage.IncGotCountRely getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<IncGotCountRely>
+          PARSER = new com.google.protobuf.AbstractParser<IncGotCountRely>() {
+        @java.lang.Override
+        public IncGotCountRely parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<IncGotCountRely> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<IncGotCountRely> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public product.SeckillProductRpc.ProductMessage.IncGotCountRely getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -12738,6 +14196,16 @@ public final class SeckillProductRpc {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ProductMessage_Product_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ProductMessage_IncGotCountReq_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_ProductMessage_IncGotCountReq_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ProductMessage_IncGotCountRely_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_ProductMessage_IncGotCountRely_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -12747,7 +14215,7 @@ public final class SeckillProductRpc {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\031seckill-product-rpc.proto\"\230\n\n\016ProductM" +
+      "\n\031seckill-product-rpc.proto\"\203\013\n\016ProductM" +
       "essage\032\032\n\nCommonRely\022\014\n\004code\030\001 \001(\005\032\214\002\n\026S" +
       "aveOrUpdateProductReq\022\023\n\013category_id\030\001 \001" +
       "(\005\022\022\n\nproduct_id\030\002 \001(\t\022\024\n\014product_name\030\003" +
@@ -12780,19 +14248,24 @@ public final class SeckillProductRpc {
       "\027\n\017product_picture\030\006 \001(\t\022\025\n\rproduct_pric" +
       "e\030\007 \001(\005\022\035\n\025product_selling_price\030\010 \001(\005\022\023" +
       "\n\013product_num\030\t \001(\005\022\025\n\rproduct_sales\030\n \001" +
-      "(\005\022\n\n\002id\030\013 \001(\t2\320\003\n\025SeckillProductService" +
-      "\022[\n\023saveOrUpdateProduct\022&.ProductMessage" +
-      ".SaveOrUpdateProductReq\032\032.ProductMessage" +
-      ".CommonRely\"\000\022O\n\rdeleteProduct\022 .Product" +
-      "Message.DeleteProductReq\032\032.ProductMessag" +
-      "e.CommonRely\"\000\022P\n\013getCategory\022\036.ProductM" +
-      "essage.GetCategoryReq\032\037.ProductMessage.G" +
-      "etCategoryRely\"\000\022V\n\013getProducts\022!.Produc" +
-      "tMessage.GetAllProductsReq\032\".ProductMess" +
-      "age.GetAllProductsRely\"\000\022_\n\020getProductDe" +
-      "tail\022#.ProductMessage.GetProductDetailRe" +
-      "q\032$.ProductMessage.GetProductDetailRely\"" +
-      "\000B\t\n\007productb\006proto3"
+      "(\005\022\n\n\002id\030\013 \001(\t\032E\n\016IncGotCountReq\022\022\n\nprod" +
+      "uct_id\030\001 \001(\t\022\021\n\tinc_count\030\002 \001(\005\022\014\n\004uuid\030" +
+      "\003 \001(\t\032\"\n\017IncGotCountRely\022\017\n\007code_id\030\001 \001(" +
+      "\t2\242\004\n\025SeckillProductService\022[\n\023saveOrUpd" +
+      "ateProduct\022&.ProductMessage.SaveOrUpdate" +
+      "ProductReq\032\032.ProductMessage.CommonRely\"\000" +
+      "\022O\n\rdeleteProduct\022 .ProductMessage.Delet" +
+      "eProductReq\032\032.ProductMessage.CommonRely\"" +
+      "\000\022P\n\013getCategory\022\036.ProductMessage.GetCat" +
+      "egoryReq\032\037.ProductMessage.GetCategoryRel" +
+      "y\"\000\022V\n\013getProducts\022!.ProductMessage.GetA" +
+      "llProductsReq\032\".ProductMessage.GetAllPro" +
+      "ductsRely\"\000\022_\n\020getProductDetail\022#.Produc" +
+      "tMessage.GetProductDetailReq\032$.ProductMe" +
+      "ssage.GetProductDetailRely\"\000\022P\n\013incGotCo" +
+      "unt\022\036.ProductMessage.IncGotCountReq\032\037.Pr" +
+      "oductMessage.IncGotCountRely\"\000B\t\n\007produc" +
+      "tb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -12876,6 +14349,18 @@ public final class SeckillProductRpc {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ProductMessage_Product_descriptor,
         new java.lang.String[] { "CategoryId", "ProductId", "ProductName", "ProductTitle", "ProductIntro", "ProductPicture", "ProductPrice", "ProductSellingPrice", "ProductNum", "ProductSales", "Id", });
+    internal_static_ProductMessage_IncGotCountReq_descriptor =
+      internal_static_ProductMessage_descriptor.getNestedTypes().get(12);
+    internal_static_ProductMessage_IncGotCountReq_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_ProductMessage_IncGotCountReq_descriptor,
+        new java.lang.String[] { "ProductId", "IncCount", "Uuid", });
+    internal_static_ProductMessage_IncGotCountRely_descriptor =
+      internal_static_ProductMessage_descriptor.getNestedTypes().get(13);
+    internal_static_ProductMessage_IncGotCountRely_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_ProductMessage_IncGotCountRely_descriptor,
+        new java.lang.String[] { "CodeId", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

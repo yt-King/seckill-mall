@@ -7,6 +7,7 @@ import com.zufe.yt.goods.application.ProductsApplication;
 import com.zufe.yt.goods.domain.product.entity.Product;
 import com.zufe.yt.goods.infrastructure.transfer.CategoryMapper;
 import com.zufe.yt.goods.infrastructure.transfer.ProductMapper;
+import com.zufe.yt.goods.infrastructure.transfer.StockMapper;
 import io.grpc.stub.StreamObserver;
 import net.devh.boot.grpc.server.service.GrpcService;
 import product.SeckillProductRpc;
@@ -71,6 +72,16 @@ public class SeckillProductsGrpc extends SeckillProductServiceGrpc.SeckillProduc
         SeckillProductRpc.ProductMessage.GetProductDetailRely.Builder builder = SeckillProductRpc.ProductMessage.GetProductDetailRely.newBuilder().setCode(ResultCode.SUCCESS.getCode());
         Product productDetail = productsApplication.getProductDetail(ProductMapper.INSTANCE.toCacheQuery(request));
         builder.setProduct(ProductMapper.INSTANCE.toMessage(productDetail));
+        responseObserver.onNext(builder.build());
+        responseObserver.onCompleted();
+    }
+
+    @Override
+    public void incGotCount(SeckillProductRpc.ProductMessage.IncGotCountReq request, StreamObserver<SeckillProductRpc.ProductMessage.IncGotCountRely> responseObserver) {
+        SeckillProductRpc.ProductMessage.IncGotCountRely.Builder builder = SeckillProductRpc.ProductMessage.IncGotCountRely.newBuilder();
+        //不加锁，内部实现扣库存原子化同时返回唯一标识
+        String codeId = productsApplication.incCount(StockMapper.INSTANCE.toDTO(request));
+        builder.setCodeId(codeId);
         responseObserver.onNext(builder.build());
         responseObserver.onCompleted();
     }
