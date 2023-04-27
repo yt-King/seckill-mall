@@ -1540,7 +1540,7 @@ public final class SeckillOrderRpc {
 
       /**
        * <pre>
-       *id
+       *子订单id
        * </pre>
        *
        * <code>string id = 6;</code>
@@ -1549,7 +1549,7 @@ public final class SeckillOrderRpc {
       java.lang.String getId();
       /**
        * <pre>
-       *id
+       *子订单id
        * </pre>
        *
        * <code>string id = 6;</code>
@@ -1778,7 +1778,7 @@ public final class SeckillOrderRpc {
       private volatile java.lang.Object id_ = "";
       /**
        * <pre>
-       *id
+       *子订单id
        * </pre>
        *
        * <code>string id = 6;</code>
@@ -1799,7 +1799,7 @@ public final class SeckillOrderRpc {
       }
       /**
        * <pre>
-       *id
+       *子订单id
        * </pre>
        *
        * <code>string id = 6;</code>
@@ -2629,7 +2629,7 @@ public final class SeckillOrderRpc {
         private java.lang.Object id_ = "";
         /**
          * <pre>
-         *id
+         *子订单id
          * </pre>
          *
          * <code>string id = 6;</code>
@@ -2649,7 +2649,7 @@ public final class SeckillOrderRpc {
         }
         /**
          * <pre>
-         *id
+         *子订单id
          * </pre>
          *
          * <code>string id = 6;</code>
@@ -2670,7 +2670,7 @@ public final class SeckillOrderRpc {
         }
         /**
          * <pre>
-         *id
+         *子订单id
          * </pre>
          *
          * <code>string id = 6;</code>
@@ -2687,7 +2687,7 @@ public final class SeckillOrderRpc {
         }
         /**
          * <pre>
-         *id
+         *子订单id
          * </pre>
          *
          * <code>string id = 6;</code>
@@ -2701,7 +2701,7 @@ public final class SeckillOrderRpc {
         }
         /**
          * <pre>
-         *id
+         *子订单id
          * </pre>
          *
          * <code>string id = 6;</code>
@@ -2848,6 +2848,36 @@ public final class SeckillOrderRpc {
        */
       order.SeckillOrderRpc.OrderMessage.OrderOrBuilder getOrdersOrBuilder(
           int index);
+
+      /**
+       * <pre>
+       *订单id
+       * </pre>
+       *
+       * <code>string id = 3;</code>
+       * @return The id.
+       */
+      java.lang.String getId();
+      /**
+       * <pre>
+       *订单id
+       * </pre>
+       *
+       * <code>string id = 3;</code>
+       * @return The bytes for id.
+       */
+      com.google.protobuf.ByteString
+          getIdBytes();
+
+      /**
+       * <pre>
+       *创建时间
+       * </pre>
+       *
+       * <code>double create_time = 4;</code>
+       * @return The createTime.
+       */
+      double getCreateTime();
     }
     /**
      * Protobuf type {@code OrderMessage.AddOrderReq}
@@ -2864,6 +2894,7 @@ public final class SeckillOrderRpc {
       private AddOrderReq() {
         userId_ = "";
         orders_ = java.util.Collections.emptyList();
+        id_ = "";
       }
 
       @java.lang.Override
@@ -2999,6 +3030,68 @@ public final class SeckillOrderRpc {
         return orders_.get(index);
       }
 
+      public static final int ID_FIELD_NUMBER = 3;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object id_ = "";
+      /**
+       * <pre>
+       *订单id
+       * </pre>
+       *
+       * <code>string id = 3;</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       *订单id
+       * </pre>
+       *
+       * <code>string id = 3;</code>
+       * @return The bytes for id.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int CREATE_TIME_FIELD_NUMBER = 4;
+      private double createTime_ = 0D;
+      /**
+       * <pre>
+       *创建时间
+       * </pre>
+       *
+       * <code>double create_time = 4;</code>
+       * @return The createTime.
+       */
+      @java.lang.Override
+      public double getCreateTime() {
+        return createTime_;
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -3019,6 +3112,12 @@ public final class SeckillOrderRpc {
         for (int i = 0; i < orders_.size(); i++) {
           output.writeMessage(2, orders_.get(i));
         }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 3, id_);
+        }
+        if (java.lang.Double.doubleToRawLongBits(createTime_) != 0) {
+          output.writeDouble(4, createTime_);
+        }
         getUnknownFields().writeTo(output);
       }
 
@@ -3034,6 +3133,13 @@ public final class SeckillOrderRpc {
         for (int i = 0; i < orders_.size(); i++) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(2, orders_.get(i));
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, id_);
+        }
+        if (java.lang.Double.doubleToRawLongBits(createTime_) != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeDoubleSize(4, createTime_);
         }
         size += getUnknownFields().getSerializedSize();
         memoizedSize = size;
@@ -3054,6 +3160,11 @@ public final class SeckillOrderRpc {
             .equals(other.getUserId())) return false;
         if (!getOrdersList()
             .equals(other.getOrdersList())) return false;
+        if (!getId()
+            .equals(other.getId())) return false;
+        if (java.lang.Double.doubleToLongBits(getCreateTime())
+            != java.lang.Double.doubleToLongBits(
+                other.getCreateTime())) return false;
         if (!getUnknownFields().equals(other.getUnknownFields())) return false;
         return true;
       }
@@ -3071,6 +3182,11 @@ public final class SeckillOrderRpc {
           hash = (37 * hash) + ORDERS_FIELD_NUMBER;
           hash = (53 * hash) + getOrdersList().hashCode();
         }
+        hash = (37 * hash) + ID_FIELD_NUMBER;
+        hash = (53 * hash) + getId().hashCode();
+        hash = (37 * hash) + CREATE_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getCreateTime()));
         hash = (29 * hash) + getUnknownFields().hashCode();
         memoizedHashCode = hash;
         return hash;
@@ -3208,6 +3324,8 @@ public final class SeckillOrderRpc {
             ordersBuilder_.clear();
           }
           bitField0_ = (bitField0_ & ~0x00000002);
+          id_ = "";
+          createTime_ = 0D;
           return this;
         }
 
@@ -3256,6 +3374,12 @@ public final class SeckillOrderRpc {
           int from_bitField0_ = bitField0_;
           if (((from_bitField0_ & 0x00000001) != 0)) {
             result.userId_ = userId_;
+          }
+          if (((from_bitField0_ & 0x00000004) != 0)) {
+            result.id_ = id_;
+          }
+          if (((from_bitField0_ & 0x00000008) != 0)) {
+            result.createTime_ = createTime_;
           }
         }
 
@@ -3334,6 +3458,14 @@ public final class SeckillOrderRpc {
               }
             }
           }
+          if (!other.getId().isEmpty()) {
+            id_ = other.id_;
+            bitField0_ |= 0x00000004;
+            onChanged();
+          }
+          if (other.getCreateTime() != 0D) {
+            setCreateTime(other.getCreateTime());
+          }
           this.mergeUnknownFields(other.getUnknownFields());
           onChanged();
           return this;
@@ -3378,6 +3510,16 @@ public final class SeckillOrderRpc {
                   }
                   break;
                 } // case 18
+                case 26: {
+                  id_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000004;
+                  break;
+                } // case 26
+                case 33: {
+                  createTime_ = input.readDouble();
+                  bitField0_ |= 0x00000008;
+                  break;
+                } // case 33
                 default: {
                   if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                     done = true; // was an endgroup tag
@@ -3797,6 +3939,142 @@ public final class SeckillOrderRpc {
             orders_ = null;
           }
           return ordersBuilder_;
+        }
+
+        private java.lang.Object id_ = "";
+        /**
+         * <pre>
+         *订单id
+         * </pre>
+         *
+         * <code>string id = 3;</code>
+         * @return The id.
+         */
+        public java.lang.String getId() {
+          java.lang.Object ref = id_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            id_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         *订单id
+         * </pre>
+         *
+         * <code>string id = 3;</code>
+         * @return The bytes for id.
+         */
+        public com.google.protobuf.ByteString
+            getIdBytes() {
+          java.lang.Object ref = id_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            id_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         *订单id
+         * </pre>
+         *
+         * <code>string id = 3;</code>
+         * @param value The id to set.
+         * @return This builder for chaining.
+         */
+        public Builder setId(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          id_ = value;
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         *订单id
+         * </pre>
+         *
+         * <code>string id = 3;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearId() {
+          id_ = getDefaultInstance().getId();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         *订单id
+         * </pre>
+         *
+         * <code>string id = 3;</code>
+         * @param value The bytes for id to set.
+         * @return This builder for chaining.
+         */
+        public Builder setIdBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
+          id_ = value;
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return this;
+        }
+
+        private double createTime_ ;
+        /**
+         * <pre>
+         *创建时间
+         * </pre>
+         *
+         * <code>double create_time = 4;</code>
+         * @return The createTime.
+         */
+        @java.lang.Override
+        public double getCreateTime() {
+          return createTime_;
+        }
+        /**
+         * <pre>
+         *创建时间
+         * </pre>
+         *
+         * <code>double create_time = 4;</code>
+         * @param value The createTime to set.
+         * @return This builder for chaining.
+         */
+        public Builder setCreateTime(double value) {
+          
+          createTime_ = value;
+          bitField0_ |= 0x00000008;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         *创建时间
+         * </pre>
+         *
+         * <code>double create_time = 4;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearCreateTime() {
+          bitField0_ = (bitField0_ & ~0x00000008);
+          createTime_ = 0D;
+          onChanged();
+          return this;
         }
         @java.lang.Override
         public final Builder setUnknownFields(
@@ -5842,21 +6120,22 @@ public final class SeckillOrderRpc {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\027seckill-order-rpc.proto\"\204\003\n\014OrderMessa" +
+      "\n\027seckill-order-rpc.proto\"\245\003\n\014OrderMessa" +
       "ge\032\032\n\nCommonRely\022\014\n\004code\030\001 \001(\005\0327\n\005Order\022" +
       ".\n\014child_orders\030\001 \003(\0132\030.OrderMessage.Chi" +
       "ldOrder\032w\n\nChildOrder\022\022\n\nproduct_id\030\001 \001(" +
       "\t\022\024\n\014product_name\030\002 \001(\t\022\027\n\017product_pictu" +
       "re\030\003 \001(\t\022\r\n\005price\030\004 \001(\005\022\013\n\003num\030\005 \001(\005\022\n\n\002" +
-      "id\030\006 \001(\t\032C\n\013AddOrderReq\022\017\n\007user_id\030\001 \001(\t" +
-      "\022#\n\006orders\030\002 \003(\0132\023.OrderMessage.Order\032\036\n" +
-      "\013GetOrderReq\022\017\n\007user_id\030\001 \001(\t\032A\n\014GetOrde" +
-      "rRely\022\014\n\004code\030\001 \001(\005\022#\n\006orders\030\002 \003(\0132\023.Or" +
-      "derMessage.Order2\235\001\n\023SeckillOrderService" +
-      "\022A\n\010addOrder\022\031.OrderMessage.AddOrderReq\032" +
-      "\030.OrderMessage.CommonRely\"\000\022C\n\010getOrder\022" +
-      "\031.OrderMessage.GetOrderReq\032\032.OrderMessag" +
-      "e.GetOrderRely\"\000B\007\n\005orderb\006proto3"
+      "id\030\006 \001(\t\032d\n\013AddOrderReq\022\017\n\007user_id\030\001 \001(\t" +
+      "\022#\n\006orders\030\002 \003(\0132\023.OrderMessage.Order\022\n\n" +
+      "\002id\030\003 \001(\t\022\023\n\013create_time\030\004 \001(\001\032\036\n\013GetOrd" +
+      "erReq\022\017\n\007user_id\030\001 \001(\t\032A\n\014GetOrderRely\022\014" +
+      "\n\004code\030\001 \001(\005\022#\n\006orders\030\002 \003(\0132\023.OrderMess" +
+      "age.Order2\235\001\n\023SeckillOrderService\022A\n\010add" +
+      "Order\022\031.OrderMessage.AddOrderReq\032\030.Order" +
+      "Message.CommonRely\"\000\022C\n\010getOrder\022\031.Order" +
+      "Message.GetOrderReq\032\032.OrderMessage.GetOr" +
+      "derRely\"\000B\007\n\005orderb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5891,7 +6170,7 @@ public final class SeckillOrderRpc {
     internal_static_OrderMessage_AddOrderReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_OrderMessage_AddOrderReq_descriptor,
-        new java.lang.String[] { "UserId", "Orders", });
+        new java.lang.String[] { "UserId", "Orders", "Id", "CreateTime", });
     internal_static_OrderMessage_GetOrderReq_descriptor =
       internal_static_OrderMessage_descriptor.getNestedTypes().get(4);
     internal_static_OrderMessage_GetOrderReq_fieldAccessorTable = new

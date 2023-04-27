@@ -2,6 +2,7 @@ package com.zufe.yt.order.domain.order.entity;
 
 import com.zufe.yt.order.domain.order.value.Num;
 import com.zufe.yt.order.domain.order.value.Price;
+import lombok.Data;
 
 /**
  * @author yt
@@ -10,6 +11,7 @@ import com.zufe.yt.order.domain.order.value.Price;
  * @date 2023/4/27
  * @description: 子订单实体
  */
+@Data
 public class ChildOrder {
     String id;
     /**

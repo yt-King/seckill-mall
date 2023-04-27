@@ -41,5 +41,6 @@ public interface OrderMapper {
      * @param addOrderReq 入参
      * @return Order 实体
      */
+    @Mapping(source = "ordersList", target = "childOrders")
     Order toEntity(SeckillOrderRpc.OrderMessage.AddOrderReq addOrderReq);
 }
