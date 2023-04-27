@@ -99,11 +99,19 @@ public interface OrderMapper {
     SeckillOrderRpc.OrderMessage.ChildOrder toMessage(ChildOrder childOrder);
 
     /**
+     * 实体转rpc消息列表
+     *
+     * @param childOrder 入参
+     * @return List SeckillOrderRpc.OrderMessage.ChildOrder rpc消息
+     */
+    List<SeckillOrderRpc.OrderMessage.ChildOrder> toMessageList(List<ChildOrder> childOrder);
+
+    /**
      * 实体转rpc消息
      *
      * @param order 入参
      * @return SeckillOrderRpc.OrderMessage.AddOrderReq rpc消息
      */
-    @Mapping(target = "ordersList", source = "childOrders")
+    @Mapping(target = "childOrdersList", source = "childOrders")
     SeckillOrderRpc.OrderMessage.Order toMessage(Order order);
 }

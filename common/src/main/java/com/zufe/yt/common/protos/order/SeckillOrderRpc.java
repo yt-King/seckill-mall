@@ -1540,10 +1540,30 @@ public final class SeckillOrderRpc {
 
       /**
        * <pre>
+       *子订单状态
+       * </pre>
+       *
+       * <code>string status = 6;</code>
+       * @return The status.
+       */
+      java.lang.String getStatus();
+      /**
+       * <pre>
+       *子订单状态
+       * </pre>
+       *
+       * <code>string status = 6;</code>
+       * @return The bytes for status.
+       */
+      com.google.protobuf.ByteString
+          getStatusBytes();
+
+      /**
+       * <pre>
        *子订单id
        * </pre>
        *
-       * <code>string id = 6;</code>
+       * <code>string id = 7;</code>
        * @return The id.
        */
       java.lang.String getId();
@@ -1552,7 +1572,7 @@ public final class SeckillOrderRpc {
        *子订单id
        * </pre>
        *
-       * <code>string id = 6;</code>
+       * <code>string id = 7;</code>
        * @return The bytes for id.
        */
       com.google.protobuf.ByteString
@@ -1574,6 +1594,7 @@ public final class SeckillOrderRpc {
         productId_ = "";
         productName_ = "";
         productPicture_ = "";
+        status_ = "";
         id_ = "";
       }
 
@@ -1773,7 +1794,54 @@ public final class SeckillOrderRpc {
         return num_;
       }
 
-      public static final int ID_FIELD_NUMBER = 6;
+      public static final int STATUS_FIELD_NUMBER = 6;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object status_ = "";
+      /**
+       * <pre>
+       *子订单状态
+       * </pre>
+       *
+       * <code>string status = 6;</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public java.lang.String getStatus() {
+        java.lang.Object ref = status_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          status_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       *子订单状态
+       * </pre>
+       *
+       * <code>string status = 6;</code>
+       * @return The bytes for status.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getStatusBytes() {
+        java.lang.Object ref = status_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          status_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int ID_FIELD_NUMBER = 7;
       @SuppressWarnings("serial")
       private volatile java.lang.Object id_ = "";
       /**
@@ -1781,7 +1849,7 @@ public final class SeckillOrderRpc {
        *子订单id
        * </pre>
        *
-       * <code>string id = 6;</code>
+       * <code>string id = 7;</code>
        * @return The id.
        */
       @java.lang.Override
@@ -1802,7 +1870,7 @@ public final class SeckillOrderRpc {
        *子订单id
        * </pre>
        *
-       * <code>string id = 6;</code>
+       * <code>string id = 7;</code>
        * @return The bytes for id.
        */
       @java.lang.Override
@@ -1849,8 +1917,11 @@ public final class SeckillOrderRpc {
         if (num_ != 0) {
           output.writeInt32(5, num_);
         }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(status_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 6, status_);
+        }
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-          com.google.protobuf.GeneratedMessageV3.writeString(output, 6, id_);
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 7, id_);
         }
         getUnknownFields().writeTo(output);
       }
@@ -1878,8 +1949,11 @@ public final class SeckillOrderRpc {
           size += com.google.protobuf.CodedOutputStream
             .computeInt32Size(5, num_);
         }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(status_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, status_);
+        }
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, id_);
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, id_);
         }
         size += getUnknownFields().getSerializedSize();
         memoizedSize = size;
@@ -1906,6 +1980,8 @@ public final class SeckillOrderRpc {
             != other.getPrice()) return false;
         if (getNum()
             != other.getNum()) return false;
+        if (!getStatus()
+            .equals(other.getStatus())) return false;
         if (!getId()
             .equals(other.getId())) return false;
         if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -1929,6 +2005,8 @@ public final class SeckillOrderRpc {
         hash = (53 * hash) + getPrice();
         hash = (37 * hash) + NUM_FIELD_NUMBER;
         hash = (53 * hash) + getNum();
+        hash = (37 * hash) + STATUS_FIELD_NUMBER;
+        hash = (53 * hash) + getStatus().hashCode();
         hash = (37 * hash) + ID_FIELD_NUMBER;
         hash = (53 * hash) + getId().hashCode();
         hash = (29 * hash) + getUnknownFields().hashCode();
@@ -2065,6 +2143,7 @@ public final class SeckillOrderRpc {
           productPicture_ = "";
           price_ = 0;
           num_ = 0;
+          status_ = "";
           id_ = "";
           return this;
         }
@@ -2115,6 +2194,9 @@ public final class SeckillOrderRpc {
             result.num_ = num_;
           }
           if (((from_bitField0_ & 0x00000020) != 0)) {
+            result.status_ = status_;
+          }
+          if (((from_bitField0_ & 0x00000040) != 0)) {
             result.id_ = id_;
           }
         }
@@ -2184,9 +2266,14 @@ public final class SeckillOrderRpc {
           if (other.getNum() != 0) {
             setNum(other.getNum());
           }
+          if (!other.getStatus().isEmpty()) {
+            status_ = other.status_;
+            bitField0_ |= 0x00000020;
+            onChanged();
+          }
           if (!other.getId().isEmpty()) {
             id_ = other.id_;
-            bitField0_ |= 0x00000020;
+            bitField0_ |= 0x00000040;
             onChanged();
           }
           this.mergeUnknownFields(other.getUnknownFields());
@@ -2241,10 +2328,15 @@ public final class SeckillOrderRpc {
                   break;
                 } // case 40
                 case 50: {
-                  id_ = input.readStringRequireUtf8();
+                  status_ = input.readStringRequireUtf8();
                   bitField0_ |= 0x00000020;
                   break;
                 } // case 50
+                case 58: {
+                  id_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000040;
+                  break;
+                } // case 58
                 default: {
                   if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                     done = true; // was an endgroup tag
@@ -2626,13 +2718,105 @@ public final class SeckillOrderRpc {
           return this;
         }
 
+        private java.lang.Object status_ = "";
+        /**
+         * <pre>
+         *子订单状态
+         * </pre>
+         *
+         * <code>string status = 6;</code>
+         * @return The status.
+         */
+        public java.lang.String getStatus() {
+          java.lang.Object ref = status_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            status_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         *子订单状态
+         * </pre>
+         *
+         * <code>string status = 6;</code>
+         * @return The bytes for status.
+         */
+        public com.google.protobuf.ByteString
+            getStatusBytes() {
+          java.lang.Object ref = status_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            status_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         *子订单状态
+         * </pre>
+         *
+         * <code>string status = 6;</code>
+         * @param value The status to set.
+         * @return This builder for chaining.
+         */
+        public Builder setStatus(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          status_ = value;
+          bitField0_ |= 0x00000020;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         *子订单状态
+         * </pre>
+         *
+         * <code>string status = 6;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearStatus() {
+          status_ = getDefaultInstance().getStatus();
+          bitField0_ = (bitField0_ & ~0x00000020);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         *子订单状态
+         * </pre>
+         *
+         * <code>string status = 6;</code>
+         * @param value The bytes for status to set.
+         * @return This builder for chaining.
+         */
+        public Builder setStatusBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
+          status_ = value;
+          bitField0_ |= 0x00000020;
+          onChanged();
+          return this;
+        }
+
         private java.lang.Object id_ = "";
         /**
          * <pre>
          *子订单id
          * </pre>
          *
-         * <code>string id = 6;</code>
+         * <code>string id = 7;</code>
          * @return The id.
          */
         public java.lang.String getId() {
@@ -2652,7 +2836,7 @@ public final class SeckillOrderRpc {
          *子订单id
          * </pre>
          *
-         * <code>string id = 6;</code>
+         * <code>string id = 7;</code>
          * @return The bytes for id.
          */
         public com.google.protobuf.ByteString
@@ -2673,7 +2857,7 @@ public final class SeckillOrderRpc {
          *子订单id
          * </pre>
          *
-         * <code>string id = 6;</code>
+         * <code>string id = 7;</code>
          * @param value The id to set.
          * @return This builder for chaining.
          */
@@ -2681,7 +2865,7 @@ public final class SeckillOrderRpc {
             java.lang.String value) {
           if (value == null) { throw new NullPointerException(); }
           id_ = value;
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000040;
           onChanged();
           return this;
         }
@@ -2690,12 +2874,12 @@ public final class SeckillOrderRpc {
          *子订单id
          * </pre>
          *
-         * <code>string id = 6;</code>
+         * <code>string id = 7;</code>
          * @return This builder for chaining.
          */
         public Builder clearId() {
           id_ = getDefaultInstance().getId();
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000040);
           onChanged();
           return this;
         }
@@ -2704,7 +2888,7 @@ public final class SeckillOrderRpc {
          *子订单id
          * </pre>
          *
-         * <code>string id = 6;</code>
+         * <code>string id = 7;</code>
          * @param value The bytes for id to set.
          * @return This builder for chaining.
          */
@@ -2713,7 +2897,7 @@ public final class SeckillOrderRpc {
           if (value == null) { throw new NullPointerException(); }
           checkByteStringIsUtf8(value);
           id_ = value;
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000040;
           onChanged();
           return this;
         }
@@ -2810,24 +2994,24 @@ public final class SeckillOrderRpc {
        *订单详情
        * </pre>
        *
-       * <code>repeated .OrderMessage.Order orders = 2;</code>
+       * <code>repeated .OrderMessage.ChildOrder orders = 2;</code>
        */
-      java.util.List<order.SeckillOrderRpc.OrderMessage.Order> 
+      java.util.List<order.SeckillOrderRpc.OrderMessage.ChildOrder> 
           getOrdersList();
       /**
        * <pre>
        *订单详情
        * </pre>
        *
-       * <code>repeated .OrderMessage.Order orders = 2;</code>
+       * <code>repeated .OrderMessage.ChildOrder orders = 2;</code>
        */
-      order.SeckillOrderRpc.OrderMessage.Order getOrders(int index);
+      order.SeckillOrderRpc.OrderMessage.ChildOrder getOrders(int index);
       /**
        * <pre>
        *订单详情
        * </pre>
        *
-       * <code>repeated .OrderMessage.Order orders = 2;</code>
+       * <code>repeated .OrderMessage.ChildOrder orders = 2;</code>
        */
       int getOrdersCount();
       /**
@@ -2835,18 +3019,18 @@ public final class SeckillOrderRpc {
        *订单详情
        * </pre>
        *
-       * <code>repeated .OrderMessage.Order orders = 2;</code>
+       * <code>repeated .OrderMessage.ChildOrder orders = 2;</code>
        */
-      java.util.List<? extends order.SeckillOrderRpc.OrderMessage.OrderOrBuilder> 
+      java.util.List<? extends order.SeckillOrderRpc.OrderMessage.ChildOrderOrBuilder> 
           getOrdersOrBuilderList();
       /**
        * <pre>
        *订单详情
        * </pre>
        *
-       * <code>repeated .OrderMessage.Order orders = 2;</code>
+       * <code>repeated .OrderMessage.ChildOrder orders = 2;</code>
        */
-      order.SeckillOrderRpc.OrderMessage.OrderOrBuilder getOrdersOrBuilder(
+      order.SeckillOrderRpc.OrderMessage.ChildOrderOrBuilder getOrdersOrBuilder(
           int index);
 
       /**
@@ -2971,16 +3155,16 @@ public final class SeckillOrderRpc {
 
       public static final int ORDERS_FIELD_NUMBER = 2;
       @SuppressWarnings("serial")
-      private java.util.List<order.SeckillOrderRpc.OrderMessage.Order> orders_;
+      private java.util.List<order.SeckillOrderRpc.OrderMessage.ChildOrder> orders_;
       /**
        * <pre>
        *订单详情
        * </pre>
        *
-       * <code>repeated .OrderMessage.Order orders = 2;</code>
+       * <code>repeated .OrderMessage.ChildOrder orders = 2;</code>
        */
       @java.lang.Override
-      public java.util.List<order.SeckillOrderRpc.OrderMessage.Order> getOrdersList() {
+      public java.util.List<order.SeckillOrderRpc.OrderMessage.ChildOrder> getOrdersList() {
         return orders_;
       }
       /**
@@ -2988,10 +3172,10 @@ public final class SeckillOrderRpc {
        *订单详情
        * </pre>
        *
-       * <code>repeated .OrderMessage.Order orders = 2;</code>
+       * <code>repeated .OrderMessage.ChildOrder orders = 2;</code>
        */
       @java.lang.Override
-      public java.util.List<? extends order.SeckillOrderRpc.OrderMessage.OrderOrBuilder> 
+      public java.util.List<? extends order.SeckillOrderRpc.OrderMessage.ChildOrderOrBuilder> 
           getOrdersOrBuilderList() {
         return orders_;
       }
@@ -3000,7 +3184,7 @@ public final class SeckillOrderRpc {
        *订单详情
        * </pre>
        *
-       * <code>repeated .OrderMessage.Order orders = 2;</code>
+       * <code>repeated .OrderMessage.ChildOrder orders = 2;</code>
        */
       @java.lang.Override
       public int getOrdersCount() {
@@ -3011,10 +3195,10 @@ public final class SeckillOrderRpc {
        *订单详情
        * </pre>
        *
-       * <code>repeated .OrderMessage.Order orders = 2;</code>
+       * <code>repeated .OrderMessage.ChildOrder orders = 2;</code>
        */
       @java.lang.Override
-      public order.SeckillOrderRpc.OrderMessage.Order getOrders(int index) {
+      public order.SeckillOrderRpc.OrderMessage.ChildOrder getOrders(int index) {
         return orders_.get(index);
       }
       /**
@@ -3022,10 +3206,10 @@ public final class SeckillOrderRpc {
        *订单详情
        * </pre>
        *
-       * <code>repeated .OrderMessage.Order orders = 2;</code>
+       * <code>repeated .OrderMessage.ChildOrder orders = 2;</code>
        */
       @java.lang.Override
-      public order.SeckillOrderRpc.OrderMessage.OrderOrBuilder getOrdersOrBuilder(
+      public order.SeckillOrderRpc.OrderMessage.ChildOrderOrBuilder getOrdersOrBuilder(
           int index) {
         return orders_.get(index);
       }
@@ -3498,9 +3682,9 @@ public final class SeckillOrderRpc {
                   break;
                 } // case 10
                 case 18: {
-                  order.SeckillOrderRpc.OrderMessage.Order m =
+                  order.SeckillOrderRpc.OrderMessage.ChildOrder m =
                       input.readMessage(
-                          order.SeckillOrderRpc.OrderMessage.Order.parser(),
+                          order.SeckillOrderRpc.OrderMessage.ChildOrder.parser(),
                           extensionRegistry);
                   if (ordersBuilder_ == null) {
                     ensureOrdersIsMutable();
@@ -3629,26 +3813,26 @@ public final class SeckillOrderRpc {
           return this;
         }
 
-        private java.util.List<order.SeckillOrderRpc.OrderMessage.Order> orders_ =
+        private java.util.List<order.SeckillOrderRpc.OrderMessage.ChildOrder> orders_ =
           java.util.Collections.emptyList();
         private void ensureOrdersIsMutable() {
           if (!((bitField0_ & 0x00000002) != 0)) {
-            orders_ = new java.util.ArrayList<order.SeckillOrderRpc.OrderMessage.Order>(orders_);
+            orders_ = new java.util.ArrayList<order.SeckillOrderRpc.OrderMessage.ChildOrder>(orders_);
             bitField0_ |= 0x00000002;
            }
         }
 
         private com.google.protobuf.RepeatedFieldBuilderV3<
-            order.SeckillOrderRpc.OrderMessage.Order, order.SeckillOrderRpc.OrderMessage.Order.Builder, order.SeckillOrderRpc.OrderMessage.OrderOrBuilder> ordersBuilder_;
+            order.SeckillOrderRpc.OrderMessage.ChildOrder, order.SeckillOrderRpc.OrderMessage.ChildOrder.Builder, order.SeckillOrderRpc.OrderMessage.ChildOrderOrBuilder> ordersBuilder_;
 
         /**
          * <pre>
          *订单详情
          * </pre>
          *
-         * <code>repeated .OrderMessage.Order orders = 2;</code>
+         * <code>repeated .OrderMessage.ChildOrder orders = 2;</code>
          */
-        public java.util.List<order.SeckillOrderRpc.OrderMessage.Order> getOrdersList() {
+        public java.util.List<order.SeckillOrderRpc.OrderMessage.ChildOrder> getOrdersList() {
           if (ordersBuilder_ == null) {
             return java.util.Collections.unmodifiableList(orders_);
           } else {
@@ -3660,7 +3844,7 @@ public final class SeckillOrderRpc {
          *订单详情
          * </pre>
          *
-         * <code>repeated .OrderMessage.Order orders = 2;</code>
+         * <code>repeated .OrderMessage.ChildOrder orders = 2;</code>
          */
         public int getOrdersCount() {
           if (ordersBuilder_ == null) {
@@ -3674,9 +3858,9 @@ public final class SeckillOrderRpc {
          *订单详情
          * </pre>
          *
-         * <code>repeated .OrderMessage.Order orders = 2;</code>
+         * <code>repeated .OrderMessage.ChildOrder orders = 2;</code>
          */
-        public order.SeckillOrderRpc.OrderMessage.Order getOrders(int index) {
+        public order.SeckillOrderRpc.OrderMessage.ChildOrder getOrders(int index) {
           if (ordersBuilder_ == null) {
             return orders_.get(index);
           } else {
@@ -3688,10 +3872,10 @@ public final class SeckillOrderRpc {
          *订单详情
          * </pre>
          *
-         * <code>repeated .OrderMessage.Order orders = 2;</code>
+         * <code>repeated .OrderMessage.ChildOrder orders = 2;</code>
          */
         public Builder setOrders(
-            int index, order.SeckillOrderRpc.OrderMessage.Order value) {
+            int index, order.SeckillOrderRpc.OrderMessage.ChildOrder value) {
           if (ordersBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -3709,10 +3893,10 @@ public final class SeckillOrderRpc {
          *订单详情
          * </pre>
          *
-         * <code>repeated .OrderMessage.Order orders = 2;</code>
+         * <code>repeated .OrderMessage.ChildOrder orders = 2;</code>
          */
         public Builder setOrders(
-            int index, order.SeckillOrderRpc.OrderMessage.Order.Builder builderForValue) {
+            int index, order.SeckillOrderRpc.OrderMessage.ChildOrder.Builder builderForValue) {
           if (ordersBuilder_ == null) {
             ensureOrdersIsMutable();
             orders_.set(index, builderForValue.build());
@@ -3727,9 +3911,9 @@ public final class SeckillOrderRpc {
          *订单详情
          * </pre>
          *
-         * <code>repeated .OrderMessage.Order orders = 2;</code>
+         * <code>repeated .OrderMessage.ChildOrder orders = 2;</code>
          */
-        public Builder addOrders(order.SeckillOrderRpc.OrderMessage.Order value) {
+        public Builder addOrders(order.SeckillOrderRpc.OrderMessage.ChildOrder value) {
           if (ordersBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -3747,10 +3931,10 @@ public final class SeckillOrderRpc {
          *订单详情
          * </pre>
          *
-         * <code>repeated .OrderMessage.Order orders = 2;</code>
+         * <code>repeated .OrderMessage.ChildOrder orders = 2;</code>
          */
         public Builder addOrders(
-            int index, order.SeckillOrderRpc.OrderMessage.Order value) {
+            int index, order.SeckillOrderRpc.OrderMessage.ChildOrder value) {
           if (ordersBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -3768,10 +3952,10 @@ public final class SeckillOrderRpc {
          *订单详情
          * </pre>
          *
-         * <code>repeated .OrderMessage.Order orders = 2;</code>
+         * <code>repeated .OrderMessage.ChildOrder orders = 2;</code>
          */
         public Builder addOrders(
-            order.SeckillOrderRpc.OrderMessage.Order.Builder builderForValue) {
+            order.SeckillOrderRpc.OrderMessage.ChildOrder.Builder builderForValue) {
           if (ordersBuilder_ == null) {
             ensureOrdersIsMutable();
             orders_.add(builderForValue.build());
@@ -3786,10 +3970,10 @@ public final class SeckillOrderRpc {
          *订单详情
          * </pre>
          *
-         * <code>repeated .OrderMessage.Order orders = 2;</code>
+         * <code>repeated .OrderMessage.ChildOrder orders = 2;</code>
          */
         public Builder addOrders(
-            int index, order.SeckillOrderRpc.OrderMessage.Order.Builder builderForValue) {
+            int index, order.SeckillOrderRpc.OrderMessage.ChildOrder.Builder builderForValue) {
           if (ordersBuilder_ == null) {
             ensureOrdersIsMutable();
             orders_.add(index, builderForValue.build());
@@ -3804,10 +3988,10 @@ public final class SeckillOrderRpc {
          *订单详情
          * </pre>
          *
-         * <code>repeated .OrderMessage.Order orders = 2;</code>
+         * <code>repeated .OrderMessage.ChildOrder orders = 2;</code>
          */
         public Builder addAllOrders(
-            java.lang.Iterable<? extends order.SeckillOrderRpc.OrderMessage.Order> values) {
+            java.lang.Iterable<? extends order.SeckillOrderRpc.OrderMessage.ChildOrder> values) {
           if (ordersBuilder_ == null) {
             ensureOrdersIsMutable();
             com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -3823,7 +4007,7 @@ public final class SeckillOrderRpc {
          *订单详情
          * </pre>
          *
-         * <code>repeated .OrderMessage.Order orders = 2;</code>
+         * <code>repeated .OrderMessage.ChildOrder orders = 2;</code>
          */
         public Builder clearOrders() {
           if (ordersBuilder_ == null) {
@@ -3840,7 +4024,7 @@ public final class SeckillOrderRpc {
          *订单详情
          * </pre>
          *
-         * <code>repeated .OrderMessage.Order orders = 2;</code>
+         * <code>repeated .OrderMessage.ChildOrder orders = 2;</code>
          */
         public Builder removeOrders(int index) {
           if (ordersBuilder_ == null) {
@@ -3857,9 +4041,9 @@ public final class SeckillOrderRpc {
          *订单详情
          * </pre>
          *
-         * <code>repeated .OrderMessage.Order orders = 2;</code>
+         * <code>repeated .OrderMessage.ChildOrder orders = 2;</code>
          */
-        public order.SeckillOrderRpc.OrderMessage.Order.Builder getOrdersBuilder(
+        public order.SeckillOrderRpc.OrderMessage.ChildOrder.Builder getOrdersBuilder(
             int index) {
           return getOrdersFieldBuilder().getBuilder(index);
         }
@@ -3868,9 +4052,9 @@ public final class SeckillOrderRpc {
          *订单详情
          * </pre>
          *
-         * <code>repeated .OrderMessage.Order orders = 2;</code>
+         * <code>repeated .OrderMessage.ChildOrder orders = 2;</code>
          */
-        public order.SeckillOrderRpc.OrderMessage.OrderOrBuilder getOrdersOrBuilder(
+        public order.SeckillOrderRpc.OrderMessage.ChildOrderOrBuilder getOrdersOrBuilder(
             int index) {
           if (ordersBuilder_ == null) {
             return orders_.get(index);  } else {
@@ -3882,9 +4066,9 @@ public final class SeckillOrderRpc {
          *订单详情
          * </pre>
          *
-         * <code>repeated .OrderMessage.Order orders = 2;</code>
+         * <code>repeated .OrderMessage.ChildOrder orders = 2;</code>
          */
-        public java.util.List<? extends order.SeckillOrderRpc.OrderMessage.OrderOrBuilder> 
+        public java.util.List<? extends order.SeckillOrderRpc.OrderMessage.ChildOrderOrBuilder> 
              getOrdersOrBuilderList() {
           if (ordersBuilder_ != null) {
             return ordersBuilder_.getMessageOrBuilderList();
@@ -3897,41 +4081,41 @@ public final class SeckillOrderRpc {
          *订单详情
          * </pre>
          *
-         * <code>repeated .OrderMessage.Order orders = 2;</code>
+         * <code>repeated .OrderMessage.ChildOrder orders = 2;</code>
          */
-        public order.SeckillOrderRpc.OrderMessage.Order.Builder addOrdersBuilder() {
+        public order.SeckillOrderRpc.OrderMessage.ChildOrder.Builder addOrdersBuilder() {
           return getOrdersFieldBuilder().addBuilder(
-              order.SeckillOrderRpc.OrderMessage.Order.getDefaultInstance());
+              order.SeckillOrderRpc.OrderMessage.ChildOrder.getDefaultInstance());
         }
         /**
          * <pre>
          *订单详情
          * </pre>
          *
-         * <code>repeated .OrderMessage.Order orders = 2;</code>
+         * <code>repeated .OrderMessage.ChildOrder orders = 2;</code>
          */
-        public order.SeckillOrderRpc.OrderMessage.Order.Builder addOrdersBuilder(
+        public order.SeckillOrderRpc.OrderMessage.ChildOrder.Builder addOrdersBuilder(
             int index) {
           return getOrdersFieldBuilder().addBuilder(
-              index, order.SeckillOrderRpc.OrderMessage.Order.getDefaultInstance());
+              index, order.SeckillOrderRpc.OrderMessage.ChildOrder.getDefaultInstance());
         }
         /**
          * <pre>
          *订单详情
          * </pre>
          *
-         * <code>repeated .OrderMessage.Order orders = 2;</code>
+         * <code>repeated .OrderMessage.ChildOrder orders = 2;</code>
          */
-        public java.util.List<order.SeckillOrderRpc.OrderMessage.Order.Builder> 
+        public java.util.List<order.SeckillOrderRpc.OrderMessage.ChildOrder.Builder> 
              getOrdersBuilderList() {
           return getOrdersFieldBuilder().getBuilderList();
         }
         private com.google.protobuf.RepeatedFieldBuilderV3<
-            order.SeckillOrderRpc.OrderMessage.Order, order.SeckillOrderRpc.OrderMessage.Order.Builder, order.SeckillOrderRpc.OrderMessage.OrderOrBuilder> 
+            order.SeckillOrderRpc.OrderMessage.ChildOrder, order.SeckillOrderRpc.OrderMessage.ChildOrder.Builder, order.SeckillOrderRpc.OrderMessage.ChildOrderOrBuilder> 
             getOrdersFieldBuilder() {
           if (ordersBuilder_ == null) {
             ordersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-                order.SeckillOrderRpc.OrderMessage.Order, order.SeckillOrderRpc.OrderMessage.Order.Builder, order.SeckillOrderRpc.OrderMessage.OrderOrBuilder>(
+                order.SeckillOrderRpc.OrderMessage.ChildOrder, order.SeckillOrderRpc.OrderMessage.ChildOrder.Builder, order.SeckillOrderRpc.OrderMessage.ChildOrderOrBuilder>(
                     orders_,
                     ((bitField0_ & 0x00000002) != 0),
                     getParentForChildren(),
@@ -6120,22 +6304,23 @@ public final class SeckillOrderRpc {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\027seckill-order-rpc.proto\"\245\003\n\014OrderMessa" +
+      "\n\027seckill-order-rpc.proto\"\273\003\n\014OrderMessa" +
       "ge\032\032\n\nCommonRely\022\014\n\004code\030\001 \001(\005\0327\n\005Order\022" +
       ".\n\014child_orders\030\001 \003(\0132\030.OrderMessage.Chi" +
-      "ldOrder\032w\n\nChildOrder\022\022\n\nproduct_id\030\001 \001(" +
-      "\t\022\024\n\014product_name\030\002 \001(\t\022\027\n\017product_pictu" +
-      "re\030\003 \001(\t\022\r\n\005price\030\004 \001(\005\022\013\n\003num\030\005 \001(\005\022\n\n\002" +
-      "id\030\006 \001(\t\032d\n\013AddOrderReq\022\017\n\007user_id\030\001 \001(\t" +
-      "\022#\n\006orders\030\002 \003(\0132\023.OrderMessage.Order\022\n\n" +
-      "\002id\030\003 \001(\t\022\023\n\013create_time\030\004 \001(\001\032\036\n\013GetOrd" +
-      "erReq\022\017\n\007user_id\030\001 \001(\t\032A\n\014GetOrderRely\022\014" +
-      "\n\004code\030\001 \001(\005\022#\n\006orders\030\002 \003(\0132\023.OrderMess" +
-      "age.Order2\235\001\n\023SeckillOrderService\022A\n\010add" +
-      "Order\022\031.OrderMessage.AddOrderReq\032\030.Order" +
-      "Message.CommonRely\"\000\022C\n\010getOrder\022\031.Order" +
-      "Message.GetOrderReq\032\032.OrderMessage.GetOr" +
-      "derRely\"\000B\007\n\005orderb\006proto3"
+      "ldOrder\032\207\001\n\nChildOrder\022\022\n\nproduct_id\030\001 \001" +
+      "(\t\022\024\n\014product_name\030\002 \001(\t\022\027\n\017product_pict" +
+      "ure\030\003 \001(\t\022\r\n\005price\030\004 \001(\005\022\013\n\003num\030\005 \001(\005\022\016\n" +
+      "\006status\030\006 \001(\t\022\n\n\002id\030\007 \001(\t\032i\n\013AddOrderReq" +
+      "\022\017\n\007user_id\030\001 \001(\t\022(\n\006orders\030\002 \003(\0132\030.Orde" +
+      "rMessage.ChildOrder\022\n\n\002id\030\003 \001(\t\022\023\n\013creat" +
+      "e_time\030\004 \001(\001\032\036\n\013GetOrderReq\022\017\n\007user_id\030\001" +
+      " \001(\t\032A\n\014GetOrderRely\022\014\n\004code\030\001 \001(\005\022#\n\006or" +
+      "ders\030\002 \003(\0132\023.OrderMessage.Order2\235\001\n\023Seck" +
+      "illOrderService\022A\n\010addOrder\022\031.OrderMessa" +
+      "ge.AddOrderReq\032\030.OrderMessage.CommonRely" +
+      "\"\000\022C\n\010getOrder\022\031.OrderMessage.GetOrderRe" +
+      "q\032\032.OrderMessage.GetOrderRely\"\000B\007\n\005order" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -6164,7 +6349,7 @@ public final class SeckillOrderRpc {
     internal_static_OrderMessage_ChildOrder_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_OrderMessage_ChildOrder_descriptor,
-        new java.lang.String[] { "ProductId", "ProductName", "ProductPicture", "Price", "Num", "Id", });
+        new java.lang.String[] { "ProductId", "ProductName", "ProductPicture", "Price", "Num", "Status", "Id", });
     internal_static_OrderMessage_AddOrderReq_descriptor =
       internal_static_OrderMessage_descriptor.getNestedTypes().get(3);
     internal_static_OrderMessage_AddOrderReq_fieldAccessorTable = new

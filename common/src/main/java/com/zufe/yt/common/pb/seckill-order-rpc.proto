@@ -31,7 +31,7 @@ message OrderMessage{
     //商品数量
     int32 num = 5;
     //子订单状态
-    string order_status = 6;
+    string status = 6;
     //子订单id
     string id = 7;
   }
@@ -39,7 +39,7 @@ message OrderMessage{
     //用户id
     string user_id = 1;
     //订单详情
-    repeated Order orders = 2;
+    repeated ChildOrder orders = 2;
     //订单id
     string id = 3;
     //创建时间

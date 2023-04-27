@@ -8,6 +8,7 @@ import com.zufe.yt.order.domain.order.entity.ChildOrder;
 import com.zufe.yt.order.domain.order.entity.Order;
 import com.zufe.yt.order.domain.order.repository.OrderRepository;
 import com.zufe.yt.order.infrastructure.enums.OrderStatusEnum;
+import io.grpc.StatusRuntimeException;
 import net.devh.boot.grpc.client.inject.GrpcClient;
 import org.springframework.stereotype.Service;
 import product.SeckillProductRpc;
@@ -50,9 +51,10 @@ public class OrderApplicationImpl implements OrderApplication {
                 //正常情况下返回全局唯一的codeId，当作子订单的id
                 childOrder.setId(codeId);
                 childOrder.setStatus(OrderStatusEnum.SUCCESS.name());
-            } catch (ServiceException e) {
+            } catch (StatusRuntimeException e) {
+                assert e.getStatus().getDescription() != null;
                 //如果是库存不足则写库存不足，其他异常写购买失败
-                if (e.getCode() == ResultCode.STOCK_INSUFFICIENT.getCode()) {
+                if (Integer.parseInt(e.getStatus().getDescription().split(":")[0]) == ResultCode.STOCK_INSUFFICIENT.getCode()) {
                     childOrder.setStatus(OrderStatusEnum.STOCK_INSUFFICIENT.name());
                 } else {
                     childOrder.setStatus(OrderStatusEnum.OTHER_FAILURE.name());
