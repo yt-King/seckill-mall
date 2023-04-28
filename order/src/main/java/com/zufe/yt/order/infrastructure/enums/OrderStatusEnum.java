@@ -17,5 +17,9 @@ public enum OrderStatusEnum {
     /**
      * 其他失败
      */
-    OTHER_FAILURE
+    OTHER_FAILURE,
+    /**
+     * 未知异常
+     */
+    UNKNOWN
 }

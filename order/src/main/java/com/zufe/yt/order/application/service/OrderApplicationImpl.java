@@ -9,6 +9,7 @@ import com.zufe.yt.order.domain.order.entity.Order;
 import com.zufe.yt.order.domain.order.repository.OrderRepository;
 import com.zufe.yt.order.infrastructure.enums.OrderStatusEnum;
 import io.grpc.StatusRuntimeException;
+import lombok.extern.slf4j.Slf4j;
 import net.devh.boot.grpc.client.inject.GrpcClient;
 import org.springframework.stereotype.Service;
 import product.SeckillProductRpc;
@@ -26,6 +27,7 @@ import java.util.List;
  */
 
 @Service
+@Slf4j
 public class OrderApplicationImpl implements OrderApplication {
     @Resource
     OrderRepository orderRepository;
@@ -59,6 +61,10 @@ public class OrderApplicationImpl implements OrderApplication {
                 } else {
                     childOrder.setStatus(OrderStatusEnum.OTHER_FAILURE.name());
                 }
+            } catch (Exception e) {
+                //未知异常，打印一下
+                log.error("make codeId error:{}", e.getMessage());
+                childOrder.setStatus(OrderStatusEnum.UNKNOWN.name());
             }
         }
         orderRepository.saveOrUpdate(order);

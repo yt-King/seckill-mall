@@ -184,5 +184,7 @@ message ShoppingCartMessage{
     int32 num = 6;
     //最大购买数
     int32 max_num = 7;
+    //库存
+    int32 stock = 8;
   }
 }

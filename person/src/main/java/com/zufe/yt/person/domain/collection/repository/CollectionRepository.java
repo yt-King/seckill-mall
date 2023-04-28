@@ -12,4 +12,6 @@ import com.zufe.yt.person.infrastructure.persistence.data.CollectionDO;
 public interface CollectionRepository extends IRepository<Collection, CollectionDO> {
     @Override
     String saveOrUpdate(Collection collection);
+
+    String delete(Collection collection);
 }
