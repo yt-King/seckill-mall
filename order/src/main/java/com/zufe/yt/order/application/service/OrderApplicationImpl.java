@@ -47,6 +47,7 @@ public class OrderApplicationImpl implements OrderApplication {
         order.valid();
         //用于存放需要在购物车中删除的商品id
         List<String> list = new ArrayList<>();
+        boolean fail = true;
         //依次扣库存生成订单，成功的订单返回唯一的codeId，幂等返回空字符串，失败报错
         for (ChildOrder childOrder : order.getChildOrders()) {
             try {
@@ -64,6 +65,7 @@ public class OrderApplicationImpl implements OrderApplication {
                 //正常情况下返回全局唯一的codeId，当作子订单的id
                 childOrder.setId(codeId);
                 childOrder.setStatus(OrderStatusEnum.SUCCESS.name());
+                fail = false;
             } catch (StatusRuntimeException e) {
                 assert e.getStatus().getDescription() != null;
                 //如果是库存不足则写库存不足，其他异常写购买失败
@@ -77,6 +79,10 @@ public class OrderApplicationImpl implements OrderApplication {
                 log.error("make codeId error:{}", e.getMessage());
                 childOrder.setStatus(OrderStatusEnum.UNKNOWN.name());
             }
+        }
+        //如果一个商品都没有购买成功不存数据库直接异常返回
+        if (fail) {
+            throw new ServiceException("库存不足购买失败", 100005);
         }
         orderRepository.saveOrUpdate(order);
         //购物车去除已购买商品
