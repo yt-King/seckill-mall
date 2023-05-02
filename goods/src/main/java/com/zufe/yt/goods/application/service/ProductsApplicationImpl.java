@@ -11,6 +11,7 @@ import com.zufe.yt.common.mongo.util.SortBuilder;
 import com.zufe.yt.common.redis.util.LockUtil;
 import com.zufe.yt.common.redis.util.RedisService;
 import com.zufe.yt.goods.application.ProductsApplication;
+import com.zufe.yt.goods.domain.carousel.Carousel;
 import com.zufe.yt.goods.domain.category.Category;
 import com.zufe.yt.goods.domain.product.entity.Product;
 import com.zufe.yt.goods.domain.product.repository.ProductsRepository;
@@ -151,14 +152,26 @@ public class ProductsApplicationImpl implements ProductsApplication {
     }
 
     @Override
+    public List<Product> getAllProductList() {
+        return productsRepository.list();
+    }
+
+    @Override
     public Product getProductDetail(CacheQueryDTO queryDTO) {
-        if (StrUtil.isBlank(queryDTO.getId()) || null == queryDTO.getCategoryId()) {
-            throw new ServiceException("参数有误", 100001);
+        if (StrUtil.isBlank(queryDTO.getId())) {
+            throw new ServiceException("商品id不能为空", 100001);
         }
-        Product product = productsRepository.findById(queryDTO);
+        Product product;
+        if (null == queryDTO.getCategoryId() || 0 == queryDTO.getCategoryId()) {
+            //直接查数据库不走缓存
+            product = productsRepository.findById(queryDTO.getId());
+        } else {
+            product = productsRepository.findById(queryDTO);
+        }
         if (null == product) {
             throw new ServiceException("商品不存在", 100001);
         }
+        product.setProductStock(stockRepository.findById(product.getId()).getStock());
         return product;
     }
 
@@ -197,5 +210,10 @@ public class ProductsApplicationImpl implements ProductsApplication {
         redisService.sSet(SYNC_STOCK_KEY, stockDTO.getProductId());
         //todo:生成codeId返回，这里先简单用uuid代替一下
         return UUID.fastUUID().toString();
+    }
+
+    @Override
+    public List<Carousel> getCarousel() {
+        return Carousel.builder().build().getCarousel();
     }
 }

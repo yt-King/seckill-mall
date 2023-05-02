@@ -1,7 +1,5 @@
 # seckill-mall
 
-github仓库地址：https://github.com/yt-King/seckill-mall
-
 ## tips
 
 ```bash
@@ -25,13 +23,7 @@ chmod +x protoc-gen-grpc-java-1.54.1-osx-x86_64.exe
 
 ## 商城秒杀系统-整体架构图
 
-第一版：
-
 ![](https://typora-imagehost-1308499275.cos.ap-shanghai.myqcloud.com/mac/macimage-20230416203428539.png)
-
-最终版：
-
-![image-20230430202949980](https://typora-imagehost-1308499275.cos.ap-shanghai.myqcloud.com/2023-5/image-20230430202949980.png)
 
 ### 聚合的一些设计原则
 

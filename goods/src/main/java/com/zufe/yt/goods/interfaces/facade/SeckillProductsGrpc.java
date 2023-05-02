@@ -4,7 +4,9 @@ import com.zufe.yt.common.core.constant.ResultCode;
 import com.zufe.yt.common.mongo.util.MongoPage;
 import com.zufe.yt.common.redis.util.LockUtil;
 import com.zufe.yt.goods.application.ProductsApplication;
+import com.zufe.yt.goods.domain.carousel.Carousel;
 import com.zufe.yt.goods.domain.product.entity.Product;
+import com.zufe.yt.goods.infrastructure.transfer.CarouselMapper;
 import com.zufe.yt.goods.infrastructure.transfer.CategoryMapper;
 import com.zufe.yt.goods.infrastructure.transfer.ProductMapper;
 import com.zufe.yt.goods.infrastructure.transfer.StockMapper;
@@ -14,6 +16,7 @@ import product.SeckillProductRpc;
 import product.SeckillProductServiceGrpc;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * @author yt
@@ -68,6 +71,14 @@ public class SeckillProductsGrpc extends SeckillProductServiceGrpc.SeckillProduc
     }
 
     @Override
+    public void getAllProducts(SeckillProductRpc.ProductMessage.GetTotalProductsReq request, StreamObserver<SeckillProductRpc.ProductMessage.GetTotalProductsRely> responseObserver) {
+        SeckillProductRpc.ProductMessage.GetTotalProductsRely.Builder builder = SeckillProductRpc.ProductMessage.GetTotalProductsRely.newBuilder().setCode(ResultCode.SUCCESS.getCode());
+        List<Product> list = productsApplication.getAllProductList();
+        list.forEach(x -> builder.addProduct(ProductMapper.INSTANCE.toSimpleMessage(x)));
+        responseObserver.onNext(builder.build());
+        responseObserver.onCompleted();    }
+
+    @Override
     public void getProductDetail(SeckillProductRpc.ProductMessage.GetProductDetailReq request, StreamObserver<SeckillProductRpc.ProductMessage.GetProductDetailRely> responseObserver) {
         SeckillProductRpc.ProductMessage.GetProductDetailRely.Builder builder = SeckillProductRpc.ProductMessage.GetProductDetailRely.newBuilder().setCode(ResultCode.SUCCESS.getCode());
         Product productDetail = productsApplication.getProductDetail(ProductMapper.INSTANCE.toCacheQuery(request));
@@ -82,6 +93,17 @@ public class SeckillProductsGrpc extends SeckillProductServiceGrpc.SeckillProduc
         //不加锁，内部实现扣库存原子化同时返回唯一标识
         String codeId = productsApplication.incCount(StockMapper.INSTANCE.toDTO(request));
         builder.setCodeId(codeId);
+        responseObserver.onNext(builder.build());
+        responseObserver.onCompleted();
+    }
+
+    @Override
+    public void getCarousel(SeckillProductRpc.ProductMessage.GetCarouselReq request, StreamObserver<SeckillProductRpc.ProductMessage.GetCarouselRely> responseObserver) {
+        SeckillProductRpc.ProductMessage.GetCarouselRely.Builder builder = SeckillProductRpc.ProductMessage.GetCarouselRely.newBuilder().setCode(ResultCode.SUCCESS.getCode());
+        List<Carousel> list = productsApplication.getCarousel();
+        for (Carousel carousel : list) {
+            builder.addCarousel(CarouselMapper.INSTANCE.toMessage(carousel));
+        }
         responseObserver.onNext(builder.build());
         responseObserver.onCompleted();
     }

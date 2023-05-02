@@ -1,6 +1,7 @@
 package com.zufe.yt.goods.application;
 
 import com.zufe.yt.common.mongo.util.MongoPage;
+import com.zufe.yt.goods.domain.carousel.Carousel;
 import com.zufe.yt.goods.domain.category.Category;
 import com.zufe.yt.goods.domain.product.entity.Product;
 import com.zufe.yt.goods.interfaces.dto.CacheQueryDTO;
@@ -36,6 +37,11 @@ public interface ProductsApplication {
     MongoPage<Product> getProductList(QueryDTO queryDTO);
 
     /**
+     * 获取商品列表(全部)
+     */
+    List<Product> getAllProductList();
+
+    /**
      * 获取商品详情
      */
     Product getProductDetail(CacheQueryDTO queryDTO);
@@ -44,4 +50,9 @@ public interface ProductsApplication {
      * 用户购买商品增加商品已获取量
      */
     String incCount(StockDTO stockDTO);
+
+    /**
+     * 获取轮播图，目前写死
+     */
+    List<Carousel> getCarousel();
 }

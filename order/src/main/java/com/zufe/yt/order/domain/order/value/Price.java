@@ -20,7 +20,7 @@ public class Price implements ValueObject<Price> {
         if (null == value) {
             throw new ServiceException("商品价格不能为空", 100001);
         }
-        if (value <= 0) {
+        if (value < 0) {
             throw new ServiceException("商品价格不能为负数", 100001);
         }
         this.value = value;

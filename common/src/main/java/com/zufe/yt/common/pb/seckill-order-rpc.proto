@@ -18,6 +18,10 @@ message OrderMessage{
   message Order {
     //子订单
     repeated ChildOrder child_orders = 1;
+    //订单id
+    string  id = 2;
+    //创建时间
+    double create_time = 3;
   }
   message ChildOrder {
     //商品id

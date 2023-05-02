@@ -11,6 +11,7 @@ import order.SeckillOrderRpc;
 import order.SeckillOrderServiceGrpc;
 
 import javax.annotation.Resource;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -39,8 +40,11 @@ public class SeckillOrderGrpc extends SeckillOrderServiceGrpc.SeckillOrderServic
     public void getOrder(SeckillOrderRpc.OrderMessage.GetOrderReq request, StreamObserver<SeckillOrderRpc.OrderMessage.GetOrderRely> responseObserver) {
         SeckillOrderRpc.OrderMessage.GetOrderRely.Builder builder = SeckillOrderRpc.OrderMessage.GetOrderRely.newBuilder().setCode(ResultCode.SUCCESS.getCode());
         List<Order> orderList = orderApplication.getOrder(request.getUserId());
+        Collections.reverse(orderList);
         for (Order order : orderList) {
             SeckillOrderRpc.OrderMessage.Order.Builder orderBuilder = SeckillOrderRpc.OrderMessage.Order.newBuilder();
+            orderBuilder.setId(order.getId());
+            orderBuilder.setCreateTime(order.getCreateTime());
             for (ChildOrder childOrder : order.getChildOrders()) {
                 orderBuilder.addChildOrders(OrderMapper.INSTANCE.toMessage(childOrder));
             }

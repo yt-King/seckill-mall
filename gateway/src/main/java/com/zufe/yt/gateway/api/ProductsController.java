@@ -55,4 +55,10 @@ public class ProductsController {
         SeckillProductRpc.ProductMessage.GetProductDetailRely rely = productsStub.getProductDetail(ProtoBeanUtil.toMessage(data, SeckillProductRpc.ProductMessage.GetProductDetailReq.newBuilder()).build());
         return ProtoBeanUtil.toBean(rely, JSONObject.class);
     }
+
+    @PostMapping(value = "/v1/carousel")
+    public JSONObject carousel(@RequestBody Map<String, Object> data) {
+        SeckillProductRpc.ProductMessage.GetCarouselRely rely = productsStub.getCarousel(ProtoBeanUtil.toMessage(data, SeckillProductRpc.ProductMessage.GetCarouselReq.newBuilder()).build());
+        return ProtoBeanUtil.toBean(rely, JSONObject.class);
+    }
 }

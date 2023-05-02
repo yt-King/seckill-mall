@@ -29,4 +29,12 @@ public class ChildOrderDTO {
      * 订单状态
      */
     String status;
+    /**
+     * 商品名称
+     */
+    String productName;
+    /**
+     * 商品图片
+     */
+    String productPicture;
 }

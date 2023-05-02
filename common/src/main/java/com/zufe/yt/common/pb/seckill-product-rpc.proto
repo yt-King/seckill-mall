@@ -15,11 +15,17 @@ service SeckillProductService {
   // 商品列表
   rpc getProducts(ProductMessage.GetAllProductsReq) returns (ProductMessage.GetAllProductsRely) {
   }
+  // 商品列表(全部)
+  rpc getAllProducts(ProductMessage.GetTotalProductsReq) returns (ProductMessage.GetTotalProductsRely) {
+  }
   // 商品详情
   rpc getProductDetail(ProductMessage.GetProductDetailReq) returns (ProductMessage.GetProductDetailRely) {
   }
   // 商品扣除
   rpc incGotCount(ProductMessage.IncGotCountReq) returns (ProductMessage.IncGotCountRely) {
+  }
+  // 轮播图
+  rpc getCarousel(ProductMessage.GetCarouselReq) returns (ProductMessage.GetCarouselRely) {
   }
 }
 
@@ -89,6 +95,14 @@ message ProductMessage{
     //商品
     repeated SimpleProduct product = 3;
   }
+  message GetTotalProductsReq {
+  }
+  message GetTotalProductsRely {
+    //状态码
+    int32 code = 1;
+    //商品
+    repeated SimpleProduct product = 2;
+  }
   message SimpleProduct {
     //类目id
     int32 category_id = 1;
@@ -138,8 +152,8 @@ message ProductMessage{
     int32 product_selling_price = 8;
     //商品数量
     int32 product_num = 9;
-    //商品售出
-    int32 product_sales = 10;
+    //商品库存
+    int32 product_stock = 10;
     //主键id
     string id = 11;
   }
@@ -154,5 +168,18 @@ message ProductMessage{
   message IncGotCountRely {
     //codeId
     string code_id = 1;
+  }
+  message GetCarouselReq {
+  }
+  message GetCarouselRely {
+    //状态码
+    int32 code = 1;
+    repeated Carousel carousel = 2;
+  }
+  message Carousel{
+    //轮播图id
+    int32 carousel_id = 1;
+    //图片路径
+    string imgPath = 2;
   }
 }

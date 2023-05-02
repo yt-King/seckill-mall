@@ -21,7 +21,6 @@
         <module>logger</module>
         <module>goods</module>
         <module>order</module>
-        <module>active</module>
         <module>common</module>
         <module>gateway</module>
     </modules>

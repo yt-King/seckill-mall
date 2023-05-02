@@ -7305,6 +7305,1395 @@ public final class SeckillProductRpc {
 
     }
 
+    public interface GetTotalProductsReqOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:ProductMessage.GetTotalProductsReq)
+        com.google.protobuf.MessageOrBuilder {
+    }
+    /**
+     * Protobuf type {@code ProductMessage.GetTotalProductsReq}
+     */
+    public static final class GetTotalProductsReq extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:ProductMessage.GetTotalProductsReq)
+        GetTotalProductsReqOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use GetTotalProductsReq.newBuilder() to construct.
+      private GetTotalProductsReq(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private GetTotalProductsReq() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new GetTotalProductsReq();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return product.SeckillProductRpc.internal_static_ProductMessage_GetTotalProductsReq_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return product.SeckillProductRpc.internal_static_ProductMessage_GetTotalProductsReq_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                product.SeckillProductRpc.ProductMessage.GetTotalProductsReq.class, product.SeckillProductRpc.ProductMessage.GetTotalProductsReq.Builder.class);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof product.SeckillProductRpc.ProductMessage.GetTotalProductsReq)) {
+          return super.equals(obj);
+        }
+        product.SeckillProductRpc.ProductMessage.GetTotalProductsReq other = (product.SeckillProductRpc.ProductMessage.GetTotalProductsReq) obj;
+
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static product.SeckillProductRpc.ProductMessage.GetTotalProductsReq parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static product.SeckillProductRpc.ProductMessage.GetTotalProductsReq parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static product.SeckillProductRpc.ProductMessage.GetTotalProductsReq parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static product.SeckillProductRpc.ProductMessage.GetTotalProductsReq parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static product.SeckillProductRpc.ProductMessage.GetTotalProductsReq parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static product.SeckillProductRpc.ProductMessage.GetTotalProductsReq parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static product.SeckillProductRpc.ProductMessage.GetTotalProductsReq parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static product.SeckillProductRpc.ProductMessage.GetTotalProductsReq parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static product.SeckillProductRpc.ProductMessage.GetTotalProductsReq parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static product.SeckillProductRpc.ProductMessage.GetTotalProductsReq parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static product.SeckillProductRpc.ProductMessage.GetTotalProductsReq parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static product.SeckillProductRpc.ProductMessage.GetTotalProductsReq parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(product.SeckillProductRpc.ProductMessage.GetTotalProductsReq prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code ProductMessage.GetTotalProductsReq}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:ProductMessage.GetTotalProductsReq)
+          product.SeckillProductRpc.ProductMessage.GetTotalProductsReqOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return product.SeckillProductRpc.internal_static_ProductMessage_GetTotalProductsReq_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return product.SeckillProductRpc.internal_static_ProductMessage_GetTotalProductsReq_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  product.SeckillProductRpc.ProductMessage.GetTotalProductsReq.class, product.SeckillProductRpc.ProductMessage.GetTotalProductsReq.Builder.class);
+        }
+
+        // Construct using product.SeckillProductRpc.ProductMessage.GetTotalProductsReq.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return product.SeckillProductRpc.internal_static_ProductMessage_GetTotalProductsReq_descriptor;
+        }
+
+        @java.lang.Override
+        public product.SeckillProductRpc.ProductMessage.GetTotalProductsReq getDefaultInstanceForType() {
+          return product.SeckillProductRpc.ProductMessage.GetTotalProductsReq.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public product.SeckillProductRpc.ProductMessage.GetTotalProductsReq build() {
+          product.SeckillProductRpc.ProductMessage.GetTotalProductsReq result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public product.SeckillProductRpc.ProductMessage.GetTotalProductsReq buildPartial() {
+          product.SeckillProductRpc.ProductMessage.GetTotalProductsReq result = new product.SeckillProductRpc.ProductMessage.GetTotalProductsReq(this);
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof product.SeckillProductRpc.ProductMessage.GetTotalProductsReq) {
+            return mergeFrom((product.SeckillProductRpc.ProductMessage.GetTotalProductsReq)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(product.SeckillProductRpc.ProductMessage.GetTotalProductsReq other) {
+          if (other == product.SeckillProductRpc.ProductMessage.GetTotalProductsReq.getDefaultInstance()) return this;
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:ProductMessage.GetTotalProductsReq)
+      }
+
+      // @@protoc_insertion_point(class_scope:ProductMessage.GetTotalProductsReq)
+      private static final product.SeckillProductRpc.ProductMessage.GetTotalProductsReq DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new product.SeckillProductRpc.ProductMessage.GetTotalProductsReq();
+      }
+
+      public static product.SeckillProductRpc.ProductMessage.GetTotalProductsReq getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<GetTotalProductsReq>
+          PARSER = new com.google.protobuf.AbstractParser<GetTotalProductsReq>() {
+        @java.lang.Override
+        public GetTotalProductsReq parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<GetTotalProductsReq> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<GetTotalProductsReq> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public product.SeckillProductRpc.ProductMessage.GetTotalProductsReq getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface GetTotalProductsRelyOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:ProductMessage.GetTotalProductsRely)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       *状态码
+       * </pre>
+       *
+       * <code>int32 code = 1;</code>
+       * @return The code.
+       */
+      int getCode();
+
+      /**
+       * <pre>
+       *商品
+       * </pre>
+       *
+       * <code>repeated .ProductMessage.SimpleProduct product = 2;</code>
+       */
+      java.util.List<product.SeckillProductRpc.ProductMessage.SimpleProduct> 
+          getProductList();
+      /**
+       * <pre>
+       *商品
+       * </pre>
+       *
+       * <code>repeated .ProductMessage.SimpleProduct product = 2;</code>
+       */
+      product.SeckillProductRpc.ProductMessage.SimpleProduct getProduct(int index);
+      /**
+       * <pre>
+       *商品
+       * </pre>
+       *
+       * <code>repeated .ProductMessage.SimpleProduct product = 2;</code>
+       */
+      int getProductCount();
+      /**
+       * <pre>
+       *商品
+       * </pre>
+       *
+       * <code>repeated .ProductMessage.SimpleProduct product = 2;</code>
+       */
+      java.util.List<? extends product.SeckillProductRpc.ProductMessage.SimpleProductOrBuilder> 
+          getProductOrBuilderList();
+      /**
+       * <pre>
+       *商品
+       * </pre>
+       *
+       * <code>repeated .ProductMessage.SimpleProduct product = 2;</code>
+       */
+      product.SeckillProductRpc.ProductMessage.SimpleProductOrBuilder getProductOrBuilder(
+          int index);
+    }
+    /**
+     * Protobuf type {@code ProductMessage.GetTotalProductsRely}
+     */
+    public static final class GetTotalProductsRely extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:ProductMessage.GetTotalProductsRely)
+        GetTotalProductsRelyOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use GetTotalProductsRely.newBuilder() to construct.
+      private GetTotalProductsRely(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private GetTotalProductsRely() {
+        product_ = java.util.Collections.emptyList();
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new GetTotalProductsRely();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return product.SeckillProductRpc.internal_static_ProductMessage_GetTotalProductsRely_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return product.SeckillProductRpc.internal_static_ProductMessage_GetTotalProductsRely_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                product.SeckillProductRpc.ProductMessage.GetTotalProductsRely.class, product.SeckillProductRpc.ProductMessage.GetTotalProductsRely.Builder.class);
+      }
+
+      public static final int CODE_FIELD_NUMBER = 1;
+      private int code_ = 0;
+      /**
+       * <pre>
+       *状态码
+       * </pre>
+       *
+       * <code>int32 code = 1;</code>
+       * @return The code.
+       */
+      @java.lang.Override
+      public int getCode() {
+        return code_;
+      }
+
+      public static final int PRODUCT_FIELD_NUMBER = 2;
+      @SuppressWarnings("serial")
+      private java.util.List<product.SeckillProductRpc.ProductMessage.SimpleProduct> product_;
+      /**
+       * <pre>
+       *商品
+       * </pre>
+       *
+       * <code>repeated .ProductMessage.SimpleProduct product = 2;</code>
+       */
+      @java.lang.Override
+      public java.util.List<product.SeckillProductRpc.ProductMessage.SimpleProduct> getProductList() {
+        return product_;
+      }
+      /**
+       * <pre>
+       *商品
+       * </pre>
+       *
+       * <code>repeated .ProductMessage.SimpleProduct product = 2;</code>
+       */
+      @java.lang.Override
+      public java.util.List<? extends product.SeckillProductRpc.ProductMessage.SimpleProductOrBuilder> 
+          getProductOrBuilderList() {
+        return product_;
+      }
+      /**
+       * <pre>
+       *商品
+       * </pre>
+       *
+       * <code>repeated .ProductMessage.SimpleProduct product = 2;</code>
+       */
+      @java.lang.Override
+      public int getProductCount() {
+        return product_.size();
+      }
+      /**
+       * <pre>
+       *商品
+       * </pre>
+       *
+       * <code>repeated .ProductMessage.SimpleProduct product = 2;</code>
+       */
+      @java.lang.Override
+      public product.SeckillProductRpc.ProductMessage.SimpleProduct getProduct(int index) {
+        return product_.get(index);
+      }
+      /**
+       * <pre>
+       *商品
+       * </pre>
+       *
+       * <code>repeated .ProductMessage.SimpleProduct product = 2;</code>
+       */
+      @java.lang.Override
+      public product.SeckillProductRpc.ProductMessage.SimpleProductOrBuilder getProductOrBuilder(
+          int index) {
+        return product_.get(index);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (code_ != 0) {
+          output.writeInt32(1, code_);
+        }
+        for (int i = 0; i < product_.size(); i++) {
+          output.writeMessage(2, product_.get(i));
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (code_ != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(1, code_);
+        }
+        for (int i = 0; i < product_.size(); i++) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, product_.get(i));
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof product.SeckillProductRpc.ProductMessage.GetTotalProductsRely)) {
+          return super.equals(obj);
+        }
+        product.SeckillProductRpc.ProductMessage.GetTotalProductsRely other = (product.SeckillProductRpc.ProductMessage.GetTotalProductsRely) obj;
+
+        if (getCode()
+            != other.getCode()) return false;
+        if (!getProductList()
+            .equals(other.getProductList())) return false;
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + CODE_FIELD_NUMBER;
+        hash = (53 * hash) + getCode();
+        if (getProductCount() > 0) {
+          hash = (37 * hash) + PRODUCT_FIELD_NUMBER;
+          hash = (53 * hash) + getProductList().hashCode();
+        }
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static product.SeckillProductRpc.ProductMessage.GetTotalProductsRely parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static product.SeckillProductRpc.ProductMessage.GetTotalProductsRely parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static product.SeckillProductRpc.ProductMessage.GetTotalProductsRely parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static product.SeckillProductRpc.ProductMessage.GetTotalProductsRely parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static product.SeckillProductRpc.ProductMessage.GetTotalProductsRely parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static product.SeckillProductRpc.ProductMessage.GetTotalProductsRely parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static product.SeckillProductRpc.ProductMessage.GetTotalProductsRely parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static product.SeckillProductRpc.ProductMessage.GetTotalProductsRely parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static product.SeckillProductRpc.ProductMessage.GetTotalProductsRely parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static product.SeckillProductRpc.ProductMessage.GetTotalProductsRely parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static product.SeckillProductRpc.ProductMessage.GetTotalProductsRely parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static product.SeckillProductRpc.ProductMessage.GetTotalProductsRely parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(product.SeckillProductRpc.ProductMessage.GetTotalProductsRely prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code ProductMessage.GetTotalProductsRely}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:ProductMessage.GetTotalProductsRely)
+          product.SeckillProductRpc.ProductMessage.GetTotalProductsRelyOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return product.SeckillProductRpc.internal_static_ProductMessage_GetTotalProductsRely_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return product.SeckillProductRpc.internal_static_ProductMessage_GetTotalProductsRely_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  product.SeckillProductRpc.ProductMessage.GetTotalProductsRely.class, product.SeckillProductRpc.ProductMessage.GetTotalProductsRely.Builder.class);
+        }
+
+        // Construct using product.SeckillProductRpc.ProductMessage.GetTotalProductsRely.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          code_ = 0;
+          if (productBuilder_ == null) {
+            product_ = java.util.Collections.emptyList();
+          } else {
+            product_ = null;
+            productBuilder_.clear();
+          }
+          bitField0_ = (bitField0_ & ~0x00000002);
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return product.SeckillProductRpc.internal_static_ProductMessage_GetTotalProductsRely_descriptor;
+        }
+
+        @java.lang.Override
+        public product.SeckillProductRpc.ProductMessage.GetTotalProductsRely getDefaultInstanceForType() {
+          return product.SeckillProductRpc.ProductMessage.GetTotalProductsRely.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public product.SeckillProductRpc.ProductMessage.GetTotalProductsRely build() {
+          product.SeckillProductRpc.ProductMessage.GetTotalProductsRely result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public product.SeckillProductRpc.ProductMessage.GetTotalProductsRely buildPartial() {
+          product.SeckillProductRpc.ProductMessage.GetTotalProductsRely result = new product.SeckillProductRpc.ProductMessage.GetTotalProductsRely(this);
+          buildPartialRepeatedFields(result);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartialRepeatedFields(product.SeckillProductRpc.ProductMessage.GetTotalProductsRely result) {
+          if (productBuilder_ == null) {
+            if (((bitField0_ & 0x00000002) != 0)) {
+              product_ = java.util.Collections.unmodifiableList(product_);
+              bitField0_ = (bitField0_ & ~0x00000002);
+            }
+            result.product_ = product_;
+          } else {
+            result.product_ = productBuilder_.build();
+          }
+        }
+
+        private void buildPartial0(product.SeckillProductRpc.ProductMessage.GetTotalProductsRely result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.code_ = code_;
+          }
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof product.SeckillProductRpc.ProductMessage.GetTotalProductsRely) {
+            return mergeFrom((product.SeckillProductRpc.ProductMessage.GetTotalProductsRely)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(product.SeckillProductRpc.ProductMessage.GetTotalProductsRely other) {
+          if (other == product.SeckillProductRpc.ProductMessage.GetTotalProductsRely.getDefaultInstance()) return this;
+          if (other.getCode() != 0) {
+            setCode(other.getCode());
+          }
+          if (productBuilder_ == null) {
+            if (!other.product_.isEmpty()) {
+              if (product_.isEmpty()) {
+                product_ = other.product_;
+                bitField0_ = (bitField0_ & ~0x00000002);
+              } else {
+                ensureProductIsMutable();
+                product_.addAll(other.product_);
+              }
+              onChanged();
+            }
+          } else {
+            if (!other.product_.isEmpty()) {
+              if (productBuilder_.isEmpty()) {
+                productBuilder_.dispose();
+                productBuilder_ = null;
+                product_ = other.product_;
+                bitField0_ = (bitField0_ & ~0x00000002);
+                productBuilder_ = 
+                  com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                     getProductFieldBuilder() : null;
+              } else {
+                productBuilder_.addAllMessages(other.product_);
+              }
+            }
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 8: {
+                  code_ = input.readInt32();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 8
+                case 18: {
+                  product.SeckillProductRpc.ProductMessage.SimpleProduct m =
+                      input.readMessage(
+                          product.SeckillProductRpc.ProductMessage.SimpleProduct.parser(),
+                          extensionRegistry);
+                  if (productBuilder_ == null) {
+                    ensureProductIsMutable();
+                    product_.add(m);
+                  } else {
+                    productBuilder_.addMessage(m);
+                  }
+                  break;
+                } // case 18
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private int code_ ;
+        /**
+         * <pre>
+         *状态码
+         * </pre>
+         *
+         * <code>int32 code = 1;</code>
+         * @return The code.
+         */
+        @java.lang.Override
+        public int getCode() {
+          return code_;
+        }
+        /**
+         * <pre>
+         *状态码
+         * </pre>
+         *
+         * <code>int32 code = 1;</code>
+         * @param value The code to set.
+         * @return This builder for chaining.
+         */
+        public Builder setCode(int value) {
+          
+          code_ = value;
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         *状态码
+         * </pre>
+         *
+         * <code>int32 code = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearCode() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          code_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private java.util.List<product.SeckillProductRpc.ProductMessage.SimpleProduct> product_ =
+          java.util.Collections.emptyList();
+        private void ensureProductIsMutable() {
+          if (!((bitField0_ & 0x00000002) != 0)) {
+            product_ = new java.util.ArrayList<product.SeckillProductRpc.ProductMessage.SimpleProduct>(product_);
+            bitField0_ |= 0x00000002;
+           }
+        }
+
+        private com.google.protobuf.RepeatedFieldBuilderV3<
+            product.SeckillProductRpc.ProductMessage.SimpleProduct, product.SeckillProductRpc.ProductMessage.SimpleProduct.Builder, product.SeckillProductRpc.ProductMessage.SimpleProductOrBuilder> productBuilder_;
+
+        /**
+         * <pre>
+         *商品
+         * </pre>
+         *
+         * <code>repeated .ProductMessage.SimpleProduct product = 2;</code>
+         */
+        public java.util.List<product.SeckillProductRpc.ProductMessage.SimpleProduct> getProductList() {
+          if (productBuilder_ == null) {
+            return java.util.Collections.unmodifiableList(product_);
+          } else {
+            return productBuilder_.getMessageList();
+          }
+        }
+        /**
+         * <pre>
+         *商品
+         * </pre>
+         *
+         * <code>repeated .ProductMessage.SimpleProduct product = 2;</code>
+         */
+        public int getProductCount() {
+          if (productBuilder_ == null) {
+            return product_.size();
+          } else {
+            return productBuilder_.getCount();
+          }
+        }
+        /**
+         * <pre>
+         *商品
+         * </pre>
+         *
+         * <code>repeated .ProductMessage.SimpleProduct product = 2;</code>
+         */
+        public product.SeckillProductRpc.ProductMessage.SimpleProduct getProduct(int index) {
+          if (productBuilder_ == null) {
+            return product_.get(index);
+          } else {
+            return productBuilder_.getMessage(index);
+          }
+        }
+        /**
+         * <pre>
+         *商品
+         * </pre>
+         *
+         * <code>repeated .ProductMessage.SimpleProduct product = 2;</code>
+         */
+        public Builder setProduct(
+            int index, product.SeckillProductRpc.ProductMessage.SimpleProduct value) {
+          if (productBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureProductIsMutable();
+            product_.set(index, value);
+            onChanged();
+          } else {
+            productBuilder_.setMessage(index, value);
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         *商品
+         * </pre>
+         *
+         * <code>repeated .ProductMessage.SimpleProduct product = 2;</code>
+         */
+        public Builder setProduct(
+            int index, product.SeckillProductRpc.ProductMessage.SimpleProduct.Builder builderForValue) {
+          if (productBuilder_ == null) {
+            ensureProductIsMutable();
+            product_.set(index, builderForValue.build());
+            onChanged();
+          } else {
+            productBuilder_.setMessage(index, builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         *商品
+         * </pre>
+         *
+         * <code>repeated .ProductMessage.SimpleProduct product = 2;</code>
+         */
+        public Builder addProduct(product.SeckillProductRpc.ProductMessage.SimpleProduct value) {
+          if (productBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureProductIsMutable();
+            product_.add(value);
+            onChanged();
+          } else {
+            productBuilder_.addMessage(value);
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         *商品
+         * </pre>
+         *
+         * <code>repeated .ProductMessage.SimpleProduct product = 2;</code>
+         */
+        public Builder addProduct(
+            int index, product.SeckillProductRpc.ProductMessage.SimpleProduct value) {
+          if (productBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureProductIsMutable();
+            product_.add(index, value);
+            onChanged();
+          } else {
+            productBuilder_.addMessage(index, value);
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         *商品
+         * </pre>
+         *
+         * <code>repeated .ProductMessage.SimpleProduct product = 2;</code>
+         */
+        public Builder addProduct(
+            product.SeckillProductRpc.ProductMessage.SimpleProduct.Builder builderForValue) {
+          if (productBuilder_ == null) {
+            ensureProductIsMutable();
+            product_.add(builderForValue.build());
+            onChanged();
+          } else {
+            productBuilder_.addMessage(builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         *商品
+         * </pre>
+         *
+         * <code>repeated .ProductMessage.SimpleProduct product = 2;</code>
+         */
+        public Builder addProduct(
+            int index, product.SeckillProductRpc.ProductMessage.SimpleProduct.Builder builderForValue) {
+          if (productBuilder_ == null) {
+            ensureProductIsMutable();
+            product_.add(index, builderForValue.build());
+            onChanged();
+          } else {
+            productBuilder_.addMessage(index, builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         *商品
+         * </pre>
+         *
+         * <code>repeated .ProductMessage.SimpleProduct product = 2;</code>
+         */
+        public Builder addAllProduct(
+            java.lang.Iterable<? extends product.SeckillProductRpc.ProductMessage.SimpleProduct> values) {
+          if (productBuilder_ == null) {
+            ensureProductIsMutable();
+            com.google.protobuf.AbstractMessageLite.Builder.addAll(
+                values, product_);
+            onChanged();
+          } else {
+            productBuilder_.addAllMessages(values);
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         *商品
+         * </pre>
+         *
+         * <code>repeated .ProductMessage.SimpleProduct product = 2;</code>
+         */
+        public Builder clearProduct() {
+          if (productBuilder_ == null) {
+            product_ = java.util.Collections.emptyList();
+            bitField0_ = (bitField0_ & ~0x00000002);
+            onChanged();
+          } else {
+            productBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         *商品
+         * </pre>
+         *
+         * <code>repeated .ProductMessage.SimpleProduct product = 2;</code>
+         */
+        public Builder removeProduct(int index) {
+          if (productBuilder_ == null) {
+            ensureProductIsMutable();
+            product_.remove(index);
+            onChanged();
+          } else {
+            productBuilder_.remove(index);
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         *商品
+         * </pre>
+         *
+         * <code>repeated .ProductMessage.SimpleProduct product = 2;</code>
+         */
+        public product.SeckillProductRpc.ProductMessage.SimpleProduct.Builder getProductBuilder(
+            int index) {
+          return getProductFieldBuilder().getBuilder(index);
+        }
+        /**
+         * <pre>
+         *商品
+         * </pre>
+         *
+         * <code>repeated .ProductMessage.SimpleProduct product = 2;</code>
+         */
+        public product.SeckillProductRpc.ProductMessage.SimpleProductOrBuilder getProductOrBuilder(
+            int index) {
+          if (productBuilder_ == null) {
+            return product_.get(index);  } else {
+            return productBuilder_.getMessageOrBuilder(index);
+          }
+        }
+        /**
+         * <pre>
+         *商品
+         * </pre>
+         *
+         * <code>repeated .ProductMessage.SimpleProduct product = 2;</code>
+         */
+        public java.util.List<? extends product.SeckillProductRpc.ProductMessage.SimpleProductOrBuilder> 
+             getProductOrBuilderList() {
+          if (productBuilder_ != null) {
+            return productBuilder_.getMessageOrBuilderList();
+          } else {
+            return java.util.Collections.unmodifiableList(product_);
+          }
+        }
+        /**
+         * <pre>
+         *商品
+         * </pre>
+         *
+         * <code>repeated .ProductMessage.SimpleProduct product = 2;</code>
+         */
+        public product.SeckillProductRpc.ProductMessage.SimpleProduct.Builder addProductBuilder() {
+          return getProductFieldBuilder().addBuilder(
+              product.SeckillProductRpc.ProductMessage.SimpleProduct.getDefaultInstance());
+        }
+        /**
+         * <pre>
+         *商品
+         * </pre>
+         *
+         * <code>repeated .ProductMessage.SimpleProduct product = 2;</code>
+         */
+        public product.SeckillProductRpc.ProductMessage.SimpleProduct.Builder addProductBuilder(
+            int index) {
+          return getProductFieldBuilder().addBuilder(
+              index, product.SeckillProductRpc.ProductMessage.SimpleProduct.getDefaultInstance());
+        }
+        /**
+         * <pre>
+         *商品
+         * </pre>
+         *
+         * <code>repeated .ProductMessage.SimpleProduct product = 2;</code>
+         */
+        public java.util.List<product.SeckillProductRpc.ProductMessage.SimpleProduct.Builder> 
+             getProductBuilderList() {
+          return getProductFieldBuilder().getBuilderList();
+        }
+        private com.google.protobuf.RepeatedFieldBuilderV3<
+            product.SeckillProductRpc.ProductMessage.SimpleProduct, product.SeckillProductRpc.ProductMessage.SimpleProduct.Builder, product.SeckillProductRpc.ProductMessage.SimpleProductOrBuilder> 
+            getProductFieldBuilder() {
+          if (productBuilder_ == null) {
+            productBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+                product.SeckillProductRpc.ProductMessage.SimpleProduct, product.SeckillProductRpc.ProductMessage.SimpleProduct.Builder, product.SeckillProductRpc.ProductMessage.SimpleProductOrBuilder>(
+                    product_,
+                    ((bitField0_ & 0x00000002) != 0),
+                    getParentForChildren(),
+                    isClean());
+            product_ = null;
+          }
+          return productBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:ProductMessage.GetTotalProductsRely)
+      }
+
+      // @@protoc_insertion_point(class_scope:ProductMessage.GetTotalProductsRely)
+      private static final product.SeckillProductRpc.ProductMessage.GetTotalProductsRely DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new product.SeckillProductRpc.ProductMessage.GetTotalProductsRely();
+      }
+
+      public static product.SeckillProductRpc.ProductMessage.GetTotalProductsRely getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<GetTotalProductsRely>
+          PARSER = new com.google.protobuf.AbstractParser<GetTotalProductsRely>() {
+        @java.lang.Override
+        public GetTotalProductsRely parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<GetTotalProductsRely> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<GetTotalProductsRely> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public product.SeckillProductRpc.ProductMessage.GetTotalProductsRely getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
     public interface SimpleProductOrBuilder extends
         // @@protoc_insertion_point(interface_extends:ProductMessage.SimpleProduct)
         com.google.protobuf.MessageOrBuilder {
@@ -10492,13 +11881,13 @@ public final class SeckillProductRpc {
 
       /**
        * <pre>
-       *商品售出
+       *商品库存
        * </pre>
        *
-       * <code>int32 product_sales = 10;</code>
-       * @return The productSales.
+       * <code>int32 product_stock = 10;</code>
+       * @return The productStock.
        */
-      int getProductSales();
+      int getProductStock();
 
       /**
        * <pre>
@@ -10861,19 +12250,19 @@ public final class SeckillProductRpc {
         return productNum_;
       }
 
-      public static final int PRODUCT_SALES_FIELD_NUMBER = 10;
-      private int productSales_ = 0;
+      public static final int PRODUCT_STOCK_FIELD_NUMBER = 10;
+      private int productStock_ = 0;
       /**
        * <pre>
-       *商品售出
+       *商品库存
        * </pre>
        *
-       * <code>int32 product_sales = 10;</code>
-       * @return The productSales.
+       * <code>int32 product_stock = 10;</code>
+       * @return The productStock.
        */
       @java.lang.Override
-      public int getProductSales() {
-        return productSales_;
+      public int getProductStock() {
+        return productStock_;
       }
 
       public static final int ID_FIELD_NUMBER = 11;
@@ -10964,8 +12353,8 @@ public final class SeckillProductRpc {
         if (productNum_ != 0) {
           output.writeInt32(9, productNum_);
         }
-        if (productSales_ != 0) {
-          output.writeInt32(10, productSales_);
+        if (productStock_ != 0) {
+          output.writeInt32(10, productStock_);
         }
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 11, id_);
@@ -11010,9 +12399,9 @@ public final class SeckillProductRpc {
           size += com.google.protobuf.CodedOutputStream
             .computeInt32Size(9, productNum_);
         }
-        if (productSales_ != 0) {
+        if (productStock_ != 0) {
           size += com.google.protobuf.CodedOutputStream
-            .computeInt32Size(10, productSales_);
+            .computeInt32Size(10, productStock_);
         }
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, id_);
@@ -11050,8 +12439,8 @@ public final class SeckillProductRpc {
             != other.getProductSellingPrice()) return false;
         if (getProductNum()
             != other.getProductNum()) return false;
-        if (getProductSales()
-            != other.getProductSales()) return false;
+        if (getProductStock()
+            != other.getProductStock()) return false;
         if (!getId()
             .equals(other.getId())) return false;
         if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -11083,8 +12472,8 @@ public final class SeckillProductRpc {
         hash = (53 * hash) + getProductSellingPrice();
         hash = (37 * hash) + PRODUCT_NUM_FIELD_NUMBER;
         hash = (53 * hash) + getProductNum();
-        hash = (37 * hash) + PRODUCT_SALES_FIELD_NUMBER;
-        hash = (53 * hash) + getProductSales();
+        hash = (37 * hash) + PRODUCT_STOCK_FIELD_NUMBER;
+        hash = (53 * hash) + getProductStock();
         hash = (37 * hash) + ID_FIELD_NUMBER;
         hash = (53 * hash) + getId().hashCode();
         hash = (29 * hash) + getUnknownFields().hashCode();
@@ -11225,7 +12614,7 @@ public final class SeckillProductRpc {
           productPrice_ = 0;
           productSellingPrice_ = 0;
           productNum_ = 0;
-          productSales_ = 0;
+          productStock_ = 0;
           id_ = "";
           return this;
         }
@@ -11288,7 +12677,7 @@ public final class SeckillProductRpc {
             result.productNum_ = productNum_;
           }
           if (((from_bitField0_ & 0x00000200) != 0)) {
-            result.productSales_ = productSales_;
+            result.productStock_ = productStock_;
           }
           if (((from_bitField0_ & 0x00000400) != 0)) {
             result.id_ = id_;
@@ -11376,8 +12765,8 @@ public final class SeckillProductRpc {
           if (other.getProductNum() != 0) {
             setProductNum(other.getProductNum());
           }
-          if (other.getProductSales() != 0) {
-            setProductSales(other.getProductSales());
+          if (other.getProductStock() != 0) {
+            setProductStock(other.getProductStock());
           }
           if (!other.getId().isEmpty()) {
             id_ = other.id_;
@@ -11456,7 +12845,7 @@ public final class SeckillProductRpc {
                   break;
                 } // case 72
                 case 80: {
-                  productSales_ = input.readInt32();
+                  productStock_ = input.readInt32();
                   bitField0_ |= 0x00000200;
                   break;
                 } // case 80
@@ -12118,46 +13507,46 @@ public final class SeckillProductRpc {
           return this;
         }
 
-        private int productSales_ ;
+        private int productStock_ ;
         /**
          * <pre>
-         *商品售出
+         *商品库存
          * </pre>
          *
-         * <code>int32 product_sales = 10;</code>
-         * @return The productSales.
+         * <code>int32 product_stock = 10;</code>
+         * @return The productStock.
          */
         @java.lang.Override
-        public int getProductSales() {
-          return productSales_;
+        public int getProductStock() {
+          return productStock_;
         }
         /**
          * <pre>
-         *商品售出
+         *商品库存
          * </pre>
          *
-         * <code>int32 product_sales = 10;</code>
-         * @param value The productSales to set.
+         * <code>int32 product_stock = 10;</code>
+         * @param value The productStock to set.
          * @return This builder for chaining.
          */
-        public Builder setProductSales(int value) {
+        public Builder setProductStock(int value) {
           
-          productSales_ = value;
+          productStock_ = value;
           bitField0_ |= 0x00000200;
           onChanged();
           return this;
         }
         /**
          * <pre>
-         *商品售出
+         *商品库存
          * </pre>
          *
-         * <code>int32 product_sales = 10;</code>
+         * <code>int32 product_stock = 10;</code>
          * @return This builder for chaining.
          */
-        public Builder clearProductSales() {
+        public Builder clearProductStock() {
           bitField0_ = (bitField0_ & ~0x00000200);
-          productSales_ = 0;
+          productStock_ = 0;
           onChanged();
           return this;
         }
@@ -13775,6 +15164,1966 @@ public final class SeckillProductRpc {
 
     }
 
+    public interface GetCarouselReqOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:ProductMessage.GetCarouselReq)
+        com.google.protobuf.MessageOrBuilder {
+    }
+    /**
+     * Protobuf type {@code ProductMessage.GetCarouselReq}
+     */
+    public static final class GetCarouselReq extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:ProductMessage.GetCarouselReq)
+        GetCarouselReqOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use GetCarouselReq.newBuilder() to construct.
+      private GetCarouselReq(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private GetCarouselReq() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new GetCarouselReq();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return product.SeckillProductRpc.internal_static_ProductMessage_GetCarouselReq_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return product.SeckillProductRpc.internal_static_ProductMessage_GetCarouselReq_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                product.SeckillProductRpc.ProductMessage.GetCarouselReq.class, product.SeckillProductRpc.ProductMessage.GetCarouselReq.Builder.class);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof product.SeckillProductRpc.ProductMessage.GetCarouselReq)) {
+          return super.equals(obj);
+        }
+        product.SeckillProductRpc.ProductMessage.GetCarouselReq other = (product.SeckillProductRpc.ProductMessage.GetCarouselReq) obj;
+
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static product.SeckillProductRpc.ProductMessage.GetCarouselReq parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static product.SeckillProductRpc.ProductMessage.GetCarouselReq parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static product.SeckillProductRpc.ProductMessage.GetCarouselReq parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static product.SeckillProductRpc.ProductMessage.GetCarouselReq parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static product.SeckillProductRpc.ProductMessage.GetCarouselReq parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static product.SeckillProductRpc.ProductMessage.GetCarouselReq parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static product.SeckillProductRpc.ProductMessage.GetCarouselReq parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static product.SeckillProductRpc.ProductMessage.GetCarouselReq parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static product.SeckillProductRpc.ProductMessage.GetCarouselReq parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static product.SeckillProductRpc.ProductMessage.GetCarouselReq parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static product.SeckillProductRpc.ProductMessage.GetCarouselReq parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static product.SeckillProductRpc.ProductMessage.GetCarouselReq parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(product.SeckillProductRpc.ProductMessage.GetCarouselReq prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code ProductMessage.GetCarouselReq}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:ProductMessage.GetCarouselReq)
+          product.SeckillProductRpc.ProductMessage.GetCarouselReqOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return product.SeckillProductRpc.internal_static_ProductMessage_GetCarouselReq_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return product.SeckillProductRpc.internal_static_ProductMessage_GetCarouselReq_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  product.SeckillProductRpc.ProductMessage.GetCarouselReq.class, product.SeckillProductRpc.ProductMessage.GetCarouselReq.Builder.class);
+        }
+
+        // Construct using product.SeckillProductRpc.ProductMessage.GetCarouselReq.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return product.SeckillProductRpc.internal_static_ProductMessage_GetCarouselReq_descriptor;
+        }
+
+        @java.lang.Override
+        public product.SeckillProductRpc.ProductMessage.GetCarouselReq getDefaultInstanceForType() {
+          return product.SeckillProductRpc.ProductMessage.GetCarouselReq.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public product.SeckillProductRpc.ProductMessage.GetCarouselReq build() {
+          product.SeckillProductRpc.ProductMessage.GetCarouselReq result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public product.SeckillProductRpc.ProductMessage.GetCarouselReq buildPartial() {
+          product.SeckillProductRpc.ProductMessage.GetCarouselReq result = new product.SeckillProductRpc.ProductMessage.GetCarouselReq(this);
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof product.SeckillProductRpc.ProductMessage.GetCarouselReq) {
+            return mergeFrom((product.SeckillProductRpc.ProductMessage.GetCarouselReq)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(product.SeckillProductRpc.ProductMessage.GetCarouselReq other) {
+          if (other == product.SeckillProductRpc.ProductMessage.GetCarouselReq.getDefaultInstance()) return this;
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:ProductMessage.GetCarouselReq)
+      }
+
+      // @@protoc_insertion_point(class_scope:ProductMessage.GetCarouselReq)
+      private static final product.SeckillProductRpc.ProductMessage.GetCarouselReq DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new product.SeckillProductRpc.ProductMessage.GetCarouselReq();
+      }
+
+      public static product.SeckillProductRpc.ProductMessage.GetCarouselReq getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<GetCarouselReq>
+          PARSER = new com.google.protobuf.AbstractParser<GetCarouselReq>() {
+        @java.lang.Override
+        public GetCarouselReq parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<GetCarouselReq> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<GetCarouselReq> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public product.SeckillProductRpc.ProductMessage.GetCarouselReq getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface GetCarouselRelyOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:ProductMessage.GetCarouselRely)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       *状态码
+       * </pre>
+       *
+       * <code>int32 code = 1;</code>
+       * @return The code.
+       */
+      int getCode();
+
+      /**
+       * <code>repeated .ProductMessage.Carousel carousel = 2;</code>
+       */
+      java.util.List<product.SeckillProductRpc.ProductMessage.Carousel> 
+          getCarouselList();
+      /**
+       * <code>repeated .ProductMessage.Carousel carousel = 2;</code>
+       */
+      product.SeckillProductRpc.ProductMessage.Carousel getCarousel(int index);
+      /**
+       * <code>repeated .ProductMessage.Carousel carousel = 2;</code>
+       */
+      int getCarouselCount();
+      /**
+       * <code>repeated .ProductMessage.Carousel carousel = 2;</code>
+       */
+      java.util.List<? extends product.SeckillProductRpc.ProductMessage.CarouselOrBuilder> 
+          getCarouselOrBuilderList();
+      /**
+       * <code>repeated .ProductMessage.Carousel carousel = 2;</code>
+       */
+      product.SeckillProductRpc.ProductMessage.CarouselOrBuilder getCarouselOrBuilder(
+          int index);
+    }
+    /**
+     * Protobuf type {@code ProductMessage.GetCarouselRely}
+     */
+    public static final class GetCarouselRely extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:ProductMessage.GetCarouselRely)
+        GetCarouselRelyOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use GetCarouselRely.newBuilder() to construct.
+      private GetCarouselRely(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private GetCarouselRely() {
+        carousel_ = java.util.Collections.emptyList();
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new GetCarouselRely();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return product.SeckillProductRpc.internal_static_ProductMessage_GetCarouselRely_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return product.SeckillProductRpc.internal_static_ProductMessage_GetCarouselRely_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                product.SeckillProductRpc.ProductMessage.GetCarouselRely.class, product.SeckillProductRpc.ProductMessage.GetCarouselRely.Builder.class);
+      }
+
+      public static final int CODE_FIELD_NUMBER = 1;
+      private int code_ = 0;
+      /**
+       * <pre>
+       *状态码
+       * </pre>
+       *
+       * <code>int32 code = 1;</code>
+       * @return The code.
+       */
+      @java.lang.Override
+      public int getCode() {
+        return code_;
+      }
+
+      public static final int CAROUSEL_FIELD_NUMBER = 2;
+      @SuppressWarnings("serial")
+      private java.util.List<product.SeckillProductRpc.ProductMessage.Carousel> carousel_;
+      /**
+       * <code>repeated .ProductMessage.Carousel carousel = 2;</code>
+       */
+      @java.lang.Override
+      public java.util.List<product.SeckillProductRpc.ProductMessage.Carousel> getCarouselList() {
+        return carousel_;
+      }
+      /**
+       * <code>repeated .ProductMessage.Carousel carousel = 2;</code>
+       */
+      @java.lang.Override
+      public java.util.List<? extends product.SeckillProductRpc.ProductMessage.CarouselOrBuilder> 
+          getCarouselOrBuilderList() {
+        return carousel_;
+      }
+      /**
+       * <code>repeated .ProductMessage.Carousel carousel = 2;</code>
+       */
+      @java.lang.Override
+      public int getCarouselCount() {
+        return carousel_.size();
+      }
+      /**
+       * <code>repeated .ProductMessage.Carousel carousel = 2;</code>
+       */
+      @java.lang.Override
+      public product.SeckillProductRpc.ProductMessage.Carousel getCarousel(int index) {
+        return carousel_.get(index);
+      }
+      /**
+       * <code>repeated .ProductMessage.Carousel carousel = 2;</code>
+       */
+      @java.lang.Override
+      public product.SeckillProductRpc.ProductMessage.CarouselOrBuilder getCarouselOrBuilder(
+          int index) {
+        return carousel_.get(index);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (code_ != 0) {
+          output.writeInt32(1, code_);
+        }
+        for (int i = 0; i < carousel_.size(); i++) {
+          output.writeMessage(2, carousel_.get(i));
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (code_ != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(1, code_);
+        }
+        for (int i = 0; i < carousel_.size(); i++) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, carousel_.get(i));
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof product.SeckillProductRpc.ProductMessage.GetCarouselRely)) {
+          return super.equals(obj);
+        }
+        product.SeckillProductRpc.ProductMessage.GetCarouselRely other = (product.SeckillProductRpc.ProductMessage.GetCarouselRely) obj;
+
+        if (getCode()
+            != other.getCode()) return false;
+        if (!getCarouselList()
+            .equals(other.getCarouselList())) return false;
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + CODE_FIELD_NUMBER;
+        hash = (53 * hash) + getCode();
+        if (getCarouselCount() > 0) {
+          hash = (37 * hash) + CAROUSEL_FIELD_NUMBER;
+          hash = (53 * hash) + getCarouselList().hashCode();
+        }
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static product.SeckillProductRpc.ProductMessage.GetCarouselRely parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static product.SeckillProductRpc.ProductMessage.GetCarouselRely parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static product.SeckillProductRpc.ProductMessage.GetCarouselRely parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static product.SeckillProductRpc.ProductMessage.GetCarouselRely parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static product.SeckillProductRpc.ProductMessage.GetCarouselRely parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static product.SeckillProductRpc.ProductMessage.GetCarouselRely parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static product.SeckillProductRpc.ProductMessage.GetCarouselRely parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static product.SeckillProductRpc.ProductMessage.GetCarouselRely parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static product.SeckillProductRpc.ProductMessage.GetCarouselRely parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static product.SeckillProductRpc.ProductMessage.GetCarouselRely parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static product.SeckillProductRpc.ProductMessage.GetCarouselRely parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static product.SeckillProductRpc.ProductMessage.GetCarouselRely parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(product.SeckillProductRpc.ProductMessage.GetCarouselRely prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code ProductMessage.GetCarouselRely}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:ProductMessage.GetCarouselRely)
+          product.SeckillProductRpc.ProductMessage.GetCarouselRelyOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return product.SeckillProductRpc.internal_static_ProductMessage_GetCarouselRely_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return product.SeckillProductRpc.internal_static_ProductMessage_GetCarouselRely_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  product.SeckillProductRpc.ProductMessage.GetCarouselRely.class, product.SeckillProductRpc.ProductMessage.GetCarouselRely.Builder.class);
+        }
+
+        // Construct using product.SeckillProductRpc.ProductMessage.GetCarouselRely.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          code_ = 0;
+          if (carouselBuilder_ == null) {
+            carousel_ = java.util.Collections.emptyList();
+          } else {
+            carousel_ = null;
+            carouselBuilder_.clear();
+          }
+          bitField0_ = (bitField0_ & ~0x00000002);
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return product.SeckillProductRpc.internal_static_ProductMessage_GetCarouselRely_descriptor;
+        }
+
+        @java.lang.Override
+        public product.SeckillProductRpc.ProductMessage.GetCarouselRely getDefaultInstanceForType() {
+          return product.SeckillProductRpc.ProductMessage.GetCarouselRely.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public product.SeckillProductRpc.ProductMessage.GetCarouselRely build() {
+          product.SeckillProductRpc.ProductMessage.GetCarouselRely result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public product.SeckillProductRpc.ProductMessage.GetCarouselRely buildPartial() {
+          product.SeckillProductRpc.ProductMessage.GetCarouselRely result = new product.SeckillProductRpc.ProductMessage.GetCarouselRely(this);
+          buildPartialRepeatedFields(result);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartialRepeatedFields(product.SeckillProductRpc.ProductMessage.GetCarouselRely result) {
+          if (carouselBuilder_ == null) {
+            if (((bitField0_ & 0x00000002) != 0)) {
+              carousel_ = java.util.Collections.unmodifiableList(carousel_);
+              bitField0_ = (bitField0_ & ~0x00000002);
+            }
+            result.carousel_ = carousel_;
+          } else {
+            result.carousel_ = carouselBuilder_.build();
+          }
+        }
+
+        private void buildPartial0(product.SeckillProductRpc.ProductMessage.GetCarouselRely result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.code_ = code_;
+          }
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof product.SeckillProductRpc.ProductMessage.GetCarouselRely) {
+            return mergeFrom((product.SeckillProductRpc.ProductMessage.GetCarouselRely)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(product.SeckillProductRpc.ProductMessage.GetCarouselRely other) {
+          if (other == product.SeckillProductRpc.ProductMessage.GetCarouselRely.getDefaultInstance()) return this;
+          if (other.getCode() != 0) {
+            setCode(other.getCode());
+          }
+          if (carouselBuilder_ == null) {
+            if (!other.carousel_.isEmpty()) {
+              if (carousel_.isEmpty()) {
+                carousel_ = other.carousel_;
+                bitField0_ = (bitField0_ & ~0x00000002);
+              } else {
+                ensureCarouselIsMutable();
+                carousel_.addAll(other.carousel_);
+              }
+              onChanged();
+            }
+          } else {
+            if (!other.carousel_.isEmpty()) {
+              if (carouselBuilder_.isEmpty()) {
+                carouselBuilder_.dispose();
+                carouselBuilder_ = null;
+                carousel_ = other.carousel_;
+                bitField0_ = (bitField0_ & ~0x00000002);
+                carouselBuilder_ = 
+                  com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                     getCarouselFieldBuilder() : null;
+              } else {
+                carouselBuilder_.addAllMessages(other.carousel_);
+              }
+            }
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 8: {
+                  code_ = input.readInt32();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 8
+                case 18: {
+                  product.SeckillProductRpc.ProductMessage.Carousel m =
+                      input.readMessage(
+                          product.SeckillProductRpc.ProductMessage.Carousel.parser(),
+                          extensionRegistry);
+                  if (carouselBuilder_ == null) {
+                    ensureCarouselIsMutable();
+                    carousel_.add(m);
+                  } else {
+                    carouselBuilder_.addMessage(m);
+                  }
+                  break;
+                } // case 18
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private int code_ ;
+        /**
+         * <pre>
+         *状态码
+         * </pre>
+         *
+         * <code>int32 code = 1;</code>
+         * @return The code.
+         */
+        @java.lang.Override
+        public int getCode() {
+          return code_;
+        }
+        /**
+         * <pre>
+         *状态码
+         * </pre>
+         *
+         * <code>int32 code = 1;</code>
+         * @param value The code to set.
+         * @return This builder for chaining.
+         */
+        public Builder setCode(int value) {
+          
+          code_ = value;
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         *状态码
+         * </pre>
+         *
+         * <code>int32 code = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearCode() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          code_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private java.util.List<product.SeckillProductRpc.ProductMessage.Carousel> carousel_ =
+          java.util.Collections.emptyList();
+        private void ensureCarouselIsMutable() {
+          if (!((bitField0_ & 0x00000002) != 0)) {
+            carousel_ = new java.util.ArrayList<product.SeckillProductRpc.ProductMessage.Carousel>(carousel_);
+            bitField0_ |= 0x00000002;
+           }
+        }
+
+        private com.google.protobuf.RepeatedFieldBuilderV3<
+            product.SeckillProductRpc.ProductMessage.Carousel, product.SeckillProductRpc.ProductMessage.Carousel.Builder, product.SeckillProductRpc.ProductMessage.CarouselOrBuilder> carouselBuilder_;
+
+        /**
+         * <code>repeated .ProductMessage.Carousel carousel = 2;</code>
+         */
+        public java.util.List<product.SeckillProductRpc.ProductMessage.Carousel> getCarouselList() {
+          if (carouselBuilder_ == null) {
+            return java.util.Collections.unmodifiableList(carousel_);
+          } else {
+            return carouselBuilder_.getMessageList();
+          }
+        }
+        /**
+         * <code>repeated .ProductMessage.Carousel carousel = 2;</code>
+         */
+        public int getCarouselCount() {
+          if (carouselBuilder_ == null) {
+            return carousel_.size();
+          } else {
+            return carouselBuilder_.getCount();
+          }
+        }
+        /**
+         * <code>repeated .ProductMessage.Carousel carousel = 2;</code>
+         */
+        public product.SeckillProductRpc.ProductMessage.Carousel getCarousel(int index) {
+          if (carouselBuilder_ == null) {
+            return carousel_.get(index);
+          } else {
+            return carouselBuilder_.getMessage(index);
+          }
+        }
+        /**
+         * <code>repeated .ProductMessage.Carousel carousel = 2;</code>
+         */
+        public Builder setCarousel(
+            int index, product.SeckillProductRpc.ProductMessage.Carousel value) {
+          if (carouselBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureCarouselIsMutable();
+            carousel_.set(index, value);
+            onChanged();
+          } else {
+            carouselBuilder_.setMessage(index, value);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .ProductMessage.Carousel carousel = 2;</code>
+         */
+        public Builder setCarousel(
+            int index, product.SeckillProductRpc.ProductMessage.Carousel.Builder builderForValue) {
+          if (carouselBuilder_ == null) {
+            ensureCarouselIsMutable();
+            carousel_.set(index, builderForValue.build());
+            onChanged();
+          } else {
+            carouselBuilder_.setMessage(index, builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .ProductMessage.Carousel carousel = 2;</code>
+         */
+        public Builder addCarousel(product.SeckillProductRpc.ProductMessage.Carousel value) {
+          if (carouselBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureCarouselIsMutable();
+            carousel_.add(value);
+            onChanged();
+          } else {
+            carouselBuilder_.addMessage(value);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .ProductMessage.Carousel carousel = 2;</code>
+         */
+        public Builder addCarousel(
+            int index, product.SeckillProductRpc.ProductMessage.Carousel value) {
+          if (carouselBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureCarouselIsMutable();
+            carousel_.add(index, value);
+            onChanged();
+          } else {
+            carouselBuilder_.addMessage(index, value);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .ProductMessage.Carousel carousel = 2;</code>
+         */
+        public Builder addCarousel(
+            product.SeckillProductRpc.ProductMessage.Carousel.Builder builderForValue) {
+          if (carouselBuilder_ == null) {
+            ensureCarouselIsMutable();
+            carousel_.add(builderForValue.build());
+            onChanged();
+          } else {
+            carouselBuilder_.addMessage(builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .ProductMessage.Carousel carousel = 2;</code>
+         */
+        public Builder addCarousel(
+            int index, product.SeckillProductRpc.ProductMessage.Carousel.Builder builderForValue) {
+          if (carouselBuilder_ == null) {
+            ensureCarouselIsMutable();
+            carousel_.add(index, builderForValue.build());
+            onChanged();
+          } else {
+            carouselBuilder_.addMessage(index, builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .ProductMessage.Carousel carousel = 2;</code>
+         */
+        public Builder addAllCarousel(
+            java.lang.Iterable<? extends product.SeckillProductRpc.ProductMessage.Carousel> values) {
+          if (carouselBuilder_ == null) {
+            ensureCarouselIsMutable();
+            com.google.protobuf.AbstractMessageLite.Builder.addAll(
+                values, carousel_);
+            onChanged();
+          } else {
+            carouselBuilder_.addAllMessages(values);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .ProductMessage.Carousel carousel = 2;</code>
+         */
+        public Builder clearCarousel() {
+          if (carouselBuilder_ == null) {
+            carousel_ = java.util.Collections.emptyList();
+            bitField0_ = (bitField0_ & ~0x00000002);
+            onChanged();
+          } else {
+            carouselBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .ProductMessage.Carousel carousel = 2;</code>
+         */
+        public Builder removeCarousel(int index) {
+          if (carouselBuilder_ == null) {
+            ensureCarouselIsMutable();
+            carousel_.remove(index);
+            onChanged();
+          } else {
+            carouselBuilder_.remove(index);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .ProductMessage.Carousel carousel = 2;</code>
+         */
+        public product.SeckillProductRpc.ProductMessage.Carousel.Builder getCarouselBuilder(
+            int index) {
+          return getCarouselFieldBuilder().getBuilder(index);
+        }
+        /**
+         * <code>repeated .ProductMessage.Carousel carousel = 2;</code>
+         */
+        public product.SeckillProductRpc.ProductMessage.CarouselOrBuilder getCarouselOrBuilder(
+            int index) {
+          if (carouselBuilder_ == null) {
+            return carousel_.get(index);  } else {
+            return carouselBuilder_.getMessageOrBuilder(index);
+          }
+        }
+        /**
+         * <code>repeated .ProductMessage.Carousel carousel = 2;</code>
+         */
+        public java.util.List<? extends product.SeckillProductRpc.ProductMessage.CarouselOrBuilder> 
+             getCarouselOrBuilderList() {
+          if (carouselBuilder_ != null) {
+            return carouselBuilder_.getMessageOrBuilderList();
+          } else {
+            return java.util.Collections.unmodifiableList(carousel_);
+          }
+        }
+        /**
+         * <code>repeated .ProductMessage.Carousel carousel = 2;</code>
+         */
+        public product.SeckillProductRpc.ProductMessage.Carousel.Builder addCarouselBuilder() {
+          return getCarouselFieldBuilder().addBuilder(
+              product.SeckillProductRpc.ProductMessage.Carousel.getDefaultInstance());
+        }
+        /**
+         * <code>repeated .ProductMessage.Carousel carousel = 2;</code>
+         */
+        public product.SeckillProductRpc.ProductMessage.Carousel.Builder addCarouselBuilder(
+            int index) {
+          return getCarouselFieldBuilder().addBuilder(
+              index, product.SeckillProductRpc.ProductMessage.Carousel.getDefaultInstance());
+        }
+        /**
+         * <code>repeated .ProductMessage.Carousel carousel = 2;</code>
+         */
+        public java.util.List<product.SeckillProductRpc.ProductMessage.Carousel.Builder> 
+             getCarouselBuilderList() {
+          return getCarouselFieldBuilder().getBuilderList();
+        }
+        private com.google.protobuf.RepeatedFieldBuilderV3<
+            product.SeckillProductRpc.ProductMessage.Carousel, product.SeckillProductRpc.ProductMessage.Carousel.Builder, product.SeckillProductRpc.ProductMessage.CarouselOrBuilder> 
+            getCarouselFieldBuilder() {
+          if (carouselBuilder_ == null) {
+            carouselBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+                product.SeckillProductRpc.ProductMessage.Carousel, product.SeckillProductRpc.ProductMessage.Carousel.Builder, product.SeckillProductRpc.ProductMessage.CarouselOrBuilder>(
+                    carousel_,
+                    ((bitField0_ & 0x00000002) != 0),
+                    getParentForChildren(),
+                    isClean());
+            carousel_ = null;
+          }
+          return carouselBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:ProductMessage.GetCarouselRely)
+      }
+
+      // @@protoc_insertion_point(class_scope:ProductMessage.GetCarouselRely)
+      private static final product.SeckillProductRpc.ProductMessage.GetCarouselRely DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new product.SeckillProductRpc.ProductMessage.GetCarouselRely();
+      }
+
+      public static product.SeckillProductRpc.ProductMessage.GetCarouselRely getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<GetCarouselRely>
+          PARSER = new com.google.protobuf.AbstractParser<GetCarouselRely>() {
+        @java.lang.Override
+        public GetCarouselRely parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<GetCarouselRely> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<GetCarouselRely> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public product.SeckillProductRpc.ProductMessage.GetCarouselRely getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface CarouselOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:ProductMessage.Carousel)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       *轮播图id
+       * </pre>
+       *
+       * <code>int32 carousel_id = 1;</code>
+       * @return The carouselId.
+       */
+      int getCarouselId();
+
+      /**
+       * <pre>
+       *图片路径
+       * </pre>
+       *
+       * <code>string imgPath = 2;</code>
+       * @return The imgPath.
+       */
+      java.lang.String getImgPath();
+      /**
+       * <pre>
+       *图片路径
+       * </pre>
+       *
+       * <code>string imgPath = 2;</code>
+       * @return The bytes for imgPath.
+       */
+      com.google.protobuf.ByteString
+          getImgPathBytes();
+    }
+    /**
+     * Protobuf type {@code ProductMessage.Carousel}
+     */
+    public static final class Carousel extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:ProductMessage.Carousel)
+        CarouselOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Carousel.newBuilder() to construct.
+      private Carousel(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Carousel() {
+        imgPath_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Carousel();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return product.SeckillProductRpc.internal_static_ProductMessage_Carousel_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return product.SeckillProductRpc.internal_static_ProductMessage_Carousel_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                product.SeckillProductRpc.ProductMessage.Carousel.class, product.SeckillProductRpc.ProductMessage.Carousel.Builder.class);
+      }
+
+      public static final int CAROUSEL_ID_FIELD_NUMBER = 1;
+      private int carouselId_ = 0;
+      /**
+       * <pre>
+       *轮播图id
+       * </pre>
+       *
+       * <code>int32 carousel_id = 1;</code>
+       * @return The carouselId.
+       */
+      @java.lang.Override
+      public int getCarouselId() {
+        return carouselId_;
+      }
+
+      public static final int IMGPATH_FIELD_NUMBER = 2;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object imgPath_ = "";
+      /**
+       * <pre>
+       *图片路径
+       * </pre>
+       *
+       * <code>string imgPath = 2;</code>
+       * @return The imgPath.
+       */
+      @java.lang.Override
+      public java.lang.String getImgPath() {
+        java.lang.Object ref = imgPath_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          imgPath_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       *图片路径
+       * </pre>
+       *
+       * <code>string imgPath = 2;</code>
+       * @return The bytes for imgPath.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getImgPathBytes() {
+        java.lang.Object ref = imgPath_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          imgPath_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (carouselId_ != 0) {
+          output.writeInt32(1, carouselId_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(imgPath_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, imgPath_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (carouselId_ != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(1, carouselId_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(imgPath_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, imgPath_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof product.SeckillProductRpc.ProductMessage.Carousel)) {
+          return super.equals(obj);
+        }
+        product.SeckillProductRpc.ProductMessage.Carousel other = (product.SeckillProductRpc.ProductMessage.Carousel) obj;
+
+        if (getCarouselId()
+            != other.getCarouselId()) return false;
+        if (!getImgPath()
+            .equals(other.getImgPath())) return false;
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + CAROUSEL_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getCarouselId();
+        hash = (37 * hash) + IMGPATH_FIELD_NUMBER;
+        hash = (53 * hash) + getImgPath().hashCode();
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static product.SeckillProductRpc.ProductMessage.Carousel parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static product.SeckillProductRpc.ProductMessage.Carousel parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static product.SeckillProductRpc.ProductMessage.Carousel parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static product.SeckillProductRpc.ProductMessage.Carousel parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static product.SeckillProductRpc.ProductMessage.Carousel parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static product.SeckillProductRpc.ProductMessage.Carousel parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static product.SeckillProductRpc.ProductMessage.Carousel parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static product.SeckillProductRpc.ProductMessage.Carousel parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static product.SeckillProductRpc.ProductMessage.Carousel parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static product.SeckillProductRpc.ProductMessage.Carousel parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static product.SeckillProductRpc.ProductMessage.Carousel parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static product.SeckillProductRpc.ProductMessage.Carousel parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(product.SeckillProductRpc.ProductMessage.Carousel prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code ProductMessage.Carousel}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:ProductMessage.Carousel)
+          product.SeckillProductRpc.ProductMessage.CarouselOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return product.SeckillProductRpc.internal_static_ProductMessage_Carousel_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return product.SeckillProductRpc.internal_static_ProductMessage_Carousel_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  product.SeckillProductRpc.ProductMessage.Carousel.class, product.SeckillProductRpc.ProductMessage.Carousel.Builder.class);
+        }
+
+        // Construct using product.SeckillProductRpc.ProductMessage.Carousel.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          carouselId_ = 0;
+          imgPath_ = "";
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return product.SeckillProductRpc.internal_static_ProductMessage_Carousel_descriptor;
+        }
+
+        @java.lang.Override
+        public product.SeckillProductRpc.ProductMessage.Carousel getDefaultInstanceForType() {
+          return product.SeckillProductRpc.ProductMessage.Carousel.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public product.SeckillProductRpc.ProductMessage.Carousel build() {
+          product.SeckillProductRpc.ProductMessage.Carousel result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public product.SeckillProductRpc.ProductMessage.Carousel buildPartial() {
+          product.SeckillProductRpc.ProductMessage.Carousel result = new product.SeckillProductRpc.ProductMessage.Carousel(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(product.SeckillProductRpc.ProductMessage.Carousel result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.carouselId_ = carouselId_;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.imgPath_ = imgPath_;
+          }
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof product.SeckillProductRpc.ProductMessage.Carousel) {
+            return mergeFrom((product.SeckillProductRpc.ProductMessage.Carousel)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(product.SeckillProductRpc.ProductMessage.Carousel other) {
+          if (other == product.SeckillProductRpc.ProductMessage.Carousel.getDefaultInstance()) return this;
+          if (other.getCarouselId() != 0) {
+            setCarouselId(other.getCarouselId());
+          }
+          if (!other.getImgPath().isEmpty()) {
+            imgPath_ = other.imgPath_;
+            bitField0_ |= 0x00000002;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 8: {
+                  carouselId_ = input.readInt32();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 8
+                case 18: {
+                  imgPath_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000002;
+                  break;
+                } // case 18
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private int carouselId_ ;
+        /**
+         * <pre>
+         *轮播图id
+         * </pre>
+         *
+         * <code>int32 carousel_id = 1;</code>
+         * @return The carouselId.
+         */
+        @java.lang.Override
+        public int getCarouselId() {
+          return carouselId_;
+        }
+        /**
+         * <pre>
+         *轮播图id
+         * </pre>
+         *
+         * <code>int32 carousel_id = 1;</code>
+         * @param value The carouselId to set.
+         * @return This builder for chaining.
+         */
+        public Builder setCarouselId(int value) {
+          
+          carouselId_ = value;
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         *轮播图id
+         * </pre>
+         *
+         * <code>int32 carousel_id = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearCarouselId() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          carouselId_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object imgPath_ = "";
+        /**
+         * <pre>
+         *图片路径
+         * </pre>
+         *
+         * <code>string imgPath = 2;</code>
+         * @return The imgPath.
+         */
+        public java.lang.String getImgPath() {
+          java.lang.Object ref = imgPath_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            imgPath_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         *图片路径
+         * </pre>
+         *
+         * <code>string imgPath = 2;</code>
+         * @return The bytes for imgPath.
+         */
+        public com.google.protobuf.ByteString
+            getImgPathBytes() {
+          java.lang.Object ref = imgPath_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            imgPath_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         *图片路径
+         * </pre>
+         *
+         * <code>string imgPath = 2;</code>
+         * @param value The imgPath to set.
+         * @return This builder for chaining.
+         */
+        public Builder setImgPath(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          imgPath_ = value;
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         *图片路径
+         * </pre>
+         *
+         * <code>string imgPath = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearImgPath() {
+          imgPath_ = getDefaultInstance().getImgPath();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         *图片路径
+         * </pre>
+         *
+         * <code>string imgPath = 2;</code>
+         * @param value The bytes for imgPath to set.
+         * @return This builder for chaining.
+         */
+        public Builder setImgPathBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
+          imgPath_ = value;
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:ProductMessage.Carousel)
+      }
+
+      // @@protoc_insertion_point(class_scope:ProductMessage.Carousel)
+      private static final product.SeckillProductRpc.ProductMessage.Carousel DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new product.SeckillProductRpc.ProductMessage.Carousel();
+      }
+
+      public static product.SeckillProductRpc.ProductMessage.Carousel getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Carousel>
+          PARSER = new com.google.protobuf.AbstractParser<Carousel>() {
+        @java.lang.Override
+        public Carousel parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<Carousel> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Carousel> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public product.SeckillProductRpc.ProductMessage.Carousel getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -14177,6 +17526,16 @@ public final class SeckillProductRpc {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ProductMessage_GetAllProductsRely_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ProductMessage_GetTotalProductsReq_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_ProductMessage_GetTotalProductsReq_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ProductMessage_GetTotalProductsRely_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_ProductMessage_GetTotalProductsRely_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ProductMessage_SimpleProduct_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -14206,6 +17565,21 @@ public final class SeckillProductRpc {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ProductMessage_IncGotCountRely_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ProductMessage_GetCarouselReq_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_ProductMessage_GetCarouselReq_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ProductMessage_GetCarouselRely_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_ProductMessage_GetCarouselRely_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ProductMessage_Carousel_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_ProductMessage_Carousel_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -14215,7 +17589,7 @@ public final class SeckillProductRpc {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\031seckill-product-rpc.proto\"\203\013\n\016ProductM" +
+      "\n\031seckill-product-rpc.proto\"\201\r\n\016ProductM" +
       "essage\032\032\n\nCommonRely\022\014\n\004code\030\001 \001(\005\032\214\002\n\026S" +
       "aveOrUpdateProductReq\022\023\n\013category_id\030\001 \001" +
       "(\005\022\022\n\nproduct_id\030\002 \001(\t\022\024\n\014product_name\030\003" +
@@ -14233,39 +17607,49 @@ public final class SeckillProductRpc {
       "h\030\002 \001(\t\022\024\n\014current_page\030\003 \001(\005\022\021\n\tpage_si" +
       "ze\030\004 \001(\005\032a\n\022GetAllProductsRely\022\014\n\004code\030\001" +
       " \001(\005\022\r\n\005total\030\002 \001(\005\022.\n\007product\030\003 \003(\0132\035.P" +
-      "roductMessage.SimpleProduct\032\300\001\n\rSimplePr" +
-      "oduct\022\023\n\013category_id\030\001 \001(\005\022\022\n\nproduct_id" +
-      "\030\002 \001(\t\022\024\n\014product_name\030\003 \001(\t\022\025\n\rproduct_" +
-      "title\030\004 \001(\t\022\027\n\017product_picture\030\005 \001(\t\022\025\n\r" +
-      "product_price\030\006 \001(\005\022\035\n\025product_selling_p" +
-      "rice\030\007 \001(\005\022\n\n\002id\030\010 \001(\t\0326\n\023GetProductDeta" +
-      "ilReq\022\n\n\002id\030\001 \001(\t\022\023\n\013category_id\030\002 \001(\005\032N" +
-      "\n\024GetProductDetailRely\022\014\n\004code\030\001 \001(\005\022(\n\007" +
-      "product\030\002 \001(\0132\027.ProductMessage.Product\032\375" +
-      "\001\n\007Product\022\023\n\013category_id\030\001 \001(\005\022\022\n\nprodu" +
-      "ct_id\030\002 \001(\t\022\024\n\014product_name\030\003 \001(\t\022\025\n\rpro" +
-      "duct_title\030\004 \001(\t\022\025\n\rproduct_intro\030\005 \001(\t\022" +
-      "\027\n\017product_picture\030\006 \001(\t\022\025\n\rproduct_pric" +
-      "e\030\007 \001(\005\022\035\n\025product_selling_price\030\010 \001(\005\022\023" +
-      "\n\013product_num\030\t \001(\005\022\025\n\rproduct_sales\030\n \001" +
-      "(\005\022\n\n\002id\030\013 \001(\t\032E\n\016IncGotCountReq\022\022\n\nprod" +
-      "uct_id\030\001 \001(\t\022\021\n\tinc_count\030\002 \001(\005\022\014\n\004uuid\030" +
-      "\003 \001(\t\032\"\n\017IncGotCountRely\022\017\n\007code_id\030\001 \001(" +
-      "\t2\242\004\n\025SeckillProductService\022[\n\023saveOrUpd" +
-      "ateProduct\022&.ProductMessage.SaveOrUpdate" +
-      "ProductReq\032\032.ProductMessage.CommonRely\"\000" +
-      "\022O\n\rdeleteProduct\022 .ProductMessage.Delet" +
-      "eProductReq\032\032.ProductMessage.CommonRely\"" +
-      "\000\022P\n\013getCategory\022\036.ProductMessage.GetCat" +
-      "egoryReq\032\037.ProductMessage.GetCategoryRel" +
-      "y\"\000\022V\n\013getProducts\022!.ProductMessage.GetA" +
-      "llProductsReq\032\".ProductMessage.GetAllPro" +
-      "ductsRely\"\000\022_\n\020getProductDetail\022#.Produc" +
-      "tMessage.GetProductDetailReq\032$.ProductMe" +
-      "ssage.GetProductDetailRely\"\000\022P\n\013incGotCo" +
-      "unt\022\036.ProductMessage.IncGotCountReq\032\037.Pr" +
-      "oductMessage.IncGotCountRely\"\000B\t\n\007produc" +
-      "tb\006proto3"
+      "roductMessage.SimpleProduct\032\025\n\023GetTotalP" +
+      "roductsReq\032T\n\024GetTotalProductsRely\022\014\n\004co" +
+      "de\030\001 \001(\005\022.\n\007product\030\002 \003(\0132\035.ProductMessa" +
+      "ge.SimpleProduct\032\300\001\n\rSimpleProduct\022\023\n\013ca" +
+      "tegory_id\030\001 \001(\005\022\022\n\nproduct_id\030\002 \001(\t\022\024\n\014p" +
+      "roduct_name\030\003 \001(\t\022\025\n\rproduct_title\030\004 \001(\t" +
+      "\022\027\n\017product_picture\030\005 \001(\t\022\025\n\rproduct_pri" +
+      "ce\030\006 \001(\005\022\035\n\025product_selling_price\030\007 \001(\005\022" +
+      "\n\n\002id\030\010 \001(\t\0326\n\023GetProductDetailReq\022\n\n\002id" +
+      "\030\001 \001(\t\022\023\n\013category_id\030\002 \001(\005\032N\n\024GetProduc" +
+      "tDetailRely\022\014\n\004code\030\001 \001(\005\022(\n\007product\030\002 \001" +
+      "(\0132\027.ProductMessage.Product\032\375\001\n\007Product\022" +
+      "\023\n\013category_id\030\001 \001(\005\022\022\n\nproduct_id\030\002 \001(\t" +
+      "\022\024\n\014product_name\030\003 \001(\t\022\025\n\rproduct_title\030" +
+      "\004 \001(\t\022\025\n\rproduct_intro\030\005 \001(\t\022\027\n\017product_" +
+      "picture\030\006 \001(\t\022\025\n\rproduct_price\030\007 \001(\005\022\035\n\025" +
+      "product_selling_price\030\010 \001(\005\022\023\n\013product_n" +
+      "um\030\t \001(\005\022\025\n\rproduct_stock\030\n \001(\005\022\n\n\002id\030\013 " +
+      "\001(\t\032E\n\016IncGotCountReq\022\022\n\nproduct_id\030\001 \001(" +
+      "\t\022\021\n\tinc_count\030\002 \001(\005\022\014\n\004uuid\030\003 \001(\t\032\"\n\017In" +
+      "cGotCountRely\022\017\n\007code_id\030\001 \001(\t\032\020\n\016GetCar" +
+      "ouselReq\032K\n\017GetCarouselRely\022\014\n\004code\030\001 \001(" +
+      "\005\022*\n\010carousel\030\002 \003(\0132\030.ProductMessage.Car" +
+      "ousel\0320\n\010Carousel\022\023\n\013carousel_id\030\001 \001(\005\022\017" +
+      "\n\007imgPath\030\002 \001(\t2\323\005\n\025SeckillProductServic" +
+      "e\022[\n\023saveOrUpdateProduct\022&.ProductMessag" +
+      "e.SaveOrUpdateProductReq\032\032.ProductMessag" +
+      "e.CommonRely\"\000\022O\n\rdeleteProduct\022 .Produc" +
+      "tMessage.DeleteProductReq\032\032.ProductMessa" +
+      "ge.CommonRely\"\000\022P\n\013getCategory\022\036.Product" +
+      "Message.GetCategoryReq\032\037.ProductMessage." +
+      "GetCategoryRely\"\000\022V\n\013getProducts\022!.Produ" +
+      "ctMessage.GetAllProductsReq\032\".ProductMes" +
+      "sage.GetAllProductsRely\"\000\022]\n\016getAllProdu" +
+      "cts\022#.ProductMessage.GetTotalProductsReq" +
+      "\032$.ProductMessage.GetTotalProductsRely\"\000" +
+      "\022_\n\020getProductDetail\022#.ProductMessage.Ge" +
+      "tProductDetailReq\032$.ProductMessage.GetPr" +
+      "oductDetailRely\"\000\022P\n\013incGotCount\022\036.Produ" +
+      "ctMessage.IncGotCountReq\032\037.ProductMessag" +
+      "e.IncGotCountRely\"\000\022P\n\013getCarousel\022\036.Pro" +
+      "ductMessage.GetCarouselReq\032\037.ProductMess" +
+      "age.GetCarouselRely\"\000B\t\n\007productb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -14325,42 +17709,72 @@ public final class SeckillProductRpc {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ProductMessage_GetAllProductsRely_descriptor,
         new java.lang.String[] { "Code", "Total", "Product", });
-    internal_static_ProductMessage_SimpleProduct_descriptor =
+    internal_static_ProductMessage_GetTotalProductsReq_descriptor =
       internal_static_ProductMessage_descriptor.getNestedTypes().get(8);
+    internal_static_ProductMessage_GetTotalProductsReq_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_ProductMessage_GetTotalProductsReq_descriptor,
+        new java.lang.String[] { });
+    internal_static_ProductMessage_GetTotalProductsRely_descriptor =
+      internal_static_ProductMessage_descriptor.getNestedTypes().get(9);
+    internal_static_ProductMessage_GetTotalProductsRely_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_ProductMessage_GetTotalProductsRely_descriptor,
+        new java.lang.String[] { "Code", "Product", });
+    internal_static_ProductMessage_SimpleProduct_descriptor =
+      internal_static_ProductMessage_descriptor.getNestedTypes().get(10);
     internal_static_ProductMessage_SimpleProduct_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ProductMessage_SimpleProduct_descriptor,
         new java.lang.String[] { "CategoryId", "ProductId", "ProductName", "ProductTitle", "ProductPicture", "ProductPrice", "ProductSellingPrice", "Id", });
     internal_static_ProductMessage_GetProductDetailReq_descriptor =
-      internal_static_ProductMessage_descriptor.getNestedTypes().get(9);
+      internal_static_ProductMessage_descriptor.getNestedTypes().get(11);
     internal_static_ProductMessage_GetProductDetailReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ProductMessage_GetProductDetailReq_descriptor,
         new java.lang.String[] { "Id", "CategoryId", });
     internal_static_ProductMessage_GetProductDetailRely_descriptor =
-      internal_static_ProductMessage_descriptor.getNestedTypes().get(10);
+      internal_static_ProductMessage_descriptor.getNestedTypes().get(12);
     internal_static_ProductMessage_GetProductDetailRely_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ProductMessage_GetProductDetailRely_descriptor,
         new java.lang.String[] { "Code", "Product", });
     internal_static_ProductMessage_Product_descriptor =
-      internal_static_ProductMessage_descriptor.getNestedTypes().get(11);
+      internal_static_ProductMessage_descriptor.getNestedTypes().get(13);
     internal_static_ProductMessage_Product_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ProductMessage_Product_descriptor,
-        new java.lang.String[] { "CategoryId", "ProductId", "ProductName", "ProductTitle", "ProductIntro", "ProductPicture", "ProductPrice", "ProductSellingPrice", "ProductNum", "ProductSales", "Id", });
+        new java.lang.String[] { "CategoryId", "ProductId", "ProductName", "ProductTitle", "ProductIntro", "ProductPicture", "ProductPrice", "ProductSellingPrice", "ProductNum", "ProductStock", "Id", });
     internal_static_ProductMessage_IncGotCountReq_descriptor =
-      internal_static_ProductMessage_descriptor.getNestedTypes().get(12);
+      internal_static_ProductMessage_descriptor.getNestedTypes().get(14);
     internal_static_ProductMessage_IncGotCountReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ProductMessage_IncGotCountReq_descriptor,
         new java.lang.String[] { "ProductId", "IncCount", "Uuid", });
     internal_static_ProductMessage_IncGotCountRely_descriptor =
-      internal_static_ProductMessage_descriptor.getNestedTypes().get(13);
+      internal_static_ProductMessage_descriptor.getNestedTypes().get(15);
     internal_static_ProductMessage_IncGotCountRely_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ProductMessage_IncGotCountRely_descriptor,
         new java.lang.String[] { "CodeId", });
+    internal_static_ProductMessage_GetCarouselReq_descriptor =
+      internal_static_ProductMessage_descriptor.getNestedTypes().get(16);
+    internal_static_ProductMessage_GetCarouselReq_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_ProductMessage_GetCarouselReq_descriptor,
+        new java.lang.String[] { });
+    internal_static_ProductMessage_GetCarouselRely_descriptor =
+      internal_static_ProductMessage_descriptor.getNestedTypes().get(17);
+    internal_static_ProductMessage_GetCarouselRely_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_ProductMessage_GetCarouselRely_descriptor,
+        new java.lang.String[] { "Code", "Carousel", });
+    internal_static_ProductMessage_Carousel_descriptor =
+      internal_static_ProductMessage_descriptor.getNestedTypes().get(18);
+    internal_static_ProductMessage_Carousel_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_ProductMessage_Carousel_descriptor,
+        new java.lang.String[] { "CarouselId", "ImgPath", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

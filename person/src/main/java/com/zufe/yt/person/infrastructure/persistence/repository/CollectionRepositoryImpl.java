@@ -28,7 +28,8 @@ public class CollectionRepositoryImpl extends RepositoryImpl<Collection, Collect
         //更新
         collection.setId(find.getId());
         //把原来的加进去再保存
-        collection.getProductIds().addAll(find.getProductIds());
+        find.getProductIds().add(collection.getProductIds().get(0));
+        collection.setProductIds(find.getProductIds());
         //做一遍去重保险一点
         collection.setProductIds(collection.getProductIds().parallelStream().distinct().collect(Collectors.toList()));
         return super.saveOrUpdate(collection);

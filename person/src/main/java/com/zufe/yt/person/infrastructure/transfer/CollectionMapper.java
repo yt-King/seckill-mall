@@ -1,9 +1,11 @@
 package com.zufe.yt.person.infrastructure.transfer;
 
 import com.zufe.yt.person.domain.collection.entity.Collection;
+import com.zufe.yt.person.interfaces.dto.CollectionInfoDTO;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 import person.SeckillPersonRpc;
+import product.SeckillProductRpc;
 
 /**
  * @author yt
@@ -21,7 +23,6 @@ public interface CollectionMapper {
      * @param addCollectionReq 入参
      * @return Collection 实体
      */
-//    @Mapping(expression = "java((String)map.get(\"categoryName\"))", target = "categoryName")
     Collection toEntity(SeckillPersonRpc.CollectionMessage.AddCollectionReq addCollectionReq);
 
     /**
@@ -30,6 +31,21 @@ public interface CollectionMapper {
      * @param deleteCollectReq 入参
      * @return Collection 实体
      */
-//    @Mapping(expression = "java((String)map.get(\"categoryName\"))", target = "categoryName")
     Collection toEntity(SeckillPersonRpc.CollectionMessage.DeleteCollectReq deleteCollectReq);
+
+    /**
+     * rpc->dto
+     *
+     * @param simpleProduct 入参
+     * @return CollectionInfoDTO 实体
+     */
+    CollectionInfoDTO toDTO(SeckillProductRpc.ProductMessage.SimpleProduct simpleProduct);
+
+    /**
+     * dto->rpc
+     *
+     * @param collectionInfoDTO 入参
+     * @return Collect message
+     */
+    SeckillPersonRpc.CollectionMessage.Collect toMessage(CollectionInfoDTO collectionInfoDTO);
 }

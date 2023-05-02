@@ -1,17 +1,16 @@
-package com.zufe.yt.goods.interfaces.dto;
+package com.zufe.yt.person.interfaces.dto;
 
 import lombok.Data;
 
 /**
  * @author yt
- * @package: com.zufe.yt.goods.interfaces.dto
- * @className: ProductDTO
- * @date 2023/4/23
+ * @package: com.zufe.yt.person.interfaces.dto
+ * @className: ShoppingcartInfoDTO
+ * @date 2023/4/30
  * @description: TODO
  */
-
 @Data
-public class ProductDTO {
+public class ShoppingcartInfoDTO {
     /**
      * 主键id
      */
@@ -33,27 +32,15 @@ public class ProductDTO {
      */
     String productTitle;
     /**
-     * 商品介绍
-     */
-    String productIntro;
-    /**
      * 商品图片
      */
     String productPicture;
     /**
      * 商品价格
      */
-    Integer productPrice;
-    /**
-     * 商品打折价格
-     */
-    Integer productSellingPrice;
+    Integer price;
     /**
      * 商品数量
      */
-    Integer productNum;
-    /**
-     * 商品库存
-     */
-    Integer productStock;
+    Integer num;
 }

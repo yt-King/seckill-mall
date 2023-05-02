@@ -31,7 +31,7 @@ service SeckillCollectionService {
 // 用户购物车
 service SeckillShoppingCartService {
   // 添加购物车
-  rpc addShoppingCart(ShoppingCartMessage.AddShoppingCartReq) returns (ShoppingCartMessage.CommonRely) {
+  rpc addShoppingCart(ShoppingCartMessage.AddShoppingCartReq) returns (ShoppingCartMessage.AddShoppingCartRely) {
   }
   // 删除购物车
   rpc deleteShoppingCart(ShoppingCartMessage.DeleteShoppingCartReq) returns (ShoppingCartMessage.CommonRely) {
@@ -115,23 +115,19 @@ message CollectionMessage{
     //类目id
     int32 category_id = 1;
     //商品id
-    int32 product_id = 2;
+    string id = 2;
     //商品名称
     string product_name = 3;
     //商品标题
     string product_title = 4;
-    //商品介绍
-    string product_intro = 5;
     //商品图片
     string product_picture = 6;
     //商品价格
     int32 product_price = 7;
     //商品打折价格
     int32 product_selling_price = 8;
-    //商品数量
-    int32 product_num = 9;
-    //商品售出
-    int32 product_sales = 10;
+    //商品库存
+    int32 product_stock = 9;
   }
 }
 message ShoppingCartMessage{
@@ -145,6 +141,12 @@ message ShoppingCartMessage{
     //用户id
     string user_id = 2;
   }
+  message AddShoppingCartRely {
+    ///状态码
+    int32 code = 1;
+    //商品信息
+    ShoppingCart shopping_cart_data = 2;
+  }
   message UpdateShoppingCartReq {
     //商品id
     string product_id = 1;
@@ -155,7 +157,7 @@ message ShoppingCartMessage{
   }
   message DeleteShoppingCartReq {
     //商品id
-    string product_id = 1;
+    repeated string product_id = 1;
     //用户id
     string user_id = 2;
   }
@@ -173,18 +175,18 @@ message ShoppingCartMessage{
     //是否选中
     bool check = 1;
     //商品id
-    int32 product_id = 2;
+    string product_id = 2;
     //商品名称
     string product_name = 3;
     //商品图片
     string product_picture = 4;
     //商品价格
     int32 price = 5;
-    //商品数量
-    int32 num = 6;
-    //最大购买数
-    int32 max_num = 7;
     //库存
-    int32 stock = 8;
+    int32 stock = 6;
+    //数量
+    int32 num = 7;
+    //类目id
+    int32 category_id = 8;
   }
 }

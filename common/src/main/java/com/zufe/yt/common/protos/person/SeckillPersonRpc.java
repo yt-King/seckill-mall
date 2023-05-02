@@ -9235,10 +9235,20 @@ public final class SeckillPersonRpc {
        *商品id
        * </pre>
        *
-       * <code>int32 product_id = 2;</code>
-       * @return The productId.
+       * <code>string id = 2;</code>
+       * @return The id.
        */
-      int getProductId();
+      java.lang.String getId();
+      /**
+       * <pre>
+       *商品id
+       * </pre>
+       *
+       * <code>string id = 2;</code>
+       * @return The bytes for id.
+       */
+      com.google.protobuf.ByteString
+          getIdBytes();
 
       /**
        * <pre>
@@ -9282,26 +9292,6 @@ public final class SeckillPersonRpc {
 
       /**
        * <pre>
-       *商品介绍
-       * </pre>
-       *
-       * <code>string product_intro = 5;</code>
-       * @return The productIntro.
-       */
-      java.lang.String getProductIntro();
-      /**
-       * <pre>
-       *商品介绍
-       * </pre>
-       *
-       * <code>string product_intro = 5;</code>
-       * @return The bytes for productIntro.
-       */
-      com.google.protobuf.ByteString
-          getProductIntroBytes();
-
-      /**
-       * <pre>
        *商品图片
        * </pre>
        *
@@ -9342,23 +9332,13 @@ public final class SeckillPersonRpc {
 
       /**
        * <pre>
-       *商品数量
+       *商品库存
        * </pre>
        *
-       * <code>int32 product_num = 9;</code>
-       * @return The productNum.
+       * <code>int32 product_stock = 9;</code>
+       * @return The productStock.
        */
-      int getProductNum();
-
-      /**
-       * <pre>
-       *商品售出
-       * </pre>
-       *
-       * <code>int32 product_sales = 10;</code>
-       * @return The productSales.
-       */
-      int getProductSales();
+      int getProductStock();
     }
     /**
      * Protobuf type {@code CollectionMessage.Collect}
@@ -9373,9 +9353,9 @@ public final class SeckillPersonRpc {
         super(builder);
       }
       private Collect() {
+        id_ = "";
         productName_ = "";
         productTitle_ = "";
-        productIntro_ = "";
         productPicture_ = "";
       }
 
@@ -9419,19 +9399,51 @@ public final class SeckillPersonRpc {
         return categoryId_;
       }
 
-      public static final int PRODUCT_ID_FIELD_NUMBER = 2;
-      private int productId_ = 0;
+      public static final int ID_FIELD_NUMBER = 2;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object id_ = "";
       /**
        * <pre>
        *商品id
        * </pre>
        *
-       * <code>int32 product_id = 2;</code>
-       * @return The productId.
+       * <code>string id = 2;</code>
+       * @return The id.
        */
       @java.lang.Override
-      public int getProductId() {
-        return productId_;
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       *商品id
+       * </pre>
+       *
+       * <code>string id = 2;</code>
+       * @return The bytes for id.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
       }
 
       public static final int PRODUCT_NAME_FIELD_NUMBER = 3;
@@ -9528,53 +9540,6 @@ public final class SeckillPersonRpc {
         }
       }
 
-      public static final int PRODUCT_INTRO_FIELD_NUMBER = 5;
-      @SuppressWarnings("serial")
-      private volatile java.lang.Object productIntro_ = "";
-      /**
-       * <pre>
-       *商品介绍
-       * </pre>
-       *
-       * <code>string product_intro = 5;</code>
-       * @return The productIntro.
-       */
-      @java.lang.Override
-      public java.lang.String getProductIntro() {
-        java.lang.Object ref = productIntro_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          productIntro_ = s;
-          return s;
-        }
-      }
-      /**
-       * <pre>
-       *商品介绍
-       * </pre>
-       *
-       * <code>string product_intro = 5;</code>
-       * @return The bytes for productIntro.
-       */
-      @java.lang.Override
-      public com.google.protobuf.ByteString
-          getProductIntroBytes() {
-        java.lang.Object ref = productIntro_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          productIntro_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-
       public static final int PRODUCT_PICTURE_FIELD_NUMBER = 6;
       @SuppressWarnings("serial")
       private volatile java.lang.Object productPicture_ = "";
@@ -9652,34 +9617,19 @@ public final class SeckillPersonRpc {
         return productSellingPrice_;
       }
 
-      public static final int PRODUCT_NUM_FIELD_NUMBER = 9;
-      private int productNum_ = 0;
+      public static final int PRODUCT_STOCK_FIELD_NUMBER = 9;
+      private int productStock_ = 0;
       /**
        * <pre>
-       *商品数量
+       *商品库存
        * </pre>
        *
-       * <code>int32 product_num = 9;</code>
-       * @return The productNum.
+       * <code>int32 product_stock = 9;</code>
+       * @return The productStock.
        */
       @java.lang.Override
-      public int getProductNum() {
-        return productNum_;
-      }
-
-      public static final int PRODUCT_SALES_FIELD_NUMBER = 10;
-      private int productSales_ = 0;
-      /**
-       * <pre>
-       *商品售出
-       * </pre>
-       *
-       * <code>int32 product_sales = 10;</code>
-       * @return The productSales.
-       */
-      @java.lang.Override
-      public int getProductSales() {
-        return productSales_;
+      public int getProductStock() {
+        return productStock_;
       }
 
       private byte memoizedIsInitialized = -1;
@@ -9699,17 +9649,14 @@ public final class SeckillPersonRpc {
         if (categoryId_ != 0) {
           output.writeInt32(1, categoryId_);
         }
-        if (productId_ != 0) {
-          output.writeInt32(2, productId_);
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, id_);
         }
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productName_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 3, productName_);
         }
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productTitle_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 4, productTitle_);
-        }
-        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productIntro_)) {
-          com.google.protobuf.GeneratedMessageV3.writeString(output, 5, productIntro_);
         }
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productPicture_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 6, productPicture_);
@@ -9720,11 +9667,8 @@ public final class SeckillPersonRpc {
         if (productSellingPrice_ != 0) {
           output.writeInt32(8, productSellingPrice_);
         }
-        if (productNum_ != 0) {
-          output.writeInt32(9, productNum_);
-        }
-        if (productSales_ != 0) {
-          output.writeInt32(10, productSales_);
+        if (productStock_ != 0) {
+          output.writeInt32(9, productStock_);
         }
         getUnknownFields().writeTo(output);
       }
@@ -9739,18 +9683,14 @@ public final class SeckillPersonRpc {
           size += com.google.protobuf.CodedOutputStream
             .computeInt32Size(1, categoryId_);
         }
-        if (productId_ != 0) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeInt32Size(2, productId_);
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, id_);
         }
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productName_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, productName_);
         }
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productTitle_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, productTitle_);
-        }
-        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productIntro_)) {
-          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, productIntro_);
         }
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productPicture_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, productPicture_);
@@ -9763,13 +9703,9 @@ public final class SeckillPersonRpc {
           size += com.google.protobuf.CodedOutputStream
             .computeInt32Size(8, productSellingPrice_);
         }
-        if (productNum_ != 0) {
+        if (productStock_ != 0) {
           size += com.google.protobuf.CodedOutputStream
-            .computeInt32Size(9, productNum_);
-        }
-        if (productSales_ != 0) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeInt32Size(10, productSales_);
+            .computeInt32Size(9, productStock_);
         }
         size += getUnknownFields().getSerializedSize();
         memoizedSize = size;
@@ -9788,24 +9724,20 @@ public final class SeckillPersonRpc {
 
         if (getCategoryId()
             != other.getCategoryId()) return false;
-        if (getProductId()
-            != other.getProductId()) return false;
+        if (!getId()
+            .equals(other.getId())) return false;
         if (!getProductName()
             .equals(other.getProductName())) return false;
         if (!getProductTitle()
             .equals(other.getProductTitle())) return false;
-        if (!getProductIntro()
-            .equals(other.getProductIntro())) return false;
         if (!getProductPicture()
             .equals(other.getProductPicture())) return false;
         if (getProductPrice()
             != other.getProductPrice()) return false;
         if (getProductSellingPrice()
             != other.getProductSellingPrice()) return false;
-        if (getProductNum()
-            != other.getProductNum()) return false;
-        if (getProductSales()
-            != other.getProductSales()) return false;
+        if (getProductStock()
+            != other.getProductStock()) return false;
         if (!getUnknownFields().equals(other.getUnknownFields())) return false;
         return true;
       }
@@ -9819,24 +9751,20 @@ public final class SeckillPersonRpc {
         hash = (19 * hash) + getDescriptor().hashCode();
         hash = (37 * hash) + CATEGORY_ID_FIELD_NUMBER;
         hash = (53 * hash) + getCategoryId();
-        hash = (37 * hash) + PRODUCT_ID_FIELD_NUMBER;
-        hash = (53 * hash) + getProductId();
+        hash = (37 * hash) + ID_FIELD_NUMBER;
+        hash = (53 * hash) + getId().hashCode();
         hash = (37 * hash) + PRODUCT_NAME_FIELD_NUMBER;
         hash = (53 * hash) + getProductName().hashCode();
         hash = (37 * hash) + PRODUCT_TITLE_FIELD_NUMBER;
         hash = (53 * hash) + getProductTitle().hashCode();
-        hash = (37 * hash) + PRODUCT_INTRO_FIELD_NUMBER;
-        hash = (53 * hash) + getProductIntro().hashCode();
         hash = (37 * hash) + PRODUCT_PICTURE_FIELD_NUMBER;
         hash = (53 * hash) + getProductPicture().hashCode();
         hash = (37 * hash) + PRODUCT_PRICE_FIELD_NUMBER;
         hash = (53 * hash) + getProductPrice();
         hash = (37 * hash) + PRODUCT_SELLING_PRICE_FIELD_NUMBER;
         hash = (53 * hash) + getProductSellingPrice();
-        hash = (37 * hash) + PRODUCT_NUM_FIELD_NUMBER;
-        hash = (53 * hash) + getProductNum();
-        hash = (37 * hash) + PRODUCT_SALES_FIELD_NUMBER;
-        hash = (53 * hash) + getProductSales();
+        hash = (37 * hash) + PRODUCT_STOCK_FIELD_NUMBER;
+        hash = (53 * hash) + getProductStock();
         hash = (29 * hash) + getUnknownFields().hashCode();
         memoizedHashCode = hash;
         return hash;
@@ -9967,15 +9895,13 @@ public final class SeckillPersonRpc {
           super.clear();
           bitField0_ = 0;
           categoryId_ = 0;
-          productId_ = 0;
+          id_ = "";
           productName_ = "";
           productTitle_ = "";
-          productIntro_ = "";
           productPicture_ = "";
           productPrice_ = 0;
           productSellingPrice_ = 0;
-          productNum_ = 0;
-          productSales_ = 0;
+          productStock_ = 0;
           return this;
         }
 
@@ -10013,7 +9939,7 @@ public final class SeckillPersonRpc {
             result.categoryId_ = categoryId_;
           }
           if (((from_bitField0_ & 0x00000002) != 0)) {
-            result.productId_ = productId_;
+            result.id_ = id_;
           }
           if (((from_bitField0_ & 0x00000004) != 0)) {
             result.productName_ = productName_;
@@ -10022,22 +9948,16 @@ public final class SeckillPersonRpc {
             result.productTitle_ = productTitle_;
           }
           if (((from_bitField0_ & 0x00000010) != 0)) {
-            result.productIntro_ = productIntro_;
-          }
-          if (((from_bitField0_ & 0x00000020) != 0)) {
             result.productPicture_ = productPicture_;
           }
-          if (((from_bitField0_ & 0x00000040) != 0)) {
+          if (((from_bitField0_ & 0x00000020) != 0)) {
             result.productPrice_ = productPrice_;
           }
-          if (((from_bitField0_ & 0x00000080) != 0)) {
+          if (((from_bitField0_ & 0x00000040) != 0)) {
             result.productSellingPrice_ = productSellingPrice_;
           }
-          if (((from_bitField0_ & 0x00000100) != 0)) {
-            result.productNum_ = productNum_;
-          }
-          if (((from_bitField0_ & 0x00000200) != 0)) {
-            result.productSales_ = productSales_;
+          if (((from_bitField0_ & 0x00000080) != 0)) {
+            result.productStock_ = productStock_;
           }
         }
 
@@ -10088,8 +10008,10 @@ public final class SeckillPersonRpc {
           if (other.getCategoryId() != 0) {
             setCategoryId(other.getCategoryId());
           }
-          if (other.getProductId() != 0) {
-            setProductId(other.getProductId());
+          if (!other.getId().isEmpty()) {
+            id_ = other.id_;
+            bitField0_ |= 0x00000002;
+            onChanged();
           }
           if (!other.getProductName().isEmpty()) {
             productName_ = other.productName_;
@@ -10101,14 +10023,9 @@ public final class SeckillPersonRpc {
             bitField0_ |= 0x00000008;
             onChanged();
           }
-          if (!other.getProductIntro().isEmpty()) {
-            productIntro_ = other.productIntro_;
-            bitField0_ |= 0x00000010;
-            onChanged();
-          }
           if (!other.getProductPicture().isEmpty()) {
             productPicture_ = other.productPicture_;
-            bitField0_ |= 0x00000020;
+            bitField0_ |= 0x00000010;
             onChanged();
           }
           if (other.getProductPrice() != 0) {
@@ -10117,11 +10034,8 @@ public final class SeckillPersonRpc {
           if (other.getProductSellingPrice() != 0) {
             setProductSellingPrice(other.getProductSellingPrice());
           }
-          if (other.getProductNum() != 0) {
-            setProductNum(other.getProductNum());
-          }
-          if (other.getProductSales() != 0) {
-            setProductSales(other.getProductSales());
+          if (other.getProductStock() != 0) {
+            setProductStock(other.getProductStock());
           }
           this.mergeUnknownFields(other.getUnknownFields());
           onChanged();
@@ -10154,11 +10068,11 @@ public final class SeckillPersonRpc {
                   bitField0_ |= 0x00000001;
                   break;
                 } // case 8
-                case 16: {
-                  productId_ = input.readInt32();
+                case 18: {
+                  id_ = input.readStringRequireUtf8();
                   bitField0_ |= 0x00000002;
                   break;
-                } // case 16
+                } // case 18
                 case 26: {
                   productName_ = input.readStringRequireUtf8();
                   bitField0_ |= 0x00000004;
@@ -10169,36 +10083,26 @@ public final class SeckillPersonRpc {
                   bitField0_ |= 0x00000008;
                   break;
                 } // case 34
-                case 42: {
-                  productIntro_ = input.readStringRequireUtf8();
-                  bitField0_ |= 0x00000010;
-                  break;
-                } // case 42
                 case 50: {
                   productPicture_ = input.readStringRequireUtf8();
-                  bitField0_ |= 0x00000020;
+                  bitField0_ |= 0x00000010;
                   break;
                 } // case 50
                 case 56: {
                   productPrice_ = input.readInt32();
-                  bitField0_ |= 0x00000040;
+                  bitField0_ |= 0x00000020;
                   break;
                 } // case 56
                 case 64: {
                   productSellingPrice_ = input.readInt32();
-                  bitField0_ |= 0x00000080;
+                  bitField0_ |= 0x00000040;
                   break;
                 } // case 64
                 case 72: {
-                  productNum_ = input.readInt32();
-                  bitField0_ |= 0x00000100;
+                  productStock_ = input.readInt32();
+                  bitField0_ |= 0x00000080;
                   break;
                 } // case 72
-                case 80: {
-                  productSales_ = input.readInt32();
-                  bitField0_ |= 0x00000200;
-                  break;
-                } // case 80
                 default: {
                   if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                     done = true; // was an endgroup tag
@@ -10260,31 +10164,61 @@ public final class SeckillPersonRpc {
           return this;
         }
 
-        private int productId_ ;
+        private java.lang.Object id_ = "";
         /**
          * <pre>
          *商品id
          * </pre>
          *
-         * <code>int32 product_id = 2;</code>
-         * @return The productId.
+         * <code>string id = 2;</code>
+         * @return The id.
          */
-        @java.lang.Override
-        public int getProductId() {
-          return productId_;
+        public java.lang.String getId() {
+          java.lang.Object ref = id_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            id_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
         }
         /**
          * <pre>
          *商品id
          * </pre>
          *
-         * <code>int32 product_id = 2;</code>
-         * @param value The productId to set.
+         * <code>string id = 2;</code>
+         * @return The bytes for id.
+         */
+        public com.google.protobuf.ByteString
+            getIdBytes() {
+          java.lang.Object ref = id_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            id_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         *商品id
+         * </pre>
+         *
+         * <code>string id = 2;</code>
+         * @param value The id to set.
          * @return This builder for chaining.
          */
-        public Builder setProductId(int value) {
-          
-          productId_ = value;
+        public Builder setId(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          id_ = value;
           bitField0_ |= 0x00000002;
           onChanged();
           return this;
@@ -10294,12 +10228,30 @@ public final class SeckillPersonRpc {
          *商品id
          * </pre>
          *
-         * <code>int32 product_id = 2;</code>
+         * <code>string id = 2;</code>
          * @return This builder for chaining.
          */
-        public Builder clearProductId() {
+        public Builder clearId() {
+          id_ = getDefaultInstance().getId();
           bitField0_ = (bitField0_ & ~0x00000002);
-          productId_ = 0;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         *商品id
+         * </pre>
+         *
+         * <code>string id = 2;</code>
+         * @param value The bytes for id to set.
+         * @return This builder for chaining.
+         */
+        public Builder setIdBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
+          id_ = value;
+          bitField0_ |= 0x00000002;
           onChanged();
           return this;
         }
@@ -10488,98 +10440,6 @@ public final class SeckillPersonRpc {
           return this;
         }
 
-        private java.lang.Object productIntro_ = "";
-        /**
-         * <pre>
-         *商品介绍
-         * </pre>
-         *
-         * <code>string product_intro = 5;</code>
-         * @return The productIntro.
-         */
-        public java.lang.String getProductIntro() {
-          java.lang.Object ref = productIntro_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            productIntro_ = s;
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
-        }
-        /**
-         * <pre>
-         *商品介绍
-         * </pre>
-         *
-         * <code>string product_intro = 5;</code>
-         * @return The bytes for productIntro.
-         */
-        public com.google.protobuf.ByteString
-            getProductIntroBytes() {
-          java.lang.Object ref = productIntro_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            productIntro_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <pre>
-         *商品介绍
-         * </pre>
-         *
-         * <code>string product_intro = 5;</code>
-         * @param value The productIntro to set.
-         * @return This builder for chaining.
-         */
-        public Builder setProductIntro(
-            java.lang.String value) {
-          if (value == null) { throw new NullPointerException(); }
-          productIntro_ = value;
-          bitField0_ |= 0x00000010;
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         *商品介绍
-         * </pre>
-         *
-         * <code>string product_intro = 5;</code>
-         * @return This builder for chaining.
-         */
-        public Builder clearProductIntro() {
-          productIntro_ = getDefaultInstance().getProductIntro();
-          bitField0_ = (bitField0_ & ~0x00000010);
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         *商品介绍
-         * </pre>
-         *
-         * <code>string product_intro = 5;</code>
-         * @param value The bytes for productIntro to set.
-         * @return This builder for chaining.
-         */
-        public Builder setProductIntroBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) { throw new NullPointerException(); }
-          checkByteStringIsUtf8(value);
-          productIntro_ = value;
-          bitField0_ |= 0x00000010;
-          onChanged();
-          return this;
-        }
-
         private java.lang.Object productPicture_ = "";
         /**
          * <pre>
@@ -10635,7 +10495,7 @@ public final class SeckillPersonRpc {
             java.lang.String value) {
           if (value == null) { throw new NullPointerException(); }
           productPicture_ = value;
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000010;
           onChanged();
           return this;
         }
@@ -10649,7 +10509,7 @@ public final class SeckillPersonRpc {
          */
         public Builder clearProductPicture() {
           productPicture_ = getDefaultInstance().getProductPicture();
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000010);
           onChanged();
           return this;
         }
@@ -10667,7 +10527,7 @@ public final class SeckillPersonRpc {
           if (value == null) { throw new NullPointerException(); }
           checkByteStringIsUtf8(value);
           productPicture_ = value;
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000010;
           onChanged();
           return this;
         }
@@ -10697,7 +10557,7 @@ public final class SeckillPersonRpc {
         public Builder setProductPrice(int value) {
           
           productPrice_ = value;
-          bitField0_ |= 0x00000040;
+          bitField0_ |= 0x00000020;
           onChanged();
           return this;
         }
@@ -10710,7 +10570,7 @@ public final class SeckillPersonRpc {
          * @return This builder for chaining.
          */
         public Builder clearProductPrice() {
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000020);
           productPrice_ = 0;
           onChanged();
           return this;
@@ -10741,7 +10601,7 @@ public final class SeckillPersonRpc {
         public Builder setProductSellingPrice(int value) {
           
           productSellingPrice_ = value;
-          bitField0_ |= 0x00000080;
+          bitField0_ |= 0x00000040;
           onChanged();
           return this;
         }
@@ -10754,96 +10614,52 @@ public final class SeckillPersonRpc {
          * @return This builder for chaining.
          */
         public Builder clearProductSellingPrice() {
-          bitField0_ = (bitField0_ & ~0x00000080);
+          bitField0_ = (bitField0_ & ~0x00000040);
           productSellingPrice_ = 0;
           onChanged();
           return this;
         }
 
-        private int productNum_ ;
+        private int productStock_ ;
         /**
          * <pre>
-         *商品数量
+         *商品库存
          * </pre>
          *
-         * <code>int32 product_num = 9;</code>
-         * @return The productNum.
+         * <code>int32 product_stock = 9;</code>
+         * @return The productStock.
          */
         @java.lang.Override
-        public int getProductNum() {
-          return productNum_;
+        public int getProductStock() {
+          return productStock_;
         }
         /**
          * <pre>
-         *商品数量
+         *商品库存
          * </pre>
          *
-         * <code>int32 product_num = 9;</code>
-         * @param value The productNum to set.
+         * <code>int32 product_stock = 9;</code>
+         * @param value The productStock to set.
          * @return This builder for chaining.
          */
-        public Builder setProductNum(int value) {
+        public Builder setProductStock(int value) {
           
-          productNum_ = value;
-          bitField0_ |= 0x00000100;
+          productStock_ = value;
+          bitField0_ |= 0x00000080;
           onChanged();
           return this;
         }
         /**
          * <pre>
-         *商品数量
+         *商品库存
          * </pre>
          *
-         * <code>int32 product_num = 9;</code>
+         * <code>int32 product_stock = 9;</code>
          * @return This builder for chaining.
          */
-        public Builder clearProductNum() {
-          bitField0_ = (bitField0_ & ~0x00000100);
-          productNum_ = 0;
-          onChanged();
-          return this;
-        }
-
-        private int productSales_ ;
-        /**
-         * <pre>
-         *商品售出
-         * </pre>
-         *
-         * <code>int32 product_sales = 10;</code>
-         * @return The productSales.
-         */
-        @java.lang.Override
-        public int getProductSales() {
-          return productSales_;
-        }
-        /**
-         * <pre>
-         *商品售出
-         * </pre>
-         *
-         * <code>int32 product_sales = 10;</code>
-         * @param value The productSales to set.
-         * @return This builder for chaining.
-         */
-        public Builder setProductSales(int value) {
-          
-          productSales_ = value;
-          bitField0_ |= 0x00000200;
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         *商品售出
-         * </pre>
-         *
-         * <code>int32 product_sales = 10;</code>
-         * @return This builder for chaining.
-         */
-        public Builder clearProductSales() {
-          bitField0_ = (bitField0_ & ~0x00000200);
-          productSales_ = 0;
+        public Builder clearProductStock() {
+          bitField0_ = (bitField0_ & ~0x00000080);
+          productStock_ = 0;
           onChanged();
           return this;
         }
@@ -12585,6 +12401,761 @@ public final class SeckillPersonRpc {
 
     }
 
+    public interface AddShoppingCartRelyOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:ShoppingCartMessage.AddShoppingCartRely)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       *&#47;状态码
+       * </pre>
+       *
+       * <code>int32 code = 1;</code>
+       * @return The code.
+       */
+      int getCode();
+
+      /**
+       * <pre>
+       *商品信息
+       * </pre>
+       *
+       * <code>.ShoppingCartMessage.ShoppingCart shopping_cart_data = 2;</code>
+       * @return Whether the shoppingCartData field is set.
+       */
+      boolean hasShoppingCartData();
+      /**
+       * <pre>
+       *商品信息
+       * </pre>
+       *
+       * <code>.ShoppingCartMessage.ShoppingCart shopping_cart_data = 2;</code>
+       * @return The shoppingCartData.
+       */
+      person.SeckillPersonRpc.ShoppingCartMessage.ShoppingCart getShoppingCartData();
+      /**
+       * <pre>
+       *商品信息
+       * </pre>
+       *
+       * <code>.ShoppingCartMessage.ShoppingCart shopping_cart_data = 2;</code>
+       */
+      person.SeckillPersonRpc.ShoppingCartMessage.ShoppingCartOrBuilder getShoppingCartDataOrBuilder();
+    }
+    /**
+     * Protobuf type {@code ShoppingCartMessage.AddShoppingCartRely}
+     */
+    public static final class AddShoppingCartRely extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:ShoppingCartMessage.AddShoppingCartRely)
+        AddShoppingCartRelyOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use AddShoppingCartRely.newBuilder() to construct.
+      private AddShoppingCartRely(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private AddShoppingCartRely() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new AddShoppingCartRely();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return person.SeckillPersonRpc.internal_static_ShoppingCartMessage_AddShoppingCartRely_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return person.SeckillPersonRpc.internal_static_ShoppingCartMessage_AddShoppingCartRely_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                person.SeckillPersonRpc.ShoppingCartMessage.AddShoppingCartRely.class, person.SeckillPersonRpc.ShoppingCartMessage.AddShoppingCartRely.Builder.class);
+      }
+
+      public static final int CODE_FIELD_NUMBER = 1;
+      private int code_ = 0;
+      /**
+       * <pre>
+       *&#47;状态码
+       * </pre>
+       *
+       * <code>int32 code = 1;</code>
+       * @return The code.
+       */
+      @java.lang.Override
+      public int getCode() {
+        return code_;
+      }
+
+      public static final int SHOPPING_CART_DATA_FIELD_NUMBER = 2;
+      private person.SeckillPersonRpc.ShoppingCartMessage.ShoppingCart shoppingCartData_;
+      /**
+       * <pre>
+       *商品信息
+       * </pre>
+       *
+       * <code>.ShoppingCartMessage.ShoppingCart shopping_cart_data = 2;</code>
+       * @return Whether the shoppingCartData field is set.
+       */
+      @java.lang.Override
+      public boolean hasShoppingCartData() {
+        return shoppingCartData_ != null;
+      }
+      /**
+       * <pre>
+       *商品信息
+       * </pre>
+       *
+       * <code>.ShoppingCartMessage.ShoppingCart shopping_cart_data = 2;</code>
+       * @return The shoppingCartData.
+       */
+      @java.lang.Override
+      public person.SeckillPersonRpc.ShoppingCartMessage.ShoppingCart getShoppingCartData() {
+        return shoppingCartData_ == null ? person.SeckillPersonRpc.ShoppingCartMessage.ShoppingCart.getDefaultInstance() : shoppingCartData_;
+      }
+      /**
+       * <pre>
+       *商品信息
+       * </pre>
+       *
+       * <code>.ShoppingCartMessage.ShoppingCart shopping_cart_data = 2;</code>
+       */
+      @java.lang.Override
+      public person.SeckillPersonRpc.ShoppingCartMessage.ShoppingCartOrBuilder getShoppingCartDataOrBuilder() {
+        return shoppingCartData_ == null ? person.SeckillPersonRpc.ShoppingCartMessage.ShoppingCart.getDefaultInstance() : shoppingCartData_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (code_ != 0) {
+          output.writeInt32(1, code_);
+        }
+        if (shoppingCartData_ != null) {
+          output.writeMessage(2, getShoppingCartData());
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (code_ != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(1, code_);
+        }
+        if (shoppingCartData_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, getShoppingCartData());
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof person.SeckillPersonRpc.ShoppingCartMessage.AddShoppingCartRely)) {
+          return super.equals(obj);
+        }
+        person.SeckillPersonRpc.ShoppingCartMessage.AddShoppingCartRely other = (person.SeckillPersonRpc.ShoppingCartMessage.AddShoppingCartRely) obj;
+
+        if (getCode()
+            != other.getCode()) return false;
+        if (hasShoppingCartData() != other.hasShoppingCartData()) return false;
+        if (hasShoppingCartData()) {
+          if (!getShoppingCartData()
+              .equals(other.getShoppingCartData())) return false;
+        }
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + CODE_FIELD_NUMBER;
+        hash = (53 * hash) + getCode();
+        if (hasShoppingCartData()) {
+          hash = (37 * hash) + SHOPPING_CART_DATA_FIELD_NUMBER;
+          hash = (53 * hash) + getShoppingCartData().hashCode();
+        }
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static person.SeckillPersonRpc.ShoppingCartMessage.AddShoppingCartRely parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static person.SeckillPersonRpc.ShoppingCartMessage.AddShoppingCartRely parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static person.SeckillPersonRpc.ShoppingCartMessage.AddShoppingCartRely parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static person.SeckillPersonRpc.ShoppingCartMessage.AddShoppingCartRely parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static person.SeckillPersonRpc.ShoppingCartMessage.AddShoppingCartRely parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static person.SeckillPersonRpc.ShoppingCartMessage.AddShoppingCartRely parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static person.SeckillPersonRpc.ShoppingCartMessage.AddShoppingCartRely parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static person.SeckillPersonRpc.ShoppingCartMessage.AddShoppingCartRely parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static person.SeckillPersonRpc.ShoppingCartMessage.AddShoppingCartRely parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static person.SeckillPersonRpc.ShoppingCartMessage.AddShoppingCartRely parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static person.SeckillPersonRpc.ShoppingCartMessage.AddShoppingCartRely parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static person.SeckillPersonRpc.ShoppingCartMessage.AddShoppingCartRely parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(person.SeckillPersonRpc.ShoppingCartMessage.AddShoppingCartRely prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code ShoppingCartMessage.AddShoppingCartRely}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:ShoppingCartMessage.AddShoppingCartRely)
+          person.SeckillPersonRpc.ShoppingCartMessage.AddShoppingCartRelyOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return person.SeckillPersonRpc.internal_static_ShoppingCartMessage_AddShoppingCartRely_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return person.SeckillPersonRpc.internal_static_ShoppingCartMessage_AddShoppingCartRely_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  person.SeckillPersonRpc.ShoppingCartMessage.AddShoppingCartRely.class, person.SeckillPersonRpc.ShoppingCartMessage.AddShoppingCartRely.Builder.class);
+        }
+
+        // Construct using person.SeckillPersonRpc.ShoppingCartMessage.AddShoppingCartRely.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          code_ = 0;
+          shoppingCartData_ = null;
+          if (shoppingCartDataBuilder_ != null) {
+            shoppingCartDataBuilder_.dispose();
+            shoppingCartDataBuilder_ = null;
+          }
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return person.SeckillPersonRpc.internal_static_ShoppingCartMessage_AddShoppingCartRely_descriptor;
+        }
+
+        @java.lang.Override
+        public person.SeckillPersonRpc.ShoppingCartMessage.AddShoppingCartRely getDefaultInstanceForType() {
+          return person.SeckillPersonRpc.ShoppingCartMessage.AddShoppingCartRely.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public person.SeckillPersonRpc.ShoppingCartMessage.AddShoppingCartRely build() {
+          person.SeckillPersonRpc.ShoppingCartMessage.AddShoppingCartRely result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public person.SeckillPersonRpc.ShoppingCartMessage.AddShoppingCartRely buildPartial() {
+          person.SeckillPersonRpc.ShoppingCartMessage.AddShoppingCartRely result = new person.SeckillPersonRpc.ShoppingCartMessage.AddShoppingCartRely(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(person.SeckillPersonRpc.ShoppingCartMessage.AddShoppingCartRely result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.code_ = code_;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.shoppingCartData_ = shoppingCartDataBuilder_ == null
+                ? shoppingCartData_
+                : shoppingCartDataBuilder_.build();
+          }
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof person.SeckillPersonRpc.ShoppingCartMessage.AddShoppingCartRely) {
+            return mergeFrom((person.SeckillPersonRpc.ShoppingCartMessage.AddShoppingCartRely)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(person.SeckillPersonRpc.ShoppingCartMessage.AddShoppingCartRely other) {
+          if (other == person.SeckillPersonRpc.ShoppingCartMessage.AddShoppingCartRely.getDefaultInstance()) return this;
+          if (other.getCode() != 0) {
+            setCode(other.getCode());
+          }
+          if (other.hasShoppingCartData()) {
+            mergeShoppingCartData(other.getShoppingCartData());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 8: {
+                  code_ = input.readInt32();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 8
+                case 18: {
+                  input.readMessage(
+                      getShoppingCartDataFieldBuilder().getBuilder(),
+                      extensionRegistry);
+                  bitField0_ |= 0x00000002;
+                  break;
+                } // case 18
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private int code_ ;
+        /**
+         * <pre>
+         *&#47;状态码
+         * </pre>
+         *
+         * <code>int32 code = 1;</code>
+         * @return The code.
+         */
+        @java.lang.Override
+        public int getCode() {
+          return code_;
+        }
+        /**
+         * <pre>
+         *&#47;状态码
+         * </pre>
+         *
+         * <code>int32 code = 1;</code>
+         * @param value The code to set.
+         * @return This builder for chaining.
+         */
+        public Builder setCode(int value) {
+          
+          code_ = value;
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         *&#47;状态码
+         * </pre>
+         *
+         * <code>int32 code = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearCode() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          code_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private person.SeckillPersonRpc.ShoppingCartMessage.ShoppingCart shoppingCartData_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            person.SeckillPersonRpc.ShoppingCartMessage.ShoppingCart, person.SeckillPersonRpc.ShoppingCartMessage.ShoppingCart.Builder, person.SeckillPersonRpc.ShoppingCartMessage.ShoppingCartOrBuilder> shoppingCartDataBuilder_;
+        /**
+         * <pre>
+         *商品信息
+         * </pre>
+         *
+         * <code>.ShoppingCartMessage.ShoppingCart shopping_cart_data = 2;</code>
+         * @return Whether the shoppingCartData field is set.
+         */
+        public boolean hasShoppingCartData() {
+          return ((bitField0_ & 0x00000002) != 0);
+        }
+        /**
+         * <pre>
+         *商品信息
+         * </pre>
+         *
+         * <code>.ShoppingCartMessage.ShoppingCart shopping_cart_data = 2;</code>
+         * @return The shoppingCartData.
+         */
+        public person.SeckillPersonRpc.ShoppingCartMessage.ShoppingCart getShoppingCartData() {
+          if (shoppingCartDataBuilder_ == null) {
+            return shoppingCartData_ == null ? person.SeckillPersonRpc.ShoppingCartMessage.ShoppingCart.getDefaultInstance() : shoppingCartData_;
+          } else {
+            return shoppingCartDataBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         *商品信息
+         * </pre>
+         *
+         * <code>.ShoppingCartMessage.ShoppingCart shopping_cart_data = 2;</code>
+         */
+        public Builder setShoppingCartData(person.SeckillPersonRpc.ShoppingCartMessage.ShoppingCart value) {
+          if (shoppingCartDataBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            shoppingCartData_ = value;
+          } else {
+            shoppingCartDataBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         *商品信息
+         * </pre>
+         *
+         * <code>.ShoppingCartMessage.ShoppingCart shopping_cart_data = 2;</code>
+         */
+        public Builder setShoppingCartData(
+            person.SeckillPersonRpc.ShoppingCartMessage.ShoppingCart.Builder builderForValue) {
+          if (shoppingCartDataBuilder_ == null) {
+            shoppingCartData_ = builderForValue.build();
+          } else {
+            shoppingCartDataBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         *商品信息
+         * </pre>
+         *
+         * <code>.ShoppingCartMessage.ShoppingCart shopping_cart_data = 2;</code>
+         */
+        public Builder mergeShoppingCartData(person.SeckillPersonRpc.ShoppingCartMessage.ShoppingCart value) {
+          if (shoppingCartDataBuilder_ == null) {
+            if (((bitField0_ & 0x00000002) != 0) &&
+              shoppingCartData_ != null &&
+              shoppingCartData_ != person.SeckillPersonRpc.ShoppingCartMessage.ShoppingCart.getDefaultInstance()) {
+              getShoppingCartDataBuilder().mergeFrom(value);
+            } else {
+              shoppingCartData_ = value;
+            }
+          } else {
+            shoppingCartDataBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         *商品信息
+         * </pre>
+         *
+         * <code>.ShoppingCartMessage.ShoppingCart shopping_cart_data = 2;</code>
+         */
+        public Builder clearShoppingCartData() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          shoppingCartData_ = null;
+          if (shoppingCartDataBuilder_ != null) {
+            shoppingCartDataBuilder_.dispose();
+            shoppingCartDataBuilder_ = null;
+          }
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         *商品信息
+         * </pre>
+         *
+         * <code>.ShoppingCartMessage.ShoppingCart shopping_cart_data = 2;</code>
+         */
+        public person.SeckillPersonRpc.ShoppingCartMessage.ShoppingCart.Builder getShoppingCartDataBuilder() {
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return getShoppingCartDataFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         *商品信息
+         * </pre>
+         *
+         * <code>.ShoppingCartMessage.ShoppingCart shopping_cart_data = 2;</code>
+         */
+        public person.SeckillPersonRpc.ShoppingCartMessage.ShoppingCartOrBuilder getShoppingCartDataOrBuilder() {
+          if (shoppingCartDataBuilder_ != null) {
+            return shoppingCartDataBuilder_.getMessageOrBuilder();
+          } else {
+            return shoppingCartData_ == null ?
+                person.SeckillPersonRpc.ShoppingCartMessage.ShoppingCart.getDefaultInstance() : shoppingCartData_;
+          }
+        }
+        /**
+         * <pre>
+         *商品信息
+         * </pre>
+         *
+         * <code>.ShoppingCartMessage.ShoppingCart shopping_cart_data = 2;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            person.SeckillPersonRpc.ShoppingCartMessage.ShoppingCart, person.SeckillPersonRpc.ShoppingCartMessage.ShoppingCart.Builder, person.SeckillPersonRpc.ShoppingCartMessage.ShoppingCartOrBuilder> 
+            getShoppingCartDataFieldBuilder() {
+          if (shoppingCartDataBuilder_ == null) {
+            shoppingCartDataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                person.SeckillPersonRpc.ShoppingCartMessage.ShoppingCart, person.SeckillPersonRpc.ShoppingCartMessage.ShoppingCart.Builder, person.SeckillPersonRpc.ShoppingCartMessage.ShoppingCartOrBuilder>(
+                    getShoppingCartData(),
+                    getParentForChildren(),
+                    isClean());
+            shoppingCartData_ = null;
+          }
+          return shoppingCartDataBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:ShoppingCartMessage.AddShoppingCartRely)
+      }
+
+      // @@protoc_insertion_point(class_scope:ShoppingCartMessage.AddShoppingCartRely)
+      private static final person.SeckillPersonRpc.ShoppingCartMessage.AddShoppingCartRely DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new person.SeckillPersonRpc.ShoppingCartMessage.AddShoppingCartRely();
+      }
+
+      public static person.SeckillPersonRpc.ShoppingCartMessage.AddShoppingCartRely getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<AddShoppingCartRely>
+          PARSER = new com.google.protobuf.AbstractParser<AddShoppingCartRely>() {
+        @java.lang.Override
+        public AddShoppingCartRely parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<AddShoppingCartRely> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<AddShoppingCartRely> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public person.SeckillPersonRpc.ShoppingCartMessage.AddShoppingCartRely getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
     public interface UpdateShoppingCartReqOrBuilder extends
         // @@protoc_insertion_point(interface_extends:ShoppingCartMessage.UpdateShoppingCartReq)
         com.google.protobuf.MessageOrBuilder {
@@ -13461,20 +14032,41 @@ public final class SeckillPersonRpc {
        *商品id
        * </pre>
        *
-       * <code>string product_id = 1;</code>
-       * @return The productId.
+       * <code>repeated string product_id = 1;</code>
+       * @return A list containing the productId.
        */
-      java.lang.String getProductId();
+      java.util.List<java.lang.String>
+          getProductIdList();
       /**
        * <pre>
        *商品id
        * </pre>
        *
-       * <code>string product_id = 1;</code>
-       * @return The bytes for productId.
+       * <code>repeated string product_id = 1;</code>
+       * @return The count of productId.
+       */
+      int getProductIdCount();
+      /**
+       * <pre>
+       *商品id
+       * </pre>
+       *
+       * <code>repeated string product_id = 1;</code>
+       * @param index The index of the element to return.
+       * @return The productId at the given index.
+       */
+      java.lang.String getProductId(int index);
+      /**
+       * <pre>
+       *商品id
+       * </pre>
+       *
+       * <code>repeated string product_id = 1;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the productId at the given index.
        */
       com.google.protobuf.ByteString
-          getProductIdBytes();
+          getProductIdBytes(int index);
 
       /**
        * <pre>
@@ -13509,7 +14101,7 @@ public final class SeckillPersonRpc {
         super(builder);
       }
       private DeleteShoppingCartReq() {
-        productId_ = "";
+        productId_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         userId_ = "";
       }
 
@@ -13540,49 +14132,54 @@ public final class SeckillPersonRpc {
 
       public static final int PRODUCT_ID_FIELD_NUMBER = 1;
       @SuppressWarnings("serial")
-      private volatile java.lang.Object productId_ = "";
+      private com.google.protobuf.LazyStringList productId_;
       /**
        * <pre>
        *商品id
        * </pre>
        *
-       * <code>string product_id = 1;</code>
-       * @return The productId.
+       * <code>repeated string product_id = 1;</code>
+       * @return A list containing the productId.
        */
-      @java.lang.Override
-      public java.lang.String getProductId() {
-        java.lang.Object ref = productId_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          productId_ = s;
-          return s;
-        }
+      public com.google.protobuf.ProtocolStringList
+          getProductIdList() {
+        return productId_;
       }
       /**
        * <pre>
        *商品id
        * </pre>
        *
-       * <code>string product_id = 1;</code>
-       * @return The bytes for productId.
+       * <code>repeated string product_id = 1;</code>
+       * @return The count of productId.
        */
-      @java.lang.Override
+      public int getProductIdCount() {
+        return productId_.size();
+      }
+      /**
+       * <pre>
+       *商品id
+       * </pre>
+       *
+       * <code>repeated string product_id = 1;</code>
+       * @param index The index of the element to return.
+       * @return The productId at the given index.
+       */
+      public java.lang.String getProductId(int index) {
+        return productId_.get(index);
+      }
+      /**
+       * <pre>
+       *商品id
+       * </pre>
+       *
+       * <code>repeated string product_id = 1;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the productId at the given index.
+       */
       public com.google.protobuf.ByteString
-          getProductIdBytes() {
-        java.lang.Object ref = productId_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          productId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+          getProductIdBytes(int index) {
+        return productId_.getByteString(index);
       }
 
       public static final int USER_ID_FIELD_NUMBER = 2;
@@ -13646,8 +14243,8 @@ public final class SeckillPersonRpc {
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productId_)) {
-          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, productId_);
+        for (int i = 0; i < productId_.size(); i++) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, productId_.getRaw(i));
         }
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 2, userId_);
@@ -13661,8 +14258,13 @@ public final class SeckillPersonRpc {
         if (size != -1) return size;
 
         size = 0;
-        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productId_)) {
-          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, productId_);
+        {
+          int dataSize = 0;
+          for (int i = 0; i < productId_.size(); i++) {
+            dataSize += computeStringSizeNoTag(productId_.getRaw(i));
+          }
+          size += dataSize;
+          size += 1 * getProductIdList().size();
         }
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, userId_);
@@ -13682,8 +14284,8 @@ public final class SeckillPersonRpc {
         }
         person.SeckillPersonRpc.ShoppingCartMessage.DeleteShoppingCartReq other = (person.SeckillPersonRpc.ShoppingCartMessage.DeleteShoppingCartReq) obj;
 
-        if (!getProductId()
-            .equals(other.getProductId())) return false;
+        if (!getProductIdList()
+            .equals(other.getProductIdList())) return false;
         if (!getUserId()
             .equals(other.getUserId())) return false;
         if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -13697,8 +14299,10 @@ public final class SeckillPersonRpc {
         }
         int hash = 41;
         hash = (19 * hash) + getDescriptor().hashCode();
-        hash = (37 * hash) + PRODUCT_ID_FIELD_NUMBER;
-        hash = (53 * hash) + getProductId().hashCode();
+        if (getProductIdCount() > 0) {
+          hash = (37 * hash) + PRODUCT_ID_FIELD_NUMBER;
+          hash = (53 * hash) + getProductIdList().hashCode();
+        }
         hash = (37 * hash) + USER_ID_FIELD_NUMBER;
         hash = (53 * hash) + getUserId().hashCode();
         hash = (29 * hash) + getUnknownFields().hashCode();
@@ -13830,7 +14434,8 @@ public final class SeckillPersonRpc {
         public Builder clear() {
           super.clear();
           bitField0_ = 0;
-          productId_ = "";
+          productId_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+          bitField0_ = (bitField0_ & ~0x00000001);
           userId_ = "";
           return this;
         }
@@ -13858,16 +14463,22 @@ public final class SeckillPersonRpc {
         @java.lang.Override
         public person.SeckillPersonRpc.ShoppingCartMessage.DeleteShoppingCartReq buildPartial() {
           person.SeckillPersonRpc.ShoppingCartMessage.DeleteShoppingCartReq result = new person.SeckillPersonRpc.ShoppingCartMessage.DeleteShoppingCartReq(this);
+          buildPartialRepeatedFields(result);
           if (bitField0_ != 0) { buildPartial0(result); }
           onBuilt();
           return result;
         }
 
+        private void buildPartialRepeatedFields(person.SeckillPersonRpc.ShoppingCartMessage.DeleteShoppingCartReq result) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            productId_ = productId_.getUnmodifiableView();
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.productId_ = productId_;
+        }
+
         private void buildPartial0(person.SeckillPersonRpc.ShoppingCartMessage.DeleteShoppingCartReq result) {
           int from_bitField0_ = bitField0_;
-          if (((from_bitField0_ & 0x00000001) != 0)) {
-            result.productId_ = productId_;
-          }
           if (((from_bitField0_ & 0x00000002) != 0)) {
             result.userId_ = userId_;
           }
@@ -13917,9 +14528,14 @@ public final class SeckillPersonRpc {
 
         public Builder mergeFrom(person.SeckillPersonRpc.ShoppingCartMessage.DeleteShoppingCartReq other) {
           if (other == person.SeckillPersonRpc.ShoppingCartMessage.DeleteShoppingCartReq.getDefaultInstance()) return this;
-          if (!other.getProductId().isEmpty()) {
-            productId_ = other.productId_;
-            bitField0_ |= 0x00000001;
+          if (!other.productId_.isEmpty()) {
+            if (productId_.isEmpty()) {
+              productId_ = other.productId_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureProductIdIsMutable();
+              productId_.addAll(other.productId_);
+            }
             onChanged();
           }
           if (!other.getUserId().isEmpty()) {
@@ -13954,8 +14570,9 @@ public final class SeckillPersonRpc {
                   done = true;
                   break;
                 case 10: {
-                  productId_ = input.readStringRequireUtf8();
-                  bitField0_ |= 0x00000001;
+                  java.lang.String s = input.readStringRequireUtf8();
+                  ensureProductIdIsMutable();
+                  productId_.add(s);
                   break;
                 } // case 10
                 case 18: {
@@ -13980,62 +14597,76 @@ public final class SeckillPersonRpc {
         }
         private int bitField0_;
 
-        private java.lang.Object productId_ = "";
-        /**
-         * <pre>
-         *商品id
-         * </pre>
-         *
-         * <code>string product_id = 1;</code>
-         * @return The productId.
-         */
-        public java.lang.String getProductId() {
-          java.lang.Object ref = productId_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            productId_ = s;
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
+        private com.google.protobuf.LazyStringList productId_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        private void ensureProductIdIsMutable() {
+          if (!((bitField0_ & 0x00000001) != 0)) {
+            productId_ = new com.google.protobuf.LazyStringArrayList(productId_);
+            bitField0_ |= 0x00000001;
+           }
         }
         /**
          * <pre>
          *商品id
          * </pre>
          *
-         * <code>string product_id = 1;</code>
-         * @return The bytes for productId.
+         * <code>repeated string product_id = 1;</code>
+         * @return A list containing the productId.
+         */
+        public com.google.protobuf.ProtocolStringList
+            getProductIdList() {
+          return productId_.getUnmodifiableView();
+        }
+        /**
+         * <pre>
+         *商品id
+         * </pre>
+         *
+         * <code>repeated string product_id = 1;</code>
+         * @return The count of productId.
+         */
+        public int getProductIdCount() {
+          return productId_.size();
+        }
+        /**
+         * <pre>
+         *商品id
+         * </pre>
+         *
+         * <code>repeated string product_id = 1;</code>
+         * @param index The index of the element to return.
+         * @return The productId at the given index.
+         */
+        public java.lang.String getProductId(int index) {
+          return productId_.get(index);
+        }
+        /**
+         * <pre>
+         *商品id
+         * </pre>
+         *
+         * <code>repeated string product_id = 1;</code>
+         * @param index The index of the value to return.
+         * @return The bytes of the productId at the given index.
          */
         public com.google.protobuf.ByteString
-            getProductIdBytes() {
-          java.lang.Object ref = productId_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            productId_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
+            getProductIdBytes(int index) {
+          return productId_.getByteString(index);
         }
         /**
          * <pre>
          *商品id
          * </pre>
          *
-         * <code>string product_id = 1;</code>
+         * <code>repeated string product_id = 1;</code>
+         * @param index The index to set the value at.
          * @param value The productId to set.
          * @return This builder for chaining.
          */
         public Builder setProductId(
-            java.lang.String value) {
+            int index, java.lang.String value) {
           if (value == null) { throw new NullPointerException(); }
-          productId_ = value;
-          bitField0_ |= 0x00000001;
+          ensureProductIdIsMutable();
+          productId_.set(index, value);
           onChanged();
           return this;
         }
@@ -14044,11 +14675,45 @@ public final class SeckillPersonRpc {
          *商品id
          * </pre>
          *
-         * <code>string product_id = 1;</code>
+         * <code>repeated string product_id = 1;</code>
+         * @param value The productId to add.
+         * @return This builder for chaining.
+         */
+        public Builder addProductId(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          ensureProductIdIsMutable();
+          productId_.add(value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         *商品id
+         * </pre>
+         *
+         * <code>repeated string product_id = 1;</code>
+         * @param values The productId to add.
+         * @return This builder for chaining.
+         */
+        public Builder addAllProductId(
+            java.lang.Iterable<java.lang.String> values) {
+          ensureProductIdIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, productId_);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         *商品id
+         * </pre>
+         *
+         * <code>repeated string product_id = 1;</code>
          * @return This builder for chaining.
          */
         public Builder clearProductId() {
-          productId_ = getDefaultInstance().getProductId();
+          productId_ = com.google.protobuf.LazyStringArrayList.EMPTY;
           bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
           return this;
@@ -14058,16 +14723,16 @@ public final class SeckillPersonRpc {
          *商品id
          * </pre>
          *
-         * <code>string product_id = 1;</code>
-         * @param value The bytes for productId to set.
+         * <code>repeated string product_id = 1;</code>
+         * @param value The bytes of the productId to add.
          * @return This builder for chaining.
          */
-        public Builder setProductIdBytes(
+        public Builder addProductIdBytes(
             com.google.protobuf.ByteString value) {
           if (value == null) { throw new NullPointerException(); }
           checkByteStringIsUtf8(value);
-          productId_ = value;
-          bitField0_ |= 0x00000001;
+          ensureProductIdIsMutable();
+          productId_.add(value);
           onChanged();
           return this;
         }
@@ -15826,10 +16491,20 @@ public final class SeckillPersonRpc {
        *商品id
        * </pre>
        *
-       * <code>int32 product_id = 2;</code>
+       * <code>string product_id = 2;</code>
        * @return The productId.
        */
-      int getProductId();
+      java.lang.String getProductId();
+      /**
+       * <pre>
+       *商品id
+       * </pre>
+       *
+       * <code>string product_id = 2;</code>
+       * @return The bytes for productId.
+       */
+      com.google.protobuf.ByteString
+          getProductIdBytes();
 
       /**
        * <pre>
@@ -15883,23 +16558,33 @@ public final class SeckillPersonRpc {
 
       /**
        * <pre>
-       *商品数量
+       *库存
        * </pre>
        *
-       * <code>int32 num = 6;</code>
+       * <code>int32 stock = 6;</code>
+       * @return The stock.
+       */
+      int getStock();
+
+      /**
+       * <pre>
+       *数量
+       * </pre>
+       *
+       * <code>int32 num = 7;</code>
        * @return The num.
        */
       int getNum();
 
       /**
        * <pre>
-       *最大购买数
+       *类目id
        * </pre>
        *
-       * <code>int32 max_num = 7;</code>
-       * @return The maxNum.
+       * <code>int32 category_id = 8;</code>
+       * @return The categoryId.
        */
-      int getMaxNum();
+      int getCategoryId();
     }
     /**
      * Protobuf type {@code ShoppingCartMessage.ShoppingCart}
@@ -15914,6 +16599,7 @@ public final class SeckillPersonRpc {
         super(builder);
       }
       private ShoppingCart() {
+        productId_ = "";
         productName_ = "";
         productPicture_ = "";
       }
@@ -15959,18 +16645,50 @@ public final class SeckillPersonRpc {
       }
 
       public static final int PRODUCT_ID_FIELD_NUMBER = 2;
-      private int productId_ = 0;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object productId_ = "";
       /**
        * <pre>
        *商品id
        * </pre>
        *
-       * <code>int32 product_id = 2;</code>
+       * <code>string product_id = 2;</code>
        * @return The productId.
        */
       @java.lang.Override
-      public int getProductId() {
-        return productId_;
+      public java.lang.String getProductId() {
+        java.lang.Object ref = productId_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          productId_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       *商品id
+       * </pre>
+       *
+       * <code>string product_id = 2;</code>
+       * @return The bytes for productId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getProductIdBytes() {
+        java.lang.Object ref = productId_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          productId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
       }
 
       public static final int PRODUCT_NAME_FIELD_NUMBER = 3;
@@ -16082,14 +16800,29 @@ public final class SeckillPersonRpc {
         return price_;
       }
 
-      public static final int NUM_FIELD_NUMBER = 6;
+      public static final int STOCK_FIELD_NUMBER = 6;
+      private int stock_ = 0;
+      /**
+       * <pre>
+       *库存
+       * </pre>
+       *
+       * <code>int32 stock = 6;</code>
+       * @return The stock.
+       */
+      @java.lang.Override
+      public int getStock() {
+        return stock_;
+      }
+
+      public static final int NUM_FIELD_NUMBER = 7;
       private int num_ = 0;
       /**
        * <pre>
-       *商品数量
+       *数量
        * </pre>
        *
-       * <code>int32 num = 6;</code>
+       * <code>int32 num = 7;</code>
        * @return The num.
        */
       @java.lang.Override
@@ -16097,19 +16830,19 @@ public final class SeckillPersonRpc {
         return num_;
       }
 
-      public static final int MAX_NUM_FIELD_NUMBER = 7;
-      private int maxNum_ = 0;
+      public static final int CATEGORY_ID_FIELD_NUMBER = 8;
+      private int categoryId_ = 0;
       /**
        * <pre>
-       *最大购买数
+       *类目id
        * </pre>
        *
-       * <code>int32 max_num = 7;</code>
-       * @return The maxNum.
+       * <code>int32 category_id = 8;</code>
+       * @return The categoryId.
        */
       @java.lang.Override
-      public int getMaxNum() {
-        return maxNum_;
+      public int getCategoryId() {
+        return categoryId_;
       }
 
       private byte memoizedIsInitialized = -1;
@@ -16129,8 +16862,8 @@ public final class SeckillPersonRpc {
         if (check_ != false) {
           output.writeBool(1, check_);
         }
-        if (productId_ != 0) {
-          output.writeInt32(2, productId_);
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productId_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, productId_);
         }
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productName_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 3, productName_);
@@ -16141,11 +16874,14 @@ public final class SeckillPersonRpc {
         if (price_ != 0) {
           output.writeInt32(5, price_);
         }
-        if (num_ != 0) {
-          output.writeInt32(6, num_);
+        if (stock_ != 0) {
+          output.writeInt32(6, stock_);
         }
-        if (maxNum_ != 0) {
-          output.writeInt32(7, maxNum_);
+        if (num_ != 0) {
+          output.writeInt32(7, num_);
+        }
+        if (categoryId_ != 0) {
+          output.writeInt32(8, categoryId_);
         }
         getUnknownFields().writeTo(output);
       }
@@ -16160,9 +16896,8 @@ public final class SeckillPersonRpc {
           size += com.google.protobuf.CodedOutputStream
             .computeBoolSize(1, check_);
         }
-        if (productId_ != 0) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeInt32Size(2, productId_);
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productId_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, productId_);
         }
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productName_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, productName_);
@@ -16174,13 +16909,17 @@ public final class SeckillPersonRpc {
           size += com.google.protobuf.CodedOutputStream
             .computeInt32Size(5, price_);
         }
+        if (stock_ != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(6, stock_);
+        }
         if (num_ != 0) {
           size += com.google.protobuf.CodedOutputStream
-            .computeInt32Size(6, num_);
+            .computeInt32Size(7, num_);
         }
-        if (maxNum_ != 0) {
+        if (categoryId_ != 0) {
           size += com.google.protobuf.CodedOutputStream
-            .computeInt32Size(7, maxNum_);
+            .computeInt32Size(8, categoryId_);
         }
         size += getUnknownFields().getSerializedSize();
         memoizedSize = size;
@@ -16199,18 +16938,20 @@ public final class SeckillPersonRpc {
 
         if (getCheck()
             != other.getCheck()) return false;
-        if (getProductId()
-            != other.getProductId()) return false;
+        if (!getProductId()
+            .equals(other.getProductId())) return false;
         if (!getProductName()
             .equals(other.getProductName())) return false;
         if (!getProductPicture()
             .equals(other.getProductPicture())) return false;
         if (getPrice()
             != other.getPrice()) return false;
+        if (getStock()
+            != other.getStock()) return false;
         if (getNum()
             != other.getNum()) return false;
-        if (getMaxNum()
-            != other.getMaxNum()) return false;
+        if (getCategoryId()
+            != other.getCategoryId()) return false;
         if (!getUnknownFields().equals(other.getUnknownFields())) return false;
         return true;
       }
@@ -16226,17 +16967,19 @@ public final class SeckillPersonRpc {
         hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
             getCheck());
         hash = (37 * hash) + PRODUCT_ID_FIELD_NUMBER;
-        hash = (53 * hash) + getProductId();
+        hash = (53 * hash) + getProductId().hashCode();
         hash = (37 * hash) + PRODUCT_NAME_FIELD_NUMBER;
         hash = (53 * hash) + getProductName().hashCode();
         hash = (37 * hash) + PRODUCT_PICTURE_FIELD_NUMBER;
         hash = (53 * hash) + getProductPicture().hashCode();
         hash = (37 * hash) + PRICE_FIELD_NUMBER;
         hash = (53 * hash) + getPrice();
+        hash = (37 * hash) + STOCK_FIELD_NUMBER;
+        hash = (53 * hash) + getStock();
         hash = (37 * hash) + NUM_FIELD_NUMBER;
         hash = (53 * hash) + getNum();
-        hash = (37 * hash) + MAX_NUM_FIELD_NUMBER;
-        hash = (53 * hash) + getMaxNum();
+        hash = (37 * hash) + CATEGORY_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getCategoryId();
         hash = (29 * hash) + getUnknownFields().hashCode();
         memoizedHashCode = hash;
         return hash;
@@ -16367,12 +17110,13 @@ public final class SeckillPersonRpc {
           super.clear();
           bitField0_ = 0;
           check_ = false;
-          productId_ = 0;
+          productId_ = "";
           productName_ = "";
           productPicture_ = "";
           price_ = 0;
+          stock_ = 0;
           num_ = 0;
-          maxNum_ = 0;
+          categoryId_ = 0;
           return this;
         }
 
@@ -16422,10 +17166,13 @@ public final class SeckillPersonRpc {
             result.price_ = price_;
           }
           if (((from_bitField0_ & 0x00000020) != 0)) {
-            result.num_ = num_;
+            result.stock_ = stock_;
           }
           if (((from_bitField0_ & 0x00000040) != 0)) {
-            result.maxNum_ = maxNum_;
+            result.num_ = num_;
+          }
+          if (((from_bitField0_ & 0x00000080) != 0)) {
+            result.categoryId_ = categoryId_;
           }
         }
 
@@ -16476,8 +17223,10 @@ public final class SeckillPersonRpc {
           if (other.getCheck() != false) {
             setCheck(other.getCheck());
           }
-          if (other.getProductId() != 0) {
-            setProductId(other.getProductId());
+          if (!other.getProductId().isEmpty()) {
+            productId_ = other.productId_;
+            bitField0_ |= 0x00000002;
+            onChanged();
           }
           if (!other.getProductName().isEmpty()) {
             productName_ = other.productName_;
@@ -16492,11 +17241,14 @@ public final class SeckillPersonRpc {
           if (other.getPrice() != 0) {
             setPrice(other.getPrice());
           }
+          if (other.getStock() != 0) {
+            setStock(other.getStock());
+          }
           if (other.getNum() != 0) {
             setNum(other.getNum());
           }
-          if (other.getMaxNum() != 0) {
-            setMaxNum(other.getMaxNum());
+          if (other.getCategoryId() != 0) {
+            setCategoryId(other.getCategoryId());
           }
           this.mergeUnknownFields(other.getUnknownFields());
           onChanged();
@@ -16529,11 +17281,11 @@ public final class SeckillPersonRpc {
                   bitField0_ |= 0x00000001;
                   break;
                 } // case 8
-                case 16: {
-                  productId_ = input.readInt32();
+                case 18: {
+                  productId_ = input.readStringRequireUtf8();
                   bitField0_ |= 0x00000002;
                   break;
-                } // case 16
+                } // case 18
                 case 26: {
                   productName_ = input.readStringRequireUtf8();
                   bitField0_ |= 0x00000004;
@@ -16550,15 +17302,20 @@ public final class SeckillPersonRpc {
                   break;
                 } // case 40
                 case 48: {
-                  num_ = input.readInt32();
+                  stock_ = input.readInt32();
                   bitField0_ |= 0x00000020;
                   break;
                 } // case 48
                 case 56: {
-                  maxNum_ = input.readInt32();
+                  num_ = input.readInt32();
                   bitField0_ |= 0x00000040;
                   break;
                 } // case 56
+                case 64: {
+                  categoryId_ = input.readInt32();
+                  bitField0_ |= 0x00000080;
+                  break;
+                } // case 64
                 default: {
                   if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                     done = true; // was an endgroup tag
@@ -16620,30 +17377,60 @@ public final class SeckillPersonRpc {
           return this;
         }
 
-        private int productId_ ;
+        private java.lang.Object productId_ = "";
         /**
          * <pre>
          *商品id
          * </pre>
          *
-         * <code>int32 product_id = 2;</code>
+         * <code>string product_id = 2;</code>
          * @return The productId.
          */
-        @java.lang.Override
-        public int getProductId() {
-          return productId_;
+        public java.lang.String getProductId() {
+          java.lang.Object ref = productId_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            productId_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
         }
         /**
          * <pre>
          *商品id
          * </pre>
          *
-         * <code>int32 product_id = 2;</code>
+         * <code>string product_id = 2;</code>
+         * @return The bytes for productId.
+         */
+        public com.google.protobuf.ByteString
+            getProductIdBytes() {
+          java.lang.Object ref = productId_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            productId_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         *商品id
+         * </pre>
+         *
+         * <code>string product_id = 2;</code>
          * @param value The productId to set.
          * @return This builder for chaining.
          */
-        public Builder setProductId(int value) {
-          
+        public Builder setProductId(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
           productId_ = value;
           bitField0_ |= 0x00000002;
           onChanged();
@@ -16654,12 +17441,30 @@ public final class SeckillPersonRpc {
          *商品id
          * </pre>
          *
-         * <code>int32 product_id = 2;</code>
+         * <code>string product_id = 2;</code>
          * @return This builder for chaining.
          */
         public Builder clearProductId() {
+          productId_ = getDefaultInstance().getProductId();
           bitField0_ = (bitField0_ & ~0x00000002);
-          productId_ = 0;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         *商品id
+         * </pre>
+         *
+         * <code>string product_id = 2;</code>
+         * @param value The bytes for productId to set.
+         * @return This builder for chaining.
+         */
+        public Builder setProductIdBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
+          productId_ = value;
+          bitField0_ |= 0x00000002;
           onChanged();
           return this;
         }
@@ -16892,13 +17697,57 @@ public final class SeckillPersonRpc {
           return this;
         }
 
+        private int stock_ ;
+        /**
+         * <pre>
+         *库存
+         * </pre>
+         *
+         * <code>int32 stock = 6;</code>
+         * @return The stock.
+         */
+        @java.lang.Override
+        public int getStock() {
+          return stock_;
+        }
+        /**
+         * <pre>
+         *库存
+         * </pre>
+         *
+         * <code>int32 stock = 6;</code>
+         * @param value The stock to set.
+         * @return This builder for chaining.
+         */
+        public Builder setStock(int value) {
+          
+          stock_ = value;
+          bitField0_ |= 0x00000020;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         *库存
+         * </pre>
+         *
+         * <code>int32 stock = 6;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearStock() {
+          bitField0_ = (bitField0_ & ~0x00000020);
+          stock_ = 0;
+          onChanged();
+          return this;
+        }
+
         private int num_ ;
         /**
          * <pre>
-         *商品数量
+         *数量
          * </pre>
          *
-         * <code>int32 num = 6;</code>
+         * <code>int32 num = 7;</code>
          * @return The num.
          */
         @java.lang.Override
@@ -16907,75 +17756,75 @@ public final class SeckillPersonRpc {
         }
         /**
          * <pre>
-         *商品数量
+         *数量
          * </pre>
          *
-         * <code>int32 num = 6;</code>
+         * <code>int32 num = 7;</code>
          * @param value The num to set.
          * @return This builder for chaining.
          */
         public Builder setNum(int value) {
           
           num_ = value;
-          bitField0_ |= 0x00000020;
-          onChanged();
-          return this;
-        }
-        /**
-         * <pre>
-         *商品数量
-         * </pre>
-         *
-         * <code>int32 num = 6;</code>
-         * @return This builder for chaining.
-         */
-        public Builder clearNum() {
-          bitField0_ = (bitField0_ & ~0x00000020);
-          num_ = 0;
-          onChanged();
-          return this;
-        }
-
-        private int maxNum_ ;
-        /**
-         * <pre>
-         *最大购买数
-         * </pre>
-         *
-         * <code>int32 max_num = 7;</code>
-         * @return The maxNum.
-         */
-        @java.lang.Override
-        public int getMaxNum() {
-          return maxNum_;
-        }
-        /**
-         * <pre>
-         *最大购买数
-         * </pre>
-         *
-         * <code>int32 max_num = 7;</code>
-         * @param value The maxNum to set.
-         * @return This builder for chaining.
-         */
-        public Builder setMaxNum(int value) {
-          
-          maxNum_ = value;
           bitField0_ |= 0x00000040;
           onChanged();
           return this;
         }
         /**
          * <pre>
-         *最大购买数
+         *数量
          * </pre>
          *
-         * <code>int32 max_num = 7;</code>
+         * <code>int32 num = 7;</code>
          * @return This builder for chaining.
          */
-        public Builder clearMaxNum() {
+        public Builder clearNum() {
           bitField0_ = (bitField0_ & ~0x00000040);
-          maxNum_ = 0;
+          num_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int categoryId_ ;
+        /**
+         * <pre>
+         *类目id
+         * </pre>
+         *
+         * <code>int32 category_id = 8;</code>
+         * @return The categoryId.
+         */
+        @java.lang.Override
+        public int getCategoryId() {
+          return categoryId_;
+        }
+        /**
+         * <pre>
+         *类目id
+         * </pre>
+         *
+         * <code>int32 category_id = 8;</code>
+         * @param value The categoryId to set.
+         * @return This builder for chaining.
+         */
+        public Builder setCategoryId(int value) {
+          
+          categoryId_ = value;
+          bitField0_ |= 0x00000080;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         *类目id
+         * </pre>
+         *
+         * <code>int32 category_id = 8;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearCategoryId() {
+          bitField0_ = (bitField0_ & ~0x00000080);
+          categoryId_ = 0;
           onChanged();
           return this;
         }
@@ -17490,6 +18339,11 @@ public final class SeckillPersonRpc {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ShoppingCartMessage_AddShoppingCartReq_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ShoppingCartMessage_AddShoppingCartRely_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_ShoppingCartMessage_AddShoppingCartRely_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ShoppingCartMessage_UpdateShoppingCartReq_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -17533,60 +18387,62 @@ public final class SeckillPersonRpc {
       " \001(\005\022\'\n\004user\030\002 \001(\0132\031.PersonMessage.Perso" +
       "nInfo\0320\n\nPersonInfo\022\021\n\tuser_name\030\001 \001(\t\022\017" +
       "\n\007user_id\030\002 \001(\t\032&\n\021JudgeExistenceReq\022\021\n\t" +
-      "user_name\030\001 \001(\t\"\211\004\n\021CollectionMessage\032\032\n" +
+      "user_name\030\001 \001(\t\"\325\003\n\021CollectionMessage\032\032\n" +
       "\nCommonRely\022\014\n\004code\030\001 \001(\005\0327\n\020AddCollecti" +
       "onReq\022\022\n\nproduct_id\030\001 \001(\t\022\017\n\007user_id\030\002 \001" +
       "(\t\0327\n\020DeleteCollectReq\022\022\n\nproduct_id\030\001 \001" +
       "(\t\022\017\n\007user_id\030\002 \001(\t\032 \n\rGetCollectReq\022\017\n\007" +
       "user_id\030\001 \001(\t\032P\n\016GetCollectRely\022\014\n\004code\030" +
       "\001 \001(\005\0220\n\014collect_list\030\002 \003(\0132\032.Collection" +
-      "Message.Collect\032\361\001\n\007Collect\022\023\n\013category_" +
-      "id\030\001 \001(\005\022\022\n\nproduct_id\030\002 \001(\005\022\024\n\014product_" +
-      "name\030\003 \001(\t\022\025\n\rproduct_title\030\004 \001(\t\022\025\n\rpro" +
-      "duct_intro\030\005 \001(\t\022\027\n\017product_picture\030\006 \001(" +
-      "\t\022\025\n\rproduct_price\030\007 \001(\005\022\035\n\025product_sell" +
-      "ing_price\030\010 \001(\005\022\023\n\013product_num\030\t \001(\005\022\025\n\r" +
-      "product_sales\030\n \001(\005\"\220\004\n\023ShoppingCartMess" +
-      "age\032\032\n\nCommonRely\022\014\n\004code\030\001 \001(\005\0329\n\022AddSh" +
-      "oppingCartReq\022\022\n\nproduct_id\030\001 \001(\t\022\017\n\007use" +
-      "r_id\030\002 \001(\t\032I\n\025UpdateShoppingCartReq\022\022\n\np" +
-      "roduct_id\030\001 \001(\t\022\017\n\007user_id\030\002 \001(\t\022\013\n\003num\030" +
-      "\003 \001(\005\032<\n\025DeleteShoppingCartReq\022\022\n\nproduc" +
-      "t_id\030\001 \001(\t\022\017\n\007user_id\030\002 \001(\t\032%\n\022GetShoppi" +
-      "ngCartReq\022\017\n\007user_id\030\001 \001(\t\032b\n\023GetShoppin" +
-      "gCartRely\022\014\n\004code\030\001 \001(\005\022=\n\022shopping_cart" +
-      "_data\030\002 \003(\0132!.ShoppingCartMessage.Shoppi" +
-      "ngCart\032\215\001\n\014ShoppingCart\022\r\n\005check\030\001 \001(\010\022\022" +
-      "\n\nproduct_id\030\002 \001(\005\022\024\n\014product_name\030\003 \001(\t" +
-      "\022\027\n\017product_picture\030\004 \001(\t\022\r\n\005price\030\005 \001(\005" +
-      "\022\013\n\003num\030\006 \001(\005\022\017\n\007max_num\030\007 \001(\0052\277\002\n\024Secki" +
-      "llPersonService\022E\n\006create\022\036.PersonMessag" +
-      "e.CreatePersonReq\032\031.PersonMessage.Common" +
-      "Rely\"\000\022E\n\006update\022\036.PersonMessage.UpdateP" +
-      "ersonReq\032\031.PersonMessage.CommonRely\"\000\022H\n" +
-      "\005login\022\035.PersonMessage.PersonLoginReq\032\036." +
-      "PersonMessage.PersonLoginRely\"\000\022O\n\016judge" +
-      "Existence\022 .PersonMessage.JudgeExistence" +
-      "Req\032\031.PersonMessage.CommonRely\"\0002\232\002\n\030Sec" +
-      "killCollectionService\022R\n\naddCollect\022#.Co" +
-      "llectionMessage.AddCollectionReq\032\035.Colle" +
-      "ctionMessage.CommonRely\"\000\022U\n\rdeleteColle" +
-      "ct\022#.CollectionMessage.DeleteCollectReq\032" +
-      "\035.CollectionMessage.CommonRely\"\000\022S\n\ngetC" +
-      "ollect\022 .CollectionMessage.GetCollectReq" +
-      "\032!.CollectionMessage.GetCollectRely\"\0002\255\003" +
-      "\n\032SeckillShoppingCartService\022]\n\017addShopp" +
-      "ingCart\022\'.ShoppingCartMessage.AddShoppin" +
-      "gCartReq\032\037.ShoppingCartMessage.CommonRel" +
-      "y\"\000\022c\n\022deleteShoppingCart\022*.ShoppingCart" +
-      "Message.DeleteShoppingCartReq\032\037.Shopping" +
-      "CartMessage.CommonRely\"\000\022c\n\022updateShoppi" +
-      "ngCart\022*.ShoppingCartMessage.UpdateShopp" +
-      "ingCartReq\032\037.ShoppingCartMessage.CommonR" +
-      "ely\"\000\022f\n\017getShoppingCart\022\'.ShoppingCartM" +
-      "essage.GetShoppingCartReq\032(.ShoppingCart" +
-      "Message.GetShoppingCartRely\"\000B\010\n\006personb" +
-      "\006proto3"
+      "Message.Collect\032\275\001\n\007Collect\022\023\n\013category_" +
+      "id\030\001 \001(\005\022\n\n\002id\030\002 \001(\t\022\024\n\014product_name\030\003 \001" +
+      "(\t\022\025\n\rproduct_title\030\004 \001(\t\022\027\n\017product_pic" +
+      "ture\030\006 \001(\t\022\025\n\rproduct_price\030\007 \001(\005\022\035\n\025pro" +
+      "duct_selling_price\030\010 \001(\005\022\025\n\rproduct_stoc" +
+      "k\030\t \001(\005\"\207\005\n\023ShoppingCartMessage\032\032\n\nCommo" +
+      "nRely\022\014\n\004code\030\001 \001(\005\0329\n\022AddShoppingCartRe" +
+      "q\022\022\n\nproduct_id\030\001 \001(\t\022\017\n\007user_id\030\002 \001(\t\032b" +
+      "\n\023AddShoppingCartRely\022\014\n\004code\030\001 \001(\005\022=\n\022s" +
+      "hopping_cart_data\030\002 \001(\0132!.ShoppingCartMe" +
+      "ssage.ShoppingCart\032I\n\025UpdateShoppingCart" +
+      "Req\022\022\n\nproduct_id\030\001 \001(\t\022\017\n\007user_id\030\002 \001(\t" +
+      "\022\013\n\003num\030\003 \001(\005\032<\n\025DeleteShoppingCartReq\022\022" +
+      "\n\nproduct_id\030\001 \003(\t\022\017\n\007user_id\030\002 \001(\t\032%\n\022G" +
+      "etShoppingCartReq\022\017\n\007user_id\030\001 \001(\t\032b\n\023Ge" +
+      "tShoppingCartRely\022\014\n\004code\030\001 \001(\005\022=\n\022shopp" +
+      "ing_cart_data\030\002 \003(\0132!.ShoppingCartMessag" +
+      "e.ShoppingCart\032\240\001\n\014ShoppingCart\022\r\n\005check" +
+      "\030\001 \001(\010\022\022\n\nproduct_id\030\002 \001(\t\022\024\n\014product_na" +
+      "me\030\003 \001(\t\022\027\n\017product_picture\030\004 \001(\t\022\r\n\005pri" +
+      "ce\030\005 \001(\005\022\r\n\005stock\030\006 \001(\005\022\013\n\003num\030\007 \001(\005\022\023\n\013" +
+      "category_id\030\010 \001(\0052\277\002\n\024SeckillPersonServi" +
+      "ce\022E\n\006create\022\036.PersonMessage.CreatePerso" +
+      "nReq\032\031.PersonMessage.CommonRely\"\000\022E\n\006upd" +
+      "ate\022\036.PersonMessage.UpdatePersonReq\032\031.Pe" +
+      "rsonMessage.CommonRely\"\000\022H\n\005login\022\035.Pers" +
+      "onMessage.PersonLoginReq\032\036.PersonMessage" +
+      ".PersonLoginRely\"\000\022O\n\016judgeExistence\022 .P" +
+      "ersonMessage.JudgeExistenceReq\032\031.PersonM" +
+      "essage.CommonRely\"\0002\232\002\n\030SeckillCollectio" +
+      "nService\022R\n\naddCollect\022#.CollectionMessa" +
+      "ge.AddCollectionReq\032\035.CollectionMessage." +
+      "CommonRely\"\000\022U\n\rdeleteCollect\022#.Collecti" +
+      "onMessage.DeleteCollectReq\032\035.CollectionM" +
+      "essage.CommonRely\"\000\022S\n\ngetCollect\022 .Coll" +
+      "ectionMessage.GetCollectReq\032!.Collection" +
+      "Message.GetCollectRely\"\0002\266\003\n\032SeckillShop" +
+      "pingCartService\022f\n\017addShoppingCart\022\'.Sho" +
+      "ppingCartMessage.AddShoppingCartReq\032(.Sh" +
+      "oppingCartMessage.AddShoppingCartRely\"\000\022" +
+      "c\n\022deleteShoppingCart\022*.ShoppingCartMess" +
+      "age.DeleteShoppingCartReq\032\037.ShoppingCart" +
+      "Message.CommonRely\"\000\022c\n\022updateShoppingCa" +
+      "rt\022*.ShoppingCartMessage.UpdateShoppingC" +
+      "artReq\032\037.ShoppingCartMessage.CommonRely\"" +
+      "\000\022f\n\017getShoppingCart\022\'.ShoppingCartMessa" +
+      "ge.GetShoppingCartReq\032(.ShoppingCartMess" +
+      "age.GetShoppingCartRely\"\000B\010\n\006personb\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -17681,7 +18537,7 @@ public final class SeckillPersonRpc {
     internal_static_CollectionMessage_Collect_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_CollectionMessage_Collect_descriptor,
-        new java.lang.String[] { "CategoryId", "ProductId", "ProductName", "ProductTitle", "ProductIntro", "ProductPicture", "ProductPrice", "ProductSellingPrice", "ProductNum", "ProductSales", });
+        new java.lang.String[] { "CategoryId", "Id", "ProductName", "ProductTitle", "ProductPicture", "ProductPrice", "ProductSellingPrice", "ProductStock", });
     internal_static_ShoppingCartMessage_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_ShoppingCartMessage_fieldAccessorTable = new
@@ -17700,36 +18556,42 @@ public final class SeckillPersonRpc {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ShoppingCartMessage_AddShoppingCartReq_descriptor,
         new java.lang.String[] { "ProductId", "UserId", });
-    internal_static_ShoppingCartMessage_UpdateShoppingCartReq_descriptor =
+    internal_static_ShoppingCartMessage_AddShoppingCartRely_descriptor =
       internal_static_ShoppingCartMessage_descriptor.getNestedTypes().get(2);
+    internal_static_ShoppingCartMessage_AddShoppingCartRely_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_ShoppingCartMessage_AddShoppingCartRely_descriptor,
+        new java.lang.String[] { "Code", "ShoppingCartData", });
+    internal_static_ShoppingCartMessage_UpdateShoppingCartReq_descriptor =
+      internal_static_ShoppingCartMessage_descriptor.getNestedTypes().get(3);
     internal_static_ShoppingCartMessage_UpdateShoppingCartReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ShoppingCartMessage_UpdateShoppingCartReq_descriptor,
         new java.lang.String[] { "ProductId", "UserId", "Num", });
     internal_static_ShoppingCartMessage_DeleteShoppingCartReq_descriptor =
-      internal_static_ShoppingCartMessage_descriptor.getNestedTypes().get(3);
+      internal_static_ShoppingCartMessage_descriptor.getNestedTypes().get(4);
     internal_static_ShoppingCartMessage_DeleteShoppingCartReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ShoppingCartMessage_DeleteShoppingCartReq_descriptor,
         new java.lang.String[] { "ProductId", "UserId", });
     internal_static_ShoppingCartMessage_GetShoppingCartReq_descriptor =
-      internal_static_ShoppingCartMessage_descriptor.getNestedTypes().get(4);
+      internal_static_ShoppingCartMessage_descriptor.getNestedTypes().get(5);
     internal_static_ShoppingCartMessage_GetShoppingCartReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ShoppingCartMessage_GetShoppingCartReq_descriptor,
         new java.lang.String[] { "UserId", });
     internal_static_ShoppingCartMessage_GetShoppingCartRely_descriptor =
-      internal_static_ShoppingCartMessage_descriptor.getNestedTypes().get(5);
+      internal_static_ShoppingCartMessage_descriptor.getNestedTypes().get(6);
     internal_static_ShoppingCartMessage_GetShoppingCartRely_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ShoppingCartMessage_GetShoppingCartRely_descriptor,
         new java.lang.String[] { "Code", "ShoppingCartData", });
     internal_static_ShoppingCartMessage_ShoppingCart_descriptor =
-      internal_static_ShoppingCartMessage_descriptor.getNestedTypes().get(6);
+      internal_static_ShoppingCartMessage_descriptor.getNestedTypes().get(7);
     internal_static_ShoppingCartMessage_ShoppingCart_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ShoppingCartMessage_ShoppingCart_descriptor,
-        new java.lang.String[] { "Check", "ProductId", "ProductName", "ProductPicture", "Price", "Num", "MaxNum", });
+        new java.lang.String[] { "Check", "ProductId", "ProductName", "ProductPicture", "Price", "Stock", "Num", "CategoryId", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

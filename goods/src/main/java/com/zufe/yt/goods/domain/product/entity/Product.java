@@ -63,9 +63,9 @@ public class Product {
      */
     Integer productNum;
     /**
-     * 商品售出
+     * 商品库存
      */
-    Integer productSales;
+    Integer productStock;
     /**
      * 全局搜索值
      */

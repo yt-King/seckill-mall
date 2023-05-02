@@ -30,4 +30,8 @@ public class Stock {
      * 商品已购买量
      */
     private GotCount gotCount;
+
+    public Integer getStock() {
+        return this.getTotalCount().getValue() - this.getGotCount().getValue();
+    }
 }

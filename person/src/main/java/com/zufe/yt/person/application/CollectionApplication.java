@@ -1,6 +1,9 @@
 package com.zufe.yt.person.application;
 
 import com.zufe.yt.person.domain.collection.entity.Collection;
+import com.zufe.yt.person.interfaces.dto.CollectionInfoDTO;
+
+import java.util.List;
 
 /**
  * @author yt
@@ -19,7 +22,7 @@ public interface CollectionApplication {
     void delete(Collection collection);
 
     /**
-     * 删除
+     * 列表
      */
-    Collection getCollection(String userId);
+    List<CollectionInfoDTO> getCollection(String userId);
 }
