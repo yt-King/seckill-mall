@@ -55,9 +55,11 @@ public class CollectionApplicationImpl implements CollectionApplication {
                 productsStub.getAllProducts(SeckillProductRpc.ProductMessage.GetTotalProductsReq.newBuilder().build())
                         .getProductList().parallelStream().collect(Collectors.toMap(SeckillProductRpc.ProductMessage.SimpleProduct::getId, x -> x));
         List<CollectionInfoDTO> list = new ArrayList<>();
-        collection.getProductIds().forEach(x->{
-            list.add(CollectionMapper.INSTANCE.toDTO(simpleProductMap.get(x)));
-        });
+        if (collection != null) {
+            collection.getProductIds().forEach(x -> {
+                list.add(CollectionMapper.INSTANCE.toDTO(simpleProductMap.get(x)));
+            });
+        }
         return list;
     }
 }

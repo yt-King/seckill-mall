@@ -78,11 +78,13 @@ public class ShoppingcartApplicationImpl implements ShoppingcartApplication {
                 productsStub.getAllProducts(SeckillProductRpc.ProductMessage.GetTotalProductsReq.newBuilder().build())
                         .getProductList().parallelStream().collect(Collectors.toMap(SeckillProductRpc.ProductMessage.SimpleProduct::getId, x -> x));
         List<ShoppingcartInfoDTO> list = new ArrayList<>();
-        shoppingCart.getProductInfos().forEach(x -> {
-            ShoppingcartInfoDTO dto = ShoppingcartMapper.INSTANCE.toDTO(simpleProductMap.get(x.getProductId()));
-            dto.setNum(x.getNum());
-            list.add(dto);
-        });
+        if (shoppingCart != null) {
+            shoppingCart.getProductInfos().forEach(x -> {
+                ShoppingcartInfoDTO dto = ShoppingcartMapper.INSTANCE.toDTO(simpleProductMap.get(x.getProductId()));
+                dto.setNum(x.getNum());
+                list.add(dto);
+            });
+        }
         return list;
     }
 }
