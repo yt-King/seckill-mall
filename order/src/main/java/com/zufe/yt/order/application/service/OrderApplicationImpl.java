@@ -56,7 +56,7 @@ public class OrderApplicationImpl implements OrderApplication {
                         .setProductId(childOrder.getProductId().getValue())
                         .setIncCount(childOrder.getNum().getValue())
                         //下游接口幂等时间30s，这30s里面参数一样的就算是幂等了
-                        .setUuid(order.getUserId() + childOrder.getProductId().getValue() + childOrder.getNum().getValue())
+//                        .setUuid(order.getUserId() + childOrder.getProductId().getValue() + childOrder.getNum().getValue())
                         .build()).getCodeId();
                 if (StrUtil.isBlank(codeId)) {
                     //如果为空表示幂等了
